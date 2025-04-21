@@ -1,0 +1,1742 @@
+fileFormatVersion: 2
+guid: 90000409ed5ff5e47acdf294db203f0d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4630936746156072198
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_0
+  - first:
+      213: 8904780928431898005
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_1
+  - first:
+      213: 2319610864419594430
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_2
+  - first:
+      213: 471406216648754022
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_3
+  - first:
+      213: -5769998686746514932
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_4
+  - first:
+      213: -7464527821599069767
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_5
+  - first:
+      213: 7514011131527258983
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_6
+  - first:
+      213: -2321015777755513753
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_7
+  - first:
+      213: 8302974239798227525
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_8
+  - first:
+      213: -8249438904101711238
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_9
+  - first:
+      213: -3853250084184377050
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_10
+  - first:
+      213: -3745390536416074946
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_11
+  - first:
+      213: -379495618338398119
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_12
+  - first:
+      213: -3477651960925569650
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_13
+  - first:
+      213: -5783132952757741418
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_14
+  - first:
+      213: -4604879245717540859
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_15
+  - first:
+      213: -5887339347753965500
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_16
+  - first:
+      213: -1956191883345080282
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_17
+  - first:
+      213: -3066588041581868383
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_18
+  - first:
+      213: -2661874921279288186
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_19
+  - first:
+      213: -2977736427578494284
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_20
+  - first:
+      213: 3897627194030351977
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_21
+  - first:
+      213: -185022311137887320
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_22
+  - first:
+      213: -4593410037741486299
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_23
+  - first:
+      213: -2405091714730980826
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_24
+  - first:
+      213: -8059373372156600838
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_25
+  - first:
+      213: 6251628651137395771
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_26
+  - first:
+      213: -3488243449323937000
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_27
+  - first:
+      213: -5115970414541870243
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_28
+  - first:
+      213: -5777989596496989170
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_29
+  - first:
+      213: -5523683752778141074
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_30
+  - first:
+      213: -1783867113800697402
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_31
+  - first:
+      213: 80166669262940864
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_32
+  - first:
+      213: 4844353720395575970
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_33
+  - first:
+      213: 6815505965117988405
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_34
+  - first:
+      213: -4553276981450170311
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_35
+  - first:
+      213: 8326448792411913343
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_36
+  - first:
+      213: -3535254143847176516
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_37
+  - first:
+      213: -3495738135803930166
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_38
+  - first:
+      213: -5720356566088684206
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_39
+  - first:
+      213: -9175291641605718480
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_40
+  - first:
+      213: 3444577295586950928
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_41
+  - first:
+      213: -3406362151861325490
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_42
+  - first:
+      213: -5456621961227939639
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_43
+  - first:
+      213: 6600039658387264524
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_44
+  - first:
+      213: 8514600762209115060
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_45
+  - first:
+      213: -6813008266330028096
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_46
+  - first:
+      213: -2299372988503054276
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_47
+  - first:
+      213: -1654515295471017632
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_48
+  - first:
+      213: 2543273067232844519
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_49
+  - first:
+      213: -9134740391066801841
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_50
+  - first:
+      213: 85032313445235815
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_51
+  - first:
+      213: -3716476317451043741
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_52
+  - first:
+      213: 944814981982775275
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_53
+  - first:
+      213: 2275047727269223635
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_54
+  - first:
+      213: 5593006409700837048
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_55
+  - first:
+      213: 8223804031473838023
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_56
+  - first:
+      213: 7518222242918084625
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_57
+  - first:
+      213: -638323517551696296
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_58
+  - first:
+      213: -2320998813001972267
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_59
+  - first:
+      213: 3043927546594986200
+    second: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2601ca09b9bbfb0800000000000000
+      internalID: -4630936746156072198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 115
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d3bd92313249b70800000000000000
+      internalID: 8904780928431898005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0edd69ac9e03020800000000000000
+      internalID: 2319610864419594430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6638248d475ca8600800000000000000
+      internalID: 471406216648754022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ae002e3c8dcefa0800000000000000
+      internalID: -5769998686746514932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b92199be7ba86890800000000000000
+      internalID: -7464527821599069767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763630d2051274860800000000000000
+      internalID: 7514011131527258983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c3ec882781acfd0800000000000000
+      internalID: -2321015777755513753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_8
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542746e74171a3370800000000000000
+      internalID: 8302974239798227525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_9
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72dabc260b148d80800000000000000
+      internalID: -8249438904101711238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629327db671868ac0800000000000000
+      internalID: -3853250084184377050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 98
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e336fcba623b50cc0800000000000000
+      internalID: -3745390536416074946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_12
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9506f1beeb2cbbaf0800000000000000
+      internalID: -379495618338398119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_13
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d379887f5ecbfc0800000000000000
+      internalID: -3477651960925569650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698d406483f2ebfa0800000000000000
+      internalID: -5783132952757741418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_15
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500ff6549be2810c0800000000000000
+      internalID: -4604879245717540859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_16
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 115
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448e1f04e08fb4ea0800000000000000
+      internalID: -5887339347753965500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620d6b0b8d53ad4e0800000000000000
+      internalID: -1956191883345080282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa4d057c6a4175d0800000000000000
+      internalID: -3066588041581868383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_19
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c80a0ccde1f0bd0800000000000000
+      internalID: -2661874921279288186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_20
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2717fee74fca6d0800000000000000
+      internalID: -2977736427578494284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966e41f4847271630800000000000000
+      internalID: 3897627194030351977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8abba15303bae6df0800000000000000
+      internalID: -185022311137887320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_23
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f74b858ede040c0800000000000000
+      internalID: -4593410037741486299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_24
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a893304d56f9ed0800000000000000
+      internalID: -2405091714730980826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_25
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd1d505e9a572090800000000000000
+      internalID: -8059373372156600838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ce2bab22f32c650800000000000000
+      internalID: 6251628651137395771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813a6f87015479fc0800000000000000
+      internalID: -3488243449323937000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_28
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5be2d7730c6009b0800000000000000
+      internalID: -5115970414541870243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_29
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04f4e8331570dfa0800000000000000
+      internalID: -5777989596496989170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_30
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62ff0084eee753b0800000000000000
+      internalID: -5523683752778141074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_31
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c97863bf4e6e37e0800000000000000
+      internalID: -1783867113800697402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_32
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca6e34392fcc1100800000000000000
+      internalID: 80166669262940864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_33
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2358eca0a9a3340800000000000000
+      internalID: 4844353720395575970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_34
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 81
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ed96fa09a859e50800000000000000
+      internalID: 6815505965117988405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_35
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93023bca5b28fc0c0800000000000000
+      internalID: -4553276981450170311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_36
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c3130bf0d7d8370800000000000000
+      internalID: 8326448792411913343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_37
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6e245361140fec0800000000000000
+      internalID: -3535254143847176516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_38
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 30
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9de9bcfa4ac7fc0800000000000000
+      internalID: -3495738135803930166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_39
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25de5b9c2063d90b0800000000000000
+      internalID: -5720356566088684206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_40
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 30
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03efa7f5dd0daa080800000000000000
+      internalID: -9175291641605718480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ff5d8dcc89dcf20800000000000000
+      internalID: 3444577295586950928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 30
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4178f9abab2ab0d0800000000000000
+      internalID: -3406362151861325490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_43
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0d9679c3f2644b0800000000000000
+      internalID: -5456621961227939639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_44
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 30
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04d9adc91d089b50800000000000000
+      internalID: 6600039658387264524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb9ebbe740f92670800000000000000
+      internalID: 8514600762209115060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_46
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 30
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7499124155371a0800000000000000
+      internalID: -6813008266330028096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_47
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38a526137cf610e0800000000000000
+      internalID: -2299372988503054276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_48
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061eff1da1bf909e0800000000000000
+      internalID: -1654515295471017632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_49
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea5b3b31658b4320800000000000000
+      internalID: 2543273067232844519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49ec032302ea3180800000000000000
+      internalID: -9134740391066801841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_51
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c355540781e2100800000000000000
+      internalID: 85032313445235815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_52
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 47
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36cbd22ea7c6c6cc0800000000000000
+      internalID: -3716476317451043741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_53
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 7
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7ec836838ac1d00800000000000000
+      internalID: 944814981982775275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_54
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 7
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc11feaad7929f10800000000000000
+      internalID: 2275047727269223635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_55
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 7
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b683b452b95e9d40800000000000000
+      internalID: 5593006409700837048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_56
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 7
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c76c6ee132d02270800000000000000
+      internalID: 8223804031473838023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_57
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 7
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110b293fb47165860800000000000000
+      internalID: 7518222242918084625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_58
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 7
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856ad8c84283427f0800000000000000
+      internalID: -638323517551696296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_59
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 7
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d50ae270e72acfd0800000000000000
+      internalID: -2320998813001972267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_60
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 7
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d802d8e9f33e3a20800000000000000
+      internalID: 3043927546594986200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_0: -4630936746156072198
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_1: 8904780928431898005
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_10: -3853250084184377050
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_11: -3745390536416074946
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_12: -379495618338398119
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_13: -3477651960925569650
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_14: -5783132952757741418
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_15: -4604879245717540859
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_16: -5887339347753965500
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_17: -1956191883345080282
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_18: -3066588041581868383
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_19: -2661874921279288186
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_2: 2319610864419594430
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_20: -2977736427578494284
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_21: 3897627194030351977
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_22: -185022311137887320
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_23: -4593410037741486299
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_24: -2405091714730980826
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_25: -8059373372156600838
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_26: 6251628651137395771
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_27: -3488243449323937000
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_28: -5115970414541870243
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_29: -5777989596496989170
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_3: 471406216648754022
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_30: -5523683752778141074
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_31: -1783867113800697402
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_32: 80166669262940864
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_33: 4844353720395575970
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_34: 6815505965117988405
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_35: -4553276981450170311
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_36: 8326448792411913343
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_37: -3535254143847176516
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_38: -3495738135803930166
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_39: -5720356566088684206
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_4: -5769998686746514932
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_40: -9175291641605718480
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_41: 3444577295586950928
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_42: -3406362151861325490
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_43: -5456621961227939639
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_44: 6600039658387264524
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_45: 8514600762209115060
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_46: -6813008266330028096
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_47: -2299372988503054276
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_48: -1654515295471017632
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_49: 2543273067232844519
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_5: -7464527821599069767
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_50: -9134740391066801841
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_51: 85032313445235815
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_52: -3716476317451043741
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_53: 944814981982775275
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_54: 2275047727269223635
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_55: 5593006409700837048
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_56: 8223804031473838023
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_57: 7518222242918084625
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_58: -638323517551696296
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_59: -2320998813001972267
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_6: 7514011131527258983
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_60: 3043927546594986200
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_7: -2321015777755513753
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_8: 8302974239798227525
+      Custom Edited - Mega Man Customs - Cut Man Tileset GBC-Style_9: -8249438904101711238
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
