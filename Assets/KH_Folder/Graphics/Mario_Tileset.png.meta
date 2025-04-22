@@ -807,7 +807,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -829,7 +829,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -851,7 +851,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -860,6 +860,50 @@ TextureImporter:
       bones: []
       spriteID: 77379323768862049a842ec6ea35dbf0
       internalID: 2007257215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: block5
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 670
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6201fc05d82558438e799deb52393e4
+      internalID: 719496783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin1
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 653
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c63ed466915c74b9c0301101ceb8ed
+      internalID: -1668514866
       vertices: []
       indices: 
       edges: []
@@ -882,12 +926,14 @@ TextureImporter:
       block2: 796877363
       block3: -657719879
       block4: 2098074938
+      block5: 719496783
       cloud1: -789603534
       cloud2: -951454300
       cloud3: -1386452460
       cloud4: 1674213516
       cloud5: 1279654261
       cloud6: -929078884
+      coin1: -1668514866
       grass1: -498442290
       grass2: -1134986576
       grass3: -1655924551
