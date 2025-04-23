@@ -1,20 +1,16 @@
 using UnityEngine;
 
-public class Enemy_Bass : MonoBehaviour
+public class Enemy_Bass : EnemyBase
 {
-    public EnemyStateMachine stateMachine;
-    public Transform player;
-
-    public float moveSpeed = 3.5f;
     public GameObject rapidShotPrefab;
-    public Transform firePoint;
 
     [HideInInspector] public int jumpCount = 0;
     public int maxJumps = 2;
 
-    private void Start()
+    protected override void Start()
     {
-        stateMachine = GetComponent<EnemyStateMachine>();
+        base.Start();
+        moveSpeed = 3.5f; // 필요 시 별도 세팅
         stateMachine.ChangeState(new BassIdleState(this));
     }
 }
