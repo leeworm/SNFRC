@@ -139,15 +139,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mario_EnemyNBoss_0
+      name: enemy_mushroom1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 436
-        height: 508
+        y: 476
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,11 +160,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: enemy_mushroom2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 476
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb58e0bc385d4442b3307657e6d4fbe
+      internalID: 525600212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_mushroom3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 476
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b59f4d531440141ab6cf5f23cb13dc
+      internalID: 1426649068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14fdba47c4d279f4a9376a0687fc8cb4
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +218,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mario_EnemyNBoss_0: -6469838034995708988
+      enemy_mushroom1: -6469838034995708988
+      enemy_mushroom2: 525600212
+      enemy_mushroom3: 1426649068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

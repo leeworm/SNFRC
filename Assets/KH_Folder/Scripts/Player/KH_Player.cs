@@ -5,6 +5,11 @@ public class KH_Player : KH_Entity
     [Header("이동 정보")]
     public float moveSpeed = 12f;
     public float jumpForce;
+
+    [Header("적 총돌 정보")]
+    [SerializeField] public Transform enemyChek;
+    [SerializeField] public float enemyCheckDistance = 0.2f;
+    [SerializeField] public LayerMask whatIsEnemy;
     
     #region States
     public KH_PlayerStateMachine stateMachine { get; private set; }

@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class KH_Entity : MonoBehaviour
 {
+    public enum WallCheckDirection
+    {
+        Left,
+        Right
+    }
 
     #region Components
     public Animator anim { get; private set; }
@@ -18,6 +23,10 @@ public class KH_Entity : MonoBehaviour
     [SerializeField] protected float wallCheckDistance = 0.2f;
     [SerializeField] protected LayerMask whatIsGround;
     [SerializeField] protected LayerMask whatIsWall;
+    
+    [SerializeField] private WallCheckDirection wallCheckDir;
+    private Vector2 wallCheckDirVector => wallCheckDir == WallCheckDirection.Left ? Vector2.left : Vector2.right;
+
     
     public int facingDir { get; private set; } = 1;
     protected bool facingRight = true;
@@ -38,12 +47,17 @@ public class KH_Entity : MonoBehaviour
 
     #region 충돌
     public virtual bool IsGroundDetected() => Physics2D.Raycast(groundChek.position, Vector2.down, groundCheckDistance, whatIsGround);
-    public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsWall);
+    public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, wallCheckDirVector * facingDir, wallCheckDistance, whatIsWall);
 
     protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawLine(groundChek.position, new Vector3(groundChek.position.x, groundChek.position.y - groundCheckDistance));
-        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
+
+        // 벽 체크 방향에 따른 끝점 계산
+        Vector3 wallCheckEnd = wallCheck.position + (Vector3)(wallCheckDirVector * wallCheckDistance);
+
+        // 벽 체크 라인 그리기
+        Gizmos.DrawLine(wallCheck.position, wallCheckEnd);
     }
     #endregion
 
