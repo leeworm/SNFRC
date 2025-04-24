@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class MushRoom : KH_Entity
+public class MushRoom : KH_Enemy
 {
-    [SerializeField]private float moveSpeed = 2f;
-
     protected override void Awake()
     {
         base.Awake();
@@ -13,27 +11,25 @@ public class MushRoom : KH_Entity
     protected override void Start()
     {
         base.Start();
-
     }
-
 
     protected override void Update()
     {
         base.Update();
 
         Move();
+
+        if(isDeath)
+        {
+            PostDeath();
+            isDeath = false;
+        }
     }
 
-    private void Move()
+    public void PostDeath()
     {
-        if (IsWallDetected())
-        {
-            Flip();
-        }
-
-        if (IsGroundDetected())
-        {
-            rb.linearVelocity = new Vector2(facingDir * -moveSpeed, rb.linearVelocity.y);
-        }
+        boxCollider.enabled = false; // 콜라이더 비활성화
+        rb.bodyType = RigidbodyType2D.Kinematic; // 물리적 상호작용 비활성화
+        Destroy(gameObject, 0.4f); // 1초 후에 오브젝트 제거
     }
 }

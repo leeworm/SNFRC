@@ -169,7 +169,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,9 +189,9 @@ TextureImporter:
         x: 36
         y: 476
         width: 16
-        height: 8
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,6 +200,94 @@ TextureImporter:
       bones: []
       spriteID: e3b59f4d531440141ab6cf5f23cb13dc
       internalID: 1426649068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94564985f601b02499fd206f9d9a4a3e
+      internalID: -1080235306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 372
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9869ae26c18177419ee69be044b725a
+      internalID: 528146564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 372
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d464841b44d0d64485237840a2967b3
+      internalID: -1618125637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turtle4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 372
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38593080694df54a8fd2c9fb4a724c1
+      internalID: -1099047297
       vertices: []
       indices: 
       edges: []
@@ -221,6 +309,10 @@ TextureImporter:
       enemy_mushroom1: -6469838034995708988
       enemy_mushroom2: 525600212
       enemy_mushroom3: 1426649068
+      turtle1: -1080235306
+      turtle2: 528146564
+      turtle3: -1618125637
+      turtle4: -1099047297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

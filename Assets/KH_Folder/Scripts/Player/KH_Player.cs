@@ -17,6 +17,7 @@ public class KH_Player : KH_Entity
     public KH_PlayerIdleState idleState { get; private set; }
     public KH_PlayerMoveState moveState { get; private set; }
     public KH_PlayerJumpState jumpState { get; private set; }
+    public KH_PlayerFallState fallState { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -28,6 +29,7 @@ public class KH_Player : KH_Entity
         idleState = new KH_PlayerIdleState(this, stateMachine, "Idle");
         moveState = new KH_PlayerMoveState(this, stateMachine, "Move");
         jumpState = new KH_PlayerJumpState(this, stateMachine, "Jump");
+        fallState = new KH_PlayerFallState(this, stateMachine, "Jump");
     }
 
     protected override void Start()

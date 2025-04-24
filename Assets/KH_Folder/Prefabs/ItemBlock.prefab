@@ -230,5 +230,5 @@ MonoBehaviour:
   coinPrefab: {fileID: 982536370130439238, guid: 22d1476e670320f42ac6e079499ba67e, type: 3}
   blockBounceHeight: 0.2
   blockBounceDuration: 0.1
-  coinBounceHeight: 1
-  coinBounceDuration: 0.5
+  coinBounceHeight: 2
+  coinBounceDuration: 0.1

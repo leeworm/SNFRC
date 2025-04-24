@@ -40,7 +40,9 @@ public class ItemBlock : MonoBehaviour
             GameObject coin = Instantiate(coinPrefab, coinPosition, Quaternion.identity); // 코인 생성
             
             coin.transform.DOMoveY(coinPosition.y + coinBounceHeight, coinBounceDuration)
+                .SetEase(Ease.OutQuad) // 위로 올라갈 때 점점 느려지는 효과
                 .OnComplete(() => coin.transform.DOMoveY(coinPosition.y, coinBounceDuration)
+                    .SetEase(Ease.InQuad) // 내려올 때 점점 빨라지는 효과
                     .OnComplete(() => Destroy(coin)));
 
             isNoItemBlock = false; // 아이템 블록이 아님을 표시

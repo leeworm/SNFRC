@@ -16,8 +16,8 @@ public class KH_PlayerGroundedState : KH_PlayerState
     {
         base.Update();
 
-        // if(!player.IsGroundDetected())
-        //     stateMachine.ChangeState(player.jumpState);
+        if(!player.IsGroundDetected())
+            stateMachine.ChangeState(player.fallState);
 
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
             stateMachine.ChangeState(player.jumpState);

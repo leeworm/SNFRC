@@ -20,10 +20,6 @@ public class KH_PlayerJumpState : KH_PlayerState
     {
         base.Update();
 
-        // 점프 중에 땅에 닿으면 점프 취소
-        if (player.IsGroundDetected() && stateTimer <= 0)
-            stateMachine.ChangeState(player.idleState);
-
         // 점프 중에 x 축 움직임
         if (xInput != 0)
             player.SetVelocity(player.moveSpeed * 0.6f * xInput, rb.linearVelocityY);
@@ -31,27 +27,12 @@ public class KH_PlayerJumpState : KH_PlayerState
         // 낙하 중일 때만 적 밟기 체크
         if (player.rb.linearVelocity.y < 0)
         {
-            CheckEnemyBelow();
+            stateMachine.ChangeState(player.fallState); // 낙하 상태로 전환
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-    }
-
-    void CheckEnemyBelow()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(player.enemyChek.position, Vector2.down, player.enemyCheckDistance, player.whatIsEnemy);
-        if (hit.collider != null)
-        {
-            Object.Destroy(hit.collider.gameObject); // 적 제거
-            Bounce(); // 마리오 점프
-        }
-    }
-
-    void Bounce()
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 5f); // 위로 튕기기
     }
 }

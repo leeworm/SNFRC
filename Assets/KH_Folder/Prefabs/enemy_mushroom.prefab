@@ -60,6 +60,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 448
   wallCheckDir: 0
+  treadSprite: {fileID: 1426649068, guid: 5108604fc44eab04983796632079bdf5, type: 3}
   moveSpeed: 2
 --- !u!50 &7572295667587766853
 Rigidbody2D:
