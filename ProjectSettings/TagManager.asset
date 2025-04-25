@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Ground
   - Wall
+  - Enemy
   - Player
-  - 
   - 
   - 
   - 
@@ -40,6 +40,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2116296431
+    locked: 0
+  - name: Ground
+    uniqueID: 3563523497
+    locked: 0
+  - name: Player
+    uniqueID: 4090047123
+    locked: 0
+  - name: Enemy
+    uniqueID: 3709783127
+    locked: 0
+  - name: Object
+    uniqueID: 3462075729
     locked: 0
   m_RenderingLayers:
   - Default
