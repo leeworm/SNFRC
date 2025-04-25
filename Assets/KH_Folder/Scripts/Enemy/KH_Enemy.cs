@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class KH_Enemy : KH_Entity
 {
-    protected Animator animator;
     protected BoxCollider2D boxCollider;
     [SerializeField]protected float moveSpeed = 2f;
 
-    protected bool isDeath = false;
+    [SerializeField]protected bool isDeath = false;
 
     protected override void Awake()
     {
@@ -18,7 +17,6 @@ public class KH_Enemy : KH_Entity
     {
         base.Start();
         
-        animator = GetComponentInChildren<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -26,6 +24,12 @@ public class KH_Enemy : KH_Entity
     {
         base.Update();
     }
+
+    protected virtual void FixedUpdate()
+    {
+        Move();
+    }
+
     protected void Move()
     {
         if (IsWallDetected())
@@ -39,12 +43,13 @@ public class KH_Enemy : KH_Entity
         }
     }
 
+
     public void Death()
     {
         if (isDeath) return; // 이미 죽은 경우 함수 종료
         
         anim.SetBool("Death", true);
-        rb.linearVelocity = Vector2.zero; // 속도 초기화
+        //rb.linearVelocity = Vector2.zero; // 속도 초기화
         moveSpeed = 0;
         isDeath = true;
     }

@@ -17,13 +17,16 @@ public class MushRoom : KH_Enemy
     {
         base.Update();
 
-        Move();
-
         if(isDeath)
         {
             PostDeath();
             isDeath = false;
         }
+    }
+
+    protected override void FixedUpdate()
+    {
+        base.Move();
     }
 
     public void PostDeath()

@@ -58,9 +58,8 @@ MonoBehaviour:
     m_Bits: 64
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 384
   wallCheckDir: 0
-  treadSprite: {fileID: 1426649068, guid: 5108604fc44eab04983796632079bdf5, type: 3}
   moveSpeed: 2
 --- !u!50 &7572295667587766853
 Rigidbody2D:
@@ -240,8 +239,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -53139637
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -6469838034995708988, guid: 5108604fc44eab04983796632079bdf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

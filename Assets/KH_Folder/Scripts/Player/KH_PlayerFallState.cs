@@ -34,6 +34,7 @@ public class KH_PlayerFallState : KH_PlayerState
         RaycastHit2D hit = Physics2D.Raycast(player.enemyChek.position, Vector2.down, player.enemyCheckDistance, player.whatIsEnemy);
         if (hit.collider != null)
         {
+            Debug.Log("Enemy Hit: " + hit.collider.gameObject.name); // 적 충돌 확인
             hit.collider.gameObject.GetComponent<KH_Enemy>().Death(); // 적 죽이기
 
             Bounce(); // 마리오 점프
@@ -42,6 +43,6 @@ public class KH_PlayerFallState : KH_PlayerState
 
     void Bounce()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 7f); // 위로 튕기기
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 10f); // 위로 튕기기
     }
 }

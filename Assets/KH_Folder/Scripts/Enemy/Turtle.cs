@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Turtle : KH_Enemy
 {
+    [SerializeField] private float spinSpeed = 8f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -16,30 +18,33 @@ public class Turtle : KH_Enemy
     protected override void Update()
     {
         base.Update();
-
-        if (!isDeath)
-        {
-            Move();
-            Debug.Log("Velocity: " + rb.linearVelocity);
-        }
+        
     }
-    
+
+    protected override void FixedUpdate()
+    {
+        base.Move();
+    }
+
     public void Spin(Transform playerTransform)
     {
         // 스핀 애니메이션 재생
-        animator.SetBool("Spin", true);
+        anim.SetBool("Spin", true);
 
-        moveSpeed = 10;
-        FlipController(playerTransform.position.x);
-        
-        // isDeath를 false로 설정하여 이동 가능하게 함
-        isDeath = false;
+        if(transform.position.x > playerTransform.position.x)
+        {
+            // 플레이어가 왼쪽에 있을 때
+            Flip();
+        }
+
+        moveSpeed = spinSpeed;
     } 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Spin(collision.gameObject.transform);
+            if(isDeath)
+                Spin(collision.gameObject.transform);
         }
     }
 }

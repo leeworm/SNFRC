@@ -22,7 +22,7 @@ public class KH_PlayerJumpState : KH_PlayerState
 
         // 점프 중에 x 축 움직임
         if (xInput != 0)
-            player.SetVelocity(player.moveSpeed * 0.6f * xInput, rb.linearVelocityY);
+            player.SetVelocity(player.moveSpeed * 0.8f * xInput, rb.linearVelocityY);
     
         // 낙하 중일 때만 적 밟기 체크
         if (player.rb.linearVelocity.y < 0)
