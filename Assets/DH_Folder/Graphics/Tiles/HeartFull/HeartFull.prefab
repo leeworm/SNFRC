@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8061687009680657794}
   - component: {fileID: 4387475755507541940}
-  - component: {fileID: 2659961588488153403}
   m_Layer: 0
   m_Name: HeartFull
   m_TagString: Untagged
@@ -46,33 +45,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &2659961588488153403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2177662587924305811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95cbda7f59337b4b94828f06e340a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  paletteFrames:
-  - {fileID: 2800000, guid: c1616142499076d46be5fcd366805486, type: 3}
-  - {fileID: 2800000, guid: 170972911204512419344507c1b19e28, type: 3}
-  - {fileID: 2800000, guid: 613084ed48af8e64b92dc60cb7ff411c, type: 3}
-  - {fileID: 2800000, guid: b62d8f5b0a307f949afe3a2ca54e1d26, type: 3}
-  - {fileID: 2800000, guid: eeb82ada0c345cf448fb0d2ed4ed5fc9, type: 3}
-  - {fileID: 2800000, guid: 502a32bb39e41db4b8a24830c7c395ba, type: 3}
-  - {fileID: 2800000, guid: ee523e47bc0c1674db1924d9044f886c, type: 3}
-  - {fileID: 2800000, guid: 085a60c16358a03488bcadfe4c54e709, type: 3}
-  - {fileID: 2800000, guid: ad621113310d51749ae930e9a415ac91, type: 3}
-  - {fileID: 2800000, guid: e0a7a67bee7fa4b4fab89c5062355045, type: 3}
-  - {fileID: 2800000, guid: 153cb585b3d28484e8f86bb57a329221, type: 3}
-  - {fileID: 2800000, guid: f6dfe6bc57e843d41a7040fc3a268684, type: 3}
-  frameRate: 12
 --- !u!1 &4778120723598985005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1658,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &7224305290807922004
+--- !u!114 &7733160946576951817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
