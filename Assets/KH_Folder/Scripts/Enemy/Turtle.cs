@@ -7,7 +7,7 @@ public class Turtle : KH_Enemy
     protected override void Awake()
     {
         base.Awake();
-
+        
     }
 
     protected override void Start()
@@ -23,7 +23,7 @@ public class Turtle : KH_Enemy
 
     protected override void FixedUpdate()
     {
-        base.Move();
+        base.FixedUpdate();
     }
 
     public void Spin(Transform playerTransform)
@@ -38,13 +38,17 @@ public class Turtle : KH_Enemy
         }
 
         moveSpeed = spinSpeed;
-    } 
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             if(isDeath)
+            {
+                Debug.Log("Spin!");
                 Spin(collision.gameObject.transform);
+            }
         }
     }
 }

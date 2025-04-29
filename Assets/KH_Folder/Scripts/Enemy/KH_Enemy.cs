@@ -18,6 +18,7 @@ public class KH_Enemy : KH_Entity
         base.Start();
         
         boxCollider = GetComponent<BoxCollider2D>();
+
     }
 
     protected override void Update()
@@ -32,15 +33,19 @@ public class KH_Enemy : KH_Entity
 
     protected void Move()
     {
+        rb.linearVelocity = new Vector2(facingDir * -moveSpeed, rb.linearVelocity.y);
+        
         if (IsWallDetected())
         {
+            Debug.Log("Flip!");
             Flip();
         }
 
-        if (IsGroundDetected())
-        {
-            rb.linearVelocity = new Vector2(facingDir * -moveSpeed, rb.linearVelocity.y);
-        }
+        // if (IsGroundDetected())
+        // {
+        //     //Debug.Log("Velocity: " + rb.linearVelocity);
+        //     rb.linearVelocity = new Vector2(facingDir * -moveSpeed, rb.linearVelocity.y);
+        // }
     }
 
 
@@ -49,7 +54,6 @@ public class KH_Enemy : KH_Entity
         if (isDeath) return; // 이미 죽은 경우 함수 종료
         
         anim.SetBool("Death", true);
-        //rb.linearVelocity = Vector2.zero; // 속도 초기화
         moveSpeed = 0;
         isDeath = true;
     }

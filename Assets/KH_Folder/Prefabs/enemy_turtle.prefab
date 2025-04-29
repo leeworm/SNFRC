@@ -120,8 +120,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1675065215013304080}
   - component: {fileID: 1106571126908939304}
-  - component: {fileID: 6159786420804098837}
-  - component: {fileID: 8495948626571555835}
+  - component: {fileID: 3973774174745772527}
+  - component: {fileID: 5417943555245738510}
   m_Layer: 8
   m_Name: enemy_turtle
   m_TagString: Untagged
@@ -138,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 5110650895099101963}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.1, y: -2.236, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundChek: {fileID: 6220738139990284091}
-  groundCheckDistance: 0.2
+  groundCheckDistance: 0.1
   wallCheck: {fileID: 3365936351877254693}
   wallCheckDistance: 0.1
   whatIsGround:
@@ -168,12 +168,12 @@ MonoBehaviour:
     m_Bits: 64
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   wallCheckDir: 0
   moveSpeed: 2
   isDeath: 0
-  spinSpeed: 8
---- !u!50 &6159786420804098837
+  spinSpeed: 6
+--- !u!50 &3973774174745772527
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -198,9 +198,9 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &8495948626571555835
+--- !u!61 &5417943555245738510
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,7 +234,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.30093676}
+  m_Offset: {x: 0, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -244,7 +244,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.91401803}
+  m_Size: {x: 1, y: 0.9}
   m_EdgeRadius: 0
 --- !u!1 &5130508063253494061
 GameObject:

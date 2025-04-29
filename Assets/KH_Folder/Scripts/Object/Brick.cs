@@ -8,10 +8,15 @@ public class Brick : MonoBehaviour
 
     [SerializeField] private Vector2[] brickVelocityOffsets;
 
+    [SerializeField] private GameObject damagePrefab;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameObject damgeObj = Instantiate(damagePrefab, transform.position, Quaternion.identity); // 데미지 이펙트 생성
+            Destroy(damgeObj, 0.5f); // 0.5초 후에 데미지 이펙트 제거
+
             // 파괴 효과의 위치 오프셋 배열
             Vector3[] offsets = new Vector3[]
             {

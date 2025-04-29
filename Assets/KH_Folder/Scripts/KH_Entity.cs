@@ -42,11 +42,12 @@ public class KH_Entity : MonoBehaviour
     }
     protected virtual void Update()
     {
-
+        
     }
 
     #region 충돌
     public virtual bool IsGroundDetected() => Physics2D.Raycast(groundChek.position, Vector2.down, groundCheckDistance, whatIsGround);
+    
     public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, wallCheckDirVector * facingDir, wallCheckDistance, whatIsWall);
 
     protected virtual void OnDrawGizmos()
@@ -81,7 +82,7 @@ public class KH_Entity : MonoBehaviour
     #endregion
     
     #region 속력
-    public void SetZeroVelocity() => rb.linearVelocity = new Vector2(0, 0);
+    //public void SetZeroVelocity() => rb.linearVelocity = new Vector2(0, 0);
 
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {

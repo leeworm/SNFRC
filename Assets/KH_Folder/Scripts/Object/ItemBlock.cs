@@ -18,6 +18,8 @@ public class ItemBlock : MonoBehaviour
 
     private bool isNoItemBlock = true;
 
+    [SerializeField] private GameObject damagePrefab;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -31,6 +33,9 @@ public class ItemBlock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && isNoItemBlock)
         {
+            GameObject damgeObj = Instantiate(damagePrefab, transform.position, Quaternion.identity); // 데미지 이펙트 생성
+            Destroy(damgeObj, 0.5f); // 0.5초 후에 데미지 이펙트 제거
+
             sr.sprite = basicblockSprite; // 스프라이트 변경
 
             // DOTween을 사용하여 블록을 위로 들썩이게 하고 다시 원위치로 이동

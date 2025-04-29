@@ -232,3 +232,4 @@ MonoBehaviour:
   blockBounceDuration: 0.1
   coinBounceHeight: 2
   coinBounceDuration: 0.1
+  damagePrefab: {fileID: 1483675720477404988, guid: af8c96d9f21faad4eba643609dd0e79e, type: 3}

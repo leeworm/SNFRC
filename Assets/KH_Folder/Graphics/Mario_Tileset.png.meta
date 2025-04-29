@@ -908,6 +908,116 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: stair1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 715
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5befa7bf7497f1a47b8a2501b761223f
+      internalID: -1067454002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 480
+        width: 11
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818637609ca26b44da51a36b535c104a
+      internalID: 388013285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flag_stick
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4a2101564f29c479946a3617e1d19e
+      internalID: 605393653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle1
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 144
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce1402c7a19894fb2ac3e103777912
+      internalID: 677750666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 96
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed12501f9405cd4e97bec73314c55aa
+      internalID: -278153952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -922,11 +1032,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Mario_Tileset_0: 388013285
       block1: 635472163
       block2: 796877363
       block3: -657719879
       block4: 2098074938
       block5: 719496783
+      castle1: 677750666
+      castle2: -278153952
       cloud1: -789603534
       cloud2: -951454300
       cloud3: -1386452460
@@ -934,6 +1047,7 @@ TextureImporter:
       cloud5: 1279654261
       cloud6: -929078884
       coin1: -1668514866
+      flag_stick: 605393653
       grass1: -498442290
       grass2: -1134986576
       grass3: -1655924551
@@ -957,6 +1071,7 @@ TextureImporter:
       pipe3: -1754870646
       pipe4: 2007257215
       sky1: -829531861
+      stair1: -1067454002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
