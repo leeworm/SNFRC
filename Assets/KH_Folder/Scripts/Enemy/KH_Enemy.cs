@@ -6,6 +6,8 @@ public class KH_Enemy : KH_Entity
     [SerializeField]protected float moveSpeed = 2f;
 
     [SerializeField]protected bool isDeath = false;
+    
+    [SerializeField] private Vector2 deathVelocity; // 적이 죽을 때의 velocity
 
     protected override void Awake()
     {
@@ -57,4 +59,24 @@ public class KH_Enemy : KH_Entity
         moveSpeed = 0;
         isDeath = true;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("DamageObject"))
+        {
+            if(transform.position.y < collision.transform.position.y) // 위에 있는 플레이어 발의 의한 충돌
+            {
+                Death();
+                collision.transform.parent.GetComponent<KH_Player>().Bounce();
+            }
+            else // 아래에 있는 벽돌 오브젝트에 의한 충돌
+            {
+                transform.rotation = Quaternion.Euler(180, 0, 0); // 적을 반전시킴
+                boxCollider.enabled = false; // 콜라이더 비활성화
+                rb.linearVelocity = deathVelocity;
+                rb.gravityScale = 3;
+            }
+        }
+    }
+    
 }

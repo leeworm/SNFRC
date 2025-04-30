@@ -10,7 +10,10 @@ public class KH_PlayerFallState : KH_PlayerState
     public override void Enter()
     {
         base.Enter();
+    
+        player.jumpAttackCollider.SetActive(true); // 점프 공격 콜라이더 활성화
 
+        player.canHit = false; // 무적
     }
 
     public override void Update()
@@ -21,28 +24,17 @@ public class KH_PlayerFallState : KH_PlayerState
         if (player.IsGroundDetected() && stateTimer <= 0)
             stateMachine.ChangeState(player.idleState);
 
-        CheckEnemyBelow(); // 적 밟기 체크
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        player.jumpAttackCollider.SetActive(false); // 점프 공격 콜라이더 비활성화
+
+        player.canHit = true; // 무적 해제
     }
 
-    void CheckEnemyBelow()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(player.enemyChek.position, Vector2.down, player.enemyCheckDistance, player.whatIsEnemy);
-        if (hit.collider != null)
-        {
-            Debug.Log("Enemy Hit: " + hit.collider.gameObject.name); // 적 충돌 확인
-            hit.collider.gameObject.GetComponent<KH_Enemy>().Death(); // 적 죽이기
 
-            Bounce(); // 마리오 점프
-        }
-    }
-
-    void Bounce()
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 10f); // 위로 튕기기
-    }
+    
 }
