@@ -21,7 +21,11 @@ public class KH_Player : KH_Entity
     public KH_PlayerJumpState jumpState { get; private set; }
     public KH_PlayerFallState fallState { get; private set; }
     public KH_PlayerHitState hitState { get; private set; }
+
+    public KH_PlayerHangState hangState { get; private set; }
+    public KH_PlayerCutMoveState cutMoveState { get; private set; }
     #endregion
+
 
     protected override void Awake()
     {
@@ -34,6 +38,8 @@ public class KH_Player : KH_Entity
         jumpState = new KH_PlayerJumpState(this, stateMachine, "Jump");
         fallState = new KH_PlayerFallState(this, stateMachine, "Jump");
         hitState = new KH_PlayerHitState(this, stateMachine, "Idle");
+        hangState = new KH_PlayerHangState(this, stateMachine, "Hang");
+        cutMoveState = new KH_PlayerCutMoveState(this, stateMachine, "Move");
     }
 
     protected override void Start()
@@ -79,5 +85,10 @@ public class KH_Player : KH_Entity
     public void Bounce()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, bouncePower); // 위로 튕기기
+    }
+
+    public void Hang()
+    {
+        stateMachine.ChangeState(hangState);
     }
 }

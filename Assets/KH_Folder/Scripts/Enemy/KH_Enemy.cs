@@ -39,7 +39,7 @@ public class KH_Enemy : KH_Entity
         
         if (IsWallDetected())
         {
-            Debug.Log("Flip!");
+            //Debug.Log("Flip!");
             Flip();
         }
 
