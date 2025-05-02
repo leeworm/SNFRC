@@ -1531,6 +1531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1568220273}
+  - component: {fileID: 1568220274}
   m_Layer: 0
   m_Name: Naruto
   m_TagString: Player
@@ -1554,6 +1555,27 @@ Transform:
   - {fileID: 743683829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568220274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568220272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412fda935e24a1843aa665cbe6606220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  jumpForce: 0
+  dashSpeed: 0
+  currentJumpCount: 0
+  maxJumpCount: 2
+  rb: {fileID: 0}
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  stateMachine: {fileID: 0}
 --- !u!1 &1724102465
 GameObject:
   m_ObjectHideFlags: 0
