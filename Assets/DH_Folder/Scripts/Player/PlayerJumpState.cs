@@ -1,6 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerJumpState : PlayerAirState
+public class PlayerJumpState : PlayerState
 {
     public PlayerJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
         : base(_player, _stateMachine, _animBoolName) { }
@@ -8,10 +8,9 @@ public class PlayerJumpState : PlayerAirState
     public override void Enter()
     {
         base.Enter();
-
         if (player.currentJumpCount > 0)
         {
-            player.SetVelocity(rb.linearVelocity.x, player.jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, player.jumpForce);
             player.currentJumpCount--;
         }
     }
@@ -19,13 +18,11 @@ public class PlayerJumpState : PlayerAirState
     public override void Update()
     {
         base.Update();
-
-        player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
-        player.FlipController(xInput);
-
-        if (rb.linearVelocity.y <= 0)
-        {
-            stateMachine.ChangeState(new PlayerFallState(player, stateMachine, "JumpFall"));
-        }
+        if (rb.linearVelocity.y < 0)
+            stateMachine.ChangeState(player.airState);
+    }
+    public override void Exit()
+    {
+        base.Exit();
     }
 }

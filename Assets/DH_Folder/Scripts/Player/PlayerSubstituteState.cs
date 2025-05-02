@@ -12,7 +12,7 @@ public class PlayerSubstituteState : PlayerState
         if (Time.time - lastUsedTime < substituteCooldown)
         {
             Debug.Log("❌ 바꿔치기 쿨타임 중");
-            stateMachine.ChangeState(new PlayerCrouchState(player, stateMachine));
+            stateMachine.ChangeState(new PlayerCrouchState(player, stateMachine, "Crouch"));
             return;
         }
 
@@ -21,7 +21,7 @@ public class PlayerSubstituteState : PlayerState
         if (enemy == null)
         {
             Debug.Log("❌ 적이 없어 바꿔치기 실패");
-            stateMachine.ChangeState(new PlayerCrouchState(player, stateMachine));
+            stateMachine.ChangeState(new PlayerCrouchState(player, stateMachine, "Crouch"));
             return;
         }
 
@@ -35,7 +35,7 @@ public class PlayerSubstituteState : PlayerState
         player.transform.position = targetPos;
 
         // TODO: 이펙트 재생 / 애니메이션 넣기
-        player.animator.Play("Substitute");
+        player.anim.Play("Substitute");
 
         lastUsedTime = Time.time;
     }
@@ -43,6 +43,6 @@ public class PlayerSubstituteState : PlayerState
     public override void Update()
     {
         // 바로 Idle 상태로 전환
-        stateMachine.ChangeState(new PlayerIdleState(player, stateMachine));
+        stateMachine.ChangeState(new PlayerIdleState(player, stateMachine, "Idle"));
     }
 }

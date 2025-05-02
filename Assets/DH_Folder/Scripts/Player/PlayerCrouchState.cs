@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerCrouchState : PlayerGroundedState
 {
@@ -8,7 +8,15 @@ public class PlayerCrouchState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+
         player.SetZeroVelocity();
+        Vector2 newSize = new Vector2(player.originalColliderSize.x, player.originalColliderSize.y * 0.5f);
+        player.col.size = newSize;
+
+        Vector2 newOffset = new Vector2(
+        player.originalColliderOffset.x,
+        player.originalColliderOffset.y - (player.originalColliderSize.y - newSize.y) / 2f);
+        player.col.offset = newOffset;
     }
 
     public override void Update()
@@ -24,5 +32,12 @@ public class PlayerCrouchState : PlayerGroundedState
         {
             stateMachine.ChangeState(new PlayerSubstituteState(player, stateMachine, "Substitute"));
         }
+    }
+    public override void Exit()
+    {
+        base.Exit();
+
+        player.col.size = player.originalColliderSize;
+        player.col.offset = player.originalColliderOffset;
     }
 }

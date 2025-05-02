@@ -1,24 +1,19 @@
 ﻿using UnityEngine;
 
-public class PlayerStateMachine : MonoBehaviour
+public class PlayerStateMachine
 {
-    public PlayerState CurrentState { get; private set; }
+    public PlayerState currentState { get; private set; }
 
-    public void Initialize(PlayerState startingState)
+    public void Initialize(PlayerState _startstate)
     {
-        CurrentState = startingState;
-        startingState.Enter();
+        currentState = _startstate;
+        currentState.Enter();
     }
 
-    public void ChangeState(PlayerState newState)
+    public void ChangeState(PlayerState _newState)
     {
-        CurrentState?.Exit();
-        CurrentState = newState;
-        newState.Enter();
-    }
-
-    void Update()
-    {
-        CurrentState?.Update();
+        currentState?.Exit();
+        currentState = _newState;
+        currentState.Enter();
     }
 }

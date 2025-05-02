@@ -43,11 +43,12 @@ public class PlayerState
     public virtual void Exit()
     {
         player.anim.SetBool(animBoolName, false); // 애니메이션 트리거 비활성화
-        //Debug.Log($"{animBoolName} 상태 종료"); // 상태 종료 로그 출력
+        Debug.Log($"{animBoolName} 상태 종료"); // 상태 종료 로그 출력
     }
 
     public virtual void AnimationFinishTrigger()
     {
         triggerCalled = true;
+        Debug.Log("Land animation finished, triggerCalled = " + triggerCalled);
     }
 }

@@ -1824,7 +1824,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2460,8 +2460,8 @@ TextureImporter:
         y: 1855
         width: 52
         height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.627907}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2482,8 +2482,8 @@ TextureImporter:
         y: 1855
         width: 47
         height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5319149, y: 0.6052632}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2504,8 +2504,8 @@ TextureImporter:
         y: 1855
         width: 58
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5344828, y: 0.5945946}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2526,8 +2526,8 @@ TextureImporter:
         y: 1855
         width: 54
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2548,8 +2548,8 @@ TextureImporter:
         y: 1855
         width: 51
         height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54901963, y: 0.6052632}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2570,8 +2570,8 @@ TextureImporter:
         y: 1855
         width: 59
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5084746, y: 0.6097561}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2724,8 +2724,8 @@ TextureImporter:
         y: 1773
         width: 56
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5322581}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2746,8 +2746,8 @@ TextureImporter:
         y: 1773
         width: 66
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5322581}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2768,8 +2768,8 @@ TextureImporter:
         y: 1773
         width: 64
         height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53571427}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2790,8 +2790,8 @@ TextureImporter:
         y: 1773
         width: 66
         height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.537037}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2812,8 +2812,8 @@ TextureImporter:
         y: 1773
         width: 76
         height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.537037}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2834,8 +2834,8 @@ TextureImporter:
         y: 1773
         width: 70
         height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.537037}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2856,8 +2856,8 @@ TextureImporter:
         y: 1707
         width: 33
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2878,8 +2878,8 @@ TextureImporter:
         y: 1707
         width: 33
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2900,8 +2900,8 @@ TextureImporter:
         y: 1707
         width: 33
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2922,8 +2922,8 @@ TextureImporter:
         y: 1707
         width: 33
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3908,10 +3908,10 @@ TextureImporter:
       name: Naruto_214
       rect:
         serializedVersion: 2
-        x: 517
+        x: 515
         y: 1307
-        width: 65
-        height: 66
+        width: 71
+        height: 67
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3927,35 +3927,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_215
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 1359
-        width: 17
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddf119a33dd9d33b0800000000000000
-      internalID: -5531091236794851363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Naruto_216
       rect:
         serializedVersion: 2
-        x: 613
+        x: 600
         y: 1307
-        width: 41
-        height: 64
+        width: 71
+        height: 67
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3966,138 +3944,6 @@ TextureImporter:
       bones: []
       spriteID: 8a28507fbf65798e0800000000000000
       internalID: -1686783895245847896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_217
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 1361
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 380d71293e7550960800000000000000
-      internalID: 7567551383786213507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_218
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 1344
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ca1b9fd0a7e00aa0800000000000000
-      internalID: -6196698409129534777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_220
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 1351
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 226a29424fc931320800000000000000
-      internalID: 2527536388284524066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_223
-      rect:
-        serializedVersion: 2
-        x: 599
-        y: 1331
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 903359715adf6a7b0800000000000000
-      internalID: -5213200633127685367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_224
-      rect:
-        serializedVersion: 2
-        x: 653
-        y: 1320
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aabbc2808b08249b0800000000000000
-      internalID: -5097370300330493014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_225
-      rect:
-        serializedVersion: 2
-        x: 655
-        y: 1336
-        width: 13
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee9442a7f583cb350800000000000000
-      internalID: 6033759583491869166
       vertices: []
       indices: 
       edges: []
@@ -4120,600 +3966,6 @@ TextureImporter:
       bones: []
       spriteID: 6dbe1435a0d245da0800000000000000
       internalID: -5957086884734571562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_229
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 1318
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 259410900f212e290800000000000000
-      internalID: -7862701177282934446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_231
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 1283
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca866a0d584d6ae50800000000000000
-      internalID: 6820372356895500460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_232
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ff1c64b1c488e310800000000000000
-      internalID: 1434542448808042484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_233
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc1fb44453a155370800000000000000
-      internalID: 8310577503463535055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_234
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 1283
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 482e367a52e13eab0800000000000000
-      internalID: -4980103615870672252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_235
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 1283
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9db580f72891e02b0800000000000000
-      internalID: -5616523637016732711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_236
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0f3f34ac57e5b3d0800000000000000
-      internalID: -3191390375843512563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_237
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 1283
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5cdd06bbd7508e70800000000000000
-      internalID: 9115382246961699935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_238
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 1283
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4a5f788cc1357330800000000000000
-      internalID: 3707924622742608461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_239
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a8faae90ad9849c0800000000000000
-      internalID: -3942728160580536157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_240
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8fdc36143503dd150800000000000000
-      internalID: 5898924221062696440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_241
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 1283
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7e38a8f0540fe940800000000000000
-      internalID: 5327481630018256510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_242
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 1283
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3641886471396ce40800000000000000
-      internalID: 5676386108523943011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_243
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: deb55b0014ef44160800000000000000
-      internalID: 7009006475233549293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_244
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f73c0c69019e37f80800000000000000
-      internalID: -8109882246506167425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_245
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 1283
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 83cb22a99e62a5ed0800000000000000
-      internalID: -2424582664630387656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_246
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f05f1f36b38b13080800000000000000
-      internalID: -9209377197776571121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_247
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 1283
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ffe0c5c46d28d6b0800000000000000
-      internalID: -5271413452999430154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_248
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 1283
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 395ba7ba3c103eb10800000000000000
-      internalID: 2009451798644569491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_249
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 1283
-        width: 14
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0f062158dff58130800000000000000
-      internalID: 3568539584300453647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_250
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d10c37caacf78c50800000000000000
-      internalID: 6667575583762547157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_251
-      rect:
-        serializedVersion: 2
-        x: 391
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13edf1fa5c090f490800000000000000
-      internalID: -7714506982964601295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_252
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 1283
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ecd6904c213b3420800000000000000
-      internalID: 2610734475123285217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_253
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 1283
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50580d78929151a10800000000000000
-      internalID: 1879436085659993349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_254
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 1283
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 367602e3901ffdf60800000000000000
-      internalID: 8061426880015787875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_255
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 1283
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da2b2822b2a7c1110800000000000000
-      internalID: 1232994723673846445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_256
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 1283
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 490fcef0fb3090c90800000000000000
-      internalID: -7203222009861574508
       vertices: []
       indices: 
       edges: []
@@ -4983,211 +4235,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_269
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 1205
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b83f2b7d43f835b70800000000000000
-      internalID: 8886603946852021131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_270
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 1205
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fb1f6c911366f010800000000000000
-      internalID: 1222273276167789556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_271
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 1205
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5328673717a986060800000000000000
-      internalID: 6946972237278118453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_272
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 1205
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5949b920011e94c10800000000000000
-      internalID: 2038407765241336981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_273
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 1205
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0e708c122a3255f0800000000000000
-      internalID: -769488668145451508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_274
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 1205
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 54b32abc4d6e749a0800000000000000
-      internalID: -6248772156329411771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_275
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 1205
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95821a5672dfe8a80800000000000000
-      internalID: -8462548304131970983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_276
-      rect:
-        serializedVersion: 2
-        x: 354
-        y: 1205
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 850dacf4083bc9530800000000000000
-      internalID: 3863159944052920408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_277
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 1205
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8347bd69fc76677f0800000000000000
-      internalID: -615190157802638280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_278
+      name: SNJ_4
       rect:
         serializedVersion: 2
         x: 161
-        y: 1128
+        y: 1129
         width: 42
-        height: 51
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5203,13 +4257,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_279
+      name: SNJ_5
       rect:
         serializedVersion: 2
         x: 217
         y: 1128
         width: 47
-        height: 57
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5225,13 +4279,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_280
+      name: SNJ_6
       rect:
         serializedVersion: 2
         x: 281
         y: 1128
         width: 47
-        height: 61
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5247,15 +4301,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_281
+      name: SNJ_7
       rect:
         serializedVersion: 2
         x: 343
         y: 1128
         width: 53
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.46226415, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5269,15 +4323,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_282
+      name: SNJ_8
       rect:
         serializedVersion: 2
         x: 410
         y: 1128
         width: 65
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.46923077, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5291,15 +4345,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_283
+      name: SNJ_9
       rect:
         serializedVersion: 2
         x: 493
         y: 1128
         width: 65
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.46923077, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5313,35 +4367,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_284
-      rect:
-        serializedVersion: 2
-        x: 534
-        y: 1179
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc180fd2ed2927180800000000000000
-      internalID: -9119064812520701492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_285
+      name: SNJ_10
       rect:
         serializedVersion: 2
         x: 571
         y: 1128
         width: 47
-        height: 57
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5357,15 +4389,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_286
+      name: SNJ_11
       rect:
         serializedVersion: 2
         x: 630
         y: 1128
         width: 50
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5379,13 +4411,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_287
+      name: SNJ_1
       rect:
         serializedVersion: 2
         x: 15
-        y: 1128
+        y: 1127
         width: 33
-        height: 45
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5401,13 +4433,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_288
+      name: SNJ_2
       rect:
         serializedVersion: 2
         x: 59
-        y: 1128
+        y: 1127
         width: 37
-        height: 50
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5423,13 +4455,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_289
+      name: SNJ_3
       rect:
         serializedVersion: 2
         x: 112
-        y: 1128
+        y: 1127
         width: 36
-        height: 49
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5445,79 +4477,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_290
-      rect:
-        serializedVersion: 2
-        x: 491
-        y: 1152
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06454232ed94645e0800000000000000
-      internalID: -1925770572233157536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_291
-      rect:
-        serializedVersion: 2
-        x: 545
-        y: 1138
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3556a2dba6e019150800000000000000
-      internalID: 5877494840298202451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_292
-      rect:
-        serializedVersion: 2
-        x: 550
-        y: 1154
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19778e23a79a0a510800000000000000
-      internalID: 1558431813375391633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_293
+      name: SNJ_12
       rect:
         serializedVersion: 2
         x: 11
         y: 1056
         width: 47
-        height: 57
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5533,15 +4499,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_294
+      name: SNJ_13
       rect:
         serializedVersion: 2
         x: 73
         y: 1056
         width: 50
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5555,14 +4521,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_295
+      name: SNJ_14
       rect:
         serializedVersion: 2
         x: 134
         y: 1056
         width: 47
-        height: 57
-      alignment: 0
+        height: 64
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -5577,15 +4543,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_296
+      name: SNJ_15
       rect:
         serializedVersion: 2
         x: 194
         y: 1056
         width: 50
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5599,15 +4565,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_297
+      name: SNJ_16
       rect:
         serializedVersion: 2
-        x: 258
+        x: 259
         y: 1056
-        width: 47
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 46
+        height: 64
+      alignment: 9
+      pivot: {x: 0.48913044, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5621,13 +4587,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_298
+      name: SNJ_17
       rect:
         serializedVersion: 2
         x: 321
         y: 1056
         width: 47
-        height: 55
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5643,13 +4609,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_299
+      name: SNJ_18
       rect:
         serializedVersion: 2
         x: 378
         y: 1056
         width: 50
-        height: 51
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5665,37 +4631,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_300
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 1100
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 941b3f803a93c42a0800000000000000
-      internalID: -6751958368942575287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_301
+      name: SNJ_19
       rect:
         serializedVersion: 2
         x: 438
         y: 1056
         width: 47
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5212766, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5709,15 +4653,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_302
+      name: SNJ_20
       rect:
         serializedVersion: 2
         x: 500
         y: 1056
         width: 47
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5425532, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5731,15 +4675,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_303
+      name: SNJ_21
       rect:
         serializedVersion: 2
         x: 558
         y: 1056
         width: 47
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5638298, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5753,15 +4697,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_304
+      name: SNJ_22
       rect:
         serializedVersion: 2
         x: 616
         y: 1056
         width: 50
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5775,15 +4719,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_305
+      name: SNJ_23
       rect:
         serializedVersion: 2
-        x: 9
+        x: 10
         y: 990
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5797,15 +4741,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_306
+      name: SNJ_24
       rect:
         serializedVersion: 2
-        x: 71
+        x: 72
         y: 990
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 49
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5816327, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5819,37 +4763,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_307
+      name: SNJ_25
       rect:
         serializedVersion: 2
-        x: 113
-        y: 1026
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30af033b444c3a7f0800000000000000
-      internalID: -602422125794362877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_308
-      rect:
-        serializedVersion: 2
-        x: 133
+        x: 134
         y: 990
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 49
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5408163, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5863,37 +4785,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_309
+      name: SNJ_26
       rect:
         serializedVersion: 2
-        x: 175
-        y: 1027
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfe92ad81f20ffcd0800000000000000
-      internalID: -2522294029817569539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_310
-      rect:
-        serializedVersion: 2
-        x: 194
+        x: 195
         y: 990
-        width: 47
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 50
+        height: 64
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5907,37 +4807,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_311
+      name: SNJ_27
       rect:
         serializedVersion: 2
-        x: 237
-        y: 1027
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88a28edac1e0c5fc0800000000000000
-      internalID: -3504910893661541752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_312
-      rect:
-        serializedVersion: 2
-        x: 259
+        x: 260
         y: 990
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 52
+        height: 64
+      alignment: 9
+      pivot: {x: 0.50961536, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5951,37 +4829,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_313
+      name: SNJ_28
       rect:
         serializedVersion: 2
-        x: 304
-        y: 1027
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9efc86cebb30675d0800000000000000
-      internalID: -3065258390718984215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_314
-      rect:
-        serializedVersion: 2
-        x: 324
+        x: 325
         y: 990
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 55
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5181818, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5995,36 +4851,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_315
+      name: SNJ_29
       rect:
         serializedVersion: 2
-        x: 372
-        y: 1027
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92b4b004c6bce2e70800000000000000
-      internalID: 9092428363498998569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_316
-      rect:
-        serializedVersion: 2
-        x: 388
+        x: 389
         y: 990
-        width: 50
-        height: 51
-      alignment: 0
+        width: 57
+        height: 64
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -6039,37 +4873,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_317
-      rect:
-        serializedVersion: 2
-        x: 438
-        y: 1028
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b187a6a46e0d0edd0800000000000000
-      internalID: -2458735709034743781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_318
+      name: SNJ_30
       rect:
         serializedVersion: 2
         x: 454
         y: 990
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 60
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49166667, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6083,37 +4895,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_319
+      name: SNJ_31
       rect:
         serializedVersion: 2
-        x: 506
-        y: 1030
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08c607d8a65557520800000000000000
-      internalID: 2699157467806329984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_320
-      rect:
-        serializedVersion: 2
-        x: 526
+        x: 527
         y: 990
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 57
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4473684, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6127,37 +4917,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_321
+      name: SNJ_32
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1032
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80df36c818f9481b0800000000000000
-      internalID: -5655219853315539704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_322
-      rect:
-        serializedVersion: 2
-        x: 597
+        x: 598
         y: 990
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 58
+        height: 64
+      alignment: 9
+      pivot: {x: 0.43965518, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6171,37 +4939,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_323
+      name: SNJ_33
       rect:
         serializedVersion: 2
-        x: 648
-        y: 1034
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2f8b70e8d1947d10800000000000000
-      internalID: 2122481685063503659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_324
-      rect:
-        serializedVersion: 2
-        x: 4
+        x: 5
         y: 918
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 64
+      alignment: 9
+      pivot: {x: 0.56666666, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6215,15 +4961,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_325
+      name: SNJ_34
       rect:
         serializedVersion: 2
-        x: 61
+        x: 62
         y: 918
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5520833, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6237,15 +4983,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_326
+      name: SNJ_35
       rect:
         serializedVersion: 2
-        x: 123
+        x: 124
         y: 918
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 45
+        height: 64
+      alignment: 9
+      pivot: {x: 0.56666666, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6259,15 +5005,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_327
+      name: SNJ_36
       rect:
         serializedVersion: 2
-        x: 177
+        x: 178
         y: 918
-        width: 50
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5520833, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6281,15 +5027,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_328
+      name: SNJ_37
       rect:
         serializedVersion: 2
-        x: 237
-        y: 916
-        width: 52
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 238
+        y: 917
+        width: 50
+        height: 64
+      alignment: 9
+      pivot: {x: 0.53, y: 0.515625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6303,13 +5049,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_329
+      name: SNJ_38
       rect:
         serializedVersion: 2
         x: 303
-        y: 916
+        y: 917
         width: 47
-        height: 57
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6325,13 +5071,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_330
+      name: SNJ_39
       rect:
         serializedVersion: 2
         x: 363
-        y: 916
+        y: 915
         width: 40
-        height: 61
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6347,15 +5093,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_331
+      name: SNJ_40
       rect:
         serializedVersion: 2
         x: 415
-        y: 916
+        y: 915
         width: 50
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.48, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6369,15 +5115,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_332
+      name: SNJ_41
       rect:
         serializedVersion: 2
         x: 474
-        y: 916
+        y: 915
         width: 65
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6391,37 +5137,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_333
+      name: SNJ_42
       rect:
         serializedVersion: 2
-        x: 559
-        y: 965
-        width: 17
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6dd002c768257ab50800000000000000
-      internalID: 6604338116123692502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_334
-      rect:
-        serializedVersion: 2
-        x: 565
-        y: 916
-        width: 53
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 552
+        y: 915
+        width: 71
+        height: 64
+      alignment: 9
+      pivot: {x: 0.47887325, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6435,79 +5159,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_335
-      rect:
-        serializedVersion: 2
-        x: 574
-        y: 962
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5fa26bfd9ee058bc0800000000000000
-      internalID: -3781599914464236811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_336
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 967
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f41ee49c49bb54c0800000000000000
-      internalID: -4297637680827722506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_337
-      rect:
-        serializedVersion: 2
-        x: 559
-        y: 957
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b2b1b3a04b9039b0800000000000000
-      internalID: -5102407675884227920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_338
+      name: SNJ_43
       rect:
         serializedVersion: 2
         x: 640
-        y: 916
+        y: 915
         width: 37
-        height: 50
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6523,321 +5181,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_339
-      rect:
-        serializedVersion: 2
-        x: 551
-        y: 937
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41fb83f7ad5f1ed80800000000000000
-      internalID: -8223021125815714028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_340
-      rect:
-        serializedVersion: 2
-        x: 605
-        y: 926
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c334b7ea6b26e8440800000000000000
-      internalID: 4939994378022896444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_341
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 942
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06efcc571a3eef470800000000000000
-      internalID: 8430425835089755744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_342
-      rect:
-        serializedVersion: 2
-        x: 562
-        y: 924
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a36065051fcdab390800000000000000
-      internalID: -7801680475472918982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_343
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 894
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e50ea3acdffa1e350800000000000000
-      internalID: 6044305679462359134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_344
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 894
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ccd795fa8011deb0800000000000000
-      internalID: -4696954747358815040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_345
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 894
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1976c1a89b965edf0800000000000000
-      internalID: -151598766840060015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_346
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 894
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb2791f0199a002e0800000000000000
-      internalID: -2161541380649160005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_347
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 894
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af106cc6e0a9c0450800000000000000
-      internalID: 6056384985651610106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_348
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 894
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5cbc68fa2ce72a780800000000000000
-      internalID: -8673230557728551995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_349
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 894
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 673702fa3ae372eb0800000000000000
-      internalID: -4744754809672797322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_350
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 894
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0db78d23bb75d6830800000000000000
-      internalID: 4066002500108975056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_351
-      rect:
-        serializedVersion: 2
-        x: 349
-        y: 894
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 788b53fcded683c20800000000000000
-      internalID: 3186417604515707015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_352
-      rect:
-        serializedVersion: 2
-        x: 354
-        y: 894
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ac55c2ec6b43c930800000000000000
-      internalID: 4162253411653606565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Naruto_353
       rect:
         serializedVersion: 2
         x: 9
-        y: 826
+        y: 825
         width: 38
-        height: 51
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6857,9 +5207,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 57
-        y: 826
+        y: 825
         width: 38
-        height: 52
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7442,292 +5792,6 @@ TextureImporter:
       bones: []
       spriteID: 0fdd5d09b13eeda60800000000000000
       internalID: 7700842120383684080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_381
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f4fad620868f7420800000000000000
-      internalID: 2629968592373478640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_382
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fda00edfa04a5650800000000000000
-      internalID: 6222356959253802486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_383
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5231120d1e1b317a0800000000000000
-      internalID: -6407582261400497371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_384
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 651
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc59501f68c05f4f0800000000000000
-      internalID: -795715985452198449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_385
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 651
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f849e8fc834e6350800000000000000
-      internalID: 6011816825336711417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_386
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: adeb0b8685d764710800000000000000
-      internalID: 1677165729909096154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_387
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 651
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdbb193d679d50750800000000000000
-      internalID: 6270657160562195419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_388
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 651
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 238fce3665d4c36d0800000000000000
-      internalID: -3009445417551333326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_389
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ad81bb10b4873cb0800000000000000
-      internalID: -4884289378946282079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_390
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3c8281b393c88edf0800000000000000
-      internalID: -150716410084448061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_391
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 651
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ece7f8eecd02e8490800000000000000
-      internalID: -7742214576136028466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_392
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 36f74358c3aec1f40800000000000000
-      internalID: 5700688773997952867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_393
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 651
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 898b77de468bfe810800000000000000
-      internalID: 1796857519964403864
       vertices: []
       indices: 
       edges: []
@@ -12102,28 +10166,28 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Naruto_0: -757711064242525727
-      Naruto_10: -8745044939515546910
-      Naruto_100: -2190269235241179612
+      Naruto_0: 2046238860
+      Naruto_10: 1733101465
+      Naruto_100: -1157946791
       Naruto_101: 8549765330340832783
-      Naruto_102: 3679437026807883602
-      Naruto_103: -8049732927929516536
-      Naruto_104: 8142371256773787904
-      Naruto_105: 8653434041904019535
-      Naruto_106: -8839863755741508758
-      Naruto_107: -3182976610848408745
-      Naruto_108: 6015150826338711462
-      Naruto_109: -2765780674419096611
+      Naruto_102: 2037146195
+      Naruto_103: 1934215079
+      Naruto_104: -1383249497
+      Naruto_105: -906934346
+      Naruto_106: 6304616
+      Naruto_107: 517004027
+      Naruto_108: -547889083
+      Naruto_109: 1930482591
       Naruto_11: 9067339219352217995
       Naruto_110: -6706608902401908025
       Naruto_111: 1672718011205119300
       Naruto_112: -927419860640423438
       Naruto_113: 85620635861222425
-      Naruto_114: 8643983656653133662
-      Naruto_115: -5391938717379213082
-      Naruto_116: 3063205956184675530
-      Naruto_117: 2040896717950058762
-      Naruto_118: 4101061135951952287
+      Naruto_114: 740480519
+      Naruto_115: 723070049
+      Naruto_116: 37278505
+      Naruto_117: 1477272398
+      Naruto_118: -109091335
       Naruto_119: 7327957356403316862
       Naruto_12: -1194774143179863548
       Naruto_120: -4761625486660582293
@@ -12140,51 +10204,51 @@ TextureImporter:
       Naruto_130: 4715279261370960698
       Naruto_131: -7367124110409928961
       Naruto_132: 8327843867013567188
-      Naruto_133: -4961788341518942244
-      Naruto_134: 4389890856539097831
-      Naruto_135: 7747456537905171188
-      Naruto_136: 1316113873198779664
-      Naruto_137: 200794174168602153
-      Naruto_138: -9133086589759555199
-      Naruto_139: -8894692381420955190
+      Naruto_133: 1289684319
+      Naruto_134: -78248226
+      Naruto_135: -716816568
+      Naruto_136: 2039441408
+      Naruto_137: 1223404637
+      Naruto_138: -1107515220
+      Naruto_139: 495531648
       Naruto_14: -8057617959912932472
       Naruto_141: 8975925652934734605
       Naruto_142: -744951981283229256
       Naruto_143: -4690470492509072576
-      Naruto_144: -4810443427175814070
-      Naruto_145: -1960060237766458589
-      Naruto_146: 5641648738728889685
-      Naruto_147: 5284865502398716107
-      Naruto_148: -4788411816202912207
-      Naruto_149: -6933039896941143679
+      Naruto_144: -1554667882
+      Naruto_145: -314782625
+      Naruto_146: 554075119
+      Naruto_147: 1084962101
+      Naruto_148: 2084307821
+      Naruto_149: -853389492
       Naruto_15: 7140737652633376737
       Naruto_151: -1420215038441810131
       Naruto_152: -9093227311222606125
       Naruto_153: 3485455870851341040
       Naruto_154: 5661582258412357865
-      Naruto_156: 2816287583037405318
-      Naruto_157: 2674068626746834732
-      Naruto_158: -1037347972195067574
+      Naruto_156: 1883631791
+      Naruto_157: 397139877
+      Naruto_158: -766661969
       Naruto_16: -3179572350447813543
       Naruto_162: -2213154902676794310
       Naruto_163: 3749402859664005695
       Naruto_164: -758393864470204038
       Naruto_165: -506688705887263486
       Naruto_166: -2571132144907571665
-      Naruto_167: -251974834368654207
-      Naruto_168: -599721099159350193
-      Naruto_169: 1876720663959767709
+      Naruto_167: -792545717
+      Naruto_168: 973671151
+      Naruto_169: -2143434017
       Naruto_17: 4663741877793299752
-      Naruto_170: -4386588780770615565
-      Naruto_171: 3499515635351450696
-      Naruto_172: 8011421239522333755
-      Naruto_173: -1362204075227290471
-      Naruto_174: 8424429684144217830
-      Naruto_175: -3517361292794189190
-      Naruto_176: 3997384351414415151
-      Naruto_177: -1358172309588407407
-      Naruto_178: 4709939524487191365
-      Naruto_179: -768987488329715088
+      Naruto_170: 455868364
+      Naruto_171: 2049689218
+      Naruto_172: 587674329
+      Naruto_173: -1137659930
+      Naruto_174: 265028203
+      Naruto_175: 794043418
+      Naruto_176: -1019418430
+      Naruto_177: -377240059
+      Naruto_178: -1184719263
+      Naruto_179: -560674938
       Naruto_18: -8184789045604905750
       Naruto_180: 2913150854775542960
       Naruto_181: 7517777950693003528
@@ -12193,31 +10257,31 @@ TextureImporter:
       Naruto_184: 5842466465909501222
       Naruto_185: -3755773332392224596
       Naruto_186: 7542900500218477449
-      Naruto_187: -7310584709525720683
-      Naruto_188: -4195440781354084124
-      Naruto_189: 7320318178404445142
+      Naruto_187: -815951792
+      Naruto_188: 1513458880
+      Naruto_189: -712361479
       Naruto_19: -401497540037949722
       Naruto_190: -3078566161801300590
       Naruto_191: -2247365114106222897
       Naruto_192: 9081847796324425659
-      Naruto_193: -5917364993040912358
-      Naruto_194: 7109790317538560475
-      Naruto_195: -410303748879790242
-      Naruto_196: 5723479674843145169
-      Naruto_197: 8522358891762760276
+      Naruto_193: 1066720414
+      Naruto_194: 1049799959
+      Naruto_195: -1615670921
+      Naruto_196: -1540400955
+      Naruto_197: -1154537996
       Naruto_198: 6812173023308814003
-      Naruto_199: 5177614660538160423
-      Naruto_2: 5468061877815110314
+      Naruto_199: 1605031861
+      Naruto_2: -882476483
       Naruto_20: 2081107343897057610
-      Naruto_200: 6471709211649984487
-      Naruto_201: -851459561327540235
-      Naruto_202: -4764107649280185458
-      Naruto_203: 2471896949272573867
+      Naruto_200: 792394400
+      Naruto_201: 375744689
+      Naruto_202: -116157857
+      Naruto_203: -1228829329
       Naruto_204: -1720125151527443302
-      Naruto_205: -7239529048491182000
+      Naruto_205: -1529484041
       Naruto_206: 2468399705169529939
-      Naruto_207: 5150162261648629650
-      Naruto_208: -3673880522713495501
+      Naruto_207: 359700555
+      Naruto_208: 1427843525
       Naruto_209: 2921914121159472356
       Naruto_21: -1589724530704169883
       Naruto_210: 2535217731749594384
@@ -12225,52 +10289,52 @@ TextureImporter:
       Naruto_212: -3109813692673291232
       Naruto_213: 1419937222210502474
       Naruto_214: 749752064480448961
-      Naruto_215: -5531091236794851363
+      Naruto_215: 1866212648
       Naruto_216: -1686783895245847896
-      Naruto_217: 7567551383786213507
-      Naruto_218: -6196698409129534777
-      Naruto_219: -3448544312180025445
+      Naruto_217: 1487150479
+      Naruto_218: -1610513211
+      Naruto_219: 2099766973
       Naruto_22: 8841180071356938149
-      Naruto_220: 2527536388284524066
-      Naruto_221: -347515685930267704
-      Naruto_222: 6110370718352216104
-      Naruto_223: -5213200633127685367
-      Naruto_224: -5097370300330493014
-      Naruto_225: 6033759583491869166
-      Naruto_226: 7088619742442859558
-      Naruto_227: -2176567555718790586
+      Naruto_220: 1742144024
+      Naruto_221: 547732971
+      Naruto_222: -1563635164
+      Naruto_223: -1284779147
+      Naruto_224: 1534349659
+      Naruto_225: -1820361049
+      Naruto_226: -1292399249
+      Naruto_227: 104078991
       Naruto_228: -5957086884734571562
-      Naruto_229: -7862701177282934446
-      Naruto_23: 5564181055553309140
-      Naruto_230: 1303337457628673818
-      Naruto_231: 6820372356895500460
-      Naruto_232: 1434542448808042484
-      Naruto_233: 8310577503463535055
-      Naruto_234: -4980103615870672252
-      Naruto_235: -5616523637016732711
-      Naruto_236: -3191390375843512563
-      Naruto_237: 9115382246961699935
-      Naruto_238: 3707924622742608461
-      Naruto_239: -3942728160580536157
-      Naruto_24: 6471709933551058848
-      Naruto_240: 5898924221062696440
-      Naruto_241: 5327481630018256510
-      Naruto_242: 5676386108523943011
-      Naruto_243: 7009006475233549293
-      Naruto_244: -8109882246506167425
-      Naruto_245: -2424582664630387656
-      Naruto_246: -9209377197776571121
-      Naruto_247: -5271413452999430154
-      Naruto_248: 2009451798644569491
-      Naruto_249: 3568539584300453647
-      Naruto_25: -5435166723178207892
-      Naruto_250: 6667575583762547157
-      Naruto_251: -7714506982964601295
-      Naruto_252: 2610734475123285217
-      Naruto_253: 1879436085659993349
-      Naruto_254: 8061426880015787875
-      Naruto_255: 1232994723673846445
-      Naruto_256: -7203222009861574508
+      Naruto_229: -1940959790
+      Naruto_23: 278153500
+      Naruto_230: -1645878712
+      Naruto_231: -1948049290
+      Naruto_232: 225562583
+      Naruto_233: -1212039746
+      Naruto_234: 1717598809
+      Naruto_235: 645152295
+      Naruto_236: -905908017
+      Naruto_237: 143820510
+      Naruto_238: 1625125268
+      Naruto_239: -164561398
+      Naruto_24: -143734226
+      Naruto_240: -1046022625
+      Naruto_241: -1473167449
+      Naruto_242: -719107073
+      Naruto_243: -617923886
+      Naruto_244: -1664099856
+      Naruto_245: 902655980
+      Naruto_246: -327759558
+      Naruto_247: -760099704
+      Naruto_248: 2142235237
+      Naruto_249: 400632584
+      Naruto_25: 1116996537
+      Naruto_250: 2138534953
+      Naruto_251: 1328469862
+      Naruto_252: -545754246
+      Naruto_253: -690148491
+      Naruto_254: -2113975360
+      Naruto_255: -850662589
+      Naruto_256: -1785663771
       Naruto_257: -6720020455291501027
       Naruto_258: 2780771619907146755
       Naruto_259: -3085310119462662400
@@ -12284,100 +10348,57 @@ TextureImporter:
       Naruto_266: 5218405208000129150
       Naruto_267: 558821475110303822
       Naruto_268: 2592928690446133402
-      Naruto_269: 8886603946852021131
+      Naruto_269: 659311877
       Naruto_27: 8184693160196725133
-      Naruto_270: 1222273276167789556
-      Naruto_271: 6946972237278118453
-      Naruto_272: 2038407765241336981
-      Naruto_273: -769488668145451508
-      Naruto_274: -6248772156329411771
-      Naruto_275: -8462548304131970983
-      Naruto_276: 3863159944052920408
-      Naruto_277: -615190157802638280
-      Naruto_278: 7108106028298729461
-      Naruto_279: -1168363656285290973
+      Naruto_270: -1118815258
+      Naruto_271: 487267165
+      Naruto_272: -1272049649
+      Naruto_273: 1405053667
+      Naruto_274: 2010564534
+      Naruto_275: 1013015603
+      Naruto_276: -976884046
+      Naruto_277: 682615944
       Naruto_28: -1944771622040103415
-      Naruto_280: -2843324227977731828
-      Naruto_281: -4510822283351158424
-      Naruto_282: -8129732391062096386
-      Naruto_283: 6682855390489869989
-      Naruto_284: -9119064812520701492
-      Naruto_285: -7908243253468718764
-      Naruto_286: 8343693747361025454
-      Naruto_287: -3299385060752341069
-      Naruto_288: -8349593908669201686
-      Naruto_289: -5277402945109082344
+      Naruto_284: -1293147544
       Naruto_29: -1392907212701553658
-      Naruto_290: -1925770572233157536
-      Naruto_291: 5877494840298202451
-      Naruto_292: 1558431813375391633
-      Naruto_293: 2435648741283459526
-      Naruto_294: 5142196425731797429
-      Naruto_295: -3664202584821382962
-      Naruto_296: 6738477388744069003
-      Naruto_297: 6377495609994169106
-      Naruto_298: 6078138075130556579
-      Naruto_299: 5603802042474070288
-      Naruto_3: 457059074160422318
+      Naruto_290: -1167175766
+      Naruto_291: 406411155
+      Naruto_292: 1543866803
+      Naruto_3: -2112817841
       Naruto_30: 8086338867284101313
-      Naruto_300: -6751958368942575287
-      Naruto_301: 7908104197206765910
-      Naruto_302: -8365327143454761884
-      Naruto_303: -5443190405464901410
-      Naruto_304: -8186161139457928135
-      Naruto_305: 3426303416847034261
-      Naruto_306: -4958290359639250326
-      Naruto_307: -602422125794362877
-      Naruto_308: 4808507313141754134
-      Naruto_309: -2522294029817569539
+      Naruto_300: 811250106
+      Naruto_307: -74912873
+      Naruto_309: -513296634
       Naruto_31: -2096943011845837502
-      Naruto_310: 1102490458774491779
-      Naruto_311: -3504910893661541752
-      Naruto_312: -3400539333422966810
-      Naruto_313: -3065258390718984215
-      Naruto_314: -1001470734649122393
-      Naruto_315: 9092428363498998569
-      Naruto_316: 4035807383495719851
-      Naruto_317: -2458735709034743781
-      Naruto_318: -4992359162285107039
-      Naruto_319: 2699157467806329984
-      Naruto_32: 4258409540109476628
-      Naruto_320: -477785665843931615
-      Naruto_321: -5655219853315539704
-      Naruto_322: -800238502756830607
-      Naruto_323: 2122481685063503659
-      Naruto_324: 1706528499810767167
-      Naruto_325: 4469113659220061638
-      Naruto_326: -4627383500618557918
-      Naruto_327: 8302388792963072577
-      Naruto_328: 6359105245684694875
-      Naruto_329: -584757134025488047
-      Naruto_33: -5338079333134420244
-      Naruto_330: 1896890583301260539
-      Naruto_331: 6259451836660507897
-      Naruto_332: 3808603151895101947
-      Naruto_333: 6604338116123692502
-      Naruto_334: -1897894954695299295
-      Naruto_335: -3781599914464236811
-      Naruto_336: -4297637680827722506
-      Naruto_337: -5102407675884227920
-      Naruto_338: -5479820568896387276
-      Naruto_339: -8223021125815714028
-      Naruto_34: -5736803178036742489
-      Naruto_340: 4939994378022896444
-      Naruto_341: 8430425835089755744
-      Naruto_342: -7801680475472918982
-      Naruto_343: 6044305679462359134
-      Naruto_344: -4696954747358815040
-      Naruto_345: -151598766840060015
-      Naruto_346: -2161541380649160005
-      Naruto_347: 6056384985651610106
-      Naruto_348: -8673230557728551995
-      Naruto_349: -4744754809672797322
-      Naruto_35: -2868158899602185886
-      Naruto_350: 4066002500108975056
-      Naruto_351: 3186417604515707015
-      Naruto_352: 4162253411653606565
+      Naruto_311: -1885005622
+      Naruto_313: 1455065141
+      Naruto_315: -2021814402
+      Naruto_317: 568816044
+      Naruto_319: -1750869771
+      Naruto_32: -933647989
+      Naruto_321: 501117699
+      Naruto_323: 660858944
+      Naruto_33: -1582542013
+      Naruto_333: 1933351384
+      Naruto_335: 1019544585
+      Naruto_336: -1252941902
+      Naruto_337: 1365402886
+      Naruto_339: -2117666149
+      Naruto_34: 1826547725
+      Naruto_340: 669592760
+      Naruto_341: 1611456578
+      Naruto_342: -1106249824
+      Naruto_343: 952040543
+      Naruto_344: 1515289726
+      Naruto_345: -2115333230
+      Naruto_346: 706553687
+      Naruto_347: 653986716
+      Naruto_348: 625149257
+      Naruto_349: -744310769
+      Naruto_35: -491600537
+      Naruto_350: 461031012
+      Naruto_351: -156604196
+      Naruto_352: 1103369568
       Naruto_353: 2465137057853300218
       Naruto_354: -695046402055814174
       Naruto_355: -5207739972210029107
@@ -12396,7 +10417,7 @@ TextureImporter:
       Naruto_367: 1933294749235485049
       Naruto_368: 3800960108051308119
       Naruto_369: -6923579615001865478
-      Naruto_37: -4890085531401813985
+      Naruto_37: 517682492
       Naruto_370: 9091509449478232673
       Naruto_371: 2230052279681079
       Naruto_372: 937685012283181407
@@ -12407,30 +10428,30 @@ TextureImporter:
       Naruto_377: 800345594821172488
       Naruto_378: -1267317374885062280
       Naruto_379: 8358280336899924462
-      Naruto_38: 3510796478478967062
+      Naruto_38: -761967431
       Naruto_380: 7700842120383684080
-      Naruto_381: 2629968592373478640
-      Naruto_382: 6222356959253802486
-      Naruto_383: -6407582261400497371
-      Naruto_384: -795715985452198449
-      Naruto_385: 6011816825336711417
-      Naruto_386: 1677165729909096154
-      Naruto_387: 6270657160562195419
-      Naruto_388: -3009445417551333326
-      Naruto_389: -4884289378946282079
-      Naruto_39: -9040157264207218815
-      Naruto_390: -150716410084448061
-      Naruto_391: -7742214576136028466
-      Naruto_392: 5700688773997952867
-      Naruto_393: 1796857519964403864
+      Naruto_381: -689318193
+      Naruto_382: 97092770
+      Naruto_383: -1587917328
+      Naruto_384: 722668406
+      Naruto_385: -1861440411
+      Naruto_386: 1719414146
+      Naruto_387: -114947979
+      Naruto_388: -830713465
+      Naruto_389: 922606117
+      Naruto_39: 1101574240
+      Naruto_390: 522485817
+      Naruto_391: -1445762132
+      Naruto_392: 928799661
+      Naruto_393: 819230639
       Naruto_394: -6061528411633585969
       Naruto_395: -7588948545408456585
       Naruto_396: -2360884445178057141
       Naruto_397: 1845550122879333118
       Naruto_398: 5192263671298588078
       Naruto_399: 482069134001013095
-      Naruto_4: 6956416154595694519
-      Naruto_40: -787712401267133350
+      Naruto_4: -177666165
+      Naruto_40: 752244005
       Naruto_400: -2914180968958229988
       Naruto_401: 429928047776660456
       Naruto_402: 4142919304327706683
@@ -12452,7 +10473,7 @@ TextureImporter:
       Naruto_417: 3306565011291724742
       Naruto_418: 984142647241186011
       Naruto_419: 5849205660145613610
-      Naruto_42: -494155766736910227
+      Naruto_42: -1455194357
       Naruto_420: 1865471251076492832
       Naruto_421: 4969911196688089797
       Naruto_422: -3660484121148451192
@@ -12463,7 +10484,7 @@ TextureImporter:
       Naruto_427: -1321357918248408299
       Naruto_428: 4478867386769588042
       Naruto_429: -534221517103829232
-      Naruto_43: -586692762500957709
+      Naruto_43: 1352145752
       Naruto_430: 7961341111614376449
       Naruto_431: 5682823521347989033
       Naruto_432: 3492934546093274985
@@ -12474,7 +10495,7 @@ TextureImporter:
       Naruto_437: -6208828150758032508
       Naruto_438: 6400987269682824176
       Naruto_439: 2968351892413385662
-      Naruto_44: -782124310131958319
+      Naruto_44: 1085347203
       Naruto_440: 5527025235898325190
       Naruto_441: -7860039631344764599
       Naruto_442: 1675942738322203306
@@ -12485,7 +10506,7 @@ TextureImporter:
       Naruto_447: -1815830181407313952
       Naruto_448: -1744151399996357577
       Naruto_449: 3572583838717196823
-      Naruto_45: 5949914212525116238
+      Naruto_45: -469060277
       Naruto_450: 3871135173880997850
       Naruto_451: -2547442851650246835
       Naruto_452: -4923874122631979351
@@ -12507,7 +10528,7 @@ TextureImporter:
       Naruto_467: 4292620255122223878
       Naruto_468: -456227218621777333
       Naruto_469: 1269429768719274130
-      Naruto_47: -4734798597248746169
+      Naruto_47: 1965174829
       Naruto_470: -5497710242847867858
       Naruto_471: -9167577518843873077
       Naruto_472: -4376187826177060747
@@ -12518,7 +10539,7 @@ TextureImporter:
       Naruto_477: -7983464211560551772
       Naruto_478: 970686236053725075
       Naruto_479: 144186085137723251
-      Naruto_48: -7109167140272100892
+      Naruto_48: -424016723
       Naruto_480: -2799273481349615301
       Naruto_481: -1496560252633314801
       Naruto_482: -5120444855258541705
@@ -12529,7 +10550,7 @@ TextureImporter:
       Naruto_487: 1521285668070799378
       Naruto_488: -8301760122208836632
       Naruto_489: 1931022194574840512
-      Naruto_49: 4418821812618383645
+      Naruto_49: 759763448
       Naruto_490: -7079414207523666075
       Naruto_491: 4131480623787146670
       Naruto_492: -4982797692511716737
@@ -12540,8 +10561,8 @@ TextureImporter:
       Naruto_497: 8052712128695005336
       Naruto_498: 6355952708944064227
       Naruto_499: 1903137120443477804
-      Naruto_5: 5729902271899081097
-      Naruto_50: -4490117106854143495
+      Naruto_5: -1223432258
+      Naruto_50: -1109048113
       Naruto_500: -1887572559654783429
       Naruto_501: -3264970219004452435
       Naruto_502: -8575305696567528351
@@ -12552,7 +10573,7 @@ TextureImporter:
       Naruto_507: -2105670718731478190
       Naruto_508: 3551381476389967456
       Naruto_509: 9176054864650570947
-      Naruto_51: -8241519596416746810
+      Naruto_51: 1108608026
       Naruto_510: -1298468155878097282
       Naruto_511: 2811801405907148614
       Naruto_512: 6284142261917006684
@@ -12563,7 +10584,7 @@ TextureImporter:
       Naruto_517: -6531188945581148791
       Naruto_518: 2629067492969178324
       Naruto_519: 4187969524060507846
-      Naruto_52: -1061871722522563809
+      Naruto_52: 268007749
       Naruto_520: -5255195261569410300
       Naruto_521: 1243717618981253333
       Naruto_522: -5872738154781455929
@@ -12574,7 +10595,7 @@ TextureImporter:
       Naruto_527: -4450201608331160585
       Naruto_528: -7850112015166644349
       Naruto_529: -5146729034125833222
-      Naruto_53: -6809413164675887825
+      Naruto_53: -855602092
       Naruto_530: 1994133095869983486
       Naruto_531: -5540895908101812804
       Naruto_532: 3801783633319960509
@@ -12585,7 +10606,7 @@ TextureImporter:
       Naruto_537: 7777413749042849634
       Naruto_538: 236230520301348373
       Naruto_539: 4038739956565045247
-      Naruto_54: 3289882976178616828
+      Naruto_54: 733698975
       Naruto_540: 8481143020047043500
       Naruto_541: -2586948989285781505
       Naruto_542: 6655990129336417733
@@ -12596,7 +10617,7 @@ TextureImporter:
       Naruto_547: 6091947462452113386
       Naruto_548: 5407830178393031179
       Naruto_549: 2700423398278453596
-      Naruto_55: 1505437496653386887
+      Naruto_55: 227909505
       Naruto_550: -7868677652884379970
       Naruto_551: 8382309724852056809
       Naruto_552: -142329552079831924
@@ -12607,7 +10628,7 @@ TextureImporter:
       Naruto_557: -6862612154973761900
       Naruto_558: -2012012342218885350
       Naruto_559: -5110333499643295996
-      Naruto_56: 8752241091634902440
+      Naruto_56: -982187931
       Naruto_560: -807918295229780941
       Naruto_561: -3480661044982157658
       Naruto_562: 8513835480867502692
@@ -12629,7 +10650,7 @@ TextureImporter:
       Naruto_577: -5172818657977246500
       Naruto_578: 4741780883877257228
       Naruto_579: 8729392930598585129
-      Naruto_58: -8627109622358222319
+      Naruto_58: 383514217
       Naruto_580: 1871064332115787671
       Naruto_581: -4464447243421580847
       Naruto_582: 4731819352524208881
@@ -12640,21 +10661,21 @@ TextureImporter:
       Naruto_587: -1991340521638432155
       Naruto_588: -3104056283101187819
       Naruto_589: -2645232793274647743
-      Naruto_59: 3423511189425596963
+      Naruto_59: 1568746678
       Naruto_590: 2867930150385653260
       Naruto_591: -321421673847394847
-      Naruto_6: 3992482216210953566
+      Naruto_6: -1888296507
       Naruto_60: 3187223481546494731
-      Naruto_61: -8649737603144601679
-      Naruto_62: 5023074711104913560
+      Naruto_61: -795645675
+      Naruto_62: -1848609833
       Naruto_63: 5648313271957037771
-      Naruto_64: 5489360089158261570
-      Naruto_65: 1870643653815825998
-      Naruto_66: -3966269944612650224
-      Naruto_67: 7769763313918537641
-      Naruto_68: 6844547650512553121
+      Naruto_64: -519629955
+      Naruto_65: -737069138
+      Naruto_66: 1122681929
+      Naruto_67: -1933177570
+      Naruto_68: -1614501058
       Naruto_69: 4916914906534941297
-      Naruto_7: 915540530527254123
+      Naruto_7: -1503905137
       Naruto_70: -4698353253690330200
       Naruto_71: 4214666916808165971
       Naruto_72: 7099508127715452947
@@ -12662,11 +10683,11 @@ TextureImporter:
       Naruto_74: 7237291864090424727
       Naruto_75: 3166259125908741611
       Naruto_76: 3334383592283245912
-      Naruto_77: 7607152623229049691
-      Naruto_78: 6096327077158323076
-      Naruto_79: -987343434760995475
-      Naruto_8: 5507097328226851105
-      Naruto_80: 2308819178089874814
+      Naruto_77: -2078684619
+      Naruto_78: -309739949
+      Naruto_79: 260442736
+      Naruto_8: 2096222854
+      Naruto_80: 1262217343
       Naruto_81: 3741572131808757152
       Naruto_82: 666531316193255661
       Naruto_83: -5175816475015497401
@@ -12674,19 +10695,62 @@ TextureImporter:
       Naruto_85: 5838770249299986815
       Naruto_86: -2125432452047967634
       Naruto_87: -4468812410832327439
-      Naruto_88: -3891752771578726435
-      Naruto_89: 3793281756287899249
-      Naruto_9: 4087223414548777223
-      Naruto_90: -4863995447470752237
-      Naruto_91: -6461028894083525752
-      Naruto_92: 811926046081681412
+      Naruto_88: 723891725
+      Naruto_89: 1545953898
+      Naruto_9: -239628031
+      Naruto_90: -1261803098
+      Naruto_91: -482838107
+      Naruto_92: 343982280
       Naruto_93: -5197024659986167300
-      Naruto_94: -8770614812631868701
+      Naruto_94: 710180402
       Naruto_95: 1518833718672544593
-      Naruto_96: -5811056576445821140
-      Naruto_97: 4799756920283099205
-      Naruto_98: 8678221546954089697
-      Naruto_99: -2030960540654806882
+      Naruto_96: -1510532860
+      Naruto_97: -6535133
+      Naruto_98: -1970979809
+      Naruto_99: -1193646180
+      SNJ_1: -3299385060752341069
+      SNJ_10: -7908243253468718764
+      SNJ_11: 8343693747361025454
+      SNJ_12: 2435648741283459526
+      SNJ_13: 5142196425731797429
+      SNJ_14: -3664202584821382962
+      SNJ_15: 6738477388744069003
+      SNJ_16: 6377495609994169106
+      SNJ_17: 6078138075130556579
+      SNJ_18: 5603802042474070288
+      SNJ_19: 7908104197206765910
+      SNJ_2: -8349593908669201686
+      SNJ_20: -8365327143454761884
+      SNJ_21: -5443190405464901410
+      SNJ_22: -8186161139457928135
+      SNJ_23: 3426303416847034261
+      SNJ_24: -4958290359639250326
+      SNJ_25: 4808507313141754134
+      SNJ_26: 1102490458774491779
+      SNJ_27: -3400539333422966810
+      SNJ_28: -1001470734649122393
+      SNJ_29: 4035807383495719851
+      SNJ_3: -5277402945109082344
+      SNJ_30: -4992359162285107039
+      SNJ_31: -477785665843931615
+      SNJ_32: -800238502756830607
+      SNJ_33: 1706528499810767167
+      SNJ_34: 4469113659220061638
+      SNJ_35: -4627383500618557918
+      SNJ_36: 8302388792963072577
+      SNJ_37: 6359105245684694875
+      SNJ_38: -584757134025488047
+      SNJ_39: 1896890583301260539
+      SNJ_4: 7108106028298729461
+      SNJ_40: 6259451836660507897
+      SNJ_41: 3808603151895101947
+      SNJ_42: -1897894954695299295
+      SNJ_43: -5479820568896387276
+      SNJ_5: -1168363656285290973
+      SNJ_6: -2843324227977731828
+      SNJ_7: -4510822283351158424
+      SNJ_8: -8129732391062096386
+      SNJ_9: 6682855390489869989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
