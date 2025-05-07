@@ -31,7 +31,7 @@ public class Entity : MonoBehaviour
     protected bool facingRight = true; // 객체가 오른쪽을 보고 있는지 여부
 
     public System.Action onFlipped;
-
+    public float lastXVelocity { get; protected set; }
 
     protected virtual void Awake()
     {
@@ -102,17 +102,14 @@ public class Entity : MonoBehaviour
     #region Speed
     public void SetZeroVelocity()
     {
-        if (isKnocked)
-            return;
-        rb.linearVelocity = new Vector2(0, 0);
+        SetVelocity(0, 0);
     }
 
-    public void SetVelocity(float _xVelocity, float _yVelocity)
+    public virtual void SetVelocity(float _xVelocity, float _yVelocity)
     {
-        if (isKnocked)
-            return;
         // Rigidbody2D의 속력 설정
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
+        lastXVelocity = _xVelocity;
         FlipController(_xVelocity);
     }
     #endregion

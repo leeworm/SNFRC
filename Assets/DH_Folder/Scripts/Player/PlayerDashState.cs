@@ -32,6 +32,6 @@ public class PlayerDashState : PlayerGroundedState
     {
         base.Exit();
         player.anim.SetBool("Dash", false);
-        player.dashCommandDetector.Reset();
+        player.CommandDetector.Reset();
     }
 }

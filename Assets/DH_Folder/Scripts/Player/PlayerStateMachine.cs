@@ -15,5 +15,10 @@ public class PlayerStateMachine
         currentState?.Exit();
         currentState = _newState;
         currentState.Enter();
+
+        if (currentState.player != null)
+        {
+            currentState.player.SetCurrentState(currentState);
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DashCommandDetector
+public class CommandDetector
 {
     private int lastDirection = 0;
     private float lastTapTime = -1f;

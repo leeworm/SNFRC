@@ -8,30 +8,47 @@ public class PlayerLandState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.anim.ResetTrigger("Land");
-        player.anim.SetTrigger("Land");
+        player.SetZeroVelocity();
+        player.anim.SetTrigger("Land"); // "Land"
     }
 
 
     public override void Update()
     {
         base.Update();
-        if (Input.GetButtonDown("Jump"))
-            return;
+
         player.SetZeroVelocity();
+
+
+        if (Input.GetKeyDown(KeyCode.X) && player.currentJumpCount > 0)
+        {
+            stateMachine.ChangeState(player.jumpState);
+            return;
+        }
+
+        if (triggerCalled)
+        {
+            stateMachine.ChangeState(player.idleState);
+        }
     }
+
 
     public override void Exit()
     {
         base.Exit();
-        player.anim.ResetTrigger("Land");
+        triggerCalled = false;
     }
+
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
 
         if (xInput != 0)
             stateMachine.ChangeState(player.moveState);
+        if (yInput < 0)
+            stateMachine.ChangeState(new PlayerCrouchState(player, stateMachine, "Crouch"));
+        if (yInput > 0)
+            stateMachine.ChangeState(player.jumpState);
         else
             stateMachine.ChangeState(player.idleState);
     }

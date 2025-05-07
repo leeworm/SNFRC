@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerBackstepState : PlayerGroundedState
 {
@@ -22,9 +23,9 @@ public class PlayerBackstepState : PlayerGroundedState
         timer = backstepDuration;
         delayTimer = landingCheckDelay;
         canLand = false;
-        float backstepSpeed = player.dashSpeed * 1.5f;
+        backstepSpeed = player.dashSpeed * 1.5f;
         float jumpforce = 13.5f;
-        player.anim.SetBool("Backstep", true);
+        //player.anim.SetBool("Backstep", true);
         // 순간적으로 속도 부여
         player.SetVelocity(direction * backstepSpeed, jumpforce);
     }
@@ -57,13 +58,15 @@ public class PlayerBackstepState : PlayerGroundedState
             player.SetZeroVelocity();
             stateMachine.ChangeState(player.idleState);
         }
+
+        
     }
 
 
     public override void Exit()
     {
         base.Exit();
-        player.anim.SetBool("Backstep", false);
+        //player.anim.SetBool("Backstep", false);
         player.SetZeroVelocity();
     }
 }

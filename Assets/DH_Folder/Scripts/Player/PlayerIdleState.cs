@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using static DashCommandDetector;
+using static CommandDetector;
 
 public class PlayerIdleState : PlayerGroundedState
 {
@@ -27,7 +27,7 @@ public class PlayerIdleState : PlayerGroundedState
         if (xInput == player.facingDir && player.IsWallDetected())
             return;
 
-        var dashType = player.dashCommandDetector.CheckDashCommand(player.facingDir);
+        var dashType = player.CommandDetector.CheckDashCommand(player.facingDir);
 
         if (dashType == DashType.Forward)
         {
@@ -40,7 +40,7 @@ public class PlayerIdleState : PlayerGroundedState
             return;
         }
 
-        // ✅ 방향키 입력 감지 시, 커맨드 유예 타이머 시작
+        // 방향키 입력 감지 시, 커맨드 유예 타이머 시작
         if (xInput != 0 && !player.isBusy)
         {
             if (!bufferingInput)

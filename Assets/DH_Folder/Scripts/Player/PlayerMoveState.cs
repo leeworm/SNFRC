@@ -17,15 +17,15 @@ public class PlayerMoveState : PlayerGroundedState
 
         Debug.Log("Checking dash input...");
 
-        var dashType = player.dashCommandDetector.CheckDashCommand(player.facingDir);
+        var dashType = player.CommandDetector.CheckDashCommand(player.facingDir);
 
-        if (dashType == DashCommandDetector.DashType.Forward)
+        if (dashType == CommandDetector.DashType.Forward)
         {
             Debug.Log("Forward dash detected!");
             stateMachine.ChangeState(new PlayerDashState(player, stateMachine, "Dash", player.facingDir));
             return;
         }
-        else if (dashType == DashCommandDetector.DashType.Backward)
+        else if (dashType == CommandDetector.DashType.Backward)
         {
             Debug.Log("Backstep detected!");
             stateMachine.ChangeState(new PlayerBackstepState(player, stateMachine, "Backstep", -player.facingDir));
@@ -46,7 +46,7 @@ public class PlayerMoveState : PlayerGroundedState
 
         if (Input.GetButtonDown("Jump") && player.currentJumpCount > 0)
         {
-            stateMachine.ChangeState(new PlayerJumpState(player, stateMachine, "Jump"));
+            stateMachine.ChangeState(new PlayerJumpState(player, stateMachine, "Jump", player.lastXVelocity));
             return;
         }
 

@@ -3,9 +3,9 @@
 public class PlayerState
 {
     protected PlayerStateMachine stateMachine;
-    protected Player player;
+    public Player player;
 
-    protected Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     protected float xInput;
     protected float yInput;
@@ -49,6 +49,5 @@ public class PlayerState
     public virtual void AnimationFinishTrigger()
     {
         triggerCalled = true;
-        Debug.Log("Land animation finished, triggerCalled = " + triggerCalled);
     }
 }

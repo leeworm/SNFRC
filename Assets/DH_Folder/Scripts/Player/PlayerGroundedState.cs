@@ -8,21 +8,24 @@ public abstract class PlayerGroundedState : PlayerState
     {
         base.Enter();
         player.currentJumpCount = player.maxJumpCount;
-        player.dashCommandDetector.Reset();
+        player.CommandDetector.Reset();
     }
     public override void Update()
     {
         base.Update();
 
-        if (Input.GetButtonDown("Jump") && player.currentJumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Z))
+            stateMachine.ChangeState(player.primaryAttack);
+
+        if (Input.GetKeyDown(KeyCode.X) && player.currentJumpCount > 0 && !(stateMachine.currentState is PlayerCrouchState) && !(stateMachine.currentState is PlayerBackstepState))
         {
-            stateMachine.ChangeState(player.jumpState);
+            stateMachine.ChangeState(new PlayerJumpState(player, stateMachine, "Jump", player.lastXVelocity));
             return;
         }
 
         if (yInput < 0)
         {
-            stateMachine.ChangeState(new PlayerCrouchState(player, stateMachine, "Crouch"));
+            stateMachine.ChangeState(player.crouchState);
             return;
         }
     }

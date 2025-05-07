@@ -13,7 +13,12 @@ public class Player : Entity
     [HideInInspector] public float lasttimeAttacked;
     [SerializeField] protected LayerMask whatIsEnemy;
 
-    public bool isBusy { get; private set; }
+    public bool isBusy;
+    public GameObject attackHitbox;
+
+    [Header("Combo")]
+    public int primaryAttackComboCounter = 0;
+
     [Header("Movement info")]
     public float moveSpeed;
     public float jumpForce;
@@ -32,14 +37,20 @@ public class Player : Entity
 
     #region States
     public PlayerStateMachine stateMachine { get; private set; }
+    public PlayerState currentState { get; private set; }
     public PlayerIdleState idleState { get; private set; }
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
     public PlayerAirState airState { get; private set; }
     public PlayerLandState landState { get; private set; }
     public PlayerDashState dashState { get; private set; }
+    public PlayerBackstepState backstepState { get; private set; }
     public PlayerDeadState deadState { get; private set; }
-    public DashCommandDetector dashCommandDetector { get; private set; }
+    public PlayerPrimaryAttackState primaryAttack { get; private set; }
+
+    public PlayerCrouchState crouchState { get; private set; }
+    public CommandDetector CommandDetector { get; private set; }
+
     #endregion
 
 
@@ -48,17 +59,21 @@ public class Player : Entity
         base.Awake();
         // 상태 머신 인스턴스 생성
         stateMachine = new PlayerStateMachine();
-        dashCommandDetector = new DashCommandDetector();
+        CommandDetector = new CommandDetector();
 
         // 각 상태 인스턴스 생성 (this: 플레이어 객체, stateMachine: 상태 머신, "Idle"/"Move": 상태 이름)
         moveState = new PlayerMoveState(this, stateMachine, "Move");
         idleState = new PlayerIdleState(this, stateMachine, "Idle");
-        jumpState = new PlayerJumpState(this, stateMachine, "Jump");
+        jumpState = new PlayerJumpState(this, stateMachine, "Jump", lastXVelocity);
         airState = new PlayerAirState(this, stateMachine, "Jump");
         landState = new PlayerLandState(this, stateMachine, "Land");
         dashState = new PlayerDashState(this, stateMachine, "Dash", dashDir);
+        backstepState = new PlayerBackstepState(this, stateMachine, "backstep", facingDir);
+        crouchState = new PlayerCrouchState(this, stateMachine, "Crouch");
+        primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "Attack");
         deadState = new PlayerDeadState(this, stateMachine, "Die");        
     }
+
     protected override void Start()
     {
         base.Start();
@@ -75,13 +90,20 @@ public class Player : Entity
         base.Update();
         stateMachine.currentState.Update();
     }
+    public void SetCurrentState(PlayerState state)
+    {
+        currentState = state;
+    }
+
     public IEnumerator BusyFor(float _seconds)
     {
         isBusy = true;
         yield return new WaitForSeconds(_seconds);
         isBusy = false;
     }
+
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+
     public Transform GetNearestEnemy()
     {
         float range = 5f;
@@ -100,6 +122,7 @@ public class Player : Entity
         }
         return nearest;
     }
+
     public override void FlipController(float _x)
     {
         // 백스텝 상태에서는 Flip 막기
@@ -107,6 +130,18 @@ public class Player : Entity
             return;
 
         base.FlipController(_x); // 나머지는 기존 방식 유지
+    }
+    
+    public void ActivateHitbox()
+    {
+        if (attackHitbox != null)
+            attackHitbox.SetActive(true);
+    }
+
+    public void DeactivateHitbox()
+    {
+        if (attackHitbox != null)
+            attackHitbox.SetActive(false);
     }
 
 }
