@@ -983,7 +983,7 @@ TextureImporter:
         width: 48
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1005,7 +1005,7 @@ TextureImporter:
         width: 80
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1014,6 +1014,72 @@ TextureImporter:
       bones: []
       spriteID: 2ed12501f9405cd4e97bec73314c55aa
       internalID: -278153952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: underBlock
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 715
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f390acbc52623e44eba9fe30c7bdac8a
+      internalID: 1819250908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: underDark
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 715
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b8a70c2cfb9ac49acbe6bd4b6190f8
+      internalID: -1661486551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: underGround
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 732
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cd48e0b4abd7940ae409dc57815d4c
+      internalID: 1100303647
       vertices: []
       indices: 
       edges: []
@@ -1072,6 +1138,9 @@ TextureImporter:
       pipe4: 2007257215
       sky1: -829531861
       stair1: -1067454002
+      underBlock: 1819250908
+      underDark: -1661486551
+      underGround: 1100303647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

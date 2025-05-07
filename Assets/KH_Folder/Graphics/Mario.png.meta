@@ -249,13 +249,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_hp
+      name: Mario_fireshot
       rect:
         serializedVersion: 2
-        x: 36
-        y: 352
+        x: 136
+        y: 332
         width: 16
-        height: 12
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,7 +279,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -288,6 +288,94 @@ TextureImporter:
       bones: []
       spriteID: fd6321db78efe4f498e3927a6b094bce
       internalID: 211354207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 351
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a907cc5e57385f644a81ad4131a5e967
+      internalID: 1594671168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 351
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee997daff37e7a746b23b2276f8f9169
+      internalID: 1241560241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 351
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf1511e101064c45b50efad70ef6497
+      internalID: 1623066829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 351
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b75ea2ca9a13d47a47553e950d2568
+      internalID: -389834470
       vertices: []
       indices: 
       edges: []
@@ -306,13 +394,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Mario_fireshot: -1618375550
       Mario_hang: 211354207
       Mario_idle: 1830896859
       Mario_jump: 510451808
       Mario_move1: -722061537
       Mario_move2: -153520277
       Mario_move3: 599722302
-      mario_hp: -1618375550
+      fireball1: 1594671168
+      fireball2: 1241560241
+      fireball3: 1623066829
+      fireball4: -389834470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -36,6 +36,9 @@ public class KH_PlayerState
 
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.Z) && xInput == 0)
+            stateMachine.ChangeState(player.shotState);
     }
 
     public virtual void Exit()

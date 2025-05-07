@@ -32,5 +32,6 @@ public class KH_PlayerMoveState : KH_PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
+        player.SetZeroVelocity();
     }
 }

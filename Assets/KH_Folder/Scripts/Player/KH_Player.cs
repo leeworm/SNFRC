@@ -12,6 +12,10 @@ public class KH_Player : KH_Entity
 
     private SpriteRenderer sr;
     public bool canHit = true; // 무적
+
+    [Header("파이어볼 정보")]
+    public GameObject FireballPrefab; // 파이어볼 프리팹
+    public Transform FireballSpawnPoint; // 파이어볼 발사 위치
     
     #region States
     public KH_PlayerStateMachine stateMachine { get; private set; }
@@ -21,11 +25,13 @@ public class KH_Player : KH_Entity
     public KH_PlayerJumpState jumpState { get; private set; }
     public KH_PlayerFallState fallState { get; private set; }
     public KH_PlayerHitState hitState { get; private set; }
+    public KH_PlayerShotState shotState { get; private set; }
 
     public KH_PlayerHangState hangState { get; private set; }
     public KH_PlayerCutMoveState cutMoveState { get; private set; }
     #endregion
 
+    //public KH_BulletPool bulletPool;
 
     protected override void Awake()
     {
@@ -38,6 +44,8 @@ public class KH_Player : KH_Entity
         jumpState = new KH_PlayerJumpState(this, stateMachine, "Jump");
         fallState = new KH_PlayerFallState(this, stateMachine, "Jump");
         hitState = new KH_PlayerHitState(this, stateMachine, "Idle");
+        shotState = new KH_PlayerShotState(this, stateMachine, "Shot");
+
         hangState = new KH_PlayerHangState(this, stateMachine, "Hang");
         cutMoveState = new KH_PlayerCutMoveState(this, stateMachine, "Move");
     }

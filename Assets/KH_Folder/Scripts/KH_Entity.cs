@@ -33,12 +33,12 @@ public class KH_Entity : MonoBehaviour
 
     protected virtual void Awake()
     {
-
+        anim = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
     protected virtual void Start()
     {
-        anim = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        
     }
     protected virtual void Update()
     {
@@ -82,7 +82,7 @@ public class KH_Entity : MonoBehaviour
     #endregion
     
     #region 속력
-    //public void SetZeroVelocity() => rb.linearVelocity = new Vector2(0, 0);
+    public void SetZeroVelocity() => rb.linearVelocity = new Vector2(0, 0);
 
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
