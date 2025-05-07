@@ -9,11 +9,16 @@ public class Enemy_ProtoMan_AI : MonoBehaviour
 
     private float timer;
     private EnemyStateMachine stateMachine;
+    private Enemy_ProtoMan protoMan;
 
     void Start()
     {
         stateMachine = GetComponent<EnemyStateMachine>();
+        protoMan = GetComponent<Enemy_ProtoMan>(); 
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        stateMachine.ChangeState(new ProtoManIdleState(protoMan));
     }
 
     void Update()
@@ -33,21 +38,21 @@ public class Enemy_ProtoMan_AI : MonoBehaviour
 
         if (distance > detectionRange)
         {
-         /*   stateMachine.ChangeState("Idle");
+            stateMachine.ChangeState(new ProtoManIdleState(protoMan));
         }
         else if (distance > attackRange)
         {
-            stateMachine.ChangeState("Move");
+            stateMachine.ChangeState(new ProtoManMoveState(protoMan));
         }
         else
         {
             int r = Random.Range(0, 3);
             switch (r)
             {
-                case 0: stateMachine.ChangeState("Attack1"); break; // 기본샷
-                case 1: stateMachine.ChangeState("Attack2"); break; // 대쉬슬래시
-                case 2: stateMachine.ChangeState("Jump"); break;    // 점프회피
-            }*/
+                case 0: stateMachine.ChangeState(new ProtoManAttackState(protoMan)); break;
+                case 1: stateMachine.ChangeState(new ProtoManDashAttackState(protoMan)); break;
+                case 2: stateMachine.ChangeState(new ProtoManJumpState(protoMan)); break;
+            }
         }
     }
 }

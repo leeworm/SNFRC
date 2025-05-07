@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7300745832995306568}
   - component: {fileID: 6010982385318880782}
   - component: {fileID: 3070697816429747458}
+  - component: {fileID: -5825993828407569767}
   - component: {fileID: -5791524082873747424}
   m_Layer: 0
   m_Name: Bullet3
@@ -111,6 +112,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5825993828407569767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780923680850697105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c617b5a75f00e8498315160b2a634ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  speed: 10
+  lifeTime: 2
 --- !u!50 &-5791524082873747424
 Rigidbody2D:
   serializedVersion: 5

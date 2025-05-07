@@ -1,10 +1,6 @@
-using UnityEngine;
-
 public class ProtoManIdleState : IEnemyState
 {
     private Enemy_ProtoMan protoMan;
-    private float idleTime;
-    private float timer;
 
     public ProtoManIdleState(Enemy_ProtoMan protoMan)
     {
@@ -13,23 +9,15 @@ public class ProtoManIdleState : IEnemyState
 
     public void Enter()
     {
-        idleTime = Random.Range(1f, 2f);
-        timer = 0f;
+        protoMan.animator.Play("Idle");
     }
 
     public void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= idleTime)
-        {
-            protoMan.stateMachine.ChangeState(new ProtoManMoveState(protoMan));
-        }
+        // 아무것도 하지 않음 (AI가 결정해서 상태를 바꿔야 함)
     }
 
     public void Exit() { }
 
-    public void AnimationFinishTrigger()
-    {
-        // 애니메이션 끝났을 때 실행할 코드
-    }
+    public void AnimationFinishTrigger() { }
 }

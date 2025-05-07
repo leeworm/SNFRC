@@ -19,11 +19,20 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        // 각 보스마다 오버라이드해서 첫 상태 지정
+        // 모든 적이 공통적으로 타겟을 플레이어로 설정
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            player = playerObj.transform;
+        }
+        else
+        {
+            Debug.LogWarning($"{name}: Player not found in scene!");
+        }
     }
 
     public void AnimationFinishTrigger()
     {
-        stateMachine.currentState.AnimationFinishTrigger();
+        stateMachine.currentState?.AnimationFinishTrigger();
     }
 }

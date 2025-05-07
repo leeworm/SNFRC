@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyStateMachine
+public class EnemyStateMachine : MonoBehaviour
 {
     public IEnemyState currentState { get; private set; }
 
