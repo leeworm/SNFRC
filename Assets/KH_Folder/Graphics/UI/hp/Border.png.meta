@@ -1,10 +1,55 @@
 fileFormatVersion: 2
-guid: 6ae00acaa351c3c44b9dc349e320d576
+guid: f94590538f4ba0945bda60d8963b6b67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1958244425575821640
-    second: Custom Edited - Mario Customs - Bowser Super Mario Bros 1 NES-Style_0
+      213: 4507162162781784842
+    second: Border_0
+  - first:
+      213: 9025258261241886631
+    second: Border_1
+  - first:
+      213: 419748798381995560
+    second: Border_2
+  - first:
+      213: 1277385477702494264
+    second: Border_3
+  - first:
+      213: 8090887076897475042
+    second: Border_4
+  - first:
+      213: -7355046329383874011
+    second: Border_5
+  - first:
+      213: 5892895116198526607
+    second: Border_6
+  - first:
+      213: 4490965917773110958
+    second: Border_7
+  - first:
+      213: -8838729720922200251
+    second: Border_8
+  - first:
+      213: 377256947841060989
+    second: Border_9
+  - first:
+      213: -1951771407282955697
+    second: Border_10
+  - first:
+      213: -4873021454879206208
+    second: Border_11
+  - first:
+      213: -9103608961859836320
+    second: Border_12
+  - first:
+      213: -8357436732776746092
+    second: Border_13
+  - first:
+      213: 3325315494065663769
+    second: Border_14
+  - first:
+      213: 373226349270037078
+    second: Border_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,353 +184,353 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coopa_idle
+      name: Border_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 9
-        width: 32
-        height: 32
+        x: 94
+        y: 370
+        width: 52
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 841f5d90ee41d2b10800000000000000
-      internalID: 1958244425575821640
+      spriteID: a0b80b96b18ac8e30800000000000000
+      internalID: 4507162162781784842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coopa_walk1
+      name: Border_1
       rect:
         serializedVersion: 2
-        x: 166
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45789bc228388dd4897682628260d403
-      internalID: -1816598346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_walk2
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ba7f813faf9edc4ea3e45362b877852
-      internalID: -1821273109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_fire
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db235293b65051a48946109b77da68e3
-      internalID: 1435865181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_spin1
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b078bf41484dfed41bf23dbf49ff2cd4
-      internalID: -543645774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_spin2
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a10e8a28a31989841a0b24a2833e9c43
-      internalID: -1838635923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_spin3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cff3fdc57f8b22c47908cc17f687f888
-      internalID: -639215705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_spin4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c03dd50b552fdbd4d8ba736e2e087884
-      internalID: 1493520186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_attack1
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 968253c99bb7d9d4e81729d547cf87bf
-      internalID: 1845417022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_attack2
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3c2ad1d08369034fb695a145dfb5f6e
-      internalID: 2103706056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_attack3
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f0e93c84296511489f2afab5ef8c453
-      internalID: 1037505289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_attack4
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f1bb486795569142b25aaf3b81a06a5
-      internalID: 366675134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_attack5
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d344e241fadac034fbeb9f5d23456c82
-      internalID: 413650367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coopa_attack6
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 9
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 167ea17d24444d5469ad2dbebf3ce995
-      internalID: 819339146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 42
-        width: 24
-        height: 8
+        x: 94
+        y: 354
+        width: 52
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5c3c94da728b59946a564b671b811e90
-      internalID: 1253126809
+      spriteID: 7a77b7b1298204d70800000000000000
+      internalID: 9025258261241886631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire2
+      name: Border_2
       rect:
         serializedVersion: 2
-        x: 537
-        y: 42
-        width: 24
-        height: 8
+        x: 94
+        y: 338
+        width: 53
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a0ef4c802dd74ac4abcc2781fa249f03
-      internalID: -2065773299
+      spriteID: 826b476ee4f33d500800000000000000
+      internalID: 419748798381995560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 322
+        width: 53
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83823b7f25f2ab110800000000000000
+      internalID: 1277385477702494264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 255
+        width: 63
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9c548ddea984070800000000000000
+      internalID: 8090887076897475042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 287
+        width: 55
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52298860550ade990800000000000000
+      internalID: -7355046329383874011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 175
+        width: 60
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8eb5a3e2e4c7c150800000000000000
+      internalID: 5892895116198526607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_7
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 162
+        width: 50
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae904345bd135e30800000000000000
+      internalID: 4490965917773110958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 146
+        width: 46
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547aebef526865580800000000000000
+      internalID: -8838729720922200251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 131
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d705d1df1394c3500800000000000000
+      internalID: 377256947841060989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_10
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 131
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a922afe3ae9e4e0800000000000000
+      internalID: -1951771407282955697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_11
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 131
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4511f1ecc8f5cb0800000000000000
+      internalID: -4873021454879206208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 131
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0662846d1eb79a180800000000000000
+      internalID: -9103608961859836320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_13
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 131
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4937a06329b640c80800000000000000
+      internalID: -8357436732776746092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 41
+        width: 50
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fe2e5d2d4e52e20800000000000000
+      internalID: 3325315494065663769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border_15
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 9
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6527e012367fd2500800000000000000
+      internalID: 373226349270037078
       vertices: []
       indices: 
       edges: []
@@ -494,7 +539,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6c08c4aaf559c12408750f089a905280
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -503,23 +548,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Coopa_attack1: 1845417022
-      Coopa_attack2: 2103706056
-      Coopa_attack3: 1037505289
-      Coopa_attack4: 366675134
-      Coopa_attack5: 413650367
-      Coopa_attack6: 819339146
-      Coopa_fire: 1435865181
-      Coopa_idle: 1958244425575821640
-      Coopa_spin1: -543645774
-      Coopa_spin2: -1838635923
-      Coopa_spin3: -639215705
-      Coopa_spin4: 1493520186
-      Coopa_walk1: -1816598346
-      Coopa_walk2: -1821273109
-      Fire1: 1253126809
-      Fire2: -2065773299
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

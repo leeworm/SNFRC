@@ -301,7 +301,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -310,6 +310,50 @@ TextureImporter:
       bones: []
       spriteID: d30b6306238b91e428641b27e4a26894
       internalID: -801934585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koopa_missile
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 440
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c0ae84eb3c349419d2cf826ee9de9d
+      internalID: -816953779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: koopa_upfire
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f736ea2787061c4697c809c49443b5a
+      internalID: 225991125
       vertices: []
       indices: 
       edges: []
@@ -332,6 +376,8 @@ TextureImporter:
       enemy_mushroom1: -6469838034995708988
       enemy_mushroom2: 525600212
       enemy_mushroom3: 1426649068
+      koopa_missile: -816953779
+      koopa_upfire: 225991125
       turtle1: -1080235306
       turtle2: 528146564
       turtle3: -1618125637

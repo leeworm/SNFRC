@@ -92,8 +92,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   wallCheckDir: 1
-  _xVelocity: 10
+  _xVelocity: 15
   _yVelocity: -10
+  Damage: 5
 --- !u!212 &2165274750524506874
 SpriteRenderer:
   m_ObjectHideFlags: 0

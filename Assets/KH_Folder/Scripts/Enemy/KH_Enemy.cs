@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class KH_Enemy : KH_Entity
 {
-    protected BoxCollider2D boxCollider;
-    [SerializeField]protected float moveSpeed = 2f;
+    [SerializeField]public float moveSpeed = 2f;
 
-    [SerializeField]protected bool isDeath = false;
-    
-    [SerializeField] private Vector2 deathVelocity; // 적이 죽을 때의 velocity
+
+    protected BoxCollider2D boxCollider;
+    protected bool isDeath = false;
+    private Vector2 deathVelocity; // 적이 죽을 때의 velocity
 
     protected override void Awake()
     {
         base.Awake();
-
     }
 
     protected override void Start()
@@ -33,7 +32,7 @@ public class KH_Enemy : KH_Entity
         Move();
     }
 
-    protected void Move()
+    private void Move()
     {
         rb.linearVelocity = new Vector2(facingDir * -moveSpeed, rb.linearVelocity.y);
         
@@ -60,7 +59,7 @@ public class KH_Enemy : KH_Entity
         isDeath = true;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("DamageObject"))
         {

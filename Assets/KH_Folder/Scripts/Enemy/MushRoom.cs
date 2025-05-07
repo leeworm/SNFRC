@@ -35,4 +35,9 @@ public class MushRoom : KH_Enemy
         rb.bodyType = RigidbodyType2D.Kinematic; // 물리적 상호작용 비활성화
         Destroy(gameObject, 0.4f); // 1초 후에 오브젝트 제거
     }
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+    }
 }

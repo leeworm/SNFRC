@@ -56,6 +56,8 @@ public class KH_BulletPool : MonoBehaviour
 
     public void ReturnBullet(GameObject bullet)
     {
+        KH_EffectManager.Instance.PlayEffect("FireBomb", bullet.transform.position); // 이펙트 재생
+
         bullet.SetActive(false);
         bulletPool.Enqueue(bullet);
     }

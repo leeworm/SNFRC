@@ -4,8 +4,9 @@ using DG.Tweening;
 public class KH_Fireball : KH_Entity
 {
     [Header("파이어볼 정보")]
-    public float _xVelocity = 10f; // x축 속도
-    public float _yVelocity = -10f; // y축 속도
+    [SerializeField]private float _xVelocity = 10f; // x축 속도
+    [SerializeField]private float _yVelocity = -10f; // y축 속도
+    [SerializeField]public int Damage = 5;
 
     private int _facingDir; // 방향 (1: 오른쪽, -1: 왼쪽)
 

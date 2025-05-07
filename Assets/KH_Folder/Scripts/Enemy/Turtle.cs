@@ -47,7 +47,7 @@ public class Turtle : KH_Enemy
         moveSpeed = spinSpeed;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -57,5 +57,10 @@ public class Turtle : KH_Enemy
                 Spin(collision.gameObject.transform);
             }
         }
+    }
+    
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
     }
 }
