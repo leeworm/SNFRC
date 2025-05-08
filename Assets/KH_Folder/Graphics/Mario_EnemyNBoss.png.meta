@@ -345,7 +345,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -354,6 +354,28 @@ TextureImporter:
       bones: []
       spriteID: 8f736ea2787061c4697c809c49443b5a
       internalID: 225991125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunflower
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e873665263b113340b7e5fbe2d958afe
+      internalID: -1828444638
       vertices: []
       indices: 
       edges: []
@@ -378,6 +400,7 @@ TextureImporter:
       enemy_mushroom3: 1426649068
       koopa_missile: -816953779
       koopa_upfire: 225991125
+      sunflower: -1828444638
       turtle1: -1080235306
       turtle2: 528146564
       turtle3: -1618125637

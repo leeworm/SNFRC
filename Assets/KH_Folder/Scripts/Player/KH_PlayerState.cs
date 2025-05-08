@@ -37,8 +37,14 @@ public class KH_PlayerState
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Z) && xInput == 0)
+        if (Input.GetKeyDown(KeyCode.Z) && xInput == 0 && !player.isStage1)
             stateMachine.ChangeState(player.shotState);
+        else if (Input.GetKeyDown(KeyCode.X) && xInput == 0 && !player.isStage1)
+            stateMachine.ChangeState(player.setPipeState);
+        else if (Input.GetKeyDown(KeyCode.C) && !player.isStage1)
+        {
+            // 버섯 생성
+        }
     }
 
     public virtual void Exit()

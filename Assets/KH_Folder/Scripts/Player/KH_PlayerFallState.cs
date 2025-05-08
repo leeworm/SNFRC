@@ -11,9 +11,11 @@ public class KH_PlayerFallState : KH_PlayerState
     {
         base.Enter();
     
-        player.jumpAttackCollider.SetActive(true); // 점프 공격 콜라이더 활성화
-
-        player.canHit = false; // 무적
+        if(player.isStage1)
+        {
+            player.jumpAttackCollider.SetActive(true); // 점프 공격 콜라이더 활성화
+            player.canHit = false; // 무적
+        }
     }
 
     public override void Update()
@@ -29,10 +31,12 @@ public class KH_PlayerFallState : KH_PlayerState
     public override void Exit()
     {
         base.Exit();
-
-        player.jumpAttackCollider.SetActive(false); // 점프 공격 콜라이더 비활성화
-
-        player.canHit = true; // 무적 해제
+        
+        if(player.isStage1)
+        {
+            player.jumpAttackCollider.SetActive(false); // 점프 공격 콜라이더 비활성화
+            player.canHit = true; // 무적 해제
+        }
     }
 
 

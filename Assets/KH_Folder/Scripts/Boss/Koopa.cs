@@ -20,7 +20,24 @@ public class Koopa : KH_Enemy
 
     #endregion
 
+    [Header("큰 파이어볼 정보")]
     public Transform playerTransform; // 플레이어 트랜스폼
+    public GameObject fireShotPrefab; // 불꽃 발사체 프리팹
+    [SerializeField] private float fireSpeed = 10f; // 불꽃 발사 속도
+    
+    [Header("점프 공격 정보")]
+    [SerializeField] private float jumpSpeed = 15f; // 점프 속도
+    [SerializeField] private float jumpAttackSpeed = 25f; // 점프 속도
+
+    
+    [Header("작은 파이어볼 정보")]
+    public GameObject smallFireShotPrefab; // 불꽃 발사체 프리팹
+    [SerializeField]public float angleIncrement = 15f; // 각도 증가량
+    [SerializeField]private float smallFireSpeed = 10f; // 작은 불꽃 발사 속도
+    
+    [Header("롤링 파이어볼 정보")]
+    public GameObject rollingFireShotPrefab; // 불꽃 발사체 프리팹
+    [SerializeField]private float rollingFireSpeed = 10f; // 작은 불꽃 발사 속도
 
     protected override void Awake()
     {
@@ -74,7 +91,102 @@ public class Koopa : KH_Enemy
                 int damage = collision.gameObject.GetComponent<KH_Fireball>().Damage;
                 healthPoint -= damage;
                 koopaHpBar.GetDamage(damage);
+    
             }
         }
     }
+
+    public void ShotFire()
+    {
+        GameObject fire = Instantiate(fireShotPrefab, wallCheck.position, Quaternion.identity);
+        
+        if(transform.position.x > playerTransform.position.x) // -
+        {
+            if(facingRight)
+                Flip(); // 방향 전환
+
+             // 왼쪽으로 공격
+             fire.transform.Rotate(0, 0, 90);
+             fire.GetComponent<Rigidbody2D>().linearVelocity = Vector2.left * fireSpeed;
+        }
+        else if(transform.position.x < playerTransform.position.x) // +
+        {
+            if(!facingRight)
+                Flip(); // 방향 전환
+
+            // 오른쪽으로 공격
+            fire.transform.Rotate(0, 0, -90);
+            fire.GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * fireSpeed;
+        }
+    }
+
+    public void JumpUp()
+    {
+        Debug.Log("JumpUp");
+
+        if(transform.position.x > playerTransform.position.x) // -
+        {
+            if(facingRight)
+                Flip(); // 방향 전환
+        }
+        else if(transform.position.x < playerTransform.position.x) // +
+        {
+            if(!facingRight)
+                Flip(); // 방향 전환
+        }
+        rb.linearVelocityY = jumpSpeed;
+    }
+
+    public void GoPlayerPos()
+    {
+        transform.position = new Vector2(playerTransform.position.x, transform.position.y);
+    }
+
+    public void JumpDown()
+    {
+        Debug.Log("JumpDown");
+        rb.linearVelocityY = -jumpAttackSpeed;
+    }
+
+    public void AllDirFire()
+    {
+        for (float angle = 0; angle < 360; angle += angleIncrement)
+        {
+            GameObject fire = Instantiate(smallFireShotPrefab, transform.position, Quaternion.identity);
+            // 발사 방향 설정
+            Vector3 direction = Quaternion.Euler(0, 0, angle) * Vector3.left;
+            fire.transform.Rotate(0, 0, angle); // 발사체 회전
+
+            // 발사 객체에 속도 부여
+            Rigidbody2D rigid = fire.GetComponent<Rigidbody2D>();
+            if (rigid != null)
+            {
+                rigid.AddForce(direction * smallFireSpeed, ForceMode2D.Impulse);
+            }
+        }
+        angleIncrement -= 0.5f; // 각도 증가량 증가
+    }
+
+    public void RoundFire()
+    {
+        Debug.Log("RoundFire");
+
+        GameObject fire = Instantiate(rollingFireShotPrefab, wallCheck.position, Quaternion.identity);
+        
+        if(transform.position.x > playerTransform.position.x) // -
+        {
+            if(facingRight)
+                Flip(); // 방향 전환
+
+             fire.GetComponent<Rigidbody2D>().linearVelocity = Vector2.left * rollingFireSpeed;
+        }
+        else if(transform.position.x < playerTransform.position.x) // +
+        {
+            if(!facingRight)
+                Flip(); // 방향 전환
+
+            fire.GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * rollingFireSpeed;
+        }
+    }
+
 }

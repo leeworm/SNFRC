@@ -39,7 +39,6 @@ public class KH_Fireball : KH_Entity
         if(IsGroundDetected())
         {
             SetVelocity(_xVelocity * _facingDir, _yVelocity);
-            Debug.Log("fireball velocity: " + rb.linearVelocity);
         }
     }
 

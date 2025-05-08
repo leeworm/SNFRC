@@ -26,12 +26,13 @@ public class KH_Player : KH_Entity
     public KH_PlayerFallState fallState { get; private set; }
     public KH_PlayerHitState hitState { get; private set; }
     public KH_PlayerShotState shotState { get; private set; }
+    public KH_PlayerSetPipeState setPipeState { get; private set; }
 
     public KH_PlayerHangState hangState { get; private set; }
     public KH_PlayerCutMoveState cutMoveState { get; private set; }
     #endregion
 
-    //public KH_BulletPool bulletPool;
+    [SerializeField]public bool isStage1 = true;
 
     protected override void Awake()
     {
@@ -45,6 +46,7 @@ public class KH_Player : KH_Entity
         fallState = new KH_PlayerFallState(this, stateMachine, "Jump");
         hitState = new KH_PlayerHitState(this, stateMachine, "Idle");
         shotState = new KH_PlayerShotState(this, stateMachine, "Shot");
+        setPipeState = new KH_PlayerSetPipeState(this, stateMachine, "Idle");
 
         hangState = new KH_PlayerHangState(this, stateMachine, "Hang");
         cutMoveState = new KH_PlayerCutMoveState(this, stateMachine, "Move");
@@ -73,6 +75,23 @@ public class KH_Player : KH_Entity
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy") && canHit)
+        {
+            if(collision.gameObject.transform.position.x > transform.position.x) // 적이 오른쪽에 있을 때
+            {
+                rb.AddForce(new Vector2(-bouncePower, 0), ForceMode2D.Impulse); // 왼쪽으로 튕기기
+            }
+            else if(collision.gameObject.transform.position.x < transform.position.x) // 적이 왼쪽에 있을 때
+            {
+                rb.AddForce(new Vector2(bouncePower, 0), ForceMode2D.Impulse); // 오른쪽으로 튕기기
+            }
+
+            stateMachine.ChangeState(hitState);
+            KH_HealthManager.Instance.TakeDamage(1);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && canHit)
         {
             stateMachine.ChangeState(hitState);
             KH_HealthManager.Instance.TakeDamage(1);

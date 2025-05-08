@@ -4,6 +4,8 @@ public class KoopaWalkState : KoopaState
 {
     private Transform oldPlayerTransform;
 
+    int patternRandomNum = 0; // 패턴 랜덤 넘버
+
     public KoopaWalkState(Koopa _koopa, KoopaStateMachine _stateMachine, string _animBoolName) 
         : base(_koopa, _stateMachine, _animBoolName)
     {
@@ -14,7 +16,7 @@ public class KoopaWalkState : KoopaState
         base.Enter();
 
         oldPlayerTransform = koopa.playerTransform; // 플레이어의 위치를 저장합니다.
-        if(koopa.transform.position.x > oldPlayerTransform.position.x) // 좌우 플립
+        if(koopa.transform.position.x > oldPlayerTransform.position.x) 
         {
             koopa.SetVelocity(-koopa.moveSpeed,0); // 왼쪽으로 이동
         }
@@ -40,14 +42,29 @@ public class KoopaWalkState : KoopaState
         if(stateTimer <= 0)
         {
             // 보스 패턴 시작
-            koopa.stateMachine.ChangeState(koopa.idleState);
+            patternRandomNum = Random.Range(0, 4); 
+
+            if(patternRandomNum == 0) // 불꽃 발사 패턴
+            {
+                koopa.stateMachine.ChangeState(koopa.fireShotState);
+            }
+            else if(patternRandomNum == 1) // 점프 공격 패턴
+            {
+                koopa.stateMachine.ChangeState(koopa.jumpAttackState);
+            }
+            else if(patternRandomNum == 2) // 모든 방향으로 불꽃 발사 패턴
+            {
+                koopa.stateMachine.ChangeState(koopa.allDirFireState);
+            }
+            else if(patternRandomNum == 3) // 롤링 불꽃 발사 패턴
+            {
+                koopa.stateMachine.ChangeState(koopa.roundFireState);
+            }
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-
-        koopa.SetZeroVelocity(); // 이동 멈춤
     }
 }

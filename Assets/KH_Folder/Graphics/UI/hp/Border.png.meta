@@ -82,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -548,7 +548,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Border_0: 4507162162781784842
+      Border_1: 9025258261241886631
+      Border_10: -1951771407282955697
+      Border_11: -4873021454879206208
+      Border_12: -9103608961859836320
+      Border_13: -8357436732776746092
+      Border_14: 3325315494065663769
+      Border_15: 373226349270037078
+      Border_2: 419748798381995560
+      Border_3: 1277385477702494264
+      Border_4: 8090887076897475042
+      Border_5: -7355046329383874011
+      Border_6: 5892895116198526607
+      Border_7: 4490965917773110958
+      Border_8: -8838729720922200251
+      Border_9: 377256947841060989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
