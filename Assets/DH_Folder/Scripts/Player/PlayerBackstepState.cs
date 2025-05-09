@@ -20,6 +20,7 @@ public class PlayerBackstepState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.isBusy = true;
         timer = backstepDuration;
         delayTimer = landingCheckDelay;
         canLand = false;
@@ -47,7 +48,7 @@ public class PlayerBackstepState : PlayerGroundedState
 
         if (canLand && player.IsGroundDetected())
         {
-            player.SetZeroVelocity();
+            player.SetVelocity(0, rb.linearVelocity.y);
             stateMachine.ChangeState(player.idleState);
             return;
         }
@@ -55,18 +56,19 @@ public class PlayerBackstepState : PlayerGroundedState
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
-            player.SetZeroVelocity();
+            player.SetVelocity(0, rb.linearVelocity.y);
             stateMachine.ChangeState(player.idleState);
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Z))  
+            return;
     }
-
 
     public override void Exit()
     {
         base.Exit();
+        player.isBusy = false;
         //player.anim.SetBool("Backstep", false);
-        player.SetZeroVelocity();
+        player.SetVelocity(0, rb.linearVelocity.y);
     }
 }

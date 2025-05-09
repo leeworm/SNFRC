@@ -2,14 +2,17 @@
 
 public class PlayerCrouchState : PlayerGroundedState
 {
+    private bool substitutionWindowOpen = false;
+
     public PlayerCrouchState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
         : base(_player, _stateMachine, _animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
+        player.isBusy = true;
 
-        player.SetZeroVelocity();
+        player.SetVelocity(0, rb.linearVelocity.y);
         Vector2 newSize = new Vector2(player.originalColliderSize.x, player.originalColliderSize.y * 0.5f);
         player.col.size = newSize;
 
@@ -23,21 +26,34 @@ public class PlayerCrouchState : PlayerGroundedState
     {
         base.Update();
 
-        if (yInput >= 0)
+        if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            stateMachine.ChangeState(new PlayerIdleState(player, stateMachine, "Idle"));
+            stateMachine.ChangeState(player.idleState);
+            return;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.X) && substitutionWindowOpen && player.canSubstitute())
         {
-            stateMachine.ChangeState(new PlayerSubstituteState(player, stateMachine, "Substitute"));
+            stateMachine.ChangeState(player.substituteState);
+            return;
         }
     }
     public override void Exit()
     {
         base.Exit();
-
+        player.isBusy = false;
         player.col.size = player.originalColliderSize;
         player.col.offset = player.originalColliderOffset;
     }
+
+    public void OpenSubstitutionWindow()
+    {
+        substitutionWindowOpen = true;
+    }
+
+    public void CloseSubstitutionWindow()
+    {
+        substitutionWindowOpen = false;
+    }
+
 }

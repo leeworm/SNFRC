@@ -2174,8 +2174,8 @@ TextureImporter:
         y: 2064
         width: 34
         height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3529412, y: 0.6904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2879,7 +2879,7 @@ TextureImporter:
         width: 33
         height: 45
       alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+      pivot: {x: 0.46969697, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3121,7 +3121,7 @@ TextureImporter:
         width: 54
         height: 46
       alignment: 9
-      pivot: {x: 0.35185185, y: 0.5869565}
+      pivot: {x: 0.33333334, y: 0.5869565}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3143,7 +3143,7 @@ TextureImporter:
         width: 53
         height: 56
       alignment: 9
-      pivot: {x: 0.35849056, y: 0.5}
+      pivot: {x: 0.41509435, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3209,7 +3209,7 @@ TextureImporter:
         width: 37
         height: 44
       alignment: 9
-      pivot: {x: 0.45945945, y: 0.6136364}
+      pivot: {x: 0.5405405, y: 0.6136364}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3252,8 +3252,8 @@ TextureImporter:
         y: 1557
         width: 36
         height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.47222224, y: 0.6904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3274,8 +3274,8 @@ TextureImporter:
         y: 1557
         width: 37
         height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6363636}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3296,8 +3296,8 @@ TextureImporter:
         y: 1557
         width: 34
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.725}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3318,8 +3318,8 @@ TextureImporter:
         y: 1479
         width: 48
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5208333, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3340,8 +3340,8 @@ TextureImporter:
         y: 1479
         width: 48
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5208333, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3362,8 +3362,8 @@ TextureImporter:
         y: 1479
         width: 48
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5208333, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3384,8 +3384,8 @@ TextureImporter:
         y: 1479
         width: 48
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5208333, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3516,8 +3516,8 @@ TextureImporter:
         y: 1388
         width: 37
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3538,8 +3538,8 @@ TextureImporter:
         y: 1388
         width: 42
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5408163}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3670,8 +3670,8 @@ TextureImporter:
         y: 1388
         width: 50
         height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40298507}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3692,8 +3692,8 @@ TextureImporter:
         y: 1388
         width: 50
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4090909}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3714,8 +3714,8 @@ TextureImporter:
         y: 1388
         width: 50
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4090909}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3729,15 +3729,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_198
+      name: Naruto_189
       rect:
         serializedVersion: 2
         x: 456
         y: 1388
         width: 50
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4090909}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3755,11 +3755,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 1305
+        y: 1306
         width: 71
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52112675, y: 0.3939394}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3780,8 +3780,8 @@ TextureImporter:
         y: 1305
         width: 71
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.47887325, y: 0.4090909}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4242,8 +4242,8 @@ TextureImporter:
         y: 1129
         width: 42
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4264,8 +4264,8 @@ TextureImporter:
         y: 1128
         width: 47
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4286,8 +4286,8 @@ TextureImporter:
         y: 1128
         width: 47
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4309,7 +4309,7 @@ TextureImporter:
         width: 53
         height: 64
       alignment: 9
-      pivot: {x: 0.46226415, y: 0.5}
+      pivot: {x: 0.46226415, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4331,7 +4331,7 @@ TextureImporter:
         width: 65
         height: 64
       alignment: 9
-      pivot: {x: 0.46923077, y: 0.5}
+      pivot: {x: 0.46923077, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4353,7 +4353,7 @@ TextureImporter:
         width: 65
         height: 64
       alignment: 9
-      pivot: {x: 0.46923077, y: 0.5}
+      pivot: {x: 0.46923077, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4374,8 +4374,8 @@ TextureImporter:
         y: 1128
         width: 47
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4397,7 +4397,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.49, y: 0.5}
+      pivot: {x: 0.49, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4418,8 +4418,8 @@ TextureImporter:
         y: 1127
         width: 33
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4440,8 +4440,8 @@ TextureImporter:
         y: 1127
         width: 37
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4462,8 +4462,8 @@ TextureImporter:
         y: 1127
         width: 36
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4484,8 +4484,8 @@ TextureImporter:
         y: 1056
         width: 47
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4507,7 +4507,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.49, y: 0.5}
+      pivot: {x: 0.49, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4529,7 +4529,7 @@ TextureImporter:
         width: 47
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4551,7 +4551,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.49, y: 0.5}
+      pivot: {x: 0.49, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4573,7 +4573,7 @@ TextureImporter:
         width: 46
         height: 64
       alignment: 9
-      pivot: {x: 0.48913044, y: 0.5}
+      pivot: {x: 0.48913044, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4594,8 +4594,8 @@ TextureImporter:
         y: 1056
         width: 47
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4616,8 +4616,8 @@ TextureImporter:
         y: 1056
         width: 50
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4639,7 +4639,7 @@ TextureImporter:
         width: 47
         height: 64
       alignment: 9
-      pivot: {x: 0.5212766, y: 0.5}
+      pivot: {x: 0.5212766, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4661,7 +4661,7 @@ TextureImporter:
         width: 47
         height: 64
       alignment: 9
-      pivot: {x: 0.5425532, y: 0.5}
+      pivot: {x: 0.5425532, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4683,7 +4683,7 @@ TextureImporter:
         width: 47
         height: 64
       alignment: 9
-      pivot: {x: 0.5638298, y: 0.5}
+      pivot: {x: 0.5638298, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4705,7 +4705,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.57, y: 0.5}
+      pivot: {x: 0.57, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4727,7 +4727,7 @@ TextureImporter:
         width: 48
         height: 64
       alignment: 9
-      pivot: {x: 0.59375, y: 0.5}
+      pivot: {x: 0.59375, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4749,7 +4749,7 @@ TextureImporter:
         width: 49
         height: 64
       alignment: 9
-      pivot: {x: 0.5816327, y: 0.5}
+      pivot: {x: 0.5816327, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4771,7 +4771,7 @@ TextureImporter:
         width: 49
         height: 64
       alignment: 9
-      pivot: {x: 0.5408163, y: 0.5}
+      pivot: {x: 0.5408163, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4793,7 +4793,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.53, y: 0.5}
+      pivot: {x: 0.53, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4815,7 +4815,7 @@ TextureImporter:
         width: 52
         height: 64
       alignment: 9
-      pivot: {x: 0.50961536, y: 0.5}
+      pivot: {x: 0.50961536, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4837,7 +4837,7 @@ TextureImporter:
         width: 55
         height: 64
       alignment: 9
-      pivot: {x: 0.5181818, y: 0.5}
+      pivot: {x: 0.5181818, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4859,7 +4859,7 @@ TextureImporter:
         width: 57
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4881,7 +4881,7 @@ TextureImporter:
         width: 60
         height: 64
       alignment: 9
-      pivot: {x: 0.49166667, y: 0.5}
+      pivot: {x: 0.49166667, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4903,7 +4903,7 @@ TextureImporter:
         width: 57
         height: 64
       alignment: 9
-      pivot: {x: 0.4473684, y: 0.5}
+      pivot: {x: 0.4473684, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4925,7 +4925,7 @@ TextureImporter:
         width: 58
         height: 64
       alignment: 9
-      pivot: {x: 0.43965518, y: 0.5}
+      pivot: {x: 0.43965518, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4947,7 +4947,7 @@ TextureImporter:
         width: 45
         height: 64
       alignment: 9
-      pivot: {x: 0.56666666, y: 0.5}
+      pivot: {x: 0.56666666, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4969,7 +4969,7 @@ TextureImporter:
         width: 48
         height: 64
       alignment: 9
-      pivot: {x: 0.5520833, y: 0.5}
+      pivot: {x: 0.5520833, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4991,7 +4991,7 @@ TextureImporter:
         width: 45
         height: 64
       alignment: 9
-      pivot: {x: 0.56666666, y: 0.5}
+      pivot: {x: 0.56666666, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5013,7 +5013,7 @@ TextureImporter:
         width: 48
         height: 64
       alignment: 9
-      pivot: {x: 0.5520833, y: 0.5}
+      pivot: {x: 0.5520833, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5035,7 +5035,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.53, y: 0.515625}
+      pivot: {x: 0.53, y: 0.453125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5056,8 +5056,8 @@ TextureImporter:
         y: 917
         width: 47
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5078,8 +5078,8 @@ TextureImporter:
         y: 915
         width: 40
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5101,7 +5101,7 @@ TextureImporter:
         width: 50
         height: 64
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.48, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5123,7 +5123,7 @@ TextureImporter:
         width: 65
         height: 64
       alignment: 9
-      pivot: {x: 0.50769234, y: 0.5}
+      pivot: {x: 0.50769234, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5145,7 +5145,7 @@ TextureImporter:
         width: 71
         height: 64
       alignment: 9
-      pivot: {x: 0.47887325, y: 0.5}
+      pivot: {x: 0.47887325, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5166,8 +5166,8 @@ TextureImporter:
         y: 915
         width: 37
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6210,336 +6210,6 @@ TextureImporter:
       bones: []
       spriteID: e51dc18958638bdf0800000000000000
       internalID: -164321438988447394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_413
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 422
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b930919981b548b0800000000000000
-      internalID: -5168529792926991950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_414
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 422
-        width: 14
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7dbda2bafb016fdb0800000000000000
-      internalID: -4758597540873839657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_415
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1672b2638ba7e0dc0800000000000000
-      internalID: -3670861714659006623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_416
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ef0ae2284a85c100800000000000000
-      internalID: 127660206877970407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_417
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cb57ccdb5743ed20800000000000000
-      internalID: 3306565011291724742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_418
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 422
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bda9f11068068ad00800000000000000
-      internalID: 984142647241186011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_419
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 422
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2bfe27be8d8c2150800000000000000
-      internalID: 5849205660145613610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_420
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02e2e1b183c73e910800000000000000
-      internalID: 1865471251076492832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_421
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 422
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c284d3d6eba8f440800000000000000
-      internalID: 4969911196688089797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_422
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 422
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8861dfcf519533dc0800000000000000
-      internalID: -3660484121148451192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_423
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5353347969edaa20800000000000000
-      internalID: 3075370759694275418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_424
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc9a4dd12f50922d0800000000000000
-      internalID: -3303102314258847283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_425
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 422
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a80db0876e9489d20800000000000000
-      internalID: 3285457182372122762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_426
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 811a6c25bb2f3b4c0800000000000000
-      internalID: -4272804735082913512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_427
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 422
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51b67a569f799ade0800000000000000
-      internalID: -1321357918248408299
       vertices: []
       indices: 
       edges: []
@@ -8349,138 +8019,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_510
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 190
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7ebab0871aeafde0800000000000000
-      internalID: -1298468155878097282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_511
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 190
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64f1a0a2b76850720800000000000000
-      internalID: 2811801405907148614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_512
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 190
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5b3597a712c53750800000000000000
-      internalID: 6284142261917006684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_513
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 190
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2cf11fa5dab7900d0800000000000000
-      internalID: -3456095254544834622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_514
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 190
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c12c7c51dd0bc31b0800000000000000
-      internalID: -5675466966793993700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_515
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 190
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 328c37b44660ea550800000000000000
-      internalID: 6173879167003904035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Naruto_516
       rect:
         serializedVersion: 2
@@ -10280,7 +9818,7 @@ TextureImporter:
       Naruto_186: 7542900500218477449
       Naruto_187: -815951792
       Naruto_188: 1513458880
-      Naruto_189: -712361479
+      Naruto_189: 6812173023308814003
       Naruto_19: -401497540037949722
       Naruto_190: -3078566161801300590
       Naruto_191: -2247365114106222897
@@ -10290,7 +9828,6 @@ TextureImporter:
       Naruto_195: -1615670921
       Naruto_196: -1540400955
       Naruto_197: -1154537996
-      Naruto_198: 6812173023308814003
       Naruto_199: 1605031861
       Naruto_2: -882476483
       Naruto_20: 2081107343897057610
@@ -10416,7 +9953,6 @@ TextureImporter:
       Naruto_347: 653986716
       Naruto_348: 625149257
       Naruto_349: -744310769
-      Naruto_35: -491600537
       Naruto_350: 461031012
       Naruto_351: -156604196
       Naruto_352: 1103369568

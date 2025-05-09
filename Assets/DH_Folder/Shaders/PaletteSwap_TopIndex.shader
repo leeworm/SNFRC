@@ -1,4 +1,4 @@
-
+﻿
 Shader "Custom/PaletteSwap_TopIndex"
 {
     Properties
@@ -7,12 +7,15 @@ Shader "Custom/PaletteSwap_TopIndex"
         _ReferencePalette("Reference Palette", 2D) = "white" {}
         _SwapPalette("Swap Palette", 2D) = "white" {}
         _SwapIndex("Swap Index", Float) = 0
+        _Alpha("Alpha", Range(0,1)) = 1.0  
     }
 
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent" }
         LOD 100
+
+        Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
         {
@@ -25,6 +28,7 @@ Shader "Custom/PaletteSwap_TopIndex"
             sampler2D _ReferencePalette;
             sampler2D _SwapPalette;
             float _SwapIndex;
+            float _Alpha; 
 
             struct appdata
             {
@@ -75,7 +79,7 @@ Shader "Custom/PaletteSwap_TopIndex"
             {
                 float3 inputColor = tex2D(_MainTex, i.uv).rgb;
                 float3 outputColor = GetSwapColor(inputColor);
-                return float4(outputColor, 1.0);
+                return float4(outputColor, _Alpha);
             }
             ENDCG
         }

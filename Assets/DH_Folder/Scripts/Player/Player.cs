@@ -3,21 +3,26 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    [Header("Attack Detail")]
-    public Vector2[] attackMovement;
-    public float counterAttackDuration = 0.2f;
+    [Header("Skill Effects")]
+    public GameObject blackFadePrefab;
+    public GameObject skillEffectPrefab;
+
+    [Header("Effect info")]
+    public GameObject effectPrefab;
+    public Transform effectSpawnPoint; // 이펙트 생성 위치 (예: 손 위치, 무기 위치)
 
     [Header("Attack Info")]
     public float attackDistance;
     public float attackCooldown;
     [HideInInspector] public float lasttimeAttacked;
     [SerializeField] protected LayerMask whatIsEnemy;
-
-    public bool isBusy;
     public GameObject attackHitbox;
+
 
     [Header("Combo")]
     public int primaryAttackComboCounter = 0;
+    public float comboWindow = 0.7f; // 콤보 입력 유효 시간
+    public bool bufferedAttackInput = false;
 
     [Header("Movement info")]
     public float moveSpeed;
@@ -27,12 +32,27 @@ public class Player : Entity
     public float dashSpeed;
     public float dashDir { get; private set; } // 대시 방향 (1: 오른쪽, -1: 왼쪽)
 
-    public int currentJumpCount;
+    [Header("Jump info")]
     public int maxJumpCount = 2;
+    public int currentJumpCount;
+
+    [Header("Substitution info")]
+    public float substitutionCooldown = 1.5f;
+    private float lastSubstitutionTime = -999f;
+    public bool canSubstitute()
+    {
+        return Time.time >= lastSubstitutionTime + substitutionCooldown;
+    }
 
     [HideInInspector] public BoxCollider2D col;
     [HideInInspector] public Vector2 originalColliderSize;
     [HideInInspector] public Vector2 originalColliderOffset;
+
+    public bool isBusy;
+    public bool commandDetectorEnabled = false;
+    public bool hasAirAttacked = false;
+    public bool isBlocking = false;
+    public bool isLanding = false;
 
 
     #region States
@@ -45,11 +65,15 @@ public class Player : Entity
     public PlayerLandState landState { get; private set; }
     public PlayerDashState dashState { get; private set; }
     public PlayerBackstepState backstepState { get; private set; }
-    public PlayerDeadState deadState { get; private set; }
     public PlayerPrimaryAttackState primaryAttack { get; private set; }
-
+    public PlayerAirAttackState airAttackState { get; private set; }
+    public PlayerDefenseState defenseState { get; private set; }
+    public PlayerAirDefenseState airDefenseState { get; private set; }
+    public PlayerSexyJutsuState SexyJutsuState { get; private set; }
     public PlayerCrouchState crouchState { get; private set; }
+    public PlayerSubstituteState substituteState { get; private set; }
     public CommandDetector CommandDetector { get; private set; }
+    public PlayerDeadState deadState { get; private set; }
 
     #endregion
 
@@ -62,16 +86,21 @@ public class Player : Entity
         CommandDetector = new CommandDetector();
 
         // 각 상태 인스턴스 생성 (this: 플레이어 객체, stateMachine: 상태 머신, "Idle"/"Move": 상태 이름)
-        moveState = new PlayerMoveState(this, stateMachine, "Move");
         idleState = new PlayerIdleState(this, stateMachine, "Idle");
+        moveState = new PlayerMoveState(this, stateMachine, "Move");
         jumpState = new PlayerJumpState(this, stateMachine, "Jump", lastXVelocity);
         airState = new PlayerAirState(this, stateMachine, "Jump");
         landState = new PlayerLandState(this, stateMachine, "Land");
         dashState = new PlayerDashState(this, stateMachine, "Dash", dashDir);
-        backstepState = new PlayerBackstepState(this, stateMachine, "backstep", facingDir);
-        crouchState = new PlayerCrouchState(this, stateMachine, "Crouch");
+        backstepState = new PlayerBackstepState(this, stateMachine, "Backstep", facingDir);
         primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "Attack");
-        deadState = new PlayerDeadState(this, stateMachine, "Die");        
+        airAttackState = new PlayerAirAttackState(this, stateMachine, "AirAttack");
+        defenseState = new PlayerDefenseState(this, stateMachine, "Block");
+        airDefenseState = new PlayerAirDefenseState(this, stateMachine, "AirBlock");
+        SexyJutsuState = new PlayerSexyJutsuState(this, stateMachine, "Skill1");
+        crouchState = new PlayerCrouchState(this, stateMachine, "Crouch");
+        substituteState = new PlayerSubstituteState(this, stateMachine, "Substitute_Venish");
+        deadState = new PlayerDeadState(this, stateMachine, "Die");
     }
 
     protected override void Start()
@@ -81,8 +110,14 @@ public class Player : Entity
         stateMachine.Initialize(idleState);
 
         col = GetComponent<BoxCollider2D>();
+
         originalColliderSize = col.size;
         originalColliderOffset = col.offset;
+
+        isBlocking = false;
+        isLanding = false;
+        hasAirAttacked = false;
+        commandDetectorEnabled = true;
     }
 
     protected override void Update()
@@ -106,7 +141,7 @@ public class Player : Entity
 
     public Transform GetNearestEnemy()
     {
-        float range = 5f;
+        float range = 10f;
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, range, LayerMask.GetMask("Enemy"));
         Transform nearest = null;
         float minDistance = Mathf.Infinity;
@@ -131,7 +166,7 @@ public class Player : Entity
 
         base.FlipController(_x); // 나머지는 기존 방식 유지
     }
-    
+
     public void ActivateHitbox()
     {
         if (attackHitbox != null)
@@ -144,4 +179,5 @@ public class Player : Entity
             attackHitbox.SetActive(false);
     }
 
+    public bool IsGrounded() => IsGroundDetected();
 }

@@ -32,6 +32,8 @@ AnimationClip:
       value: {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
     - time: 0.41666666
       value: {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
+    - time: 0.5
+      value: {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -60,12 +62,13 @@ AnimationClip:
     - {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
     - {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
     - {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
+    - {fileID: 5661582258412357865, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.5833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -84,4 +87,32 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.083333336
+    functionName: ActivateHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: DeactivateHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: OnAttackComplete
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: AnimationTrigger
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

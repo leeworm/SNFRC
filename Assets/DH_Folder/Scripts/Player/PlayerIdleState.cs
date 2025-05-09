@@ -3,21 +3,20 @@ using static CommandDetector;
 
 public class PlayerIdleState : PlayerGroundedState
 {
-    public PlayerIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
-        : base(_player, _stateMachine, _animBoolName)
-    {
-    }
-
     private float commandBufferTime = 0.15f;
     private float commandBufferTimer;
     private bool bufferingInput = false;
 
+    public PlayerIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
+        : base(_player, _stateMachine, _animBoolName) { }    
+
     public override void Enter()
     {
         base.Enter();
-        player.SetZeroVelocity();
+        player.SetVelocity(0, rb.linearVelocity.y);
         bufferingInput = false;
         commandBufferTimer = 0f;
+        player.commandDetectorEnabled = true;
     }
 
     public override void Update()
@@ -27,14 +26,14 @@ public class PlayerIdleState : PlayerGroundedState
         if (xInput == player.facingDir && player.IsWallDetected())
             return;
 
-        var dashType = player.CommandDetector.CheckDashCommand(player.facingDir);
+        var commandType = player.CommandDetector.CheckCommand(player.facingDir, enabled: player.commandDetectorEnabled);
 
-        if (dashType == DashType.Forward)
+        if (commandType == DashType.Forward)
         {
             stateMachine.ChangeState(new PlayerDashState(player, stateMachine, "Dash", player.facingDir));
             return;
         }
-        else if (dashType == DashType.Backward)
+        else if (commandType == DashType.Backward)
         {
             stateMachine.ChangeState(new PlayerBackstepState(player, stateMachine, "Backstep", -player.facingDir));
             return;

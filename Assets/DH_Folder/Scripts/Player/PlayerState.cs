@@ -33,7 +33,6 @@ public class PlayerState
     {
         stateTimer -= Time.deltaTime; // 상태 타이머 업데이트
 
-
         xInput = Input.GetAxisRaw("Horizontal"); // 수평 입력 값 가져오기
         yInput = Input.GetAxisRaw("Vertical"); // 수직 입력 값 가져오기
         player.anim.SetFloat("yVelocity", rb.linearVelocity.y); // y축 속도 애니메이션 변수 설정

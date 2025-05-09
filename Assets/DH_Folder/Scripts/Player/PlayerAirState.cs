@@ -12,19 +12,37 @@ public class PlayerAirState : PlayerState
         base.Enter();
         currentXVelocity = player.lastXVelocity; // 직전 속도 유지
         player.SetVelocity(currentXVelocity, rb.linearVelocityY);
+        player.commandDetectorEnabled = false;
     }
+
     public override void Update()
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.X) && player.currentJumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Z) && !(player.currentState is PlayerAirDefenseState) && !(player.currentState is PlayerAirAttackState))
         {
-            stateMachine.ChangeState(new PlayerJumpState(player, stateMachine, "Jump", player.lastXVelocity));
+            stateMachine.ChangeState(player.airAttackState);
             return;
         }
 
-        if (player.IsGroundDetected())
+        if (Input.GetKeyDown(KeyCode.X) && player.currentJumpCount > 0 && !(player.currentState is PlayerAirDefenseState))
+        {
+            Debug.Log("에어에서 점프로 전이");
+            stateMachine.ChangeState(player.jumpState);
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.S) && !player.isBlocking)
+        {
+            stateMachine.ChangeState(player.airDefenseState);
+            return;
+        }
+
+        if (player.IsGrounded())
+        {
             stateMachine.ChangeState(player.landState);
+            return;
+        }
 
         if (xInput != 0)
             player.SetVelocity(currentXVelocity * xInput, rb.linearVelocity.y);

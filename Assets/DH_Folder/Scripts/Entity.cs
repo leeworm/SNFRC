@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public SpriteRenderer sr { get; private set; }
     //public CharacterStats stats { get; private set; }
     public CapsuleCollider2D cd { get; private set; }
+    public BoxCollider2D bd { get; private set; }
     #endregion
 
     [Header("Knockback info")]
@@ -31,7 +32,9 @@ public class Entity : MonoBehaviour
     protected bool facingRight = true; // 객체가 오른쪽을 보고 있는지 여부
 
     public System.Action onFlipped;
-    public float lastXVelocity { get; protected set; }
+
+    public float lastXVelocity;
+    public float lastYVelocity;
 
     protected virtual void Awake()
     {
@@ -46,6 +49,7 @@ public class Entity : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //stats = GetComponent<CharacterStats>();
         cd = GetComponent<CapsuleCollider2D>();
+        bd = GetComponent<BoxCollider2D>();
     }
 
     protected virtual void Update()

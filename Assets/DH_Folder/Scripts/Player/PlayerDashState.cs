@@ -14,7 +14,6 @@ public class PlayerDashState : PlayerGroundedState
     {
         base.Enter();
         player.SetVelocity(direction * player.dashSpeed, 0);
-        player.anim.SetBool("Dash", true); // 명시적으로 시작
     }
 
     public override void Update()
@@ -31,7 +30,6 @@ public class PlayerDashState : PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
-        player.anim.SetBool("Dash", false);
         player.CommandDetector.Reset();
     }
 }
