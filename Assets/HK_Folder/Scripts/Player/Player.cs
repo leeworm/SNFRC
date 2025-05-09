@@ -20,6 +20,8 @@ public class Player : Entity
     [Header("대시 정보")]
     public float dashSpeed;
     public float dashDuration;
+    internal bool inputEnabled;
+
     public float dashDir { get; private set; }
 
     public bool grounded => IsGroundDetected();

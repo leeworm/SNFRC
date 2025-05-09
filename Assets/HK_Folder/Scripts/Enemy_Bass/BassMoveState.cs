@@ -3,27 +3,32 @@ using UnityEngine;
 public class BassMoveState : IEnemyState
 {
     private Enemy_Bass bass;
+    private float speed = 2.5f;
 
     public BassMoveState(Enemy_Bass bass)
     {
         this.bass = bass;
     }
 
-    public void Enter() { }
+    public void Enter()
+    {
+        bass.animator.SetBool("isMoving",true);
+    }
 
     public void Update()
     {
-        Vector2 direction = bass.player.position - bass.transform.position;
-        bass.transform.position += (Vector3)direction.normalized * bass.moveSpeed * Time.deltaTime;
+        if (bass.player == null) return;
 
-        if (Vector2.Distance(bass.transform.position, bass.player.position) < 4f)
-        {
-            bass.stateMachine.ChangeState(new BassRapidFireState(bass));
-        }
+        Vector2 direction = (bass.player.position - bass.transform.position).normalized;
+        bass.transform.position += (Vector3)(new Vector2(direction.x, 0) * speed * Time.deltaTime);
     }
-    public void AnimationFinishTrigger()
+
+    public void Exit()
     {
-        // 애니메이션 끝났을 때 실행할 코드
+        
     }
-    public void Exit() { }
+
+    public void AnimationFinishTrigger() { }
 }
+
+

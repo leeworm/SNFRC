@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &766359128102787878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8179516368575305354}
+  m_Layer: 8
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8179516368575305354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766359128102787878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.674, y: 0.104, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1791788168577963054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2248829850861595611
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +42,7 @@ GameObject:
   - component: {fileID: 4145762559327140190}
   - component: {fileID: 3123672577297780139}
   - component: {fileID: 4623691781987807871}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738193333590652461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,12 +183,14 @@ GameObject:
   - component: {fileID: 1791788168577963054}
   - component: {fileID: 5513500998290261077}
   - component: {fileID: 4781771687862275906}
+  - component: {fileID: 864382650048814151}
   - component: {fileID: 4018051179356356099}
   - component: {fileID: 8251672073072062986}
   - component: {fileID: 6843326750063764305}
-  m_Layer: 0
+  - component: {fileID: 5266133777408269125}
+  m_Layer: 8
   m_Name: Bass
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +212,7 @@ Transform:
   - {fileID: 5940304543269566201}
   - {fileID: 738193333590652461}
   - {fileID: 6347204407121433590}
+  - {fileID: 8179516368575305354}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5513500998290261077
@@ -253,7 +287,27 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &864382650048814151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048471228345439419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17db5f3e16f5f4941921faf17b6a4143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4623691781987807871}
+  rapidShotPrefab: {fileID: 7199489736972560969, guid: 6cfb31176cb8ee64f807e19e134e16aa, type: 3}
+  firePoint: {fileID: 8179516368575305354}
+  player: {fileID: 1791788168577963054}
+  stateMachine: {fileID: 0}
+  maxJumps: 2
+  jumpCount: 0
+  linearVelocityX: 0
 --- !u!114 &4018051179356356099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7099bc1cd927149832ea2fc50b0549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
 --- !u!114 &8251672073072062986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,9 +333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd7bfb0a6507844d97ed0b0ccd6e6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1791788168577963054}
+  player: {fileID: 0}
   detectionRange: 10
-  attackRange: 3
+  shootRange: 6
+  kickRange: 2.5
   decisionInterval: 1
 --- !u!114 &6843326750063764305
 MonoBehaviour:
@@ -295,10 +350,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8394c25081dcfdb46b5471d54dd05fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1791788168577963054}
+  player: {fileID: 0}
   detectionRange: 10
   attackRange: 2
   decisionCooldown: 1.5
+--- !u!114 &5266133777408269125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048471228345439419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a9eef06c95d4748a2741b8db898873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5757043004501583774
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5940304543269566201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6347204407121433590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

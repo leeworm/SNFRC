@@ -15,17 +15,16 @@ public class BassJumpState : IEnemyState
     {
         if (bass.jumpCount < bass.maxJumps)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, 8f);  // 점프력
+            rb.linearVelocity = new Vector2(bass.linearVelocityX, 8f); // 수직 점프력
             bass.jumpCount++;
         }
 
         bass.stateMachine.ChangeState(new BassMoveState(bass));
     }
-    public void AnimationFinishTrigger()
-    {
-        // 애니메이션 끝났을 때 실행할 코드
-    }
+
     public void Update() { }
 
     public void Exit() { }
+
+    public void AnimationFinishTrigger() { }
 }

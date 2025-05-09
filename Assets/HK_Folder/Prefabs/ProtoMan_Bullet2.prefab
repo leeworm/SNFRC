@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2202802915463424781}
   - component: {fileID: 2778604429792661999}
+  - component: {fileID: 9203405948469345959}
   - component: {fileID: 5256538684492864517}
   m_Layer: 0
   m_Name: ProtoMan_Bullet2
@@ -88,6 +89,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9203405948469345959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546625232250486162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbb6fc4b2e0743469cc8ce14bf7419e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  speed: 5
+  lifeTime: 3
+  canPierce: 0
+  direction: {x: 1, y: 0}
 --- !u!95 &5256538684492864517
 Animator:
   serializedVersion: 7

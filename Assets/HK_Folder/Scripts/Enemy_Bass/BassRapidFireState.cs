@@ -17,6 +17,7 @@ public class BassRapidFireState : IEnemyState
     {
         fireTimer = 0f;
         shotsFired = 0;
+        bass.animator.SetTrigger("RapidFire");
     }
 
     public void Update()

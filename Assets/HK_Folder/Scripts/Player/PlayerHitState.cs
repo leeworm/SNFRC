@@ -9,7 +9,7 @@ public class PlayerHitState : PlayerState
     {
         base.Enter();
         stateTimer = 0.3f;
-        player.anim.Play("Hit");
+        player.anim.Play("Player_Hit");
     }
 
     public override void Update()

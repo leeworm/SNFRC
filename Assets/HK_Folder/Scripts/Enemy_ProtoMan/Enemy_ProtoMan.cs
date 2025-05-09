@@ -1,32 +1,34 @@
 using UnityEngine;
 
-public class Enemy_ProtoMan : EnemyBase
+public class Enemy_ProtoMan : MonoBehaviour
 {
-    [Header("ProtoMan Specific")]
+    public Animator animator;    
+    public Transform firePoint;
+    public GameObject attackPrefab;
     public GameObject chargeShotPrefab;
+    public Transform player;
 
-    protected override void Start()
-    {
-        base.Start();
-
-        // 플레이어 자동 할당 (태그가 "Player"인 오브젝트를 찾아서)
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
-
-        if (player == null)
-        {
-            Debug.LogError("Enemy_ProtoMan: Player not found! 'Player' 태그가 있는 오브젝트가 필요합니다.");
-            return;
-        }
-
-        // 초기 상태 진입
-        stateMachine.ChangeState(new ProtoManIdleState(this));
-    }
-
+    [HideInInspector]
+    public EnemyStateMachine stateMachine;
     public void MoveTowardsPlayer()
     {
         if (player == null) return;
 
         Vector2 direction = (player.position - transform.position).normalized;
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+        transform.position += (Vector3)(direction * Time.deltaTime * 2f); // 여기서 2f는 이동 속도
+    }
+    private void Awake()
+    {
+        stateMachine = GetComponent<EnemyStateMachine>();
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        if (animator == null)
+        {
+            Debug.LogError("Animator 컴포넌트가 이 오브젝트에 없습니다.");
+        }
     }
 }

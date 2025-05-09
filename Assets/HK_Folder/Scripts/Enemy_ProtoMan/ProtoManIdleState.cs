@@ -9,7 +9,11 @@ public class ProtoManIdleState : IEnemyState
 
     public void Enter()
     {
-        protoMan.animator.Play("Idle");
+        if (protoMan.animator != null)
+        {
+            protoMan.animator.Play("ProtoMan_Idle",0);
+        }
+        
     }
 
     public void Update()

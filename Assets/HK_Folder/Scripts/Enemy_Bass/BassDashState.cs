@@ -1,37 +1,50 @@
-using System.Collections;
 using UnityEngine;
 
 public class BassDashState : IEnemyState
 {
     private Enemy_Bass bass;
-    private Rigidbody2D rb;
+    private float dashSpeed = 8f;
+    private float dashDuration = 0.4f;
+    private float dashTimer;
+    private bool hasDashed;
 
     public BassDashState(Enemy_Bass bass)
     {
         this.bass = bass;
-        rb = bass.GetComponent<Rigidbody2D>();
     }
 
     public void Enter()
     {
-        Vector2 dashDirection = (bass.player.position - bass.transform.position).normalized;
-        rb.linearVelocity = dashDirection * 10f;
-
-        
-        bass.StartCoroutine(EndDash());
+        dashTimer = dashDuration;
+        hasDashed = false;
+        bass.animator.Play("Bass_Dash");
     }
 
-    public void Update() { }
-
-    public void Exit() { }
-
-    private IEnumerator EndDash()
+    public void Update()
     {
-        yield return new WaitForSeconds(0.3f);
-        bass.stateMachine.ChangeState(new BassMoveState(bass));
+        if (bass.player == null) return;
+
+        dashTimer -= Time.deltaTime;
+
+        if (!hasDashed)
+        {
+            Vector2 direction = (bass.player.position - bass.transform.position).normalized;
+            bass.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(direction.x * dashSpeed, 0);
+            hasDashed = true;
+        }
+
+        if (dashTimer <= 0)
+        {
+            bass.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            bass.stateMachine.ChangeState(new BassIdleState(bass));
+        }
     }
-    public void AnimationFinishTrigger()
+
+    public void Exit()
     {
-        // 애니메이션 끝났을 때 실행할 코드
+        bass.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
+
+    public void AnimationFinishTrigger() { }
 }
+

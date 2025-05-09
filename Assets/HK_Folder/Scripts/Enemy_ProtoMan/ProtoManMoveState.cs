@@ -9,7 +9,7 @@ public class ProtoManMoveState : IEnemyState
 
     public void Enter()
     {
-        protoMan.animator.Play("Move");
+        protoMan.animator.SetBool("isMoving", true); // 파라미터 설정
     }
 
     public void Update()
@@ -17,7 +17,11 @@ public class ProtoManMoveState : IEnemyState
         protoMan.MoveTowardsPlayer();
     }
 
-    public void Exit() { }
+    public void Exit()
+    {
+        protoMan.animator.SetBool("isMoving", false); // 이동 끝나면 false로
+    }
 
     public void AnimationFinishTrigger() { }
 }
+

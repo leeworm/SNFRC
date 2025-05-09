@@ -3,8 +3,6 @@ using UnityEngine;
 public class BassIdleState : IEnemyState
 {
     private Enemy_Bass bass;
-    private float timer;
-    private float waitTime;
 
     public BassIdleState(Enemy_Bass bass)
     {
@@ -13,21 +11,18 @@ public class BassIdleState : IEnemyState
 
     public void Enter()
     {
-        waitTime = Random.Range(0.5f, 1.5f);
-        timer = 0f;
+        bass.animator.SetBool("Idle",true);
     }
 
     public void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > waitTime)
-        {
-            bass.stateMachine.ChangeState(new BassMoveState(bass));
-        }
+        // 아무 행동 없음 (AI에서 자동 전환됨)
     }
-    public void AnimationFinishTrigger()
+
+    public void Exit() 
     {
-        // 애니메이션 끝났을 때 실행할 코드
+        bass.animator.SetBool("Idle", false);
     }
-    public void Exit() { }
+
+    public void AnimationFinishTrigger() { }
 }

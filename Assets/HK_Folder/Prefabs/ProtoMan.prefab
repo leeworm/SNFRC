@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5458493149792114665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2427109129428815683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012633393039737730}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2012633393039737730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427109129428815683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5458493149792114665}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2493378344313977408
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,13 +103,16 @@ GameObject:
   m_Component:
   - component: {fileID: 5458493149792114665}
   - component: {fileID: 1296799279811572675}
+  - component: {fileID: 2681104026227172689}
+  - component: {fileID: 937252513843540704}
   - component: {fileID: 5339714036848972629}
   - component: {fileID: 5213999482405175940}
   - component: {fileID: 7393331309890376282}
   - component: {fileID: 3945287710076919546}
+  - component: {fileID: 2074676694425132243}
   m_Layer: 0
   m_Name: ProtoMan
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +134,7 @@ Transform:
   - {fileID: 980585804139829883}
   - {fileID: 7773158760129022455}
   - {fileID: 4561533216116760357}
+  - {fileID: 2012633393039737730}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1296799279811572675
@@ -129,6 +164,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2681104026227172689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398404469612061484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896d217edc890fb4fa5eb00b15705820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  player: {fileID: 0}
+  moveSpeed: 2
+  firePoint: {fileID: 2012633393039737730}
+  chargeShotPrefab: {fileID: 5546625232250486162, guid: f985db4ab4592fb4b8ea08bf45bb7ed3, type: 3}
+--- !u!114 &937252513843540704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398404469612061484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbb6fc4b2e0743469cc8ce14bf7419e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  speed: 5
+  lifeTime: 3
+  canPierce: 0
+  direction: {x: 1, y: 0}
 --- !u!61 &5339714036848972629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -187,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676ae169a03b8d944b2e1fd9e62e54ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5458493149792114665}
+  player: {fileID: 0}
   detectionRange: 8
   attackRange: 2.5
   decisionInterval: 1.2
@@ -203,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7099bc1cd927149832ea2fc50b0549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
 --- !u!114 &3945287710076919546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,10 +285,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8394c25081dcfdb46b5471d54dd05fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5458493149792114665}
+  player: {fileID: 0}
   detectionRange: 10
   attackRange: 2
   decisionCooldown: 1.5
+--- !u!114 &2074676694425132243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398404469612061484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a9eef06c95d4748a2741b8db898873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6066023728678050759
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class ProtoManJumpState : IEnemyState
 
     public void Enter()
     {
-        // 대쉬 슬래시 공격 초기화
+        protoMan.animator.Play("ProtoMan_Jump", 0);
     }
 
     public void Exit()
