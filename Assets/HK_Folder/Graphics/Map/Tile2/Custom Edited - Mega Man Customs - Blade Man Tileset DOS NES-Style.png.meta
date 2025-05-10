@@ -1,0 +1,1482 @@
+fileFormatVersion: 2
+guid: e702a8fc04ed6b4468632b1dd1c4c44f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5298507704063719934
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_0
+  - first:
+      213: 897881509396143278
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_1
+  - first:
+      213: 8388547096779901491
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_2
+  - first:
+      213: 8043495970065775809
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_3
+  - first:
+      213: 8522428117921464398
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_4
+  - first:
+      213: -7618694994542582239
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_5
+  - first:
+      213: 42630784014302004
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_6
+  - first:
+      213: -2999842729562282987
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_7
+  - first:
+      213: -4842578857781169351
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_8
+  - first:
+      213: -9067483929952168345
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_9
+  - first:
+      213: -1892961518187433099
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_10
+  - first:
+      213: 416006326312939458
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_11
+  - first:
+      213: -7862415482853423716
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_12
+  - first:
+      213: 3722375112927566980
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_13
+  - first:
+      213: 8360629281459303078
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_14
+  - first:
+      213: -3299258523431056759
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_15
+  - first:
+      213: -672474097515353236
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_16
+  - first:
+      213: -5019040086918053856
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_17
+  - first:
+      213: -3848589820071162547
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_18
+  - first:
+      213: -5461544731682899256
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_19
+  - first:
+      213: 5398197180748498344
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_20
+  - first:
+      213: -6695311878447852684
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_21
+  - first:
+      213: 6826666084406291071
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_22
+  - first:
+      213: -1982171333871219072
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_23
+  - first:
+      213: -8169536725287071855
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_24
+  - first:
+      213: 3646474798292234462
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_25
+  - first:
+      213: 7967602118704217219
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_26
+  - first:
+      213: -2286972687347954706
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_27
+  - first:
+      213: -298192370736181830
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_28
+  - first:
+      213: 2530784336965393883
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_29
+  - first:
+      213: -4460595036267989539
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_30
+  - first:
+      213: 3659812590720762795
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_31
+  - first:
+      213: -4690370914990761292
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_32
+  - first:
+      213: -8738141651982690252
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_33
+  - first:
+      213: 8053495099710289183
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_34
+  - first:
+      213: -2519643009775175374
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_35
+  - first:
+      213: -341119181191374422
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_36
+  - first:
+      213: 7006308299437453644
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_37
+  - first:
+      213: -8771877938620251340
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_38
+  - first:
+      213: 1310705132982398558
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_39
+  - first:
+      213: 6112724691103777413
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_40
+  - first:
+      213: 6711319445906155209
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_41
+  - first:
+      213: 6857206854496065966
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_42
+  - first:
+      213: -707791703605561046
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_43
+  - first:
+      213: 2297315509502578127
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_44
+  - first:
+      213: 790587425612705043
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_45
+  - first:
+      213: -6085600259963471424
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_46
+  - first:
+      213: -3646697636872757587
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_47
+  - first:
+      213: 455230717031442392
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_48
+  - first:
+      213: 2692209400441846406
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_49
+  - first:
+      213: 5018129770655887009
+    second: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 101
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2068c9bd05be776b0800000000000000
+      internalID: -5298507704063719934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 101
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacd2f1c97ae57c00800000000000000
+      internalID: 897881509396143278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 118
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a433dd32b1a6470800000000000000
+      internalID: 8388547096779901491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 101
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc7e00f7fc30af60800000000000000
+      internalID: 8043495970065775809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e408280383fb54670800000000000000
+      internalID: 8522428117921464398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1262e3e9445f44690800000000000000
+      internalID: -7618694994542582239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b3ba1e874779000800000000000000
+      internalID: 42630784014302004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_7
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514e66a6eea6e56d0800000000000000
+      internalID: -2999842729562282987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933f2299f24bbccb0800000000000000
+      internalID: -4842578857781169351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76653a44863d92280800000000000000
+      internalID: -9067483929952168345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57334fe4789dab5e0800000000000000
+      internalID: -1892961518187433099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfa238bc83f5c500800000000000000
+      internalID: 416006326312939458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_12
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c958df376c613e290800000000000000
+      internalID: -7862415482853423716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_13
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c5dc6717888a330800000000000000
+      internalID: 3722375112927566980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a27c14f80ce60470800000000000000
+      internalID: 8360629281459303078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_15
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a46b86adda632d0800000000000000
+      internalID: -3299258523431056759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_16
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b22f80f54eaa6f0800000000000000
+      internalID: -672474097515353236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_17
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020cdc902a9c85ab0800000000000000
+      internalID: -5019040086918053856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d497803ff079ac0800000000000000
+      internalID: -3848589820071162547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_19
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca7227c002b434b0800000000000000
+      internalID: -5461544731682899256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5870a2cbf3aea40800000000000000
+      internalID: 5398197180748498344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47399a0e1597513a0800000000000000
+      internalID: -6695311878447852684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_22
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a6e3172a03dbe50800000000000000
+      internalID: 6826666084406291071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ec4a08ca9ed74e0800000000000000
+      internalID: -1982171333871219072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_24
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f81c5e1a9ff9e80800000000000000
+      internalID: -8169536725287071855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_25
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed07f9a5281ea9230800000000000000
+      internalID: 3646474798292234462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_26
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cb30da9eb929e60800000000000000
+      internalID: 7967602118704217219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_27
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebca9f257a0340e0800000000000000
+      internalID: -2286972687347954706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_28
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 84
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdc9836e9b9cdbf0800000000000000
+      internalID: -298192370736181830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_29
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 67
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddd1ff12f62f1320800000000000000
+      internalID: 2530784336965393883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_30
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd53060a278c812c0800000000000000
+      internalID: -4460595036267989539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_31
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3c96629244ac230800000000000000
+      internalID: 3659812590720762795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_32
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bad623e08478eeb0800000000000000
+      internalID: -4690370914990761292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_33
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438d684d672ebb680800000000000000
+      internalID: -8738141651982690252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_34
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15b49abf13c3cf60800000000000000
+      internalID: 8053495099710289183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_35
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239fd81480e680dd0800000000000000
+      internalID: -2519643009775175374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_36
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 33
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9140b79e9144bf0800000000000000
+      internalID: -341119181191374422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_37
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4137def6486b3160800000000000000
+      internalID: 7006308299437453644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_38
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433447f7d77044680800000000000000
+      internalID: -8771877938620251340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_39
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e62b0cf5f803210800000000000000
+      internalID: 1310705132982398558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_40
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582000f48b2c4d450800000000000000
+      internalID: 6112724691103777413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_41
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6686b5a75632d50800000000000000
+      internalID: 6711319445906155209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_42
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 50
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea99c999d41b92f50800000000000000
+      internalID: 6857206854496065966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_43
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 13
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a293f93123b6d26f0800000000000000
+      internalID: -707791703605561046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_44
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 13
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd85e0c844b1ef10800000000000000
+      internalID: 2297315509502578127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_45
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 13
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d298b231bb8fa00800000000000000
+      internalID: 790587425612705043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_46
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 13
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c93ad37eca9b8ba0800000000000000
+      internalID: -6085600259963471424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_47
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 13
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae51fef1d3546dc0800000000000000
+      internalID: -3646697636872757587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_48
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 13
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7618bdced415600800000000000000
+      internalID: 455230717031442392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_49
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 13
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68abd4e8f26ac5520800000000000000
+      internalID: 2692209400441846406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_50
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 13
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aea1c0707af3a540800000000000000
+      internalID: 5018129770655887009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_0: -5298507704063719934
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_1: 897881509396143278
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_10: -1892961518187433099
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_11: 416006326312939458
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_12: -7862415482853423716
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_13: 3722375112927566980
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_14: 8360629281459303078
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_15: -3299258523431056759
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_16: -672474097515353236
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_17: -5019040086918053856
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_18: -3848589820071162547
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_19: -5461544731682899256
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_2: 8388547096779901491
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_20: 5398197180748498344
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_21: -6695311878447852684
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_22: 6826666084406291071
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_23: -1982171333871219072
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_24: -8169536725287071855
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_25: 3646474798292234462
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_26: 7967602118704217219
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_27: -2286972687347954706
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_28: -298192370736181830
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_29: 2530784336965393883
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_3: 8043495970065775809
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_30: -4460595036267989539
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_31: 3659812590720762795
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_32: -4690370914990761292
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_33: -8738141651982690252
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_34: 8053495099710289183
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_35: -2519643009775175374
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_36: -341119181191374422
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_37: 7006308299437453644
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_38: -8771877938620251340
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_39: 1310705132982398558
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_4: 8522428117921464398
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_40: 6112724691103777413
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_41: 6711319445906155209
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_42: 6857206854496065966
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_43: -707791703605561046
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_44: 2297315509502578127
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_45: 790587425612705043
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_46: -6085600259963471424
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_47: -3646697636872757587
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_48: 455230717031442392
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_49: 2692209400441846406
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_5: -7618694994542582239
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_50: 5018129770655887009
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_6: 42630784014302004
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_7: -2999842729562282987
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_8: -4842578857781169351
+      Custom Edited - Mega Man Customs - Blade Man Tileset DOS NES-Style_9: -9067483929952168345
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
