@@ -2094,7 +2094,7 @@ GameObject:
   - component: {fileID: 1234101016}
   m_Layer: 8
   m_Name: Dummy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2599,7 +2599,7 @@ GameObject:
   - component: {fileID: 1568220276}
   - component: {fileID: 1568220277}
   - component: {fileID: 1568220274}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Naruto
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2635,7 +2635,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568220272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 412fda935e24a1843aa665cbe6606220, type: 3}
+  m_Script: {fileID: 11500000, guid: 690f07e4f609f764c952cdd795698354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackDirection: {x: 0, y: 0}
@@ -2648,14 +2648,14 @@ MonoBehaviour:
   wallCheckDistance: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 0
   lastXVelocity: 0
   lastYVelocity: 0
-  blackFadePrefab: {fileID: 1516871427720791782, guid: f1202fe44dd62984b98fcaf378a980ce, type: 3}
-  skillEffectPrefab: {fileID: 3465117583333498102, guid: 876a3b3358c9945409a5c36cc0d255f0, type: 3}
-  effectPrefab: {fileID: 0}
-  effectSpawnPoint: {fileID: 1126847043}
-  attackDistance: 1
+  blackFadePrefab: {fileID: 0}
+  skillEffectPrefab: {fileID: 0}
+  effectPrefab: {fileID: 2885963707190564807, guid: fac4fd5995270cc4fb8bbe16cd1eb264, type: 3}
+  effectSpawnPoint: {fileID: 0}
+  attackDistance: 0
   attackCooldown: 0
   lasttimeAttacked: 0
   whatIsEnemy:
@@ -3358,7 +3358,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1927048530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f41abb22506ffe7488cc62c0e9ba94fa, type: 3}
+  m_Script: {fileID: 11500000, guid: cb26085814675a34c9334b7b20b910c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blackFadePrefab: {fileID: 1516871427720791782, guid: f1202fe44dd62984b98fcaf378a980ce, type: 3}

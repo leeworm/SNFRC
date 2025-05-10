@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - DamageObject
+  - Enemy
+  - 'Item '
+  - EnemyBullet
+  - Wall
+  - Ground
+  - Skill
+  - HitBox
   layers:
   - Default
   - TransparentFX
@@ -16,10 +24,10 @@ TagManager:
   - Enemy
   - CameraBounds
   - Skill
-  - 
-  - 
-  - 
-  - 
+  - Hitbox
+  - DamageObject
+  - Player
+  - Item
   - 
   - 
   - 
