@@ -14,7 +14,7 @@ public class B_PlayerHealth : MonoBehaviour
     private bool isInvincible = false;
     private float invincibleDuration = 1f;
 
-    private HashSet<Enemy> recentlyHitEnemies = new HashSet<Enemy>();
+    private HashSet<B_Enemy> recentlyHitEnemies = new HashSet<B_Enemy>();
     private float contactCooldown = 1f; // 중복 데미지 방지 시간
 
     private void Start()
@@ -73,7 +73,7 @@ public class B_PlayerHealth : MonoBehaviour
         }
     }
 
-    private IEnumerator DealContactDamage(Enemy enemy)
+    private IEnumerator DealContactDamage(B_Enemy enemy)
     {
         
 
@@ -89,7 +89,7 @@ public class B_PlayerHealth : MonoBehaviour
         }
     }
 
-    private IEnumerator RemoveFromRecentlyHit(Enemy enemy, float delay)
+    private IEnumerator RemoveFromRecentlyHit(B_Enemy enemy, float delay)
     {
         yield return new WaitForSeconds(delay);
         recentlyHitEnemies.Remove(enemy);
@@ -97,7 +97,7 @@ public class B_PlayerHealth : MonoBehaviour
 
         private void OnTriggerEnter2D(Collider2D other)
     {
-         Enemy enemy = other.GetComponent<Enemy>();
+         B_Enemy enemy = other.GetComponent<B_Enemy>();
 
         // 히트박스 무시
         if (enemy != null && !other.CompareTag("Hitbox"))
@@ -110,7 +110,7 @@ public class B_PlayerHealth : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-       Enemy enemy = other.GetComponent<Enemy>();
+       B_Enemy enemy = other.GetComponent<B_Enemy>();
         if (enemy != null && contactDamageCoroutine != null)
         {
             StopCoroutine(contactDamageCoroutine);
