@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class JH_PlayerFaing : JH_Entity
+public class JH_PlayerFaing : MonoBehaviour
 {
     public Transform opponentTransform; // 마주 볼 상대방. Inspector에서 할당하거나 코드로 찾습니다.
     private JH_Entity entityScript;     // 플레이어 자신의 JH_Entity 스크립트
@@ -10,7 +10,7 @@ public class JH_PlayerFaing : JH_Entity
 
     void Start()
     {
-        //entityScript = GetComponent<JH_Entity>();
+        entityScript = GetComponent<JH_Entity>();
         if (entityScript == null)
         {
             Debug.LogError("JH_Entity 스크립트를 찾을 수 없습니다!", gameObject);
