@@ -66,9 +66,12 @@ public class PlayerAttackController : MonoBehaviour
         else
             projectile = Instantiate(chargeShotLv3Prefab, firePoint.position, Quaternion.identity);
 
-        float dir = player.facingDir;
-        projectile.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(dir * shotSpeed, 0f);
-        projectile.transform.localScale = new Vector3(dir, 1, 1);
+        float dir = player.facingDir; // 플레이어의 방향을 가져옴
+        Rigidbody2D rbProjectile = projectile.GetComponent<Rigidbody2D>();
+
+        // 불렛의 속도와 방향을 설정
+        rbProjectile.linearVelocity = new Vector2(dir * shotSpeed, 0f);  // velocity로 변경
+        projectile.transform.localScale = new Vector3(dir, 1, 1); // 불렛이 오른쪽/왼쪽을 바라보게 설정
 
         anim.SetTrigger("Attack");
     }

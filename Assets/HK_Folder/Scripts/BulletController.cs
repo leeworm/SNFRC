@@ -13,27 +13,36 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(transform.right * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 적 또는 보스에 부딪혔을 경우
-        if (other.CompareTag("Enemy") || other.CompareTag("Boss"))
+        // 적 또는 보스에게 명중
+        if (other.CompareTag("Enemy"))
         {
-            var enemyHealth = other.GetComponent<BossHealth>();
-            if (enemyHealth != null)
+            // 일반 적의 체력 처리
+            Health health = other.GetComponent<Health>();
+            if (health != null)
             {
-                enemyHealth.TakeDamage(damage);
+                health.TakeDamage(damage);
+            }
+
+            // 보스 체력 처리
+            BossHealth bossHealth = other.GetComponent<BossHealth>();
+            if (bossHealth != null)
+            {
+                bossHealth.TakeDamage(damage);
             }
 
             Destroy(gameObject);
         }
 
-        // 벽 같은 다른 오브젝트에 닿으면 그냥 파괴
+        // 벽 또는 다른 장애물과 충돌했을 때
         if (other.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
     }
 }
+

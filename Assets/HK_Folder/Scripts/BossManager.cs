@@ -9,8 +9,8 @@ public class BossManager : MonoBehaviour
     public GameObject portal;
     public GameObject bassSpawnEffectPrefab; // 등장 이펙트 (선택)
 
-    private bool protoManDefeated = false;
-    private bool bassDefeated = false;
+    
+    
 
     private GameObject bassInstance;
 
@@ -23,12 +23,12 @@ public class BossManager : MonoBehaviour
     {
         if (bossName == "ProtoMan")
         {
-            protoManDefeated = true;
+            
             SpawnBass();
         }
         else if (bossName == "Bass")
         {
-            bassDefeated = true;
+            
             OpenPortal();
         }
     }

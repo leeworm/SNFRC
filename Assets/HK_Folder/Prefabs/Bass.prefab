@@ -183,8 +183,9 @@ GameObject:
   - component: {fileID: 1791788168577963054}
   - component: {fileID: 5513500998290261077}
   - component: {fileID: 4781771687862275906}
+  - component: {fileID: 1445917202546912481}
   - component: {fileID: 864382650048814151}
-  - component: {fileID: 4018051179356356099}
+  - component: {fileID: 2125426942161077929}
   - component: {fileID: 8251672073072062986}
   - component: {fileID: 6843326750063764305}
   - component: {fileID: 5266133777408269125}
@@ -288,6 +289,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1445917202546912481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048471228345439419}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2842d4098502ba4e92e1070cbaba4fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  speed: 10
+  lifeTime: 2
+  shooter: {fileID: 0}
 --- !u!114 &864382650048814151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +325,7 @@ MonoBehaviour:
   maxJumps: 2
   jumpCount: 0
   linearVelocityX: 0
---- !u!114 &4018051179356356099
+--- !u!114 &2125426942161077929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,10 +334,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 3048471228345439419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7099bc1cd927149832ea2fc50b0549, type: 3}
+  m_Script: {fileID: 11500000, guid: 1672200af54bfb64e842cc219aa4ed7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 30
+  currentHealth: 0
+  invincibleDuration: 1
+  flashInterval: 0.1
+  healthBar: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7400000, guid: ea420ca2d3a89fa4bb5266e2c0bb0931, type: 2}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8251672073072062986
 MonoBehaviour:
   m_ObjectHideFlags: 0

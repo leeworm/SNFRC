@@ -61,7 +61,15 @@ public class Entity : MonoBehaviour
         StartCoroutine("HitKnockBack");
 
     }
+    public virtual void TakeDamage(int damage)
+    {
+        Debug.Log($"{gameObject.name}이(가) {damage} 피해를 입었습니다.");
 
+        // 여기서 필요하다면 체력 차감 로직도 추가 가능
+        // 예: hp -= damage;
+
+        Damage(); // 넉백 등 처리
+    }
     public void MakeTransparent(bool _transparent)
     {
         if (_transparent)

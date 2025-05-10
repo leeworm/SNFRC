@@ -1,15 +1,21 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
-using System;
+using UnityEngine.UI;
+using System.Collections;
 
 public class Health : MonoBehaviour
 {
     public int maxHealth = 300;
     public int currentHealth;
+    public float invincibleDuration = 1f;
+    public float flashInterval = 0.1f;
+    public Slider healthBar;
+    public UnityEvent OnDeath;
 
-    public UnityEvent OnDeath; // 인스펙터에서 연결 가능
-    public Slider healthBar;   // 체력바 UI 연결용
+    private bool isInvincible = false;
+    private bool isDead = false;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     private void Awake()
     {
@@ -19,36 +25,79 @@ public class Health : MonoBehaviour
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
         }
+
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void TakeDamage(int amount)
     {
+        if (isInvincible || isDead) return;
+
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (healthBar != null)
-        {
-            healthBar.value = currentHealth;
-        }
-
-        Debug.Log($"{gameObject.name} took damage: {amount}");
+        UpdateHealthBar();
 
         if (currentHealth <= 0)
         {
             Die();
         }
+        else
+        {
+            StartCoroutine(InvincibilityCoroutine());
+        }
     }
 
     private void Die()
     {
-        Debug.Log($"{gameObject.name} died.");
-
-        if (OnDeath != null)
-            OnDeath.Invoke(); // 상태머신 전환 or 삭제 등 이벤트로 연결
+        if (isDead) return;
+        isDead = true;
+        animator?.SetTrigger("Die");
+        OnDeath?.Invoke();
+        StartCoroutine(WaitForDieAnimation());
     }
 
-    internal float GetHealthPercent()
+    private IEnumerator WaitForDieAnimation()
     {
-        throw new NotImplementedException();
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        while (!stateInfo.IsName("Die") || stateInfo.normalizedTime < 1f)
+        {
+            yield return null;
+            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        }
+        Destroy(gameObject);
+    }
+
+    private IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+        float timer = 0f;
+        while (timer < invincibleDuration)
+        {
+            if (spriteRenderer != null)
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            yield return new WaitForSeconds(flashInterval);
+            timer += flashInterval;
+        }
+        if (spriteRenderer != null) spriteRenderer.enabled = true;
+        isInvincible = false;
+    }
+
+    public void Heal(int amount)
+    {
+        if (isDead) return;
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthBar();
+    }
+
+    public float GetHealthPercent() => (float)currentHealth / maxHealth;
+
+    private void UpdateHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
+        }
     }
 }
