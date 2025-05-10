@@ -6721,7 +6721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1672200af54bfb64e842cc219aa4ed7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 100
   currentHealth: 0
   invincibleDuration: 1
   flashInterval: 0.1
