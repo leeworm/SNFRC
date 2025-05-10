@@ -2648,14 +2648,14 @@ MonoBehaviour:
   wallCheckDistance: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   lastXVelocity: 0
   lastYVelocity: 0
   blackFadePrefab: {fileID: 0}
   skillEffectPrefab: {fileID: 0}
   effectPrefab: {fileID: 2885963707190564807, guid: fac4fd5995270cc4fb8bbe16cd1eb264, type: 3}
-  effectSpawnPoint: {fileID: 0}
-  attackDistance: 0
+  effectSpawnPoint: {fileID: 1126847043}
+  attackDistance: 1
   attackCooldown: 0
   lasttimeAttacked: 0
   whatIsEnemy:
