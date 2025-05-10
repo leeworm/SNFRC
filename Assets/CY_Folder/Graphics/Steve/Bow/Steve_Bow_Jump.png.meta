@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 86d2d801256c56a4a9a2153a84c78240
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8522037289074785471
+    second: Steve_Bow_Jump_0
+  - first:
+      213: -7172151847012271564
+    second: Steve_Bow_Jump_1
+  - first:
+      213: -2854782536804545776
+    second: Steve_Bow_Jump_2
+  - first:
+      213: 3968798942764800756
+    second: Steve_Bow_Jump_3
+  - first:
+      213: 92319880452736081
+    second: Steve_Bow_Jump_4
+  - first:
+      213: 5444866473934317978
+    second: Steve_Bow_Jump_5
+  - first:
+      213: -5293852913018079036
+    second: Steve_Bow_Jump_6
+  - first:
+      213: 7103786275513341059
+    second: Steve_Bow_Jump_7
+  - first:
+      213: 6833934555893564792
+    second: Steve_Bow_Jump_8
+  - first:
+      213: 8377928979948830084
+    second: Steve_Bow_Jump_9
+  - first:
+      213: 6013450910938731991
+    second: Steve_Bow_Jump_10
+  - first:
+      213: 6869416377170099979
+    second: Steve_Bow_Jump_11
+  - first:
+      213: 4317612917746695697
+    second: Steve_Bow_Jump_12
+  - first:
+      213: -6996385259984246971
+    second: Steve_Bow_Jump_13
+  - first:
+      213: -6531157692047995672
+    second: Steve_Bow_Jump_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 15
+        height: 33
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143801ebc34abb980800000000000000
+      internalID: -8522037289074785471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 16
+        height: 33
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43afba315e5677c90800000000000000
+      internalID: -7172151847012271564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 17
+        height: 33
+      alignment: 9
+      pivot: {x: 0.3529412, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bc6c67866c168d0800000000000000
+      internalID: -2854782536804545776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 17
+        height: 33
+      alignment: 9
+      pivot: {x: 0.1764706, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa11706c91041730800000000000000
+      internalID: 3968798942764800756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 19
+        height: 33
+      alignment: 9
+      pivot: {x: 0.15789473, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1548710317cf74100800000000000000
+      internalID: 92319880452736081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 26
+        height: 35
+      alignment: 9
+      pivot: {x: 0.34615386, y: 0.47142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99e94cb53d009b40800000000000000
+      internalID: 5444866473934317978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 0.32, y: 0.47142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8f36ad2d47886b0800000000000000
+      internalID: -5293852913018079036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 26
+        height: 35
+      alignment: 9
+      pivot: {x: 0.34615386, y: 0.47142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3849448eaf7b59260800000000000000
+      internalID: 7103786275513341059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 26
+        height: 35
+      alignment: 9
+      pivot: {x: 0.34615386, y: 0.47142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8758d46554307de50800000000000000
+      internalID: 6833934555893564792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.47142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48dfc43e402644470800000000000000
+      internalID: 8377928979948830084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 0
+        width: 20
+        height: 33
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d590cc2eb1147350800000000000000
+      internalID: 6013450910938731991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 18
+        height: 33
+      alignment: 9
+      pivot: {x: 0.16666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f797f9cc1155f50800000000000000
+      internalID: 6869416377170099979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 17
+        height: 33
+      alignment: 9
+      pivot: {x: 0.3529412, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11efdefa21e3beb30800000000000000
+      internalID: 4317612917746695697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 16
+        height: 33
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5472cdaaca8d7ee90800000000000000
+      internalID: -6996385259984246971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve_Bow_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 15
+        height: 33
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec4b61ceaaac55a0800000000000000
+      internalID: -6531157692047995672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 04eb8ca6950743c45af16337b07b550e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Steve_Bow_Jump_0: -8522037289074785471
+      Steve_Bow_Jump_1: -7172151847012271564
+      Steve_Bow_Jump_10: 6013450910938731991
+      Steve_Bow_Jump_11: 6869416377170099979
+      Steve_Bow_Jump_12: 4317612917746695697
+      Steve_Bow_Jump_13: -6996385259984246971
+      Steve_Bow_Jump_14: -6531157692047995672
+      Steve_Bow_Jump_2: -2854782536804545776
+      Steve_Bow_Jump_3: 3968798942764800756
+      Steve_Bow_Jump_4: 92319880452736081
+      Steve_Bow_Jump_5: 5444866473934317978
+      Steve_Bow_Jump_6: -5293852913018079036
+      Steve_Bow_Jump_7: 7103786275513341059
+      Steve_Bow_Jump_8: 6833934555893564792
+      Steve_Bow_Jump_9: 8377928979948830084
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
