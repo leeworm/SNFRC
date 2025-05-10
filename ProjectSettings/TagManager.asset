@@ -4,7 +4,14 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - DamageObject
   - Enemy
+  - Item
+  - EnemyBullet
+  - Wall
+  - Ground
+  - Skill
+  - HitBox
   layers:
   - Default
   - TransparentFX
@@ -17,10 +24,10 @@ TagManager:
   - Enemy
   - CameraBounds
   - Skill
-  - 
-  - 
-  - 
-  - 
+  - Hitbox
+  - DamageObject
+  - Player
+  - Item
   - 
   - 
   - 
@@ -42,7 +49,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BackGround
+  - name: Background
     uniqueID: 1324287811
     locked: 0
   - name: Ground
