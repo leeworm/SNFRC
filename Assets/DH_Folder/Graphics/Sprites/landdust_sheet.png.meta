@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 5035545139b643c489b208c695cd9bda
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9089340231549907202
+    second: landdust_sheet_0
+  - first:
+      213: 4076027557476116168
+    second: landdust_sheet_1
+  - first:
+      213: -4959858558063933987
+    second: landdust_sheet_2
+  - first:
+      213: 8205874553173345702
+    second: landdust_sheet_3
+  - first:
+      213: 7189959459479341836
+    second: landdust_sheet_4
+  - first:
+      213: -295061438655050716
+    second: landdust_sheet_5
+  - first:
+      213: -1863226779576635849
+    second: landdust_sheet_6
+  - first:
+      213: 8860499941200578852
+    second: landdust_sheet_7
+  - first:
+      213: 8331962578123736902
+    second: landdust_sheet_8
+  - first:
+      213: -8673883439336878537
+    second: landdust_sheet_9
+  - first:
+      213: 8381746467117074971
+    second: landdust_sheet_10
+  - first:
+      213: -1491493879778009483
+    second: landdust_sheet_11
+  - first:
+      213: 8932113039263423047
+    second: landdust_sheet_12
+  - first:
+      213: 7106418736956585238
+    second: landdust_sheet_13
+  - first:
+      213: 6068132389540234813
+    second: landdust_sheet_14
+  - first:
+      213: -3394250068454195277
+    second: landdust_sheet_15
+  - first:
+      213: 2793217459248011768
+    second: landdust_sheet_16
+  - first:
+      213: -5792262094147045029
+    second: landdust_sheet_17
+  - first:
+      213: -8907706152677880142
+    second: landdust_sheet_18
+  - first:
+      213: -1997392414269156068
+    second: landdust_sheet_19
+  - first:
+      213: -3670325829900790117
+    second: landdust_sheet_20
+  - first:
+      213: 7881370501897390463
+    second: landdust_sheet_21
+  - first:
+      213: 7717507787087639618
+    second: landdust_sheet_22
+  - first:
+      213: -4785344132760026608
+    second: landdust_sheet_23
+  - first:
+      213: 2445690819728665991
+    second: landdust_sheet_24
+  - first:
+      213: -3218593690176876579
+    second: landdust_sheet_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: landdust_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 56
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201f23088c2d32e70800000000000000
+      internalID: 9089340231549907202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landdust_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 73
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c62112c775f09830800000000000000
+      internalID: 4076027557476116168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landdust_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 62
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a58055fd6f11e170800000000000000
+      internalID: 8205874553173345702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landdust_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 75
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6153a7990321f9260800000000000000
+      internalID: 7106418736956585238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landdust_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 71
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012c6d67dda079db0800000000000000
+      internalID: -4785344132760026608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7f7664b6c37af5843b6066bf54e2acac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      landdust_sheet_0: 9089340231549907202
+      landdust_sheet_1: 4076027557476116168
+      landdust_sheet_10: 8381746467117074971
+      landdust_sheet_11: -1491493879778009483
+      landdust_sheet_12: 8932113039263423047
+      landdust_sheet_14: 6068132389540234813
+      landdust_sheet_15: -3394250068454195277
+      landdust_sheet_16: 2793217459248011768
+      landdust_sheet_17: -5792262094147045029
+      landdust_sheet_18: -8907706152677880142
+      landdust_sheet_19: -1997392414269156068
+      landdust_sheet_2: 8205874553173345702
+      landdust_sheet_20: -3670325829900790117
+      landdust_sheet_21: 7881370501897390463
+      landdust_sheet_22: 7717507787087639618
+      landdust_sheet_24: 2445690819728665991
+      landdust_sheet_25: -3218593690176876579
+      landdust_sheet_3: 7106418736956585238
+      landdust_sheet_4: -4785344132760026608
+      landdust_sheet_5: -295061438655050716
+      landdust_sheet_6: -1863226779576635849
+      landdust_sheet_7: 8860499941200578852
+      landdust_sheet_8: 8331962578123736902
+      landdust_sheet_9: -8673883439336878537
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
