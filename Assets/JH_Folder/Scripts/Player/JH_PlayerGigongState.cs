@@ -14,6 +14,7 @@ public class JH_PlayerGigongState : JH_PlayerState
     public override void Enter()
     {
         base.Enter();
+        Player.SetVelocity(0, 0);
     }
 
     public override void Exit()

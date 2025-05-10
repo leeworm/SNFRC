@@ -56,13 +56,20 @@ public class JH_PlayerIdleState : JH_PlayerGroundedState
                 attackIndex = 6; // X -> 공격 6
             }
 
-            // 만약 attackIndex가 0보다 크면 (Q,E,A,S,Z,X 중 하나가 눌렸으면)
+        
             if (attackIndex > 0)
             {
                 Player.LastAttackIndex = attackIndex; // 공격 번호 저장
                 Player.animator.SetTrigger("AttackTrigger");
                 StateMachine.ChangeState(Player.GroundedAttackState); // 공격 상태로 전환
                 return; // 상태 변경 후 종료
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Player.animator.SetTrigger("AttackTrigger");
+                StateMachine.ChangeState(Player.GigongState); 
+                return; 
             }
 
         }

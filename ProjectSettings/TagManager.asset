@@ -16,7 +16,7 @@ TagManager:
   - Wall
   - Enemy
   - CameraBounds
-  - 
+  - Skill
   - 
   - 
   - 
@@ -48,13 +48,13 @@ TagManager:
   - name: Ground
     uniqueID: 806047311
     locked: 0
-  - name: Player
+  - name: Object
     uniqueID: 2366426291
     locked: 0
   - name: Enemy
     uniqueID: 3862785435
     locked: 0
-  - name: Object
+  - name: Player
     uniqueID: 3071297253
     locked: 0
   m_RenderingLayers:

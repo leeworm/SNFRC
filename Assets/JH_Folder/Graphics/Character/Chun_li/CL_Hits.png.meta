@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 4eb4ab3c875bd8d48b8495889219723f
+guid: 64c0c3b3eea36ed498506997f1750ceb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4120319256059191965
-    second: CL_KO_0
+      213: -9166302047283299072
+    second: CL_Hits_0
   - first:
-      213: -2397755026005736747
-    second: CL_KO_1
-  - first:
-      213: -6614936023523323882
-    second: CL_KO_2
-  - first:
-      213: 2410275000871277680
-    second: CL_KO_3
+      213: -1442163112703120460
+    second: CL_Hits_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,34 +142,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CL_KO_0
+      name: CL_Hits_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 7
-        width: 71
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d922c9278805e2930800000000000000
-      internalID: 4120319256059191965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CL_KO_1
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 57
+        x: 121
+        y: 23
+        width: 54
         height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -185,41 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d24588f18679bed0800000000000000
-      internalID: -2397755026005736747
+      spriteID: 00d3eb76ad0cac080800000000000000
+      internalID: -9166302047283299072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CL_KO_2
+      name: CL_Hits_1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 7
-        width: 73
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61015f9ebb60334a0800000000000000
-      internalID: -6614936023523323882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CL_KO_3
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 0
-        width: 80
+        x: 223
+        y: 22
+        width: 66
         height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -229,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 074dfe5d754037120800000000000000
-      internalID: 2410275000871277680
+      spriteID: 4bba8273a486cfbe0800000000000000
+      internalID: -1442163112703120460
       vertices: []
       indices: 
       edges: []
@@ -239,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4f7282f760557114aa4a7e2c92d58eaa
+    spriteID: c6fac843741c0f141b45ceda7d42f13b
     internalID: 0
     vertices: []
     indices: 
@@ -249,10 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CL_KO_0: 4120319256059191965
-      CL_KO_1: -2397755026005736747
-      CL_KO_2: -6614936023523323882
-      CL_KO_3: 2410275000871277680
+      CL_Hits_0: -9166302047283299072
+      CL_Hits_1: -1442163112703120460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 4eb4ab3c875bd8d48b8495889219723f
+guid: 43a9b6c0452484d40a4c41c39ac68f97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4120319256059191965
-    second: CL_KO_0
+      213: -5053789594292580827
+    second: WinCounts_0
   - first:
-      213: -2397755026005736747
-    second: CL_KO_1
+      213: 9020899259915122457
+    second: WinCounts_1
   - first:
-      213: -6614936023523323882
-    second: CL_KO_2
+      213: -8548141894432318156
+    second: WinCounts_2
   - first:
-      213: 2410275000871277680
-    second: CL_KO_3
+      213: -139919889198614351
+    second: WinCounts_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -148,89 +148,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CL_KO_0
+      name: WinCounts_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 7
-        width: 71
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d922c9278805e2930800000000000000
-      internalID: 4120319256059191965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CL_KO_1
-      rect:
-        serializedVersion: 2
-        x: 80
+        x: 0
         y: 0
-        width: 57
-        height: 91
+        width: 25
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d24588f18679bed0800000000000000
-      internalID: -2397755026005736747
+      spriteID: 52e00aed3255dd9b0800000000000000
+      internalID: -5053789594292580827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CL_KO_2
+      name: WinCounts_1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 7
-        width: 73
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61015f9ebb60334a0800000000000000
-      internalID: -6614936023523323882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CL_KO_3
-      rect:
-        serializedVersion: 2
-        x: 219
+        x: 24
         y: 0
-        width: 80
-        height: 91
+        width: 26
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 074dfe5d754037120800000000000000
-      internalID: 2410275000871277680
+      spriteID: 91733d5051ca03d70800000000000000
+      internalID: 9020899259915122457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WinCounts_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d1abcac36ee5980800000000000000
+      internalID: -8548141894432318156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WinCounts_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8fd432a97ee0ef0800000000000000
+      internalID: -139919889198614351
       vertices: []
       indices: 
       edges: []
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4f7282f760557114aa4a7e2c92d58eaa
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -249,10 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CL_KO_0: 4120319256059191965
-      CL_KO_1: -2397755026005736747
-      CL_KO_2: -6614936023523323882
-      CL_KO_3: 2410275000871277680
+      WinCounts_0: -5053789594292580827
+      WinCounts_1: 9020899259915122457
+      WinCounts_2: -8548141894432318156
+      WinCounts_3: -139919889198614351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
