@@ -33,16 +33,17 @@ public class KoopaAllDirFireState : KoopaState
             return;
         }
 
-        if(koopa.transform.position == new Vector3(0, 3, 0))
+        if(koopa.phaseState == PhaseState.Phase1)
         {
-            if(fireTimer <= 0)
-            {
-                koopa.AllDirFire(); // 모든 방향으로 불꽃 발사
-                fireTimer = 0.5f; // 발사 간격 초기화
-            }
+            GoPattern(new Vector3(0, 3, 0), 1.0f);
         }
-        else{
-            koopa.transform.position = Vector3.MoveTowards(koopa.transform.position, new Vector3(0, 3, 0), koopa.moveSpeed * Time.deltaTime);
+        else if(koopa.phaseState == PhaseState.Phase2)
+        {
+            GoPattern(new Vector3(0, -195, 0), 0.5f);
+        }
+        else
+        {
+            Debug.Log("AllDirFireState : PhaseState Error");
         }
     }
 
@@ -52,5 +53,21 @@ public class KoopaAllDirFireState : KoopaState
 
         koopa.angleIncrement = StartAngleIncrement;
         koopa.rb.gravityScale = 1;
+    }
+
+    public void GoPattern(Vector3 _midPos, float _fireDelay)
+    {
+        if(koopa.transform.position == _midPos)
+        {
+            if(fireTimer <= 0)
+            {
+                koopa.AllDirFire(); // 모든 방향으로 불꽃 발사
+                fireTimer = _fireDelay; // 발사 딜레이
+            }
+        }
+        else
+        {
+            koopa.transform.position = Vector3.MoveTowards(koopa.transform.position, _midPos, koopa.moveSpeed * Time.deltaTime);
+        }
     }
 }

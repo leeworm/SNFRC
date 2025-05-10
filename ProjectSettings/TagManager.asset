@@ -6,6 +6,12 @@ TagManager:
   tags:
   - DamageObject
   - Enemy
+  - Item
+  - EnemyBullet
+  - Wall
+  - Ground
+  - Skill
+  - HitBox
   layers:
   - Default
   - TransparentFX
@@ -16,12 +22,12 @@ TagManager:
   - Ground
   - Wall
   - Enemy
+  - CameraBounds
+  - Skill
+  - Hitbox
   - DamageObject
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Item
   - 
   - 
   - 
@@ -49,14 +55,14 @@ TagManager:
   - name: Ground
     uniqueID: 2159009135
     locked: 0
-  - name: Player
-    uniqueID: 3506990063
+  - name: Object
+    uniqueID: 1704468283
     locked: 0
   - name: Enemy
     uniqueID: 4241827659
     locked: 0
-  - name: Object
-    uniqueID: 1704468283
+  - name: Player
+    uniqueID: 3506990063
     locked: 0
   m_RenderingLayers:
   - Default

@@ -1084,6 +1084,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Pipe
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d81917b1478be46921bb828c9e2bbc
+      internalID: 432725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteblock1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 631
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52546005ddbacbe4b9f2a41667cf5704
+      internalID: -1813251363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteblock2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da9c4f0fe227fc4f86b41a78ea8289d
+      internalID: 688713833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_icon
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 716
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9517d60d9356844956da87dd1429e0
+      internalID: 418509975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1099,6 +1187,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Mario_Tileset_0: 388013285
+      Pipe: 432725
       block1: 635472163
       block2: 796877363
       block3: -657719879
@@ -1136,11 +1225,14 @@ TextureImporter:
       pipe2: -946743443
       pipe3: -1754870646
       pipe4: 2007257215
+      skeleton_icon: 418509975
       sky1: -829531861
       stair1: -1067454002
       underBlock: 1819250908
       underDark: -1661486551
       underGround: 1100303647
+      whiteblock1: -1813251363
+      whiteblock2: 688713833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

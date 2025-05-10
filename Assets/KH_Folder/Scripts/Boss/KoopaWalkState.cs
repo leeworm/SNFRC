@@ -33,16 +33,34 @@ public class KoopaWalkState : KoopaState
     {
         base.Update();
 
+        if(koopa.healthPoint <= 100 && koopa.phaseState == PhaseState.Phase1) // 체력이 100 이하일 때
+        {
+            koopa.phaseState = PhaseState.PhaseChange;
+            koopa.healthPoint = 1000; // 체력 초기화
+            koopa.koopaHpBar.SetHpBar(koopa.healthPoint); // 체력바 초기화
+            koopa.stateMachine.ChangeState(koopa.jumpAttackState);
+        }
+
         if(koopa.IsWallDetected()) // 벽에 부딪히면 방향 전환
         {
             koopa.Flip();
             koopa.SetVelocity(koopa.rb.linearVelocity.x * -1,0);
         }
         
-        if(stateTimer <= 0)
+        if(stateTimer <= 0 && koopa.phaseState != PhaseState.PhaseChange)
         {
-            // 보스 패턴 시작
-            patternRandomNum = Random.Range(0, 4); 
+            Phase1_Pattern();
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    private void Phase1_Pattern()
+    {
+        patternRandomNum = Random.Range(0, 4); 
 
             if(patternRandomNum == 0) // 불꽃 발사 패턴
             {
@@ -60,11 +78,5 @@ public class KoopaWalkState : KoopaState
             {
                 koopa.stateMachine.ChangeState(koopa.roundFireState);
             }
-        }
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
     }
 }

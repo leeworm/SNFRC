@@ -25,10 +25,47 @@ public class KoopaJumpAttackState : KoopaState
     public override void Update()
     {
         base.Update();
+
+        if(koopa.phaseState == PhaseState.PhaseChange)
+        {
+            if(koopa.transform.position.y > 15f)
+            {
+                koopa.GoMidPos();
+            }
+        }
+
+        JumpDown();
+
+        if(koopa.phaseState == PhaseState.Phase1)
+        {
+            if(koopa.transform.position.y > 15f)
+            {
+                koopa.GoPlayerPos();
+            }
+        }
+        else if(koopa.phaseState == PhaseState.Phase2)
+        {
+            if(koopa.transform.position.y > -185f)
+            {
+                koopa.GoPlayerPos();
+            }
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        //koopa.DangerRange.SetActive(false);
+    }
+
+    private void JumpDown()
+    {
         if(koopa.IsGroundDetected())
         {
+            KH_GameManager.Instance.SetActive_DamageRange(false);
+
             Debug.Log("점프 공격 종료");
-            CameraShake.Instance.Shake(); // 카메라 흔들림 효과
+            KH_CameraShake.Instance.Shake(); // 카메라 흔들림 효과
 
             if(!isEffect && stateTimer <= 2.5f) // 이펙트 생성
             {
@@ -41,22 +78,10 @@ public class KoopaJumpAttackState : KoopaState
                 koopa.stateMachine.ChangeState(koopa.idleState);
             }
         }
-        
-
         if(stateTimer <= 3f && !isAttack)
         {
             koopa.JumpDown();
             isAttack = true;
         }
-        
-        if(koopa.transform.position.y > 15f)
-        {
-            koopa.GoPlayerPos();
-        }
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
     }
 }

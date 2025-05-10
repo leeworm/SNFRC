@@ -39,11 +39,13 @@ public class KH_PlayerState
 
         if (Input.GetKeyDown(KeyCode.Z) && xInput == 0 && !player.isStage1)
             stateMachine.ChangeState(player.shotState);
-        else if (Input.GetKeyDown(KeyCode.X) && xInput == 0 && !player.isStage1)
+        else if (Input.GetKeyDown(KeyCode.X) && xInput == 0 && !player.isStage1 && player.setPipeTimer <= 0)
             stateMachine.ChangeState(player.setPipeState);
-        else if (Input.GetKeyDown(KeyCode.C) && !player.isStage1)
+        else if (Input.GetKeyDown(KeyCode.C) && !player.isStage1 && player.mushRoomTimer <= 0)
         {
-            // 버섯 생성
+            player.CallMushRoom();
+
+            player.mushRoomTimer = player.mushRoomCoolTime;
         }
     }
 

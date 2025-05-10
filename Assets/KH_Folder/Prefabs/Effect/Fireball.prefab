@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 699713998827787262}
   - component: {fileID: 7987425141826291954}
   - component: {fileID: 425931831366302458}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Fireball
   m_TagString: DamageObject
   m_Icon: {fileID: 0}
@@ -136,8 +136,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1704468283
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 1594671168, guid: b0ef29aea0187794b89dbe7c19bc056c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

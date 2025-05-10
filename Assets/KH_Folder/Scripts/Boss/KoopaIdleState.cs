@@ -20,7 +20,12 @@ public class KoopaIdleState : KoopaState
     {
         base.Update();
 
-        if (stateTimer <= 0)
+        if(koopa.phaseState == PhaseState.PhaseChange)
+        {
+            KH_GameManager.Instance.PhaseChange();
+        }
+
+        if (stateTimer <= 0 && koopa.phaseState != PhaseState.PhaseChange) // 페이즈 1 이나 페이즈 2로 바뀌면
         {
             stateMachine.ChangeState(koopa.walkState);
         }

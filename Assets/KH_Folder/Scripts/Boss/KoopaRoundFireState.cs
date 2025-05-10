@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class KoopaRoundFireState : KoopaState
 {
-    int roundfireCount; // 발사한 불꽃의 개수
+    int roundfireCounting; // 발사한 불꽃의 개수
 
     public KoopaRoundFireState(Koopa _koopa, KoopaStateMachine _stateMachine, string _animBoolName) 
         : base(_koopa, _stateMachine, _animBoolName)
@@ -13,15 +13,15 @@ public class KoopaRoundFireState : KoopaState
     {
         base.Enter();
         
-        roundfireCount = 0;
+        roundfireCounting = 0;
         stateTimer = 1f;
     }
 
     public override void Update()
     {
         base.Update();
-        
-        if(roundfireCount >= 2)
+
+        if(roundfireCounting >= koopa.roundFireCount)
         {
             koopa.stateMachine.ChangeState(koopa.idleState);
             return;
@@ -31,8 +31,8 @@ public class KoopaRoundFireState : KoopaState
         {
             koopa.RoundFire();
             
-            roundfireCount++;
-            stateTimer = 1f;
+            roundfireCounting++;
+            stateTimer = koopa.roundFireDelay;
         }
     }
 

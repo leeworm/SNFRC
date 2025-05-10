@@ -17,6 +17,18 @@ public class KH_Player : KH_Entity
     public GameObject FireballPrefab; // 파이어볼 프리팹
     public Transform FireballSpawnPoint; // 파이어볼 발사 위치
     
+    [Header("아이템 정보")]
+    public GameObject MushRoomPrefab;
+    public float mushRoomCoolTime = 10f;
+    public float mushRoomTimer = 0; // 버섯 지속시간
+    
+    [Header("파이프 정보")]
+    public GameObject SetPipePrefab;
+    [SerializeField] private GameObject UsePipePrefab;
+    public float setPipeCoolTime = 15f;
+    public float setPipeTimer = 0;
+    
+
     #region States
     public KH_PlayerStateMachine stateMachine { get; private set; }
 
@@ -66,6 +78,8 @@ public class KH_Player : KH_Entity
     protected override void Update()
     {
         base.Update();
+        mushRoomTimer -= Time.deltaTime;
+        setPipeTimer -= Time.deltaTime;
 
         stateMachine.currentState.Update();
     }
@@ -88,10 +102,24 @@ public class KH_Player : KH_Entity
             stateMachine.ChangeState(hitState);
             KH_HealthManager.Instance.TakeDamage(1);
         }
+
+        if (collision.gameObject.name == "item_mushroom(Clone)")
+        {
+            Debug.Log("버섯 먹음");
+            KH_HealthManager.Instance.Heal(2);
+
+            Destroy(collision.gameObject); // 버섯 먹으면 삭제
+        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && canHit)
+        {
+            stateMachine.ChangeState(hitState);
+            KH_HealthManager.Instance.TakeDamage(1);
+        }
+
+        if (collision.gameObject.CompareTag("EnemyBullet") && canHit)
         {
             stateMachine.ChangeState(hitState);
             KH_HealthManager.Instance.TakeDamage(1);
@@ -117,5 +145,20 @@ public class KH_Player : KH_Entity
     public void Hang()
     {
         stateMachine.ChangeState(hangState);
+    }
+
+    public void CallMushRoom()
+    {
+        if(KH_GameManager.Instance.koopa.phaseState == PhaseState.Phase2)
+        {
+            Instantiate(MushRoomPrefab, new Vector2(transform.position.x, -190), Quaternion.identity);
+            return;
+        }
+        Instantiate(MushRoomPrefab, new Vector2(transform.position.x, 8), Quaternion.identity);
+    }
+
+    public void SetPipe()
+    {
+        GameObject pipe = Instantiate(SetPipePrefab, transform.position, Quaternion.identity);
     }
 }

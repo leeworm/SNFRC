@@ -897,7 +897,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -787977233
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1830896859, guid: b0ef29aea0187794b89dbe7c19bc056c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2087,7 +2087,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1704468283
-  m_SortingLayer: 5
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -4088,6 +4088,14 @@ PrefabInstance:
     - target: {fileID: 4329185821745271723, guid: d2080332d39acd647989895e95e92a26, type: 3}
       propertyPath: m_Name
       value: mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329185821745271723, guid: d2080332d39acd647989895e95e92a26, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329185821745271723, guid: d2080332d39acd647989895e95e92a26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4708537833077653565, guid: d2080332d39acd647989895e95e92a26, type: 3}
       propertyPath: isStage1
@@ -39791,6 +39799,13 @@ MonoBehaviour:
   canHit: 1
   FireballPrefab: {fileID: 0}
   FireballSpawnPoint: {fileID: 0}
+  MushRoomPrefab: {fileID: 0}
+  mushRoomCoolTime: 10
+  mushRoomTimer: 0
+  SetPipePrefab: {fileID: 0}
+  UsePipePrefab: {fileID: 0}
+  setPipeCoolTime: 15
+  setPipeTimer: 0
   isStage1: 0
 --- !u!70 &1318185584
 CapsuleCollider2D:

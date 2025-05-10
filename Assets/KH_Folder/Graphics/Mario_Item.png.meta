@@ -160,6 +160,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: item_mushroom
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50323bc987670e4d8abf103c35e0105
+      internalID: -1689532497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -175,6 +197,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       flag: -8869406681220009429
+      item_mushroom: -1689532497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

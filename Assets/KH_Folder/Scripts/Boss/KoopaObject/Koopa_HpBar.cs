@@ -22,4 +22,16 @@ public class Koopa_HpBar : MonoBehaviour
         // 체력바 감소
         img.fillAmount -= (float)damage / 1000f; // 체력바 감소 비율 조정
     }
+
+    public void GetHeal(int heal)
+    {
+        // 체력바 감소
+        img.fillAmount += (float)heal / 1000f; // 체력바 감소 비율 조정
+    }
+
+    public void SetHpBar(float hp)
+    {
+        // 체력바 초기화
+        img.fillAmount = hp / 1000f; // 체력바 초기화 비율 조정
+    }
 }
