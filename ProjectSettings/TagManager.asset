@@ -6,7 +6,7 @@ TagManager:
   tags:
   - DamageObject
   - Enemy
-  - Item
+  - 'Item '
   - EnemyBullet
   - Wall
   - Ground
@@ -50,19 +50,19 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 2581284321
+    uniqueID: 4114123787
     locked: 0
   - name: Ground
-    uniqueID: 3982488993
+    uniqueID: 2370671453
     locked: 0
   - name: Object
-    uniqueID: 4151463179
+    uniqueID: 429325761
     locked: 0
   - name: Enemy
-    uniqueID: 2717508359
+    uniqueID: 3788302269
     locked: 0
   - name: Player
-    uniqueID: 964263701
+    uniqueID: 3234976951
     locked: 0
   m_RenderingLayers:
   - Default
