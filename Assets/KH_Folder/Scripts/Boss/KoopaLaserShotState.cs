@@ -4,6 +4,8 @@ public class KoopaLaserShotState : KoopaState
 {
     private bool isCreate;
 
+    private bool isCharge;
+
     public KoopaLaserShotState(Koopa _koopa, KoopaStateMachine _stateMachine, string _animBoolName) 
         : base(_koopa, _stateMachine, _animBoolName)
     {
@@ -14,8 +16,9 @@ public class KoopaLaserShotState : KoopaState
         base.Enter();
 
         isCreate = false;
+        isCharge = false;
 
-        stateTimer = 10f; // 상태 지속 시간
+        stateTimer = koopa.fireLaserTime; // 상태 지속 시간
         
         koopa.rb.gravityScale = 0;
     }
@@ -46,13 +49,24 @@ public class KoopaLaserShotState : KoopaState
     {
         if(koopa.transform.position == _midPos)
         {
-            if(!isCreate)
+            if(stateTimer <= koopa.fireLaserTime - 5)
             {
-                koopa.CreateLaser();
-                isCreate = true;
+                if(!isCreate)
+                {
+                    koopa.CreateLaser();
+                    isCreate = true;
+                }
+                else
+                    koopa.StartLaser();
             }
             else
-                koopa.StartLaser();
+            {
+                if(!isCharge)
+                {
+                    KH_EffectManager.Instance.PlayEffect("ChargeEffect", koopa.transform.position);
+                    isCharge = true;
+                }
+            }
         }
         else
         {

@@ -78,6 +78,7 @@ public class Koopa : KH_Enemy
     public Transform fireLaserPos;
     public float fireLaserSpeed = 1.0f;         // 회전 속도
     public float fireLaser_maxAngle = 110.0f;    // 최대 각도
+    public float fireLaserTime = 15;
 
     #endregion
 
@@ -136,13 +137,18 @@ public class Koopa : KH_Enemy
             {
                 // 파이어볼 비활성화
                 KH_BulletPool.Instance.ReturnBullet(collision.gameObject);
-                
 
                 // 체력 감소
                 int damage = collision.gameObject.GetComponent<KH_Fireball>().Damage;
                 healthPoint -= damage;
                 koopaHpBar.GetDamage(damage);
-    
+            }
+            if(collision.gameObject.GetComponent<Sonic>() != null)
+            {
+                // 체력 감소
+                int damageS = collision.gameObject.GetComponent<Sonic>().Damage;
+                healthPoint -= damageS;
+                koopaHpBar.GetDamage(damageS);
             }
         }
     }
@@ -322,7 +328,6 @@ public class Koopa : KH_Enemy
     private GameObject fireLaser;
     public void CreateLaser()
     {
-
         fireLaser = Instantiate(fireLaserPrefab, fireLaserPos.position, Quaternion.identity);
 
         if(fireLaser == null)

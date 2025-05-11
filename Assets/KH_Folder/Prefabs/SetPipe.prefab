@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a96e7ce3697e748adcd26a150dfd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plusPos: 1.5
+  plusPos: 3.5
   pipePrefab: {fileID: 6619508028159406116, guid: e92d1d3eb0b3aae4a8dc987f4e80aea3, type: 3}
 --- !u!212 &4760694566146656647
 SpriteRenderer:

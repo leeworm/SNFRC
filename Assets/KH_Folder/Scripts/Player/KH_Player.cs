@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class KH_Player : KH_Entity
 {
+    private CapsuleCollider2D capsuleCollider2D;
     public Transform pipeChek;
     public float pipeCheckDistance = 0.1f;
     public LayerMask whatIsPipe;
+
+    private UsePipe usePipe;
 
     [Header("이동 정보")]
     public float moveSpeed = 12f;
@@ -26,6 +29,8 @@ public class KH_Player : KH_Entity
     public GameObject MushRoomPrefab;
     public float mushRoomCoolTime = 10f;
     public float mushRoomTimer = 0; // 버섯 지속시간
+    public GameObject SonicPrefab;
+    public GameObject Sonic;
     
     [Header("파이프 정보")]
     public GameObject SetPipePrefab;
@@ -41,6 +46,9 @@ public class KH_Player : KH_Entity
     
     [Header("에러 파이프 정보")]
     public int pipeCount = 1;
+    public float pipInOutSpeed = 10f;
+    public bool isTelepot = false;
+    public bool isTelepotSuccess = false;
     
 
     #region States
@@ -56,6 +64,7 @@ public class KH_Player : KH_Entity
     public KH_PlayerInPipeState inPipeState { get; private set; }
 
     public KH_PlayerHangState hangState { get; private set; }
+    public KH_PlayerCutMovingState cutMovingState { get; private set; }
     #endregion
 
     [SerializeField]public bool isStage1 = true;
@@ -76,6 +85,7 @@ public class KH_Player : KH_Entity
         inPipeState = new KH_PlayerInPipeState(this, stateMachine, "Idle");
 
         hangState = new KH_PlayerHangState(this, stateMachine, "Hang");
+        cutMovingState = new KH_PlayerCutMovingState(this, stateMachine, "Move");
 
     }
 
@@ -83,6 +93,7 @@ public class KH_Player : KH_Entity
     {
         base.Start();
         sr = GetComponentInChildren<SpriteRenderer>();
+        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
 
         jumpAttackCollider.SetActive(false); // 점프 공격 콜라이더 비활성화
 
@@ -148,6 +159,14 @@ public class KH_Player : KH_Entity
 
             Destroy(collision.gameObject); // 버섯 먹으면 삭제
         }
+        if (collision.gameObject.name == "item_sonic(Clone)")
+        {
+            Debug.Log("소닉 먹음");
+
+            Instantiate(Sonic, transform.position, Quaternion.identity);
+
+            Destroy(collision.gameObject); // 소닉 먹으면 삭제
+        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -164,7 +183,22 @@ public class KH_Player : KH_Entity
         }
     }
 
-    public bool IsPipeDetected() => Physics2D.Raycast(pipeChek.position, Vector2.down, pipeCheckDistance, whatIsPipe);
+    //public bool IsPipeDetected() => Physics2D.Raycast(pipeChek.position, Vector2.down, pipeCheckDistance, whatIsPipe);
+    public bool IsPipeDetected()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(pipeChek.position, Vector2.down, pipeCheckDistance, whatIsPipe);
+
+        if (hit.collider != null)
+        {
+            usePipe = hit.collider.GetComponentInParent<UsePipe>();
+            Debug.Log(usePipe);
+
+            return true;
+        }
+
+        return false;
+    }
+
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
@@ -194,14 +228,22 @@ public class KH_Player : KH_Entity
         stateMachine.ChangeState(hangState);
     }
 
+    //
+
     public void CallMushRoom()
-    {
+    {   
+        GameObject Prefab;
+        if(isErrorState)
+            Prefab = SonicPrefab;
+        else
+            Prefab = MushRoomPrefab;
+
         if(KH_GameManager.Instance.koopa.phaseState == PhaseState.Phase2)
         {
-            Instantiate(MushRoomPrefab, new Vector2(transform.position.x, -190), Quaternion.identity);
+            Instantiate(Prefab, new Vector2(transform.position.x, -190), Quaternion.identity);
             return;
         }
-        Instantiate(MushRoomPrefab, new Vector2(transform.position.x, 8), Quaternion.identity);
+        Instantiate(Prefab, new Vector2(transform.position.x, 8), Quaternion.identity);
     }
 
     public void SetPipe()
@@ -226,5 +268,56 @@ public class KH_Player : KH_Entity
             sr.color = new Color(0,0,255);
             yield return new WaitForSeconds(0.05f);
         }
+    }
+
+    //
+
+    // 충돌 파이프 번호 가져오기
+    public int GetCollisionPipeNumber()
+    {
+        return usePipe.pipeNumber;
+    }
+    
+    public void PlayerIsTrigger(bool _trigger)
+    {
+        capsuleCollider2D.isTrigger = _trigger;
+    }
+
+    public void InTelepotPipe(Vector3 _targetVec)
+    {
+        if(transform.position == _targetVec)
+        {
+            Debug.Log("Telepot !");
+            Telepot();
+            return;
+        }
+        else
+            transform.position = Vector2.MoveTowards(transform.position, _targetVec, pipInOutSpeed * Time.deltaTime);
+    }
+
+    public void Telepot()
+    {
+        if(GetCollisionPipeNumber() == 0)
+        {
+            transform.position = KH_GameManager.Instance.telepotPipe[1].vec;
+        }
+        else if(GetCollisionPipeNumber() == 1)
+        {
+            transform.position = KH_GameManager.Instance.telepotPipe[0].vec;
+        }
+
+        isTelepot = true;
+    }
+
+    public void OutTelepotPipe(Vector3 _targetVec)
+    {
+        if(transform.position == _targetVec)
+        {
+            Debug.Log("Telepot Success !");
+            isTelepotSuccess = true;
+            return;
+        }
+        else
+            transform.position = Vector2.MoveTowards(transform.position, _targetVec, pipInOutSpeed * Time.deltaTime);
     }
 }

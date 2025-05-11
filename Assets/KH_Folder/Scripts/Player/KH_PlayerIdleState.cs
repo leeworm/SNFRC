@@ -24,8 +24,9 @@ public class KH_PlayerIdleState : KH_PlayerGroundedState
         {
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                // 파이프 안에 들어감 inPipeState
-                stateMachine.ChangeState(player.inPipeState);
+                // 파이프가 2개라면, 파이프 안에 들어감 inPipeState
+                if(KH_GameManager.Instance.telepotPipe[0].havePipe && KH_GameManager.Instance.telepotPipe[1].havePipe)
+                    stateMachine.ChangeState(player.inPipeState);
             }
         }
 
