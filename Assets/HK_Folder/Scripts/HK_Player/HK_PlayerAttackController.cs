@@ -66,19 +66,23 @@ public class HK_PlayerAttackController : MonoBehaviour
         else
             projectile = Instantiate(chargeShotLv3Prefab, firePoint.position, Quaternion.identity);
 
-        // 플레이어 방향에 맞게 총알을 발사
-        float dir = player.facingDir; // 플레이어 방향
-        Rigidbody2D rbProjectile = projectile.GetComponent<Rigidbody2D>();
+        float dir = player.facingDir; // -1 또는 1
+        Vector2 direction = new Vector2(dir, 0);
 
-        rbProjectile.linearVelocity = new Vector2(dir * shotSpeed, 0f);  // LinearVelocity 대신 velocity 사용
+        // 총알의 이동 방향 설정
+        HK_BulletController bullet = projectile.GetComponent<HK_BulletController>();
+        if (bullet != null)
+            bullet.SetDirection(direction);
 
-        // 총알 스케일 방향 맞추기
+        // 총알의 스케일도 방향에 맞게 반전
         Vector3 scale = projectile.transform.localScale;
         scale.x = Mathf.Abs(scale.x) * dir;
         projectile.transform.localScale = scale;
 
         anim.SetTrigger("Attack");
     }
+
+
 
     void UpdateAnimParams()
     {

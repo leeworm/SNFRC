@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbb6fc4b2e0743469cc8ce14bf7419e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletType: 0
   damage: 10
-  speed: 5
+  speed: 3
   lifeTime: 3
   canPierce: 0
-  direction: {x: 1, y: 0}
