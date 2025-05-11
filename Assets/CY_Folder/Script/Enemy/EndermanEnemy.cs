@@ -14,6 +14,8 @@ public class EndermanEnemy : B_Enemy
     private Coroutine contactDamageCoroutine;
     private AudioSource localAudioSource;
 
+    public GameObject dropItemPrefab;
+
     protected override void Start()
     {
         base.Start();
@@ -121,6 +123,9 @@ public class EndermanEnemy : B_Enemy
         // 사운드 중지
         if (localAudioSource != null && localAudioSource.isPlaying)
             localAudioSource.Stop();
+
+        if (dropItemPrefab != null)
+        Instantiate(dropItemPrefab, transform.position, Quaternion.identity);
 
         base.Die();
     }

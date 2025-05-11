@@ -10,12 +10,16 @@ public class EWorldChangerTrigger : MonoBehaviour
     {
         if (hasTriggered || !other.CompareTag("Player")) return;
 
-        hasTriggered = true;
 
-        if (videoPlayerOverlay != null)
-        {
-            StartCoroutine(PlayVideoThenEnd());
-        }
+        if (ItemCollector.hasEnderItem)
+            {
+                // 오버레이 영상 재생 + 맵 전환 등
+                StartCoroutine(PlayVideoThenEnd());
+            }
+            else
+            {
+                Debug.Log("엔더 아이템이 없어 아직 못 들어감");
+            }
     }
 
     private System.Collections.IEnumerator PlayVideoThenEnd()
