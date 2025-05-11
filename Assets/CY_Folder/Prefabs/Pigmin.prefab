@@ -241,6 +241,8 @@ MonoBehaviour:
     m_Bits: 192
   checkDistance: 0.2
   contactDamage: 3
+  hitSound: {fileID: 8300000, guid: 55126d4e8b11d8c4a8be18e3be5061b7, type: 3}
+  deathSound: {fileID: 8300000, guid: 65020c54a2dba9e42967a400456e3cf0, type: 3}
 --- !u!1 &4679086224481496861
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2379730795940024397}
   - component: {fileID: 3692230700892139595}
-  m_Layer: 11
+  m_Layer: 16
   m_Name: ZomieHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

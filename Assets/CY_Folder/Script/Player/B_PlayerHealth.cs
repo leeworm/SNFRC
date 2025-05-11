@@ -19,6 +19,8 @@ public class B_PlayerHealth : MonoBehaviour
     private float contactCooldown = 1f; // 중복 데미지 방지 시간
     public B_HeartUI heartUI;
     private Coroutine regenCoroutine;
+    public AudioClip hitSound;
+    
 
     private void Start()
     {
@@ -82,6 +84,7 @@ public class B_PlayerHealth : MonoBehaviour
         float dir = Mathf.Sign(transform.position.x - attackerPos.x);
         Vector2 force = new Vector2(dir * -6f, 2f);
         rb.AddForce(force, ForceMode2D.Impulse);
+          B_AudioManager.Instance.PlaySFX(hitSound);
     }
 
     private IEnumerator HitFlash()
@@ -121,11 +124,12 @@ public class B_PlayerHealth : MonoBehaviour
          B_Enemy enemy = other.GetComponent<B_Enemy>();
 
         // 히트박스 무시
-        if (enemy != null && !other.CompareTag("Hitbox"))
+        if (enemy != null && !other.CompareTag("HitHitbox"))
         {
             if (contactDamageCoroutine == null)
                 contactDamageCoroutine = StartCoroutine(DealContactDamage(enemy));
         }
+        
     }
 
 

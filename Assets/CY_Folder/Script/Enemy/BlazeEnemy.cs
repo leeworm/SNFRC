@@ -13,24 +13,26 @@ public class BlazeEnemy : B_Enemy
     private bool isAttacking = false;
     private float lastAttackTime;
 
+    public AudioClip fireballSound;
+
     protected override void RunAI()
     {
         if (isDead || player == null || isAttacking) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        // 벽 또는 낭떠러지 체크
-        bool noGround = !Physics2D.Raycast(groundCheck.position, Vector2.down, checkDistance, groundLayer);
-        bool wallHit = Physics2D.Raycast(wallCheck.position, Vector2.right * moveDirection, checkDistance, groundLayer);
-
-        if (noGround || wallHit)
-            moveDirection *= -1;
-
-        // 방향 설정
-        float dirToPlayer = Mathf.Sign(player.position.x - transform.position.x);
-        moveDirection = (int)dirToPlayer;
+       if (Vector2.Distance(transform.position, player.position) < 6f)
+        {
+            // 플레이어 추적
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
         FacePlayer();
+        }
+        // 플레이어를 바라보게 함
+                else
+        {
+            Patrol();
+        }
+        float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance <= attackRange && Time.time >= lastAttackTime + attackCooldown)
         {
@@ -63,6 +65,7 @@ public class BlazeEnemy : B_Enemy
                 Vector3 scale = fireball.transform.localScale;
                 scale.x = Mathf.Abs(scale.x) * (fireDir.x > 0 ? 1 : -1);
                 fireball.transform.localScale = scale;
+                AudioSource.PlayClipAtPoint(fireballSound, transform.position);
             }
 
             yield return new WaitForSeconds(fireInterval);

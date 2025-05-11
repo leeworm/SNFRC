@@ -36,6 +36,17 @@ public class B_PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public AudioClip bowShootSound;
+    public AudioSource audioSource;
+
+    public AudioClip[] footstepClips;
+    public float footstepInterval = 0.5f;
+    private float lastFootstepTime = 0f;
+
+    public AudioClip hitSound;
+
+
+
     private Dictionary<B_Enemy, float> lastHitTimeMap = new Dictionary<B_Enemy, float>();
     private float meleeHitCooldown = 0.3f; // 동일 적에게 다시 데미지 줄 때까지의 최소 시간
     
@@ -146,13 +157,20 @@ public class B_PlayerController : MonoBehaviour
             col.sharedMaterial = noFrictionMat;
         }
 
+        HandleFootstepSound();
+
+
         PlayCurrentAnimation();
     }
 
         public void TakeDamage(int damage)
     {
+        if (hitSound != null)
+        B_AudioManager.Instance.PlaySFX(hitSound);
+
         StartCoroutine(HitFlash());
-        KnockbackFromEnemy();
+         KnockbackFromEnemy();
+    // 체력 시스템 있으면 여기서 HP 깎기
         // 체력 시스템 있으면 여기서 HP 깎기
     }
 
@@ -241,9 +259,12 @@ public class B_PlayerController : MonoBehaviour
     public void SpawnArrow()
     {
         if (currentWeapon == WeaponType.Bow)
-        {
-            skillManager.UseSkill(currentWeapon, firePoint);
-        }
+    {
+        // 화살 소리 → AudioManager 통해 재생
+        B_AudioManager.Instance.PlaySFX(bowShootSound);
+
+        skillManager.UseSkill(currentWeapon, firePoint);
+    }
     }
 
     public void DealMeleeDamage()
@@ -254,7 +275,7 @@ public class B_PlayerController : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackCenter, attackRadius, enemyLayer);
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Hitbox")) continue;
+            if (hit.CompareTag("HitHitbox")) continue;
 
             B_Enemy enemy = hit.GetComponent<B_Enemy>();
             if (enemy != null)
@@ -275,7 +296,18 @@ public class B_PlayerController : MonoBehaviour
         }
     }
 
-
+    private void HandleFootstepSound()
+    {
+        if (currentState == B_PlayerStateType.Move && isGrounded && Time.time >= lastFootstepTime + footstepInterval)
+        {
+            if (footstepClips.Length > 0)
+            {
+                int index = Random.Range(0, footstepClips.Length);
+                B_AudioManager.Instance.PlaySFX(footstepClips[index]);
+                lastFootstepTime = Time.time;
+            }
+        }
+    }
 
 
 }

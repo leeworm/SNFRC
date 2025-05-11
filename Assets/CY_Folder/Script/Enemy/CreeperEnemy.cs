@@ -10,6 +10,7 @@ public class CreeperEnemy : B_Enemy
     private bool isExploding = false;
 
     public GameObject explosionPrefab;
+    public AudioClip explosionSound;
 
     protected override void RunAI()
     {
@@ -51,6 +52,8 @@ public class CreeperEnemy : B_Enemy
 
         if (animator != null)
             animator.SetTrigger("Explode");
+        if (explosionSound != null)
+            B_AudioManager.Instance.PlaySFX(explosionSound);
 
         yield return new WaitForSeconds(explosionDelay);
 

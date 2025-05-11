@@ -168,8 +168,12 @@ MonoBehaviour:
     m_Bits: 192
   checkDistance: 1
   contactDamage: 4
+  hitSound: {fileID: 8300000, guid: fd687509f83c5b54590f2ebd5c9650f4, type: 3}
+  deathSound: {fileID: 8300000, guid: b2c55b1e0ad408844a4e08c605acbd5d, type: 3}
   detectionDistance: 12
   teleportCooldown: 3
+  teleportSound: {fileID: 8300000, guid: 261ca07d5cd5b5c41803d290ec240528, type: 3}
+  Stare: {fileID: 8300000, guid: 368fa41e6f2bbdd4e8c1f3d771544050, type: 3}
 --- !u!50 &1388334242340560438
 Rigidbody2D:
   serializedVersion: 5
@@ -253,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2384915657783839582}
   - component: {fileID: 2481053101058445459}
-  m_Layer: 11
+  m_Layer: 16
   m_Name: EnderHitBox
   m_TagString: Enemy
   m_Icon: {fileID: 0}

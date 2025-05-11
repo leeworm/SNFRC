@@ -10,24 +10,31 @@ public class SkeletonEnemy : B_Enemy
     private float lastAttackTime;
     private bool isAttacking = false;
 
+    public AudioClip shootSound;
+    public AudioSource audioSource;
+    
+
     protected override void RunAI()
     {
         if (isDead || player == null) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        // 벽 또는 낭떠러지 체크
-        bool noGround = !Physics2D.Raycast(groundCheck.position, Vector2.down, checkDistance, groundLayer);
-        bool wallHit = Physics2D.Raycast(wallCheck.position, Vector2.right * moveDirection, checkDistance, groundLayer);
-
-        if (noGround || wallHit)
-            moveDirection *= -1;
-
-        // 플레이어 기준 방향 결정
-        float directionToPlayer = Mathf.Sign(player.position.x - transform.position.x);
-        moveDirection = (int)directionToPlayer;
+        if (Vector2.Distance(transform.position, player.position) < 6f)
+        {
+            // 플레이어 추적
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
         FacePlayer();
+        }
+        // 플레이어를 바라보게 함
+                else
+        {
+            Patrol();
+        }
+
+        
+
+        float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance <= attackRange && Time.time >= lastAttackTime + attackCooldown && !isAttacking)
         {
@@ -64,11 +71,16 @@ public class SkeletonEnemy : B_Enemy
             GameObject arrow = Instantiate(arrowPrefab, shootPoint.position, Quaternion.identity);
             Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
 
+        
             if (arrowRb != null)
             {
                 arrowRb.linearVelocity = fireDirection * 10f;
             }
 
+            // 🔊 화살 소리 추가
+            if (shootSound != null && audioSource != null)
+            audioSource.PlayOneShot(shootSound);
+            
             // 시각적 방향 보정
             Vector3 scale = arrow.transform.localScale;
             scale.x = Mathf.Abs(scale.x) * (fireDirection.x > 0 ? 1 : -1);

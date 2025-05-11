@@ -136,13 +136,16 @@ MonoBehaviour:
     m_Bits: 192
   checkDistance: 0.3
   contactDamage: 0
+  hitSound: {fileID: 8300000, guid: 40e6c2ca133a162419d3264690306066, type: 3}
+  deathSound: {fileID: 8300000, guid: 40e6c2ca133a162419d3264690306066, type: 3}
   explosionRange: 3
-  explosionDelay: 1.2
+  explosionDelay: 2.5
   explosionDamage: 5
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
   explosionPrefab: {fileID: 6470548280815452044, guid: 5ca79609849da4e4eb37d607725d5f4d, type: 3}
+  explosionSound: {fileID: 8300000, guid: 563dc8252283d534187783c09f8a05d9, type: 3}
 --- !u!61 &8970704507739066979
 BoxCollider2D:
   m_ObjectHideFlags: 0

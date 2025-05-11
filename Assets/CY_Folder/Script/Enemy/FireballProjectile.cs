@@ -5,6 +5,7 @@ public class FireballProjectile : MonoBehaviour
     public int damage = 3;
     public float lifeTime = 2f;
     public GameObject hitEffect;
+    
 
     private void Start()
     {

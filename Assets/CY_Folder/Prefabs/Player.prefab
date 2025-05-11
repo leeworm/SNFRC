@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5018480450186561660}
   - component: {fileID: 6434131909745581462}
-  m_Layer: 11
+  m_Layer: 16
   m_Name: 'AttackHitbox '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,6 +399,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   weaponDatabase: {fileID: 11400000, guid: 45592a82084092140b4c01d8aa4e8fe7, type: 2}
+  bowShootSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &2286695512950843722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHearts: 10
+  heartUI: {fileID: 0}
 --- !u!1 &8406385024765180872
 GameObject:
   m_ObjectHideFlags: 0

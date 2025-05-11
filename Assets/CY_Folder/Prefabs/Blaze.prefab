@@ -241,12 +241,15 @@ MonoBehaviour:
     m_Bits: 192
   checkDistance: 0.2
   contactDamage: 0
+  hitSound: {fileID: 8300000, guid: a4e100cd05189ce469215c8460f8adfa, type: 3}
+  deathSound: {fileID: 8300000, guid: 11caec85b92e5b048a4047187a18bedd, type: 3}
   fireballPrefab: {fileID: 3699742964493053127, guid: 99d3bc36513187340b1abed6824bbf09, type: 3}
   shootPoint: {fileID: 7878047319352323727}
   attackRange: 7
   fireballSpeed: 4
   fireInterval: 0.3
   attackCooldown: 4
+  fireballSound: {fileID: 8300000, guid: 5f5574c18b2afad47a9ea584f116cacc, type: 3}
 --- !u!1 &4471006082530728942
 GameObject:
   m_ObjectHideFlags: 0

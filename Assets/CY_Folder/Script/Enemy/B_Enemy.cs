@@ -32,7 +32,9 @@ public abstract class B_Enemy : MonoBehaviour
     [Header("공격 설정")]
     public int contactDamage = 1;
 
-    
+    [Header("사운드 설정")]
+    public AudioClip hitSound;
+    public AudioClip deathSound;
 
     protected virtual void Start()
     {
@@ -53,6 +55,9 @@ public abstract class B_Enemy : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         if (isDead) return;
+
+        if (hitSound != null)
+        B_AudioManager.Instance.PlaySFX(hitSound);
 
         currentHP -= damage;
 
@@ -92,7 +97,12 @@ public abstract class B_Enemy : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+
+        if (deathSound != null)
+        B_AudioManager.Instance.PlaySFX(deathSound);
+
         StartCoroutine(DeathSequence());
+        
     }
 
     protected void FacePlayer()
@@ -108,32 +118,29 @@ public abstract class B_Enemy : MonoBehaviour
         transform.localScale = scale;
     }
 
+    protected void Patrol()
+    {
+        if (groundCheck == null || wallCheck == null || rb == null) return;
 
-        protected void Patrol()
+        bool noGround = !Physics2D.Raycast(groundCheck.position, Vector2.down, checkDistance, groundLayer);
+        bool wallHit = Physics2D.Raycast(wallCheck.position, Vector2.right * moveDirection, checkDistance, groundLayer);
+
+        if (noGround || wallHit)
+            moveDirection *= -1;
+
+        rb.linearVelocity = new Vector2(moveDirection * moveSpeed, rb.linearVelocity.y);
+
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * -moveDirection;
+        transform.localScale = scale;
+
+        if ((noGround || wallHit) && Time.time - lastTurnTime > turnCooldown)
         {
-            if (groundCheck == null || wallCheck == null || rb == null) return;
-
-            bool noGround = !Physics2D.Raycast(groundCheck.position, Vector2.down, checkDistance, groundLayer);
-            bool wallHit = Physics2D.Raycast(wallCheck.position, Vector2.right * moveDirection, checkDistance, groundLayer);
-
-            // 낭떠러지나 벽 감지 → 회전 (쿨타임 있음)
-            if ((noGround || wallHit) && Time.time - lastTurnTime > turnCooldown)
-            {
-                moveDirection *= -1;
-                FacePlayer();
-                lastTurnTime = Time.time;
-            }
-
-            // 이동
-            rb.linearVelocity = new Vector2(moveDirection * moveSpeed, rb.linearVelocity.y);
-
-            // 방향 전환 시 스프라이트 반전
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * -moveDirection;
-            transform.localScale = scale;
+            moveDirection *= -1;
+            FacePlayer();
+            lastTurnTime = Time.time;
         }
-
-    
+    }
 
     protected virtual void Update()
     {
@@ -215,7 +222,7 @@ public abstract class B_Enemy : MonoBehaviour
 
         transform.rotation = endRot;
 
-        gameObject.layer = LayerMask.NameToLayer("Skill");
+        gameObject.layer = LayerMask.NameToLayer("Item");
 
         yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);

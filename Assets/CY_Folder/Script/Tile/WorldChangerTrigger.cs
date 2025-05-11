@@ -7,6 +7,7 @@ public class WorldChangerTrigger : MonoBehaviour
     public WorldChanger changer;
     public WorldTransitionVideoPlayer videoPlayerOverlay;
 
+
     [Header("배경 변경용")]
     public WorldBackgroundManager backgroundManager;
 
@@ -14,6 +15,8 @@ public class WorldChangerTrigger : MonoBehaviour
     public B_MonsterManager monsterManager;
 
     private bool hasTriggered = false;
+
+    public GameObject endTriggerB; 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -51,6 +54,9 @@ public class WorldChangerTrigger : MonoBehaviour
 
         if (monsterManager != null)
             monsterManager.ReplaceMonsters();
+
+        if (endTriggerB != null)
+        endTriggerB.SetActive(true);
 
                 gameObject.SetActive(false);
 }

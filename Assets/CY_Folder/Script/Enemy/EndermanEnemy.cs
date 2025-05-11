@@ -8,7 +8,21 @@ public class EndermanEnemy : B_Enemy
     private float lastTeleportTime;
     private float teleportEndTime = 0f;
 
+    public AudioClip teleportSound;
+    public AudioClip Stare;
+
     private Coroutine contactDamageCoroutine;
+    private AudioSource localAudioSource;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        // 이 오브젝트에 AudioSource가 없으면 자동으로 생성
+        localAudioSource = GetComponent<AudioSource>();
+        if (localAudioSource == null)
+            localAudioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     protected override void RunAI()
     {
@@ -24,14 +38,12 @@ public class EndermanEnemy : B_Enemy
         bool isBehind = Vector2.Dot(facingDir, directionToPlayer) < -0.5f;
         bool canSeePlayer = !Physics2D.Linecast(transform.position, player.position, groundLayer);
 
-        // 🟡 뒤에서 접근하면 회전
         if (isBehind && distanceToPlayer <= 3f)
         {
             FacePlayer();
             moveDirection = (int)Mathf.Sign(player.position.x - transform.position.x);
         }
 
-        // ✅ 앞에서 보고 있고, y차이 없고, 시야 확보되면 순간이동
         if (distanceToPlayer <= detectionDistance && isFacingPlayer && canSeePlayer && yDistance < 1f && Time.time >= lastTeleportTime + teleportCooldown)
         {
             lastTeleportTime = Time.time;
@@ -41,7 +53,6 @@ public class EndermanEnemy : B_Enemy
         else
         {
             Patrol();
-
             if (animator != null && !canSeePlayer)
                 animator.Play("EnderMan");
         }
@@ -52,6 +63,13 @@ public class EndermanEnemy : B_Enemy
         if (animator != null)
             animator.SetTrigger("Teleport");
 
+        // Stare 재생 (시야 마주칠 때 긴 사운드)
+        if (Stare != null && localAudioSource != null)
+        {
+            localAudioSource.clip = Stare;
+            localAudioSource.Play();
+        }
+
         yield return new WaitForSeconds(0.2f);
 
         Vector2 offset = (player.transform.localScale.x > 0 ? Vector2.left : Vector2.right) * 2f;
@@ -61,10 +79,12 @@ public class EndermanEnemy : B_Enemy
         if (hit.collider != null)
         {
             transform.position = targetPosition;
+
+            if (teleportSound != null && localAudioSource != null)
+                localAudioSource.PlayOneShot(teleportSound);
         }
     }
 
-    // 🟥 플레이어와 충돌 시 데미지
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isDead || !other.CompareTag("Player")) return;
@@ -92,7 +112,16 @@ public class EndermanEnemy : B_Enemy
             if (player != null)
                 player.TakeDamage(contactDamage, transform.position);
 
-            yield return new WaitForSeconds(1f); // 1초 간격 데미지
+            yield return new WaitForSeconds(1f);
         }
+    }
+
+    protected override void Die()
+    {
+        // 사운드 중지
+        if (localAudioSource != null && localAudioSource.isPlaying)
+            localAudioSource.Stop();
+
+        base.Die();
     }
 }
