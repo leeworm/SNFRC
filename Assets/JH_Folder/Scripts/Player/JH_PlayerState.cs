@@ -33,16 +33,26 @@ public class JH_PlayerState
 
     public virtual void Update()
     {
+
+
         StateTimer -= Time.deltaTime;
 
-        xInput = 0f; 
+        // 입력을 감지하여 xInput 설정
+        xInput = 0f;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             xInput = -1f;
+            Player.UpdateEnemyDetection(); // 방향 업데이트
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             xInput = 1f;
+            Player.UpdateEnemyDetection(); // 방향 업데이트
+        }
+        else
+        {
+            // 입력이 없을 때도 적 감지하여 방향 설정
+            Player.UpdateEnemyDetection();
         }
 
         yInput = 0f; // 기본값 0
