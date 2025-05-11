@@ -136,7 +136,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1704468283
+  m_SortingLayerID: 429325761
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 1594671168, guid: b0ef29aea0187794b89dbe7c19bc056c, type: 3}
@@ -186,7 +186,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.1
   m_GravityScale: 2.5
   m_Material: {fileID: 6200000, guid: 3b5ef5af867d0d74eb8301f74dfbd905, type: 2}
   m_IncludeLayers:
@@ -197,7 +197,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &425931831366302458
 CircleCollider2D:

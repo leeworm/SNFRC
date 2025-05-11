@@ -10,6 +10,7 @@ public enum PhaseState
 public class Koopa : KH_Enemy
 {
     private SpriteRenderer sr;
+    
 
     [Header("Koopa 정보")]
     public Koopa_HpBar koopaHpBar; // 체력바 스크립트
@@ -27,6 +28,8 @@ public class Koopa : KH_Enemy
     public KoopaAllDirFireState allDirFireState { get; private set; }
 
     public KoopaPhaseChangeState phaseChangeState { get; private set; }
+
+    public KoopaSpinAttackState spinAttackState { get; private set; }
 
     #endregion
 
@@ -54,6 +57,21 @@ public class Koopa : KH_Enemy
     public float roundFireDelay = 1.5f;
     #endregion
 
+    
+    #region Phase 2
+    
+    [Header("스핀 공격 정보")]
+    public float spinReadySpeed = 10f;
+    public float spinSpeed = 30f;
+    public int spinCount = 3; // 상수
+    public bool isReadySpin = false;
+    public bool isScreenOutSpin = false;
+    public bool isEndSpin = false;
+    public float spinReadyTimer;
+    public float spinReadyTime = 0.5f; // 상수
+
+    #endregion
+
     public PhaseState phaseState = PhaseState.Phase1; // 현재 상태
 
     protected override void Awake()
@@ -72,6 +90,8 @@ public class Koopa : KH_Enemy
         allDirFireState = new KoopaAllDirFireState(this, stateMachine, "Idle");
 
         phaseChangeState = new KoopaPhaseChangeState(this, stateMachine, "Idle");
+
+        spinAttackState = new KoopaSpinAttackState(this, stateMachine, "Spin");
     }
 
     protected override void Start()
@@ -117,6 +137,7 @@ public class Koopa : KH_Enemy
         }
     }
 
+    #region Phase 1 Fuctions
     public void ShotFire()
     {
         GameObject fire = Instantiate(fireShotPrefab, wallCheck.position, Quaternion.identity);
@@ -140,7 +161,7 @@ public class Koopa : KH_Enemy
             fire.GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * fireShotSpeed;
         }
     }
-    #region Phase 1 Fuctions
+    
     public void JumpUp()
     {
         Debug.Log("JumpUp");
@@ -158,10 +179,10 @@ public class Koopa : KH_Enemy
         rb.linearVelocityY = jumpSpeed;
     }
 
-    public void GoPlayerPos()
+    public void GoPlayerPosX()
     {
         transform.position = new Vector2(playerTransform.position.x, transform.position.y);
-        KH_GameManager.Instance.SetActive_DamageRange(true);
+        KH_GameManager.Instance.SetActive_DamageRangeX(true);
     }
 
     public void JumpDown()
@@ -233,4 +254,60 @@ public class Koopa : KH_Enemy
         roundFireSpeed = 13f;
 
     }
+    
+    #region Phase 2 Fuctions
+
+    public void ReadySpin()
+    {
+        boxCollider.isTrigger = true;
+
+        if(transform.position == new Vector3(transform.position.x, -200, 0))
+        {
+            isReadySpin = true;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, -200, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    public void ScreenOutSpin()
+    {
+        if(transform.position == new Vector3(30, transform.position.y, 0))
+        {
+            spinReadyTimer = spinReadyTime; // 1초 동안
+            isScreenOutSpin = true;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(30, transform.position.y, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    public void GoPlayerPosY()
+    {
+        transform.position = new Vector2(transform.position.x, playerTransform.position.y);
+        KH_GameManager.Instance.SetActive_DamageRangeY(true);
+    }
+
+    public void StartSpin(ref int count)
+    {
+        KH_GameManager.Instance.SetActive_DamageRangeY(false);
+
+        if(transform.position == new Vector3(-30, transform.position.y, 0))
+        {
+            --count;
+            Debug.Log("스핀 카운트 : " + count);
+            transform.position = new Vector3(30, transform.position.y, 0); // 다시 오른쪽 좌표에서 다시 스핀
+            spinReadyTimer = spinReadyTime; // 1초 동안
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, transform.position.y, 0), Time.deltaTime * spinSpeed);        
+    }
+
+    public void EndSpin()
+    {
+        if(transform.position == new Vector3(0, -200, 0))
+        {
+            Debug.Log("isEndSpin !!");
+            boxCollider.isTrigger = false;
+            isEndSpin = true;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -200, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    #endregion
 }

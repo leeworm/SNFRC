@@ -147,6 +147,14 @@ MonoBehaviour:
   canHit: 1
   FireballPrefab: {fileID: 4433279565195748080, guid: 58b44a67d06032545a8af9786c639e1f, type: 3}
   FireballSpawnPoint: {fileID: 727605241923174049}
+  MushRoomPrefab: {fileID: 0}
+  mushRoomCoolTime: 10
+  mushRoomTimer: 0
+  SetPipePrefab: {fileID: 0}
+  UsePipePrefab: {fileID: 0}
+  setPipeCoolTime: 15
+  setPipeTimer: 0
+  isStage1: 1
 --- !u!50 &4739936956380790687
 Rigidbody2D:
   serializedVersion: 5
@@ -347,8 +355,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -787977233
-  m_SortingLayer: 3
+  m_SortingLayerID: -1059990345
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1830896859, guid: b0ef29aea0187794b89dbe7c19bc056c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

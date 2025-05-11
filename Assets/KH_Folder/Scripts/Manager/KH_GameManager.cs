@@ -6,7 +6,8 @@ public class KH_GameManager : MonoBehaviour
 
     public Koopa koopa; // Koopa 스크립트
 
-    public GameObject DamageRange;
+    public GameObject DamageRangeX;
+    public GameObject DamageRangeY;
 
     private static KH_GameManager instance;
     public static KH_GameManager Instance
@@ -46,13 +47,19 @@ public class KH_GameManager : MonoBehaviour
         koopa.phaseState = PhaseState.Phase2;
     }
 
-    public void SetActive_DamageRange(bool _isTrue)
+    public void SetActive_DamageRangeX(bool _isTrue)
     {
         if(koopa.phaseState == PhaseState.Phase1)
-            DamageRange.transform.position = new Vector3(koopa.transform.position.x,0,0);
+            DamageRangeX.transform.position = new Vector3(koopa.transform.position.x,0,0);
         else if(koopa.phaseState == PhaseState.Phase2)
-            DamageRange.transform.position = new Vector3(koopa.transform.position.x,-196.9f,0);
+            DamageRangeX.transform.position = new Vector3(koopa.transform.position.x,-196.9f,0);
 
-        DamageRange.SetActive(_isTrue);
+        DamageRangeX.SetActive(_isTrue);
+    }
+    public void SetActive_DamageRangeY(bool _isTrue)
+    {
+        DamageRangeY.transform.position = new Vector3(0,koopa.transform.position.y,0);
+
+        DamageRangeY.SetActive(_isTrue);
     }
 }
