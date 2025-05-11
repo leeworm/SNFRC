@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bass_Hit
+  m_Name: Bass_Attack2
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 3666628792360317976, guid: 25a8e186f95b95c4595281403ceabbba, type: 3}
+      value: {fileID: -4186567944274654371, guid: 8e803080fece3b24fbfddbac86401611, type: 3}
     - time: 0.1
-      value: {fileID: 8526793297861366565, guid: d053ddaab093fc742974afe8b34c3972, type: 3}
+      value: {fileID: 7857123305511850163, guid: dae6c23fabdcbd444b60c818f5d63ed9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 3666628792360317976, guid: 25a8e186f95b95c4595281403ceabbba, type: 3}
-    - {fileID: 8526793297861366565, guid: d053ddaab093fc742974afe8b34c3972, type: 3}
+    - {fileID: -4186567944274654371, guid: 8e803080fece3b24fbfddbac86401611, type: 3}
+    - {fileID: 7857123305511850163, guid: dae6c23fabdcbd444b60c818f5d63ed9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -1,32 +1,18 @@
 using UnityEngine;
 
-public class HK_PlayerHealth : MonoBehaviour
+public class HK_PlayerHealth : HK_Health
 {
-    public int maxHealth = 100;
-    private int currentHealth;
-
-    void Start()
+    // 플레이어 고유의 죽음 처리
+    protected override void Die()
     {
-        currentHealth = maxHealth;
+        base.Die();
+        // 플레이어 죽음 시 추가 처리 (예: 게임 오버 화면)
     }
 
-    public void TakeDamage(int damage)
+    // 플레이어 고유의 피해 처리
+    public override void TakeDamage(int amount, Vector2 bulletPosition)
     {
-        currentHealth -= damage;
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-        else
-        {
-            // ��Ʈ �ִϸ��̼�, ���� �ð� �� ó��
-        }
-    }
-
-    private void Die()
-    {
-        // ���ӿ��� ó��
-        Debug.Log("Player Died");
+        // 플레이어의 피해 처리 로직 (예: 체력 부족 시 UI 업데이트)
+        base.TakeDamage(amount, bulletPosition);
     }
 }
