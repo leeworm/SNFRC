@@ -60,7 +60,7 @@ public class HK_Enemy_Bass : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.linearVelocity = velocity; // Rigidbody2D 속도 업데이트
+            rb.linearVelocity = velocity; // 수정: Rigidbody2D 속도 업데이트
         }
     }
 
@@ -74,14 +74,20 @@ public class HK_Enemy_Bass : MonoBehaviour
 
             if (shotRb != null)
             {
-                // 총알이 플레이어를 향해 발사
-                Vector2 direction = (player.position - firePoint.position).normalized;
-                shotRb.linearVelocity = direction * 12f;  // 수정: 총알 속도 설정
+                // 배스의 방향에 맞게 발사 방향 설정
+                Vector2 direction = transform.localScale.x > 0 ? Vector2.left : Vector2.right; // 배스의 방향에 맞춰 설정
+                shotRb.linearVelocity = direction * 12f;  // 총알 속도 설정
+
+                // 배스가 왼쪽을 바라볼 때 180도 회전, 오른쪽을 바라볼 때 0도 회전
+                float angle = transform.localScale.x < 0 ? 180f : 0f;
+                shot.transform.rotation = Quaternion.Euler(0, 0, angle);  // 총알 회전 적용
             }
 
             Destroy(shot, 2f); // 총알이 2초 후 삭제
         }
     }
+
+
 
     // RapidShot1 발사
     public void FireRapidShot1()
@@ -110,8 +116,5 @@ public class HK_Enemy_Bass : MonoBehaviour
 
         // 'Hit' 애니메이션 트리거
         animator.SetTrigger("Hit");
-
-        /*// 체력 감소 처리 (Health 스크립트에서 처리)
-        health?.TakeDamage(10);  // 예시로 10만큼 체력 감소*/
     }
 }

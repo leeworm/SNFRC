@@ -7,7 +7,6 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     public float shootRange = 6f;
     public float kickRange = 2.5f;
     public float decisionInterval = 1.5f;
-
     private float timer;
     private HK_Enemy_Bass bass;
     private HK_EnemyStateMachine stateMachine;
@@ -15,7 +14,7 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
 
     // 쿨타임 설정
     private float rapidFireCooldown = 3f;
-    private float rapidFire2Cooldown = 2f;
+    /*private float rapidFire2Cooldown = 2f;*/
     private float kickCooldown = 5f;
     private float dodgeCooldown = 3f;
 
@@ -23,8 +22,6 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     private float rapidFire2Timer = 0f;
     private float kickTimer = 0f;
     private float dodgeTimer = 0f;
-
-    private float dodgeChance = 0.5f;
 
     void Awake()
     {
@@ -64,11 +61,13 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, player.position);
 
-        // 플레이어 공격 중일 때 회피 행동
-        bool playerAttacking = distance < 4f; // 추후 개선 가능
-        if (playerAttacking && dodgeTimer <= 0f && Random.value < dodgeChance)
+        // 플레이어 총알이 배스를 향해 날아오는지 체크
+        bool shouldDodgeBullet = IsBulletComingTowardsBass();
+
+        if (shouldDodgeBullet && dodgeTimer <= 0f)
         {
-            ChangeState(new HK_BassMoveState(bass));
+            // 기존 점프를 사용하여 회피
+            ChangeState(new HK_BassJumpState(bass));  // 점프 상태로 전환
             dodgeTimer = dodgeCooldown;
             return;
         }
@@ -89,11 +88,6 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
                 ChangeState(new HK_BassRapidFireState(bass, rapidFireType));
                 rapidFireTimer = rapidFireCooldown;
             }
-            else if (rapidFire2Timer <= 0f)
-            {
-                ChangeState(new HK_BassRapidFire2State(bass));
-                rapidFire2Timer = rapidFire2Cooldown;
-            }
             else
             {
                 ChangeState(new HK_BassMoveState(bass));
@@ -111,6 +105,25 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
                 ChangeState(new HK_BassMoveState(bass));
             }
         }
+    }
+
+    // 플레이어의 총알이 배스를 향해 날아오는지 체크하는 함수
+    bool IsBulletComingTowardsBass()
+    {
+        // 플레이어의 총알이 현재 배스를 향해 날아오는지 여부를 체크하는 로직
+        // 예를 들어, 플레이어가 발사한 총알의 위치를 알고 있어야 합니다.
+
+        var bullets = GameObject.FindGameObjectsWithTag("Skill");  // "Bullet" 태그를 가진 모든 총알 찾기
+        foreach (var bullet in bullets)
+        {
+            var bulletDirection = (bullet.transform.position - transform.position).normalized;
+            var bassDirection = (player.position - transform.position).normalized;
+            if (Vector2.Dot(bulletDirection, bassDirection) > 0)  // 총알이 배스를 향해 날아오는지 체크
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void UpdateDirection()

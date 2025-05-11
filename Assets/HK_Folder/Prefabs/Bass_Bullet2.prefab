@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6019724297981950895}
   - component: {fileID: -9033720876615883899}
   - component: {fileID: 3371769095506902632}
+  - component: {fileID: 6846279924443565616}
   m_Layer: 0
   m_Name: Bass_Bullet2
   m_TagString: Untagged
@@ -185,3 +186,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6846279924443565616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846745179045567646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbb6fc4b2e0743469cc8ce14bf7419e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  speed: 5
+  lifeTime: 3
+  canPierce: 0

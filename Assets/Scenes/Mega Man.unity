@@ -119,37 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &55120328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 55120329}
-  m_Layer: 0
-  m_Name: bassSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &55120329
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55120328}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -3.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &76831345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2939,7 @@ Transform:
   m_GameObject: {fileID: 1407847975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -3.3, z: 0}
+  m_LocalPosition: {x: -6.09, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6342,6 +6311,7 @@ MonoBehaviour:
   shootRange: 6
   kickRange: 2.5
   decisionInterval: 1
+  dodgeChance: 0.5
 --- !u!1 &2140814955145435776
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,7 +6675,7 @@ MonoBehaviour:
   rapidShotPrefab: {fileID: 7199489736972560969, guid: 6cfb31176cb8ee64f807e19e134e16aa, type: 3}
   rapidShotPrefab2: {fileID: 846745179045567646, guid: b84a93f85d28a3f47b4595291b8bd8b5, type: 3}
   maxJumps: 1
-  attackRange: 2
+  attackRange: 3
   moveSpeed: 2.5
   jumpCount: 0
   linearVelocityX: 0
@@ -6723,7 +6693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7099bc1cd927149832ea2fc50b0549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   currentHealth: 0
   invincibleDuration: 1
   flashInterval: 0.1
@@ -6753,7 +6723,6 @@ SceneRoots:
   - {fileID: 1407847976}
   - {fileID: 8127756396486554022}
   - {fileID: 865054703}
-  - {fileID: 55120329}
   - {fileID: 1697190203}
   - {fileID: 1348769277}
   - {fileID: 903283168}
