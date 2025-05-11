@@ -18,31 +18,32 @@ public class HK_BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // �� �Ǵ� �������� ����
+        // 적과 충돌했을 때
         if (other.CompareTag("Enemy"))
         {
-            // �Ϲ� ���� ü�� ó��
+            // 적이 받은 피해 처리
             HK_Health health = other.GetComponent<HK_Health>();
             if (health != null)
             {
-                health.TakeDamage(damage);
+                // 총알 위치를 전달하여 피해 처리
+                health.TakeDamage(damage, transform.position); // transform.position이 총알의 위치
             }
 
-            // ���� ü�� ó��
-            HK_BossHealth bossHealth = other.GetComponent<HK_BossHealth>();
+            // 보스와 충돌했을 때 (보스도 HK_Health를 상속받았으므로 처리 가능)
+            HK_EnemyHealth bossHealth = other.GetComponent<HK_EnemyHealth>();
             if (bossHealth != null)
             {
-                bossHealth.TakeDamage(damage);
+                // 총알 위치를 전달하여 피해 처리
+                bossHealth.TakeDamage(damage, transform.position); // transform.position이 총알의 위치
             }
 
-            Destroy(gameObject);
+            Destroy(gameObject); // 총알을 삭제
         }
 
-        // �� �Ǵ� �ٸ� ��ֹ��� �浹���� ��
+        // 벽과 충돌했을 때
         if (other.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // 벽과 충돌하면 총알 삭제
         }
     }
 }
-

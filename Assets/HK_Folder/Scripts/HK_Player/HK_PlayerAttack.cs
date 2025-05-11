@@ -2,43 +2,39 @@ using UnityEngine;
 
 public class HK_PlayerAttack : MonoBehaviour
 {
-    public int damage = 10;                   // ï¿½ï¿½ï¿½Ý·ï¿½
-    public Collider2D attackHitbox;          // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¶ï¿½ï¿½Ì´ï¿½ (Trigger)
+    public int damage = 10;                    // °ø°Ý·Â
+    public Collider2D attackHitbox;            // °ø°Ý È÷Æ®¹Ú½º
 
     private void Awake()
     {
-        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¿ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ (ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½)
         if (attackHitbox != null)
             attackHitbox.enabled = false;
     }
 
-    /// <summary>
-    /// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½ (ï¿½ï¿½: ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½)
-    /// </summary>
+    // È÷Æ®¹Ú½º¸¦ È°¼ºÈ­ÇÏ´Â ¸Þ¼­µå
     public void EnableHitbox()
     {
         if (attackHitbox != null)
             attackHitbox.enabled = true;
     }
 
-    /// <summary>
-    /// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½
-    /// </summary>
+    // È÷Æ®¹Ú½º¸¦ ºñÈ°¼ºÈ­ÇÏ´Â ¸Þ¼­µå
     public void DisableHitbox()
     {
         if (attackHitbox != null)
             attackHitbox.enabled = false;
     }
 
+    // °ø°ÝÀÌ Àû°ú Ãæµ¹ÇßÀ» ¶§ È£ÃâµÇ´Â ¸Þ¼­µå
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Hitboxï¿½ï¿½ Triggerï¿½ï¿½ ï¿½æµ¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
         if (other.CompareTag("Enemy"))
         {
             HK_Health enemy = other.GetComponent<HK_Health>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                // °ø°ÝÇÑ À§Ä¡¸¦ Àû¿¡°Ô Àü´Þ
+                enemy.TakeDamage(damage, transform.position);  // transform.positionÀ» »ç¿ëÇÏ¿© °ø°Ý À§Ä¡ Àü´Þ
                 Debug.Log($"Enemy {other.name} hit for {damage} damage!");
             }
         }

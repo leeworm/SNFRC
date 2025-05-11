@@ -116,7 +116,7 @@ public class HK_Entity : MonoBehaviour
     #region �ø�
     public virtual void Flip()
     {
-        facingDir = facingDir * -1;
+        facingDir *= -1;
         facingRight = !facingRight;
         transform.Rotate(0, 180, 0);
     }
