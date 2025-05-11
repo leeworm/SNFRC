@@ -19,17 +19,16 @@ public class HK_BassMoveState : HK_IEnemyState
     {
         if (bass.player == null) return;
 
-        // 플레이어를 향해 이동
-        Vector2 direction = (bass.player.position - bass.transform.position).normalized;
-        bass.transform.position += (Vector3)(new Vector2(direction.x, 0) * speed * Time.deltaTime);
+        // AI가 지정한 방향대로 이동 (Y축 고정)
+        Vector2 move = new Vector2(bass.moveDirection.x, 0f);
+        bass.transform.position += (Vector3)(move * speed * Time.deltaTime);
 
         // 플레이어와의 거리 계산
         float distance = Vector2.Distance(bass.transform.position, bass.player.position);
-        if (distance <= bass.attackRange)  // 공격 범위 내에 들어가면
+        if (distance <= bass.attackRange)
         {
-            // 공격 범위에 들어가면 랜덤한 rapidFireType을 선택하여 RapidFireState로 전환
-            int rapidFireType = Random.Range(1, 3);  // RapidFire1 또는 RapidFire2 선택
-            bass.stateMachine.ChangeState(new HK_BassRapidFireState(bass, rapidFireType));  // rapidFireType 전달
+            int rapidFireType = Random.Range(1, 3);  // RapidFire1 또는 RapidFire2
+            bass.stateMachine.ChangeState(new HK_BassRapidFireState(bass, rapidFireType));
         }
     }
 

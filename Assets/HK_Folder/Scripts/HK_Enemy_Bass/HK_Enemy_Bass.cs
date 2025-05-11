@@ -23,7 +23,9 @@ public class HK_Enemy_Bass : MonoBehaviour
 
     private HK_Health health;
     private Rigidbody2D rb;
+    public Vector2 moveDirection;
 
+    public GameObject errorCodeItemPrefab; // 에러코드 아이템 프리팹
     void Awake()
     {
         // 초기화
@@ -86,8 +88,6 @@ public class HK_Enemy_Bass : MonoBehaviour
             Destroy(shot, 2f); // 총알이 2초 후 삭제
         }
     }
-
-
 
     // RapidShot1 발사
     public void FireRapidShot1()

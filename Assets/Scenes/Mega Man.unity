@@ -6311,7 +6311,7 @@ MonoBehaviour:
   shootRange: 6
   kickRange: 2.5
   decisionInterval: 1
-  dodgeChance: 0.5
+  minDistance: 3
 --- !u!1 &2140814955145435776
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,6 +6681,8 @@ MonoBehaviour:
   linearVelocityX: 0
   player: {fileID: 0}
   stateMachine: {fileID: 0}
+  moveDirection: {x: 0, y: 0}
+  errorCodeItemPrefab: {fileID: 6182345800722435007, guid: 3734b9d6c914f474e9ff0727cf684923, type: 3}
 --- !u!114 &8937055571778226539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6693,7 +6695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7099bc1cd927149832ea2fc50b0549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 30
   currentHealth: 0
   invincibleDuration: 1
   flashInterval: 0.1
@@ -6713,6 +6715,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  knockbackForce: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

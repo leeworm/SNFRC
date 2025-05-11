@@ -16,7 +16,7 @@ public class HK_BassDeathState : HK_IEnemyState
     {
         bass.animator.SetTrigger("Die");
 
-        // 충돌 및 물리 제거 (선택 사항)
+        // 충돌 및 물리 제거
         Collider2D col = bass.GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
@@ -24,9 +24,16 @@ public class HK_BassDeathState : HK_IEnemyState
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Kinematic; // Kinematic으로 설정
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        // ✅ 아이템 드랍
+        if (bass.errorCodeItemPrefab != null)
+        {
+            GameObject.Instantiate(bass.errorCodeItemPrefab, bass.transform.position, Quaternion.identity);
         }
     }
+
 
     public void Update()
     {

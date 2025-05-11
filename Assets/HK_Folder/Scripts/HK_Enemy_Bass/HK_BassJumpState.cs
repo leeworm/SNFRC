@@ -13,21 +13,19 @@ public class HK_BassJumpState : HK_IEnemyState
 
     public void Enter()
     {
-        // 점프 카운트가 최대치보다 적으면 점프
         if (bass.jumpCount < bass.maxJumps)
         {
-            bass.animator.SetTrigger("Jump");  // 점프 애니메이션 실행
+            bass.animator.SetTrigger("Jump");
 
-            // 점프 물리적 속도 설정 (X축은 현재 속도를 유지, Y축은 위로 점프)
-            rb.linearVelocity = new Vector2(bass.linearVelocityX, 8f);  // X축은 현재 속도, Y축은 점프 높이
+            rb.linearVelocity = new Vector2(bass.linearVelocityX, 8f); // linearVelocity → velocity로 수정
             bass.jumpCount++;
         }
         else
         {
-            // 점프가 끝난 후, 이동 상태로 돌아가기
             bass.stateMachine.ChangeState(new HK_BassMoveState(bass));
         }
     }
+
 
     public void Update()
     {
@@ -40,7 +38,7 @@ public class HK_BassJumpState : HK_IEnemyState
 
     public void Exit()
     {
-        bass.animator.ResetTrigger("Jump");
+        // 트리거는 자동으로 리셋되므로 여기선 별도 처리 필요 없음
     }
 
     public void AnimationFinishTrigger()

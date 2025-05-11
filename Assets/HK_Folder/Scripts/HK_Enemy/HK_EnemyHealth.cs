@@ -3,6 +3,18 @@ using UnityEngine;
 public class HK_EnemyHealth : HK_Health
 {
     // 부모 클래스의 IsDead를 숨기기 위해 new 키워드를 사용
+    [SerializeField] private float knockbackForce = 5f;
+
+    private void ApplyKnockback(Vector2 bulletPosition)
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            Vector2 knockDirection = ((Vector2)transform.position - bulletPosition).normalized;
+            rb.linearVelocity = Vector2.zero; // 기존 속도 초기화
+            rb.AddForce(knockDirection * knockbackForce, ForceMode2D.Impulse);
+        }
+    }
     public new bool IsDead
     {
         get { return base.IsDead; }
@@ -28,22 +40,24 @@ public class HK_EnemyHealth : HK_Health
     // 적 고유의 피해 처리
     public override void TakeDamage(int amount, Vector2 bulletPosition)
     {
-        base.TakeDamage(amount, bulletPosition); // 기본 체력 감소 처리
+        base.TakeDamage(amount, bulletPosition);
 
-        // 적의 피해 처리 로직 (예: 넉백, 애니메이션 트리거)
         Debug.Log("Enemy takes damage: " + amount);
 
-        // 애니메이션에서 'Hit' 트리거 추가
-        Animator animator = GetComponent<Animator>();
-        if (animator != null)
+        Animator animator = GetComponentInChildren<Animator>();
+        if (animator != null && !base.IsDead)
         {
-            animator.SetTrigger("Hit"); // 'Hit' 트리거 실행
+            Debug.Log("Triggering Hit animation");
+            animator.SetTrigger("Hit");
         }
 
-        // 체력이 0이 되면 Die() 호출
+        ApplyKnockback(bulletPosition); // ⬅ 넉백 추가
+
         if (base.IsDead)
         {
             Die();
         }
     }
+
+
 }
