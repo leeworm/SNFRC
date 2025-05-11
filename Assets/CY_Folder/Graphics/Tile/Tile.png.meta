@@ -2035,7 +2035,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2057,7 +2057,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2066,6 +2066,72 @@ TextureImporter:
       bones: []
       spriteID: a19a738c89e38b14ba6f3d5070622d05
       internalID: -917855918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_77
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 133
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c82796a6ba15304a8c36ff45302c62b
+      internalID: -27646332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_78
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 133
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434da6f60a575cb4e99e3f3db4ccb61e
+      internalID: 111744489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_79
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 133
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753008d3b71974f4a98c89ba902e05bc
+      internalID: 914154059
       vertices: []
       indices: 
       edges: []
@@ -2159,6 +2225,9 @@ TextureImporter:
       Tile_74: -674510264
       Tile_75: 1550948653
       Tile_76: -917855918
+      Tile_77: -27646332
+      Tile_78: 111744489
+      Tile_79: 914154059
       Tile_8: -8907666336204531924
       Tile_9: 6183478059368212212
   mipmapLimitGroupName: 

@@ -26,8 +26,13 @@ public abstract class B_Enemy : MonoBehaviour
     protected bool isDead = false;
     public bool IsDead => isDead;
 
+    private float lastTurnTime = 0f;
+    private float turnCooldown = 0.5f;
+
     [Header("공격 설정")]
     public int contactDamage = 1;
+
+    
 
     protected virtual void Start()
     {
@@ -103,22 +108,32 @@ public abstract class B_Enemy : MonoBehaviour
         transform.localScale = scale;
     }
 
-    protected void Patrol()
-    {
-        if (groundCheck == null || wallCheck == null || rb == null) return;
 
-        bool noGround = !Physics2D.Raycast(groundCheck.position, Vector2.down, checkDistance, groundLayer);
-        bool wallHit = Physics2D.Raycast(wallCheck.position, Vector2.right * moveDirection, checkDistance, groundLayer);
+        protected void Patrol()
+        {
+            if (groundCheck == null || wallCheck == null || rb == null) return;
 
-        if (noGround || wallHit)
-            moveDirection *= -1;
+            bool noGround = !Physics2D.Raycast(groundCheck.position, Vector2.down, checkDistance, groundLayer);
+            bool wallHit = Physics2D.Raycast(wallCheck.position, Vector2.right * moveDirection, checkDistance, groundLayer);
 
-        rb.linearVelocity = new Vector2(moveDirection * moveSpeed, rb.linearVelocity.y);
+            // 낭떠러지나 벽 감지 → 회전 (쿨타임 있음)
+            if ((noGround || wallHit) && Time.time - lastTurnTime > turnCooldown)
+            {
+                moveDirection *= -1;
+                FacePlayer();
+                lastTurnTime = Time.time;
+            }
 
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * -moveDirection;
-        transform.localScale = scale;
-    }
+            // 이동
+            rb.linearVelocity = new Vector2(moveDirection * moveSpeed, rb.linearVelocity.y);
+
+            // 방향 전환 시 스프라이트 반전
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * -moveDirection;
+            transform.localScale = scale;
+        }
+
+    
 
     protected virtual void Update()
     {

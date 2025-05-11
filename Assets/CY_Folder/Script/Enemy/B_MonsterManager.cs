@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class MonsterManager : MonoBehaviour
+public class B_MonsterManager : MonoBehaviour
 {
     [Header("기존 몬스터들 제거용 태그")]
     public string enemyTag = "Enemy";

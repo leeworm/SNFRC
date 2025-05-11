@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 3792146211914042976}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.098, y: -0.283, z: 0}
+  m_LocalPosition: {x: -0.061, y: -0.283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 5881757295928662463}
   m_Layer: 8
   m_Name: Zombie
-  m_TagString: Skill
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1577458937
+  m_SortingLayerID: -506665027
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -586699101, guid: 2572ca0aed2fb934ea0391f3124fb490, type: 3}
@@ -212,7 +212,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.21836293, y: 0.69848704}
+  m_Offset: {x: 0.1994065, y: 0.69848704}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.15625}
@@ -222,7 +222,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.50659966, y: 2.0476012}
+  m_Size: {x: 0.5445125, y: 2.0476012}
   m_EdgeRadius: 0
 --- !u!50 &3203115141454305024
 Rigidbody2D:
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8219e77bc8b6f1d4580705909d2d6b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 30
+  maxHP: 40
   moveSpeed: 2
   groundCheck: {fileID: 689621035483666433}
   wallCheck: {fileID: 3480299804139581475}
@@ -338,7 +338,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.04820192, y: 1.0684968}
+  m_Offset: {x: -0.029245496, y: 1.0684968}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -348,5 +348,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.7964814, y: 0.2448895}
+  m_Size: {x: 0.7585685, y: 0.2448895}
   m_EdgeRadius: 0

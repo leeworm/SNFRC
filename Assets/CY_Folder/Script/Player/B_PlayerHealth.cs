@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
+
 public class B_PlayerHealth : MonoBehaviour
 {
     public int maxHearts = 10;
@@ -16,12 +17,16 @@ public class B_PlayerHealth : MonoBehaviour
 
     private HashSet<B_Enemy> recentlyHitEnemies = new HashSet<B_Enemy>();
     private float contactCooldown = 1f; // 중복 데미지 방지 시간
+    public B_HeartUI heartUI;
+    private Coroutine regenCoroutine;
 
     private void Start()
     {
         currentHearts = maxHearts;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        heartUI.UpdateHearts(currentHearts);
+        regenCoroutine = StartCoroutine(AutoRegen());
     }
 
     public void TakeDamage(int damage, Vector2 attackerPos)
@@ -32,6 +37,7 @@ public class B_PlayerHealth : MonoBehaviour
         currentHearts = Mathf.Clamp(currentHearts, 0, maxHearts);
 
         Debug.Log($"❤️ 남은 하트: {currentHearts}");
+         heartUI.UpdateHearts(currentHearts);
 
         KnockbackFrom(attackerPos);
         StartCoroutine(HitFlash());
@@ -47,6 +53,21 @@ public class B_PlayerHealth : MonoBehaviour
         isInvincible = true;
         yield return new WaitForSeconds(invincibleDuration);
         isInvincible = false;
+    }
+
+    private IEnumerator AutoRegen()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10f); // 10초마다
+
+            if (currentHearts < maxHearts)
+            {
+                currentHearts++;
+                heartUI.UpdateHearts(currentHearts);
+                Debug.Log($"❤️ 회복됨: {currentHearts} / {maxHearts}");
+            }
+        }
     }
 
     private void Die()
