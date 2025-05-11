@@ -3,9 +3,9 @@ using UnityEngine;
 public class HK_EnemyAIController : MonoBehaviour
 {
     public Transform player;
-    public float detectionRange = 10f;     // �ν� ����
-    public float attackRange = 2f;         // ���� ����
-    public float decisionCooldown = 1.5f;  // �Ǵ� �ֱ�
+    public float detectionRange = 10f;     // 감지 범위
+    public float attackRange = 2f;         // 공격 범위
+    public float decisionCooldown = 1.5f;  // 결정 주기
 
     private float decisionTimer;
     private HK_EnemyStateMachine stateMachine;
@@ -34,20 +34,25 @@ public class HK_EnemyAIController : MonoBehaviour
 
         if (distance > detectionRange)
         {
-            stateMachine.ChangeState(new HK_BassIdleState(bass));  // Idle ���·� ����
+            stateMachine.ChangeState(new HK_BassIdleState(bass));  // Idle 상태로 전환
         }
         else if (distance > attackRange)
         {
-            stateMachine.ChangeState(new HK_BassMoveState(bass));  // Move ���·� ����
+            stateMachine.ChangeState(new HK_BassMoveState(bass));  // Move 상태로 전환
         }
         else
         {
-            int rand = Random.Range(0, 2); // ���� ���� ����
+            int rand = Random.Range(0, 2); // 공격 종류 랜덤 선택
             switch (rand)
             {
-                case 0: stateMachine.ChangeState(new HK_BassRapidFireState(bass)); break;
-                
-                case 1: stateMachine.ChangeState(new HK_BassKickState(bass)); break;
+                case 0:
+                    int rapidFireType = Random.Range(1, 3); // 1 또는 2를 랜덤으로 선택
+                    stateMachine.ChangeState(new HK_BassRapidFireState(bass, rapidFireType));
+                    break;
+
+                case 1:
+                    stateMachine.ChangeState(new HK_BassKickState(bass));
+                    break;
             }
         }
     }

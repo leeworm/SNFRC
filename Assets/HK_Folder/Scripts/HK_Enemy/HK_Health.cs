@@ -1,7 +1,7 @@
-using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
+using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HK_Health : MonoBehaviour
 {
@@ -12,8 +12,12 @@ public class HK_Health : MonoBehaviour
     public Slider healthBar;
     public UnityEvent OnDeath;
 
+    protected bool isDead = false;  // isDead는 기본적으로 부모 클래스에서 관리됩니다.
+
+    // IsDead 프로퍼티 추가
+    public bool IsDead => isDead;
+
     private bool isInvincible = false;
-    private bool isDead = false;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -30,7 +34,7 @@ public class HK_Health : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    public void TakeDamage(int amount)
+    public virtual void TakeDamage(int amount, Vector2 bulletPosition)
     {
         if (isInvincible || isDead) return;
 
@@ -48,7 +52,7 @@ public class HK_Health : MonoBehaviour
         }
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         if (isDead) return;
         isDead = true;
