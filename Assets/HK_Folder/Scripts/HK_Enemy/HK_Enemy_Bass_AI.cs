@@ -7,6 +7,7 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     public float shootRange = 6f;
     public float kickRange = 2.5f;
     public float decisionInterval = 1.5f;
+    public float minDistance = 3f; // 너무 가까울 때 뒤로 빠지는 거리
 
     private float timer;
     private HK_Enemy_Bass bass;
@@ -14,17 +15,15 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     private System.Type currentStateType;
 
     // 쿨타임 설정
-    private float rapidFireCooldown = 3f;
-    private float rapidFire2Cooldown = 2f;
-    private float kickCooldown = 5f;
-    private float dodgeCooldown = 3f;
+    private float rapidFireCooldown = 5f;    // RapidFire 1의 쿨타임
+    private float rapidFire2Cooldown = 10f;  // RapidFire 2의 쿨타임
+    private float kickCooldown = 5f;         // 킥 공격 쿨타임
+    private float dodgeCooldown = 3f;        // 회피 쿨타임
 
     private float rapidFireTimer = 0f;
     private float rapidFire2Timer = 0f;
     private float kickTimer = 0f;
     private float dodgeTimer = 0f;
-
-    private float dodgeChance = 0.5f;
 
     void Awake()
     {
@@ -45,12 +44,14 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     {
         if (player == null) return;
 
+        // 쿨타임 타이머 업데이트
         timer -= Time.deltaTime;
         rapidFireTimer -= Time.deltaTime;
         rapidFire2Timer -= Time.deltaTime;
         kickTimer -= Time.deltaTime;
         dodgeTimer -= Time.deltaTime;
 
+        // 주기적으로 MakeDecision 호출
         if (timer <= 0f)
         {
             MakeDecision();
@@ -63,43 +64,54 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
     void MakeDecision()
     {
         float distance = Vector2.Distance(transform.position, player.position);
+        bool shouldDodgeBullet = IsBulletComingTowardsBass();
 
-        // 플레이어 공격 중일 때 회피 행동
-        bool playerAttacking = distance < 4f; // 추후 개선 가능
-        if (playerAttacking && dodgeTimer <= 0f && Random.value < dodgeChance)
+        // 회피 상태로 전환
+        if (shouldDodgeBullet && dodgeTimer <= 0f)
         {
-            ChangeState(new HK_BassMoveState(bass));
+            ChangeState(new HK_BassJumpState(bass));
             dodgeTimer = dodgeCooldown;
             return;
         }
 
+        // 너무 가까울 때 뒤로 빠짐
+        if (distance < minDistance)
+        {
+            bass.moveDirection = (transform.position - player.position).normalized;
+            ChangeState(new HK_BassMoveState(bass));
+            return;
+        }
+
+        // 플레이어와 일정 거리 이상 떨어지면 Idle 상태로
         if (distance > detectionRange)
         {
             ChangeState(new HK_BassIdleState(bass));
         }
-        else if (distance > shootRange)
+        else if (distance > shootRange)  // 공격 범위보다 멀면 이동
         {
+            bass.moveDirection = (player.position - transform.position).normalized;
             ChangeState(new HK_BassMoveState(bass));
         }
-        else if (distance > kickRange)
+        else if (distance > kickRange)  // 킥 범위보다 멀면 공격
         {
-            if (rapidFireTimer <= 0f)
+            // RapidFire 공격이 쿨타임이 끝났을 때만 실행
+            if (rapidFireTimer <= 0f || rapidFire2Timer <= 0f)
             {
                 int rapidFireType = Random.Range(1, 3);  // 1 또는 2
-                ChangeState(new HK_BassRapidFireState(bass, rapidFireType));
-                rapidFireTimer = rapidFireCooldown;
-            }
-            else if (rapidFire2Timer <= 0f)
-            {
-                ChangeState(new HK_BassRapidFire2State(bass));
-                rapidFire2Timer = rapidFire2Cooldown;
+                bass.FireRapidShot(rapidFireType == 1 ? bass.rapidShotPrefab : bass.rapidShotPrefab2);
+
+                if (rapidFireType == 1)
+                    rapidFireTimer = rapidFireCooldown;
+                else
+                    rapidFire2Timer = rapidFire2Cooldown;
             }
             else
             {
+                bass.moveDirection = (player.position - transform.position).normalized;
                 ChangeState(new HK_BassMoveState(bass));
             }
         }
-        else
+        else  // 킥 범위 내에서는 킥 공격
         {
             if (kickTimer <= 0f)
             {
@@ -108,9 +120,25 @@ public class HK_Enemy_Bass_AI : MonoBehaviour
             }
             else
             {
+                bass.moveDirection = (player.position - transform.position).normalized;
                 ChangeState(new HK_BassMoveState(bass));
             }
         }
+    }
+
+    bool IsBulletComingTowardsBass()
+    {
+        var bullets = GameObject.FindGameObjectsWithTag("Skill");
+        foreach (var bullet in bullets)
+        {
+            var bulletDirection = (bullet.transform.position - transform.position).normalized;
+            var bassDirection = (player.position - transform.position).normalized;
+            if (Vector2.Dot(bulletDirection, bassDirection) > 0)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void UpdateDirection()

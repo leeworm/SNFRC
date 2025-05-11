@@ -20,13 +20,13 @@ public class HK_BassRapidFireState : HK_IEnemyState
         switch (rapidFireType)
         {
             case 1:
-                fireRate = 0.2f;
-                maxShots = 5;
+                fireRate = 0.2f;  // 공격 간격
+                maxShots = 2;     // 최대 발사 횟수
                 animationTrigger = "RapidFire1";
                 break;
             case 2:
-                fireRate = 0.15f;
-                maxShots = 7;
+                fireRate = 0.15f; // 공격 간격
+                maxShots = 3;     // 최대 발사 횟수
                 animationTrigger = "RapidFire2";
                 break;
             default:
@@ -49,6 +49,7 @@ public class HK_BassRapidFireState : HK_IEnemyState
     {
         fireTimer += Time.deltaTime;
 
+        // fireRate에 맞춰 공격하고, 최대 공격 횟수를 초과하지 않도록 제한
         if (fireTimer >= fireRate && shotsFired < maxShots)
         {
             fireTimer = 0f;
@@ -56,6 +57,7 @@ public class HK_BassRapidFireState : HK_IEnemyState
 
             Fire();
 
+            // 최대 발사 횟수에 도달하면 상태 전환
             if (shotsFired >= maxShots)
             {
                 bass.stateMachine.ChangeState(new HK_BassMoveState(bass));
@@ -65,7 +67,7 @@ public class HK_BassRapidFireState : HK_IEnemyState
 
     private void Fire()
     {
-        // 타입에 따라 발사 방식 변경 가능
+        // 공격 타입에 맞는 발사 메서드 호출
         switch (rapidFireType)
         {
             case 1:
@@ -90,4 +92,3 @@ public class HK_BassRapidFireState : HK_IEnemyState
         bass.animator.ResetTrigger(animationTrigger);
     }
 }
-

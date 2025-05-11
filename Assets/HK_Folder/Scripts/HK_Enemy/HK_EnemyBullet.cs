@@ -1,55 +1,71 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class HK_EnemyBullet : MonoBehaviour
 {
+    public enum BulletType
+    {
+        Type1,  // 첫 번째 불렛 타입
+        Type2   // 두 번째 불렛 타입
+    }
+
+    public BulletType bulletType;  // 불렛 타입을 지정
     public int damage = 10;
     public float speed = 5f;
     public float lifeTime = 3f;
-    public bool canPierce = false; // 피어싱 여부
-    public Vector2 direction = Vector2.right; // 방향
+    public bool canPierce = false;
+
+    private Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {
-        Destroy(gameObject, lifeTime);  // 생명 주기가 끝나면 총알 삭제
+        Destroy(gameObject, lifeTime);  // 일정 시간 후 파괴
     }
 
-    private void Update()
+    // 외부에서 방향 설정 (💡 방향과 속도 함께 적용)
+    public void SetDirection(Vector2 newDirection)
     {
-        // 총알이 주어진 방향으로 이동
-        transform.Translate(direction.normalized * speed * Time.deltaTime);
+        rb.linearVelocity = newDirection.normalized * speed;  // linearVelocity에서 velocity로 변경
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 플레이어와 충돌
         if (other.CompareTag("Player"))
         {
-            HK_PlayerHealth player = other.GetComponent<HK_PlayerHealth>();
-            if (player != null)
-            {
-                player.TakeDamage(damage, transform.position);  // 플레이어에게 피해 입히고, 총알 위치 전달
-            }
-
-            if (!canPierce)  // 피어싱이 허용되지 않으면 총알 삭제
-            {
-                Destroy(gameObject);
-            }
+            HandlePlayerCollision(other);
         }
-        // 벽과 충돌 시
-        else if (!other.CompareTag("Wall") && !other.isTrigger)
+        else if (other.CompareTag("Wall") && !other.isTrigger)
         {
-            if (!canPierce)  // 피어싱이 허용되지 않으면 총알 삭제
-            {
-                Destroy(gameObject);
-            }
+            HandleWallCollision();
         }
     }
 
-    // 총알의 방향을 플레이어의 방향에 맞춰 설정하는 메서드
-    public void SetDirection(bool isFacingRight)
+    private void HandlePlayerCollision(Collider2D other)
     {
-        direction = isFacingRight ? Vector2.right : Vector2.left;
+        HK_PlayerHealth player = other.GetComponent<HK_PlayerHealth>();
+        if (player != null)
+        {
+            player.TakeDamage(damage, transform.position);
+        }
+
+        HandleBulletDestruction();
+    }
+
+    private void HandleWallCollision()
+    {
+        HandleBulletDestruction();
+    }
+
+    private void HandleBulletDestruction()
+    {
+        if (!canPierce)
+        {
+            Destroy(gameObject);  // 관통할 수 없으면 불렛 파괴
+        }
     }
 }
-
-
