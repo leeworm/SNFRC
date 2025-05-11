@@ -1,8 +1,13 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 
 public class KH_Player : KH_Entity
 {
+    public Transform pipeChek;
+    public float pipeCheckDistance = 0.1f;
+    public LayerMask whatIsPipe;
+
     [Header("이동 정보")]
     public float moveSpeed = 12f;
     public float jumpForce;
@@ -27,6 +32,15 @@ public class KH_Player : KH_Entity
     [SerializeField] private GameObject UsePipePrefab;
     public float setPipeCoolTime = 15f;
     public float setPipeTimer = 0;
+    [Header("에러 조각 정보")]
+    public float errorPieceCoolTime = 20f; // 상수
+    public float errorPieceTimer = 0;
+    public bool isErrorState = false;
+    public bool isPlayerRaindow = false;
+    public float errorStateDuration = 10f; // 상수
+    
+    [Header("에러 파이프 정보")]
+    public int pipeCount = 1;
     
 
     #region States
@@ -39,9 +53,9 @@ public class KH_Player : KH_Entity
     public KH_PlayerHitState hitState { get; private set; }
     public KH_PlayerShotState shotState { get; private set; }
     public KH_PlayerSetPipeState setPipeState { get; private set; }
+    public KH_PlayerInPipeState inPipeState { get; private set; }
 
     public KH_PlayerHangState hangState { get; private set; }
-    public KH_PlayerCutMoveState cutMoveState { get; private set; }
     #endregion
 
     [SerializeField]public bool isStage1 = true;
@@ -59,9 +73,10 @@ public class KH_Player : KH_Entity
         hitState = new KH_PlayerHitState(this, stateMachine, "Idle");
         shotState = new KH_PlayerShotState(this, stateMachine, "Shot");
         setPipeState = new KH_PlayerSetPipeState(this, stateMachine, "Idle");
+        inPipeState = new KH_PlayerInPipeState(this, stateMachine, "Idle");
 
         hangState = new KH_PlayerHangState(this, stateMachine, "Hang");
-        cutMoveState = new KH_PlayerCutMoveState(this, stateMachine, "Move");
+
     }
 
     protected override void Start()
@@ -78,14 +93,37 @@ public class KH_Player : KH_Entity
     protected override void Update()
     {
         base.Update();
+        stateMachine.currentState.Update();
+
         mushRoomTimer -= Time.deltaTime;
         setPipeTimer -= Time.deltaTime;
+        errorPieceTimer -= Time.deltaTime;
 
-        stateMachine.currentState.Update();
+        if(isErrorState)
+            errorStateDuration -= Time.deltaTime;
+
+        // 레인 보우 코루틴 스타트
+        if(isPlayerRaindow)
+        {
+            pipeCount = 2;
+
+            errorStateDuration = 10f;
+            StartCoroutine(Rainbow());
+            isPlayerRaindow = false;
+        }
+
+        // 오류 상태 끝
+        if(errorStateDuration <= 0 && isErrorState)
+        {
+            Debug.Log("Stop Rainbow");
+            StopCoroutine(Rainbow());
+            isErrorState = false;
+        }
     }
 
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
+    #region Collision
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy") && canHit)
@@ -126,6 +164,15 @@ public class KH_Player : KH_Entity
         }
     }
 
+    public bool IsPipeDetected() => Physics2D.Raycast(pipeChek.position, Vector2.down, pipeCheckDistance, whatIsPipe);
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+
+        Gizmos.DrawLine(pipeChek.position, new Vector3(pipeChek.position.x, pipeChek.position.y - pipeCheckDistance));
+    }
+    #endregion
+
     public IEnumerator Flicker()
     {
         for (int i = 0; i < 10; i++)
@@ -160,5 +207,24 @@ public class KH_Player : KH_Entity
     public void SetPipe()
     {
         GameObject pipe = Instantiate(SetPipePrefab, transform.position, Quaternion.identity);
+    }
+
+    IEnumerator Rainbow()
+    {
+        while(true)
+        {
+            if(errorStateDuration <= 0)
+            {
+                sr.color = new Color(255,255,255);
+                yield break;
+            }
+
+            sr.color = new Color(255,0,0);
+            yield return new WaitForSeconds(0.05f);
+            sr.color = new Color(0,255,0);
+            yield return new WaitForSeconds(0.05f);
+            sr.color = new Color(0,0,255);
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }

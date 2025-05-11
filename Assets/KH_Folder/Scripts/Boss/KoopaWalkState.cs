@@ -63,7 +63,7 @@ public class KoopaWalkState : KoopaState
         if(koopa.phaseState == PhaseState.Phase1)
             patternRandomNum = Random.Range(0, 4);
         else if(koopa.phaseState == PhaseState.Phase2)
-            patternRandomNum = Random.Range(4, 6);
+            patternRandomNum = Random.Range(6, 8);
 
         Debug.Log("패턴 번호 : " + patternRandomNum);
 
@@ -86,6 +86,10 @@ public class KoopaWalkState : KoopaState
         else if(patternRandomNum == 4 || patternRandomNum == 5) // 스핀 공격 패턴
         {
             koopa.stateMachine.ChangeState(koopa.spinAttackState);
+        }
+        else if(patternRandomNum == 6 || patternRandomNum == 7) // 레이저 공격 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.laserShotState);
         }
     }
 

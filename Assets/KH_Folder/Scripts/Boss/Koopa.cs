@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public enum PhaseState
 {
@@ -30,6 +31,7 @@ public class Koopa : KH_Enemy
     public KoopaPhaseChangeState phaseChangeState { get; private set; }
 
     public KoopaSpinAttackState spinAttackState { get; private set; }
+    public KoopaLaserShotState laserShotState { get; private set; }
 
     #endregion
 
@@ -69,6 +71,13 @@ public class Koopa : KH_Enemy
     public bool isEndSpin = false;
     public float spinReadyTimer;
     public float spinReadyTime = 0.5f; // 상수
+    
+    [Header("레이저 공격 정보")]
+    public GameObject fireLaserPrefab;
+    public GameObject rainbowScreenPrefab;
+    public Transform fireLaserPos;
+    public float fireLaserSpeed = 1.0f;         // 회전 속도
+    public float fireLaser_maxAngle = 110.0f;    // 최대 각도
 
     #endregion
 
@@ -92,6 +101,7 @@ public class Koopa : KH_Enemy
         phaseChangeState = new KoopaPhaseChangeState(this, stateMachine, "Idle");
 
         spinAttackState = new KoopaSpinAttackState(this, stateMachine, "Spin");
+        laserShotState = new KoopaLaserShotState(this, stateMachine, "Fire");
     }
 
     protected override void Start()
@@ -307,6 +317,32 @@ public class Koopa : KH_Enemy
             isEndSpin = true;
         }
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -200, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    private GameObject fireLaser;
+    public void CreateLaser()
+    {
+
+        fireLaser = Instantiate(fireLaserPrefab, fireLaserPos.position, Quaternion.identity);
+
+        if(fireLaser == null)
+            return;
+
+        fireLaser.transform.DORotate(new Vector3(0, 0, fireLaser_maxAngle), fireLaserSpeed)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo) // 무한 반복, 왔다 갔다
+            .SetLink(gameObject);
+    }
+    public void StartLaser()
+    {
+        rainbowScreenPrefab.SetActive(true);
+
+    }
+    public void DestoryLaser()
+    {
+        rainbowScreenPrefab.SetActive(false);
+        //transform.DOKill();
+        Destroy(fireLaser);
     }
 
     #endregion

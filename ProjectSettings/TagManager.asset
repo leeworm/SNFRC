@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - Skill
   - HitBox
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - DamageObject
   - Player
   - Item
-  - 
+  - Pipe
   - 
   - 
   - 

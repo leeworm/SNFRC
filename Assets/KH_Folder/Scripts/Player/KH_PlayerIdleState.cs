@@ -17,8 +17,17 @@ public class KH_PlayerIdleState : KH_PlayerGroundedState
     {
         base.Update();
 
-        if (xInput == player.facingDir && player.IsWallDetected())
+        if (xInput == player.facingDir && player.IsWallDetected()) // 벽 닿을때 고정
             return;
+
+        if(player.IsPipeDetected()) // 파이프 닿을때
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                // 파이프 안에 들어감 inPipeState
+                stateMachine.ChangeState(player.inPipeState);
+            }
+        }
 
         if (xInput != 0)
             stateMachine.ChangeState(player.moveState);

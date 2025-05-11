@@ -10,7 +10,7 @@ public class KH_PlayerSetPipeState : KH_PlayerState
     public override void Enter()
     {
         base.Enter();
-        
+
         player.SetPipe();
     }
 
@@ -20,6 +20,7 @@ public class KH_PlayerSetPipeState : KH_PlayerState
 
         if(Input.GetKeyUp(KeyCode.X))
         {
+            player.pipeCount--;
             stateMachine.ChangeState(player.idleState);
         }
     }
@@ -28,6 +29,10 @@ public class KH_PlayerSetPipeState : KH_PlayerState
     {
         base.Exit();
         
-        player.setPipeTimer = player.setPipeCoolTime; // 쿨타임 초기화
+        if(player.pipeCount <= 0)
+        {
+            player.setPipeTimer = player.setPipeCoolTime; // 쿨타임 초기화
+            player.pipeCount = 1;
+        }
     }
 }
