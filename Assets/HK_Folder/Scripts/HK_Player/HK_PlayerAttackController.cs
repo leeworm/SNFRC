@@ -66,19 +66,23 @@ public class HK_PlayerAttackController : MonoBehaviour
         else
             projectile = Instantiate(chargeShotLv3Prefab, firePoint.position, Quaternion.identity);
 
-        float dir = player.facingDir; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ÇÃ·¹ÀÌ¾î ¹æÇâ¿¡ ¸Â°Ô ÃÑ¾ËÀ» ¹ß»ç
+        float dir = player.facingDir; // ÇÃ·¹ÀÌ¾î ¹æÇâ
         Rigidbody2D rbProjectile = projectile.GetComponent<Rigidbody2D>();
 
-        // ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½Óµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-        rbProjectile.linearVelocity = new Vector2(dir * shotSpeed, 0f);  // velocityï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-        projectile.transform.localScale = new Vector3(dir, 1, 1); // ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¶óº¸°ï¿½ ï¿½ï¿½ï¿½ï¿½
+        rbProjectile.linearVelocity = new Vector2(dir * shotSpeed, 0f);  // LinearVelocity ´ë½Å velocity »ç¿ë
+
+        // ÃÑ¾Ë ½ºÄÉÀÏ ¹æÇâ ¸ÂÃß±â
+        Vector3 scale = projectile.transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * dir;
+        projectile.transform.localScale = scale;
 
         anim.SetTrigger("Attack");
     }
 
     void UpdateAnimParams()
     {
-        bool isGrounded = player.IsGroundDetected(); // grounded ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½
+        bool isGrounded = player.IsGroundDetected();
         bool isMoving = Mathf.Abs(rb.linearVelocityX) > 0.1f;
         bool isJumping = !isGrounded && rb.linearVelocityY > 0.1f;
 

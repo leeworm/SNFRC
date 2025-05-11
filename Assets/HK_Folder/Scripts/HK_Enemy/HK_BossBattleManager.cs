@@ -53,7 +53,7 @@ public class HK_BossBattleManager : MonoBehaviour
                     break;
 
                 case BossState.ProtoManFight:
-                    yield return new WaitUntil(() => protoMan.GetComponent<HK_BossHealth>().IsDead);
+                    yield return new WaitUntil(() => protoMan.GetComponent<HK_EnemyHealth>().IsDead);
                     currentState = BossState.ProtoManDefeated;
                     break;
 
@@ -70,7 +70,7 @@ public class HK_BossBattleManager : MonoBehaviour
                     break;
 
                 case BossState.BassFight:
-                    yield return new WaitUntil(() => bass.GetComponent<HK_BossHealth>().IsDead);
+                    yield return new WaitUntil(() => bass.GetComponent<HK_EnemyHealth>().IsDead);
                     currentState = BossState.BassDefeated;
                     break;
 
