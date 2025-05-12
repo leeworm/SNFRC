@@ -233,6 +233,7 @@ public class DH_Player : DH_Entity
     public override void TakeDamage(int damage, Vector2 hitDirection)
     {
         base.TakeDamage(damage, hitDirection);
+        lastKnockback = hitDirection;
         stateMachine.ChangeState(hurtState);
         return;
     }
