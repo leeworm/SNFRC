@@ -8,8 +8,15 @@ public class DH_PlayerMoveState : DH_PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.isMoving = true;
         player.currentJumpCount = player.maxJumpCount;
         player.commandDetectorEnabled = true;
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        player.isMoving = false;
     }
 
     public override void Update()
@@ -33,9 +40,9 @@ public class DH_PlayerMoveState : DH_PlayerGroundedState
             return;
         }
 
-
         player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
-        if (xInput == 0 || player.IsWallDetected())
+        
+        if (xInput == 0 ) //player.IsWallDetected()
         { 
             stateMachine.ChangeState(new DH_PlayerIdleState(player, stateMachine, "Idle"));
             return;

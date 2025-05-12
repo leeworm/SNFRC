@@ -22,24 +22,24 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2213154902676794310, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
-    - time: 0.1
+    - time: 0.083333336
       value: {fileID: 3749402859664005695, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
-    - time: 0.2
+    - time: 0.16666667
       value: {fileID: -758393864470204038, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
-    - time: 0.3
+    - time: 0.25
       value: {fileID: -506688705887263486, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
-    - time: 0.4
+    - time: 0.33333334
+      value: {fileID: -2571132144907571665, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
+    - time: 0.41666666
       value: {fileID: -2571132144907571665, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
     - time: 0.5
-      value: {fileID: -2571132144907571665, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
-    - time: 0.6
       value: {fileID: -2571132144907571665, guid: e8945452a5869ed44bd7f9f984165195, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 10
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -68,7 +68,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.70000005
+    m_StopTime: 0.5833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -87,4 +87,32 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.083333336
+    functionName: ActivateHitbox
+    data: DashAttack
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: DeactivateHitbox
+    data: DashAttack
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: AnimationTrigger
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: OnAttackComplete
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

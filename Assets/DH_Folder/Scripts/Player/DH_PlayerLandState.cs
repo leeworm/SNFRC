@@ -14,9 +14,8 @@ public class DH_PlayerLandState : DH_PlayerGroundedState
     {
         base.Enter();
         player.SetVelocity(0, rb.linearVelocity.y);
-        player.isBusy = true;
         player.isLanding = true;
-        player.hasAirAttacked = false;
+        player.isAttackingAir = false;
         player.commandDetectorEnabled = true;
         bufferingInput = false;
         commandBufferTimer = 0f;
@@ -30,7 +29,6 @@ public class DH_PlayerLandState : DH_PlayerGroundedState
         
         if (triggerCalled)
         {
-            Debug.Log("Landing animation finished");
             player.isLanding = false;
             stateMachine.ChangeState(player.idleState);
             return;
@@ -40,12 +38,12 @@ public class DH_PlayerLandState : DH_PlayerGroundedState
 
         if (commandType == DashType.Forward)
         {
-            stateMachine.ChangeState(new DH_PlayerDashState(player, stateMachine, "Dash", player.facingDir));
+            stateMachine.ChangeState(player.dashState);
             return;
         }
         if (commandType == DashType.Backward)
         {
-            stateMachine.ChangeState(new DH_PlayerBackstepState(player, stateMachine, "Backstep", -player.facingDir));
+            stateMachine.ChangeState(player.backstepState);
             return;
         }
 
@@ -76,7 +74,6 @@ public class DH_PlayerLandState : DH_PlayerGroundedState
     {
         base.Exit();
         player.isLanding = false;
-        player.isBusy = false;
         player.commandDetectorEnabled = false;
     }
 }

@@ -2,7 +2,7 @@
 
 public class DH_CommandDetector
 {
-    private int lastDirection = 0;
+    private float lastDirection = 0;
     private float lastTapTime = -1f;
     private bool tappedOnce = false;
     private bool wasReleased = true;
@@ -18,8 +18,8 @@ public class DH_CommandDetector
             Reset(); // 기존 입력 초기화
             return DashType.None;
         }
-        
-        int inputDir = (int)Input.GetAxisRaw("Horizontal");
+
+        float inputDir = (float)DH_PlayerState.GetArrowKeyHorizontalInput();
 
         // 0이면 방향키가 떨어졌다고 판단
         if (inputDir == 0)

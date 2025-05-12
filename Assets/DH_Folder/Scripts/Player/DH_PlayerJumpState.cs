@@ -14,8 +14,10 @@ public class DH_PlayerJumpState : DH_PlayerState
     {
         base.Enter();
         player.isBusy = true;
-        currentXVelocity = player.lastXVelocity; // 직전 속도 유지
-        player.SetVelocity(currentXVelocity, rb.linearVelocityY);
+        player.isJumping = true;
+
+        currentXVelocity = rb.linearVelocity.x;
+        
         if (player.currentJumpCount > 0)
         {
             rb.linearVelocity = new Vector2(currentXVelocity, player.jumpForce);
@@ -27,32 +29,34 @@ public class DH_PlayerJumpState : DH_PlayerState
     {
         base.Update();
 
-        if (xInput > 0)
+        if (xInput != 0)
         {
-            rb.linearVelocity = new Vector2(xInput * currentXVelocity, rb.linearVelocity.y);
-            player.lastXVelocity = rb.linearVelocity.x; // 마지막 X 속도 저장
+            float speedMagnitude = Mathf.Max(Mathf.Abs(currentXVelocity), player.moveSpeed);
+            float xSpeed = speedMagnitude * xInput;
+
+            // 속도가 0이면 → 기본 이동 속도로 덮어쓰기
+            if (speedMagnitude == 0)
+                speedMagnitude = player.moveSpeed;
+
+            rb.linearVelocity = new Vector2(xSpeed, rb.linearVelocity.y);
+            player.lastXVelocity = xSpeed;
         }
-        if (xInput < 0)
+        else
         {
-            rb.linearVelocity = new Vector2(-xInput * currentXVelocity, rb.linearVelocity.y);
-            player.lastXVelocity = rb.linearVelocity.x;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y);
         }
-        if (xInput == 0)
-        {
-            rb.linearVelocity = new Vector2(xInput * player.moveSpeed, rb.linearVelocity.y);
-            player.lastXVelocity = rb.linearVelocity.x;
-        }
+
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            stateMachine.ChangeState(new DH_PlayerAirAttackState(player, stateMachine, "AirAttack"));
+            stateMachine.ChangeState(player.airAttackState);
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.X) && player.currentJumpCount > 0)
         {
             Debug.Log("점프에서 점프로 전이");
-            stateMachine.ChangeState(new DH_PlayerJumpState(player, stateMachine, "Jump", player.lastXVelocity));
+            stateMachine.ChangeState(player.jumpState);
             return;
         }
 
@@ -67,5 +71,6 @@ public class DH_PlayerJumpState : DH_PlayerState
     {
         base.Exit();
         player.isBusy = false;
+        player.isJumping = false;
     }
 }

@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using UnityEngine;
 
 public class JH_Hitbox : MonoBehaviour
 {
-    public int damage = 10; // int Å¸ÀÔ µ¥¹ÌÁö
-    public string targetTag = "Enemy"; // °ø°İ ´ë»ó ÅÂ±×
+    public int damage = 10; // int íƒ€ì… ë°ë¯¸ì§€
+    public string targetTag = "Enemy"; // ê³µê²© ëŒ€ìƒ íƒœê·¸
 
     private HashSet<Collider2D> hitTargetsThisActivation;
 
@@ -24,25 +24,25 @@ public class JH_Hitbox : MonoBehaviour
             return;
         }
 
-        // 1. Ãæµ¹ÇÑ 'other' ¿ÀºêÁ§Æ®¿¡¼­ Hurtbox ÄÄÆ÷³ÍÆ®¸¦ Ã£½À´Ï´Ù.
+        // 1. ì¶©ëŒí•œ 'other' ì˜¤ë¸Œì íŠ¸ì—ì„œ Hurtbox ì»´í¬ë„ŒíŠ¸ë¥¼ ì°¾ìŠµë‹ˆë‹¤.
         Hurtbox targetHurtbox = other.GetComponent<Hurtbox>();
 
-        if (targetHurtbox != null) // Hurtbox¸¦ Ã£¾Ò´Ù¸é (Áï, Æ¯Á¤ ºÎÀ§¿¡ ¸Â¾Ò´Ù¸é)
+        if (targetHurtbox != null) // Hurtboxë¥¼ ì°¾ì•˜ë‹¤ë©´ (ì¦‰, íŠ¹ì • ë¶€ìœ„ì— ë§ì•˜ë‹¤ë©´)
         {
-            // 2. Hurtbox°¡ °¡Áö°í ÀÖ´Â ownerEntity (JH_Entity¸¦ ±¸ÇöÇÑ Player ¶Ç´Â Enemy)¸¦ ÅëÇØ TakeDamage È£Ãâ
+            // 2. Hurtboxê°€ ê°€ì§€ê³  ìˆëŠ” ownerEntity (JH_Entityë¥¼ êµ¬í˜„í•œ Player ë˜ëŠ” Enemy)ë¥¼ í†µí•´ TakeDamage í˜¸ì¶œ
             if (targetHurtbox.ownerEntity != null)
             {
-                // 3. ÅÂ±× °Ë»ç´Â HurtboxÀÇ ownerEntityÀÇ ÅÂ±×¸¦ ´ë»óÀ¸·Î ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+                // 3. íƒœê·¸ ê²€ì‚¬ëŠ” Hurtboxì˜ ownerEntityì˜ íƒœê·¸ë¥¼ ëŒ€ìƒìœ¼ë¡œ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
                 if (targetHurtbox.ownerEntity.CompareTag(targetTag))
                 {
-                    Debug.Log(gameObject.name + "°¡ " + other.name + " (" + targetHurtbox.bodyPartType + ") ¿¡°Ô ÀûÁß!");
+                    Debug.Log(gameObject.name + "ê°€ " + other.name + " (" + targetHurtbox.bodyPartType + ") ì—ê²Œ ì ì¤‘!");
 
-                    // ownerEntityÀÇ TakeDamage ¸Ş¼Òµå È£Ãâ, ÇöÀç È÷Æ®¹Ú½ºÀÇ damage¿Í °¨ÁöµÈ bodyPartType Àü´Ş
+                    // ownerEntityì˜ TakeDamage ë©”ì†Œë“œ í˜¸ì¶œ, í˜„ì¬ íˆíŠ¸ë°•ìŠ¤ì˜ damageì™€ ê°ì§€ëœ bodyPartType ì „ë‹¬
                     targetHurtbox.ownerEntity.TakeDamage(this.damage, targetHurtbox.bodyPartType);
 
-                    hitTargetsThisActivation.Add(other); // ÀÌ Äİ¶óÀÌ´õ(Æ¯Á¤ ÇãÆ®¹Ú½º)¸¦ ¸ÂÃá °ÍÀ¸·Î ±â·Ï
+                    hitTargetsThisActivation.Add(other); // ì´ ì½œë¼ì´ë”(íŠ¹ì • í—ˆíŠ¸ë°•ìŠ¤)ë¥¼ ë§ì¶˜ ê²ƒìœ¼ë¡œ ê¸°ë¡
 
-                    // ¿©±â¿¡ Å¸°İ ÀÌÆåÆ® »ı¼º, »ç¿îµå Àç»ı µîÀÇ ÄÚµå Ãß°¡
+                    // ì—¬ê¸°ì— íƒ€ê²© ì´í™íŠ¸ ìƒì„±, ì‚¬ìš´ë“œ ì¬ìƒ ë“±ì˜ ì½”ë“œ ì¶”ê°€
                 }
             }
         }

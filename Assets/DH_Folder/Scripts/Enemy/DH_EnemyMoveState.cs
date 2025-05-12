@@ -1,30 +1,63 @@
 ﻿using UnityEngine;
 
-public class DH_EnemyMoveState : DH_EnemyState
+public class DH_EnemyMoveState : DH_EnemyGroundedState
 {
     public DH_EnemyMoveState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
         : base(_enemy, _stateMachine, _animBoolName) { }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-        // 애니메이션이 끝났을 때 호출되는 메서드입니다.
-        // 필요한 경우 추가 로직을 여기에 작성할 수 있습니다.
-    }
     public override void Enter()
     {
         base.Enter();
-        // enemy.SetVelocity(1f, 0f); // 적의 속도를 설정합니다.
+        enemy.isMoving = true;
+        enemy.currentJumpCount = enemy.maxJumpCount;
+        enemy.commandDetectorEnabled = true;
     }
-    public override void Update()
-    {
-        base.Update();
-        // 적의 이동 로직을 여기에 추가합니다.
-        // 예를 들어, 적이 플레이어를 추적하도록 할 수 있습니다.
-    }
+
     public override void Exit()
     {
         base.Exit();
-        // enemy.SetVelocity(0f, 0f); // 적의 속도를 0으로 설정합니다.
+        enemy.isMoving = false;
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        //Debug.Log("Checking dash input...");
+
+        var dashType = enemy.CommandDetector.CheckCommand(enemy.facingDir, enabled: enemy.commandDetectorEnabled);
+
+        if (dashType == DH_CommandDetector.DashType.Forward)
+        {
+            //Debug.Log("Forward dash detected!");
+            stateMachine.ChangeState(new DH_EnemyDashState(enemy, stateMachine, "Dash", enemy.facingDir));
+            return;
+        }
+        else if (dashType == DH_CommandDetector.DashType.Backward)
+        {
+            //Debug.Log("Backstep detected!");
+            stateMachine.ChangeState(new DH_EnemyBackstepState(enemy, stateMachine, "Backstep", -enemy.facingDir));
+            return;
+        }
+
+        enemy.SetVelocity(xInput * enemy.moveSpeed, rb.linearVelocity.y);
+        
+        if (xInput == 0 ) //enemy.IsWallDetected()
+        { 
+            stateMachine.ChangeState(new DH_EnemyIdleState(enemy, stateMachine, "Idle"));
+            return;
+        }
+
+        if (Input.GetButtonDown("Jump") && enemy.currentJumpCount > 0)
+        {
+            stateMachine.ChangeState(new DH_EnemyJumpState(enemy, stateMachine, "Jump", enemy.lastXVelocity));
+            return;
+        }
+
+        if (yInput < 0)
+        {
+            stateMachine.ChangeState(new DH_EnemyCrouchState(enemy, stateMachine, "Crouch"));
+            return;
+        }
     }
 }
