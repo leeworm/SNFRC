@@ -26,7 +26,7 @@ public class WorldTransitionVideoPlayer : MonoBehaviour
         videoPlayer.Play();
         yield return StartCoroutine(FadeIn());
 
-        yield return new WaitForSeconds(4f); // 4초 보여주기
+        yield return new WaitForSeconds(3f); // 4초 보여주기
 
         videoPlayer.Stop();
         yield return StartCoroutine(FadeOut());
