@@ -1,5 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Windows;
+using static UnityEditor.PlayerSettings;
 
 public class DH_Entity : MonoBehaviour
 {
@@ -12,6 +15,13 @@ public class DH_Entity : MonoBehaviour
     public CapsuleCollider2D cd { get; private set; }
     public BoxCollider2D bd { get; private set; }
     #endregion
+
+    [Header("Damage info")]
+    public int maxHealth = 100;
+    public int currentHealth;
+    public GameObject hitEffectPrefab; // 피격 이펙트 프리팹
+    public GameObject blockEffectPrefab; // 방어 이펙트 프리팹
+    
 
     [Header("Knockback info")]
     [SerializeField] protected Vector2 knockbackDirection;
@@ -28,14 +38,35 @@ public class DH_Entity : MonoBehaviour
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
 
+    [Header("Rigidbody2D info")]
+    [HideInInspector] public float defaultGravityScale = 10f;
+
     public int facingDir { get; private set; } = 1; // 객체의 방향 (1: 오른쪽, -1: 왼쪽)
-    protected bool facingRight = true; // 객체가 오른쪽을 보고 있는지 여부
+    public bool facingRight = true; // 객체가 오른쪽을 보고 있는지 여부
 
     public System.Action onFlipped;
 
     [HideInInspector] public float lastXVelocity;
     [HideInInspector] public float lastYVelocity;
 
+    #region Bool Variables
+    public bool isBusy = false;
+    public bool isGrounded = false;
+    public bool isIdle = false;
+    public bool isAttacking = false;
+    public bool isAttackingAir = false;
+    public bool isMoving = false;
+    //public bool isWall = false;
+    public bool isDashing = false;
+    public bool isSubstituting = false;
+    public bool isJumping = false;
+    public bool isLanding = false;
+    public bool isBlocking = false;
+    public bool isDead = false;
+    public bool commandDetectorEnabled = false;
+    public bool isHurting = false;
+    public bool isKnockdown = false;
+    #endregion
     protected virtual void Awake()
     {
 
@@ -54,7 +85,7 @@ public class DH_Entity : MonoBehaviour
 
     protected virtual void Update()
     {
-
+        isGrounded = IsGroundDetected();
     }
 
     //public virtual void DamageEffect()
@@ -73,12 +104,22 @@ public class DH_Entity : MonoBehaviour
     }
 
     #region Collision
-    public bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
-    public bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
+    public bool IsGroundDetected()
+    {
+        Vector2 origin = groundCheck.position;
+        Vector2 size = new Vector2(0.5f, 0.1f); // 박스 크기 조절
+        RaycastHit2D hit = Physics2D.BoxCast(origin, size, 0f, Vector2.down, groundCheckDistance, whatIsGround);
+        return hit.collider != null;
+    }
+
+    // => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+    //public bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
+        //Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckDistance);
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
     }
@@ -96,6 +137,9 @@ public class DH_Entity : MonoBehaviour
 
     public virtual void FlipController(float _x)
     {
+        if (_x == 0)
+            return;
+
         if (_x > 0 && !facingRight)
             Flip();
         else if (_x < 0 && facingRight)
@@ -130,4 +174,52 @@ public class DH_Entity : MonoBehaviour
     {
 
     }
+
+    public virtual void TakeDamage(int damage, Vector2 hitDirection)
+    {
+        if (isHurting || isKnockdown)
+            return;
+
+        if (IsBlocking())
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+        Debug.Log($"{gameObject.name} took {damage} damage.");
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+            return;
+        }
+
+        knockbackDirection = hitDirection; // 방향 저장      
+    }
+
+       
+    
+    public virtual void ApplyKnockback(Vector2 knockback)
+    {
+        rb.linearVelocity = knockback;
+    }
+
+    public virtual bool IsBlocking()
+    {
+        return isBlocking;
+    }
+
+    public virtual void ShowHitEffect(Vector3 position)
+    {
+        if (hitEffectPrefab != null)
+            DH_EffectPoolManager.Instance.SpawnEffect("HitEffect", position);
+
+    }
+
+    public virtual void ShowBlockEffect(Vector3 position)
+    {
+        if (blockEffectPrefab != null)
+            DH_EffectPoolManager.Instance.SpawnEffect("BlockEffect", position);
+    }   
 }

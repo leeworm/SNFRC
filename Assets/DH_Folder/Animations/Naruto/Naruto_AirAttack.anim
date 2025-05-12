@@ -81,6 +81,20 @@ AnimationClip:
   m_Events:
   - time: 0.083333336
     functionName: ActivateHitbox
+    data: AirAttack
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.083333336
+    functionName: EnableHitbox
+    data: AirAttack
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: OnAttackComplete
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -94,15 +108,15 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.25
-    functionName: OnAttackComplete
-    data: 
+    functionName: DeactivateHitbox
+    data: AirAttack
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.25
-    functionName: DeactivateHitbox
-    data: 
+    functionName: DisableHitbox
+    data: AirAttack
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

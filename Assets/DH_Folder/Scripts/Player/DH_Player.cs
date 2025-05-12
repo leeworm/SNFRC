@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class DH_Player : DH_Entity
 {
+    public Vector2 lastKnockback;
+
     //[Header("Skill Effects")]
     [HideInInspector]  public GameObject blackFadePrefab;
     [HideInInspector]  public GameObject skillEffectPrefab;
@@ -48,11 +51,13 @@ public class DH_Player : DH_Entity
     [HideInInspector] public Vector2 originalColliderSize;
     [HideInInspector] public Vector2 originalColliderOffset;
 
-    public bool isBusy;
-    public bool commandDetectorEnabled = false;
-    public bool hasAirAttacked = false;
-    public bool isBlocking = false;
-    public bool isLanding = false;
+    [Header("Attack Hitboxes")]
+    public GameObject primaryHitbox;
+    public GameObject primaryFinalHitbox;
+    public GameObject uppercutHitbox;
+    public GameObject dashAttackHitbox;
+    public GameObject airAttackHitbox;
+
 
 
     #region States
@@ -61,12 +66,15 @@ public class DH_Player : DH_Entity
     public DH_PlayerIdleState idleState { get; private set; }
     public DH_PlayerMoveState moveState { get; private set; }
     public DH_PlayerJumpState jumpState { get; private set; }
+    public DH_PlayerTeleportJumpState teleportJumpState { get; private set; }
     public DH_PlayerAirState airState { get; private set; }
     public DH_PlayerLandState landState { get; private set; }
     public DH_PlayerDashState dashState { get; private set; }
+    public DH_PlayerDashAttackState dashAttackState { get; private set; }
     public DH_PlayerBackstepState backstepState { get; private set; }
     public DH_PlayerPrimaryAttackState primaryAttack { get; private set; }
     public DH_PlayerAirAttackState airAttackState { get; private set; }
+    public DH_PlayerUppercutState uppercutState { get; private set; }
     public DH_PlayerDefenseState defenseState { get; private set; }
     public DH_PlayerAirDefenseState airDefenseState { get; private set; }
     public DH_PlayerSexyJutsuState SexyJutsuState { get; private set; }
@@ -74,6 +82,8 @@ public class DH_Player : DH_Entity
     public DH_PlayerSubstituteState substituteState { get; private set; }
     public DH_CommandDetector CommandDetector { get; private set; }
     public DH_PlayerDeadState deadState { get; private set; }
+    public DH_PlayerHurtState hurtState { get; private set; }
+    public DH_PlayerKnockdownState knockdownState { get; private set; }
 
     #endregion
 
@@ -89,18 +99,23 @@ public class DH_Player : DH_Entity
         idleState = new DH_PlayerIdleState(this, stateMachine, "Idle");
         moveState = new DH_PlayerMoveState(this, stateMachine, "Move");
         jumpState = new DH_PlayerJumpState(this, stateMachine, "Jump", lastXVelocity);
+        teleportJumpState = new DH_PlayerTeleportJumpState(this, stateMachine, "Vanish");
         airState = new DH_PlayerAirState(this, stateMachine, "Jump");
         landState = new DH_PlayerLandState(this, stateMachine, "Land");
-        dashState = new DH_PlayerDashState(this, stateMachine, "Dash", dashDir);
+        dashState = new DH_PlayerDashState(this, stateMachine, "Dash", facingDir);
+        dashAttackState = new DH_PlayerDashAttackState(this, stateMachine, "DashAttack");
         backstepState = new DH_PlayerBackstepState(this, stateMachine, "Backstep", facingDir);
         primaryAttack = new DH_PlayerPrimaryAttackState(this, stateMachine, "Attack");
+        uppercutState = new DH_PlayerUppercutState(this, stateMachine, "Uppercut");
         airAttackState = new DH_PlayerAirAttackState(this, stateMachine, "AirAttack");
         defenseState = new DH_PlayerDefenseState(this, stateMachine, "Block");
         airDefenseState = new DH_PlayerAirDefenseState(this, stateMachine, "AirBlock");
         SexyJutsuState = new DH_PlayerSexyJutsuState(this, stateMachine, "Skill1");
         crouchState = new DH_PlayerCrouchState(this, stateMachine, "Crouch");
-        substituteState = new DH_PlayerSubstituteState(this, stateMachine, "Substitute_Venish");
+        substituteState = new DH_PlayerSubstituteState(this, stateMachine, "Vanish");
         deadState = new DH_PlayerDeadState(this, stateMachine, "Die");
+        hurtState = new DH_PlayerHurtState(this, stateMachine, "Hurt");
+        knockdownState = new DH_PlayerKnockdownState(this, stateMachine, "Knockdown");
     }
 
     protected override void Start()
@@ -116,8 +131,10 @@ public class DH_Player : DH_Entity
 
         isBlocking = false;
         isLanding = false;
-        hasAirAttacked = false;
+        isAttackingAir = false;
         commandDetectorEnabled = true;
+
+        currentHealth = maxHealth;
     }
 
     protected override void Update()
@@ -167,17 +184,56 @@ public class DH_Player : DH_Entity
         base.FlipController(_x); // 나머지는 기존 방식 유지
     }
 
-    public void ActivateHitbox()
+    public void ActivateHitbox(string hitboxName)
     {
-        if (attackHitbox != null)
-            attackHitbox.SetActive(true);
+        switch (hitboxName)
+        {
+            case "Primary":
+                primaryHitbox?.SetActive(true);
+                break;
+            case "PrimaryFinal":
+                primaryFinalHitbox?.SetActive(true);
+                break;
+            case "Uppercut":
+                uppercutHitbox?.SetActive(true);
+                break;
+            case "DashAttack":
+                dashAttackHitbox?.SetActive(true);
+                break;
+            case "AirAttack":
+                airAttackHitbox?.SetActive(true);
+                break;
+        }
     }
 
-    public void DeactivateHitbox()
+    public void DeactivateHitbox(string hitboxName)
     {
-        if (attackHitbox != null)
-            attackHitbox.SetActive(false);
+        switch (hitboxName)
+        {
+            case "Primary":
+                primaryHitbox?.SetActive(false);
+                break;
+            case "PrimaryFinal":
+                primaryFinalHitbox?.SetActive(false);
+                break;
+            case "Uppercut":
+                uppercutHitbox?.SetActive(false);
+                break;
+            case "DashAttack":
+                dashAttackHitbox?.SetActive(false);
+                break;
+            case "AirAttack":
+                airAttackHitbox?.SetActive(false);
+                break;
+        }
     }
     
     public bool IsGrounded() => IsGroundDetected();
+
+    public override void TakeDamage(int damage, Vector2 hitDirection)
+    {
+        base.TakeDamage(damage, hitDirection);
+        stateMachine.ChangeState(hurtState);
+        return;
+    }
 }

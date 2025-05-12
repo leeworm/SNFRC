@@ -12,41 +12,45 @@ public class DH_PlayerAirAttackState : DH_PlayerAirState
     public override void Enter()
     {
         base.Enter();
-        if (player.hasAirAttacked)
+        if (player.isAttackingAir)
         {
             stateMachine.ChangeState(player.airState);
             return;
         }
         landingQueued = false;
-        player.hasAirAttacked = true;
+        player.isAttackingAir = true;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (player.IsGrounded())
+        // 1. 공중공격 중 땅에 닿았으면 landingQueued를 true로
+        if (player.isGrounded)
             landingQueued = true;
 
-        if (triggerCalled && player.hasAirAttacked == true)
+        // 2. 애니메이션이 끝났을 때
+        if (triggerCalled)
         {
             player.isBusy = false;
             triggerCalled = false;
+            player.anim.SetBool("AirAttack", false);
 
-            if (landingQueued && player.IsGrounded())
+            if (landingQueued && player.isGrounded)
             {
-                player.isLanding = true;
-                player.anim.SetBool("Land", true);
-                stateMachine.ChangeState(new DH_PlayerLandState(player, stateMachine, "Land"));
+                // 땅에 닿은 적이 있고, 현재도 땅에 닿아 있으면 랜드 상태로
+                stateMachine.ChangeState(player.landState);
             }
             else
+            {
+                // 아직 공중이면 에어 상태로
                 stateMachine.ChangeState(player.airState);
+            }
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        triggerCalled = false;
     }
 }

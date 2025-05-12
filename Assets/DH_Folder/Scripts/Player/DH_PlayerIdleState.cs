@@ -13,18 +13,27 @@ public class DH_PlayerIdleState : DH_PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.SetVelocity(0, rb.linearVelocity.y);
+        player.isBusy = false;
+        player.isIdle = true;
+        player.commandDetectorEnabled = true;
         bufferingInput = false;
         commandBufferTimer = 0f;
-        player.commandDetectorEnabled = true;
+        player.SetVelocity(0, rb.linearVelocity.y);
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (xInput == player.facingDir && player.IsWallDetected())
+        // 공격 입력 처리 확인
+        if (HandleAttackInput())
+        {
+            Debug.Log("HandleAttackInput triggered an attack state transition.");
             return;
+        }
+
+        //if (xInput == player.facingDir) // && player.IsWallDetected())
+        //{ Debug.Log("대시 막힘"); return; }
 
         var commandType = player.CommandDetector.CheckCommand(player.facingDir, enabled: player.commandDetectorEnabled);
 
@@ -68,6 +77,7 @@ public class DH_PlayerIdleState : DH_PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
+        player.isIdle = false;
     }
 
 }

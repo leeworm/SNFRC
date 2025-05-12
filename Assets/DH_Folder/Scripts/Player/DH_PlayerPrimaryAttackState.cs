@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class DH_PlayerPrimaryAttackState : DH_PlayerGroundedState
 {
@@ -19,17 +18,16 @@ public class DH_PlayerPrimaryAttackState : DH_PlayerGroundedState
 
         comboCounter = player.primaryAttackComboCounter;
 
-        //Debug.Log($"[Combo] AttackState Enter | comboCounter: {comboCounter}");
 
         player.anim.SetInteger("ComboCounter", comboCounter);
 
-        //player.lastPrimaryAttackTime = Time.time;
         float attackDir = player.facingDir;
         if (xInput != 0)
             attackDir = xInput;
 
         player.SetVelocity(0, rb.linearVelocity.y);
         player.isBusy = true;
+        player.isAttacking = true;
         attackFinished = false;
         canCombo = true;
 
@@ -79,9 +77,9 @@ public class DH_PlayerPrimaryAttackState : DH_PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
-        //player.lastPrimaryAttackTime = Time.time;
         player.StartCoroutine("BusyFor", 0.1f); // 짧은 시간 행동 제한
         player.isBusy = false;
+        player.isAttacking = false;
     }
 
     #region Animation Events Called via AnimationTriggers
