@@ -42,7 +42,7 @@ public class DH_Entity : MonoBehaviour
     [HideInInspector] public float defaultGravityScale = 10f;
 
     public int facingDir { get; private set; } = 1; // 객체의 방향 (1: 오른쪽, -1: 왼쪽)
-    protected bool facingRight = true; // 객체가 오른쪽을 보고 있는지 여부
+    public bool facingRight = true; // 객체가 오른쪽을 보고 있는지 여부
 
     public System.Action onFlipped;
 
@@ -174,6 +174,7 @@ public class DH_Entity : MonoBehaviour
     {
 
     }
+
     public virtual void TakeDamage(int damage, Vector2 hitDirection)
     {
         if (isHurting || isKnockdown)
@@ -181,70 +182,24 @@ public class DH_Entity : MonoBehaviour
 
         if (IsBlocking())
         {
-            ShowBlockEffect(transform.position);
             return;
         }
 
         currentHealth -= damage;
         Debug.Log($"{gameObject.name} took {damage} damage.");
-        ShowHitEffect(transform.position);
 
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
             Die();
             return;
         }
 
-
-        // 타격 방향 기준으로 바라보는 방향 조정
-        if ((hitDirection.x > 0 && !facingRight) || (hitDirection.x < 0 && facingRight))
-            Flip();
-
-        knockbackDirection = hitDirection; // 방향 저장
-
-
-        StartCoroutine(PlayHurtThenKnockback());
-
+        knockbackDirection = hitDirection; // 방향 저장      
     }
 
-
-    private IEnumerator PlayAnimationByBool(string boolName, string endAnim)
-    {
-        anim.SetBool(boolName, true);
-
-        // Hurt 상태 진입 대기
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName("Naruto_Hurt"));
-
-        // 끝날 때까지 대기
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-
-        anim.SetBool(boolName, false);
-        anim.Play(endAnim, 0, 0f);
-    }
-
-    private IEnumerator PlayHurtThenKnockback()
-    {
-        isHurting = true;
-        anim.SetBool("Hurt", true);
-
-        // Hurt 상태 진입 대기
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName("Naruto_Hurt"));
-
-        // 애니메이션 끝날 때까지 대기
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-
-        anim.SetBool("Hurt", false);
-        isHurting = false;
-
-        // 넉백이 있다면 Knockback 처리
-        if (Mathf.Abs(knockbackDirection.x) > 0.1f || Mathf.Abs(knockbackDirection.y) > 0.1f)
-            yield return StartCoroutine(ProcessKnockback());
-        else
-            anim.Play("Naruto_Idle", 0, 0f);
-    }
-
-
-
+       
+    
     public virtual void ApplyKnockback(Vector2 knockback)
     {
         rb.linearVelocity = knockback;
@@ -266,40 +221,5 @@ public class DH_Entity : MonoBehaviour
     {
         if (blockEffectPrefab != null)
             DH_EffectPoolManager.Instance.SpawnEffect("BlockEffect", position);
-    }
-
-    private IEnumerator ProcessKnockback()
-    {
-        isKnockdown = true;
-        rb.linearVelocity = knockbackDirection;
-
-        anim.SetBool("Knockback", true);
-
-        // Knockback 상태 진입 대기
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName("Naruto_Knockback"));
-
-        // 애니메이션 끝까지 재생 대기
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-
-        anim.SetBool("Knockback", false);
-
-        // 공중에 떠 있으면 착지 대기
-        while (!IsGroundDetected())
-            yield return null;
-
-        // Knockdown 재생
-        anim.SetBool("Knockdown", true);
-
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName("Naruto_Knockdown"));
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-
-        anim.SetBool("Knockdown", false);
-
-        anim.SetBool("Idle", true);
-        isKnockdown = false;
-    }
-
-
-
-
+    }   
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6633462214499334444}
   - component: {fileID: 9012215097216156555}
   - component: {fileID: 8507885610368934183}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Hitbox_DashAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

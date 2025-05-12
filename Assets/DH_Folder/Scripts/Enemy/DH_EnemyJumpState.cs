@@ -4,20 +4,21 @@ public class DH_EnemyJumpState : DH_EnemyState
 {
     private float currentXVelocity;
 
-    public DH_EnemyJumpState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName, float initialXVelocity)
-        : base(_enemy, _stateMachine, _animBoolName)
+    public DH_EnemyJumpState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName)
     {
-        currentXVelocity = initialXVelocity;
+        currentXVelocity = 0f;
     }
 
     public override void Enter()
     {
         base.Enter();
+
         enemy.isBusy = true;
         enemy.isJumping = true;
 
         currentXVelocity = rb.linearVelocity.x;
-        
+
         if (enemy.currentJumpCount > 0)
         {
             rb.linearVelocity = new Vector2(currentXVelocity, enemy.jumpForce);
@@ -29,38 +30,36 @@ public class DH_EnemyJumpState : DH_EnemyState
     {
         base.Update();
 
+        // xInput 기반 공중 이동
         if (xInput != 0)
         {
             float speedMagnitude = Mathf.Max(Mathf.Abs(currentXVelocity), enemy.moveSpeed);
             float xSpeed = speedMagnitude * xInput;
 
-            // 속도가 0이면 → 기본 이동 속도로 덮어쓰기
             if (speedMagnitude == 0)
                 speedMagnitude = enemy.moveSpeed;
 
             rb.linearVelocity = new Vector2(xSpeed, rb.linearVelocity.y);
             enemy.lastXVelocity = xSpeed;
         }
-        else
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y);
-        }
 
-
-        if (Input.GetKeyDown(KeyCode.Z))
+        // 이중 점프 (점프 입력이 다시 들어왔을 때)
+        if (enemy.isJumpInput && enemy.currentJumpCount > 0)
         {
-            stateMachine.ChangeState(enemy.airAttackState);
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.X) && enemy.currentJumpCount > 0)
-        {
-            Debug.Log("점프에서 점프로 전이");
+            enemy.isJumpInput = false;
             stateMachine.ChangeState(enemy.jumpState);
             return;
         }
 
-        // 낙하 시작되면 AirState로 전이
+        // 공격 입력 → 공중 공격 전환
+        if (enemy.isAttackInput)
+        {
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.airAttackState);
+            return;
+        }
+
+        // 낙하 시작 → AirState 전환
         if (rb.linearVelocity.y < 0)
         {
             stateMachine.ChangeState(enemy.airState);

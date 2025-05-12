@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5707909940934582532}
   - component: {fileID: 2385331628997907740}
   - component: {fileID: 8804366439463952737}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Hitbox_AirAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

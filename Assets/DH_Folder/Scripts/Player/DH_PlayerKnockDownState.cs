@@ -9,14 +9,12 @@ public class DH_PlayerKnockdownState : DH_PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.anim.Play("Knockdown");
-        player.SetVelocity(0, 0);
         player.StartCoroutine(KnockdownRecovery());
     }
 
     private IEnumerator KnockdownRecovery()
     {
-        yield return new WaitForSeconds(0.5f); // 넉다운 지속 시간
+        yield return new WaitForSeconds(1.02f); // 넉다운 지속 시간
         stateMachine.ChangeState(player.idleState);
     }
 }

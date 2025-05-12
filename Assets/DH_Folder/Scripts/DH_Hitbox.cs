@@ -18,6 +18,7 @@ public class DH_Hitbox : MonoBehaviour
 
     private void OnEnable()
     {
+        // 히트박스 활성화 시 타격 대상 초기화
         hitTargets.Clear();
         CheckImmediateHit();
     }
@@ -29,20 +30,37 @@ public class DH_Hitbox : MonoBehaviour
 
         foreach (var col in hits)
         {
+            // 이미 처리된 대상은 무시
             if (hitTargets.Contains(col))
                 continue;
 
             DH_Hurtbox hurtbox = col.GetComponent<DH_Hurtbox>();
             if (hurtbox != null)
             {
+                // 방어 상태 확인
+                if (hurtbox.entity != null && hurtbox.entity.IsBlocking())
+                {
+                    // 방어 중이라면 히트 이펙트를 생성하지 않고 처리 종료
+                    hurtbox.entity.ShowBlockEffect(col.ClosestPoint(transform.position));
+                    hitTargets.Add(col);
+                    continue;
+                }
+
+                // 타격 방향 계산
                 float direction = Mathf.Sign(col.transform.position.x - transform.position.x);
                 Vector2 finalKnockback = new Vector2(knockback.x * direction, knockback.y);
 
+                // 데미지 처리
                 hurtbox.TakeDamage(damage, finalKnockback);
 
+                // 히트 이펙트 표시
                 if (hitEffectPrefab != null)
-                    DH_EffectPoolManager.Instance.SpawnEffect("HitEffect", col.ClosestPoint(transform.position));
+                {
+                    Vector2 hitPosition = col.ClosestPoint(transform.position);
+                    DH_EffectPoolManager.Instance.SpawnEffect("HitEffect", hitPosition);
+                }
 
+                // 처리된 대상 추가
                 hitTargets.Add(col);
             }
         }

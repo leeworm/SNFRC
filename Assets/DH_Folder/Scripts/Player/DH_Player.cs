@@ -229,4 +229,11 @@ public class DH_Player : DH_Entity
     }
     
     public bool IsGrounded() => IsGroundDetected();
+
+    public override void TakeDamage(int damage, Vector2 hitDirection)
+    {
+        base.TakeDamage(damage, hitDirection);
+        stateMachine.ChangeState(hurtState);
+        return;
+    }
 }

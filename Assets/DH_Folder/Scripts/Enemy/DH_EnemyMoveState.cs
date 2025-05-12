@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class DH_EnemyMoveState : DH_EnemyGroundedState
+public class DH_EnemyMoveState : DH_EnemyState
 {
-    public DH_EnemyMoveState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
-        : base(_enemy, _stateMachine, _animBoolName) { }
+    public DH_EnemyMoveState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
@@ -13,51 +13,36 @@ public class DH_EnemyMoveState : DH_EnemyGroundedState
         enemy.commandDetectorEnabled = true;
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-        enemy.isMoving = false;
-    }
-
     public override void Update()
     {
         base.Update();
 
-        //Debug.Log("Checking dash input...");
-
-        var dashType = enemy.CommandDetector.CheckCommand(enemy.facingDir, enabled: enemy.commandDetectorEnabled);
-
-        if (dashType == DH_CommandDetector.DashType.Forward)
+        if (enemy.isAttackInput)
         {
-            //Debug.Log("Forward dash detected!");
-            stateMachine.ChangeState(new DH_EnemyDashState(enemy, stateMachine, "Dash", enemy.facingDir));
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
             return;
         }
-        else if (dashType == DH_CommandDetector.DashType.Backward)
+        if (enemy.isJumpInput)
         {
-            //Debug.Log("Backstep detected!");
-            stateMachine.ChangeState(new DH_EnemyBackstepState(enemy, stateMachine, "Backstep", -enemy.facingDir));
-            return;
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
         }
-
-        enemy.SetVelocity(xInput * enemy.moveSpeed, rb.linearVelocity.y);
-        
-        if (xInput == 0 ) //enemy.IsWallDetected()
-        { 
-            stateMachine.ChangeState(new DH_EnemyIdleState(enemy, stateMachine, "Idle"));
-            return;
-        }
-
-        if (Input.GetButtonDown("Jump") && enemy.currentJumpCount > 0)
+        if (enemy.isDashInput)
         {
-            stateMachine.ChangeState(new DH_EnemyJumpState(enemy, stateMachine, "Jump", enemy.lastXVelocity));
-            return;
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
         }
-
-        if (yInput < 0)
+        if (enemy.inputX == 0)
         {
-            stateMachine.ChangeState(new DH_EnemyCrouchState(enemy, stateMachine, "Crouch"));
+            stateMachine.ChangeState(enemy.idleState); // ← 반대 전이도 명시
             return;
         }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        enemy.isMoving = false;
     }
 }

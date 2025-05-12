@@ -1,19 +1,24 @@
-﻿// ✅ DH_EnemyAIController: 모든 Enemy 상태를 AI로 제어 (SexyJutsu 제외)
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DH_EnemyAIController : MonoBehaviour
 {
     private DH_Enemy enemy;
     private Transform player;
 
-    [Header("AI 설정")]
+    [Header("AI info")]
     public float decisionInterval = 0.3f;
-    public float attackRange = 1.5f;
-    public float dashRange = 3f;
+    public float visionRange = 10f;
+    public float attackRange = 2.5f;
+    public float dashRange = 5f;
     public float jumpHeightThreshold = 1f;
 
     private float lastDecisionTime;
+
+    [Header("Jump Pattern")]
+    public float jumpCheckInterval = 1.5f;
+    public float jumpChance = 0.2f; // 0.0 ~ 1.0 중 확률
+    private float lastJumpCheckTime = -999f;
+
 
     private void Awake()
     {
@@ -35,14 +40,35 @@ public class DH_EnemyAIController : MonoBehaviour
 
         lastDecisionTime = Time.time;
 
-        Vector2 dir = player.position - enemy.transform.position;
-        float distance = dir.magnitude;
+        Vector2 dirToPlayer = player.position - enemy.transform.position;
+        float distance = dirToPlayer.magnitude;
         float yDiff = player.position.y - enemy.transform.position.y;
 
-        // 기본 방향 설정
-        enemy.inputX = Mathf.Sign(dir.x);
+        // 탐색 범위 밖이면 아무 행동도 하지 않음
+        if (distance > visionRange)
+        {
+            enemy.inputX = 0;
+            return;
+        }
+        // 탐색 범위 안일 때만 방향 판단
+        if (distance <= visionRange)
+        {
+            float faceDir = Mathf.Sign(dirToPlayer.x);
+            enemy.inputX = faceDir;
 
-        // 어퍼컷 조건: 가까이 + 위
+            // 👉 자동으로 바라보게 하기 (Flip)
+            if ((faceDir > 0 && !enemy.facingRight) || (faceDir < 0 && enemy.facingRight))
+                enemy.FlipController(faceDir);
+        }
+        else
+        {
+            enemy.inputX = 0;
+        }
+
+        // 탐색 범위 내일 때만 입력 처리 시작
+        enemy.inputX = Mathf.Sign(dirToPlayer.x);
+
+        // 어퍼컷
         if (distance <= 1.2f && yDiff > jumpHeightThreshold)
         {
             enemy.isUpInput = true;
@@ -50,7 +76,7 @@ public class DH_EnemyAIController : MonoBehaviour
             return;
         }
 
-        // 점프 공격 (위에 있고 거리도 중간)
+        // 점프 공격
         if (distance <= 2f && yDiff > jumpHeightThreshold)
         {
             enemy.isJumpInput = true;
@@ -58,43 +84,48 @@ public class DH_EnemyAIController : MonoBehaviour
             return;
         }
 
-        // 점프 (단차 대응)
-        if (yDiff > jumpHeightThreshold)
+        // 랜덤 점프 패턴 (플랫지형 대응)
+        if (Time.time >= lastJumpCheckTime + jumpCheckInterval)
         {
-            enemy.isJumpInput = true;
-            return;
+            lastJumpCheckTime = Time.time;
+
+            if (enemy.IsGrounded() && Random.value < jumpChance)
+            {
+                enemy.isJumpInput = true;
+                return;
+            }
         }
 
-        // 대시로 접근
-        if (distance >= dashRange && Mathf.Abs(dir.x) > 1f)
+
+        // 대시 접근
+        if (!enemy.isDashing && distance >= dashRange && Mathf.Abs(dirToPlayer.x) > 1f)
         {
+            enemy.dashDir = (int)Mathf.Sign(dirToPlayer.x);
             enemy.isDashInput = true;
             return;
         }
 
-        // 백스텝 (플레이어 뒤로 이동 시도)
+        // 백스텝
         if (Random.value < 0.05f && distance < 2f)
         {
-            enemy.inputX = -enemy.facingDir;
+            enemy.inputX = -Mathf.Sign(dirToPlayer.x);
             enemy.isDashInput = true;
             return;
         }
 
-        // 방어 (확률적으로)
+        // 방어
         if (Random.value < 0.05f && distance < 2f)
         {
             enemy.isBlocking = true;
             return;
         }
 
-        // 콤보 공격
+        // 공격
         if (distance <= attackRange)
         {
+            Debug.Log("[AI] 공격 입력 감지");
             enemy.isAttackInput = true;
             return;
         }
-
-        // 이동
-        enemy.inputX = Mathf.Sign(dir.x);
     }
 }

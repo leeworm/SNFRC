@@ -1,28 +1,39 @@
-﻿public class DH_EnemyUppercutState : DH_EnemyGroundedState
+using UnityEngine;
+
+public class DH_EnemyUppercutState : DH_EnemyState
 {
-    public DH_EnemyUppercutState(DH_Enemy _enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
-        : base(_enemy, stateMachine, animBoolName) { }
+    public DH_EnemyUppercutState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.SetVelocity(0, rb.linearVelocity.y);
-        enemy.isBusy = true;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (triggerCalled)
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
         {
-            stateMachine.ChangeState(enemy.idleState);
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
+        }
+        if (enemy.isJumpInput)
+        {
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
+        }
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        enemy.isBusy = false;
     }
 }

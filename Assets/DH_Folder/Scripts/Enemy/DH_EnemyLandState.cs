@@ -1,79 +1,39 @@
-﻿using UnityEngine;
-using static DH_CommandDetector;
+using UnityEngine;
 
-public class DH_EnemyLandState : DH_EnemyGroundedState
+public class DH_EnemyLandState : DH_EnemyState
 {
-    private float commandBufferTime = 0.15f;
-    private float commandBufferTimer;
-    private bool bufferingInput = false;
-
-    public DH_EnemyLandState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
-        : base(_enemy, _stateMachine, _animBoolName) { }
+    public DH_EnemyLandState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.SetVelocity(0, rb.linearVelocity.y);
-        enemy.isLanding = true;
-        enemy.isAttackingAir = false;
-        enemy.commandDetectorEnabled = true;
-        bufferingInput = false;
-        commandBufferTimer = 0f;
     }
 
     public override void Update()
     {
         base.Update();
 
-        enemy.SetVelocity(0, rb.linearVelocity.y);
-        
-        if (triggerCalled)
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
         {
-            enemy.isLanding = false;
-            stateMachine.ChangeState(enemy.idleState);
-            return;
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
         }
-
-        var commandType = enemy.CommandDetector.CheckCommand(enemy.facingDir, enabled: enemy.commandDetectorEnabled);
-
-        if (commandType == DashType.Forward)
+        if (enemy.isJumpInput)
         {
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
+        }
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
             stateMachine.ChangeState(enemy.dashState);
-            return;
-        }
-        if (commandType == DashType.Backward)
-        {
-            stateMachine.ChangeState(enemy.backstepState);
-            return;
-        }
-
-        if (xInput != 0)
-        {
-            if (!bufferingInput)
-            {
-                bufferingInput = true;
-                commandBufferTimer = commandBufferTime;
-                return;
-            }
-
-            commandBufferTimer -= Time.deltaTime;
-
-            if (commandBufferTimer <= 0f)
-            {
-                stateMachine.ChangeState(enemy.moveState);
-                return;
-            }
-        }
-        else
-        {
-            bufferingInput = false;
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        enemy.isLanding = false;
-        enemy.commandDetectorEnabled = false;
     }
 }

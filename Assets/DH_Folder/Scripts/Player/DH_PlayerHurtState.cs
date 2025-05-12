@@ -1,40 +1,33 @@
 ﻿using UnityEngine;
 
-public class DH_PlayerHurtState : DH_PlayerState
+public class DH_PlayerHurtState : DH_PlayerGroundedState
 {
-    private bool playedKnockbackAnim = false;
+    private bool isKnockbacking = false;
 
-    public DH_PlayerHurtState(DH_Player player, DH_PlayerStateMachine stateMachine, string animBoolName)
-        : base(player, stateMachine, animBoolName) { }
+    public DH_PlayerHurtState(DH_Player _player, DH_PlayerStateMachine _stateMachine, string _animBoolName)
+        : base(_player, _stateMachine, _animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
         player.isBusy = true;
-        player.SetVelocity(player.lastKnockback.x, player.lastKnockback.y);
-
-        // 넉백 방향에 따라 애니메이션 선택
-        if (Mathf.Abs(player.lastKnockback.x) > 0.1f)
-        {
-            player.anim.Play("Knockback");
-            playedKnockbackAnim = true;
-        }
-        else
-        {
-            player.anim.Play("Hurt");
-        }
+        player.isHurting = true;
+        player.anim.SetBool("Hurt", true);
+        player.SetVelocity(player.lastKnockback.x, player.lastKnockback.y);        
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (rb.linearVelocity.y < 0 && !player.IsGrounded())
+        if (rb.linearVelocity.y > 0.1f && !player.IsGrounded())
         {
-            player.anim.Play("Knockback");
+            player.anim.SetBool("Hurt", false);
+            player.anim.SetBool("Knockback", true);
+            isKnockbacking = true;
         }
 
-        if (player.isGrounded && playedKnockbackAnim)
+        if (player.isGrounded && isKnockbacking)
         {
             stateMachine.ChangeState(player.knockdownState);
         }
@@ -48,5 +41,7 @@ public class DH_PlayerHurtState : DH_PlayerState
     {
         base.Exit();
         player.isBusy = false;
+        player.isHurting = false;
+        player.anim.SetBool("Hurt", false);
     }
 }

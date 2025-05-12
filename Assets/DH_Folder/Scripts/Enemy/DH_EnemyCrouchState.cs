@@ -1,59 +1,39 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class DH_EnemyCrouchState : DH_EnemyGroundedState
+public class DH_EnemyCrouchState : DH_EnemyState
 {
-    private bool substitutionWindowOpen = false;
-
-    public DH_EnemyCrouchState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
-        : base(_enemy, _stateMachine, _animBoolName) { }
+    public DH_EnemyCrouchState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.isBusy = true;
-
-        enemy.SetVelocity(0, rb.linearVelocity.y);
-        Vector2 newSize = new Vector2(enemy.originalColliderSize.x, enemy.originalColliderSize.y * 0.5f);
-        enemy.col.size = newSize;
-
-        Vector2 newOffset = new Vector2(
-        enemy.originalColliderOffset.x,
-        enemy.originalColliderOffset.y - (enemy.originalColliderSize.y - newSize.y) / 2f);
-        enemy.col.offset = newOffset;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
         {
-            stateMachine.ChangeState(enemy.idleState);
-            return;
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
         }
-
-        if (Input.GetKeyDown(KeyCode.X) && substitutionWindowOpen && enemy.canSubstitute())
+        if (enemy.isJumpInput)
         {
-            stateMachine.ChangeState(enemy.substituteState);
-            return;
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
+        }
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
         }
     }
+
     public override void Exit()
     {
         base.Exit();
-        enemy.isBusy = false;
-        enemy.col.size = enemy.originalColliderSize;
-        enemy.col.offset = enemy.originalColliderOffset;
     }
-
-    public void OpenSubstitutionWindow()
-    {
-        substitutionWindowOpen = true;
-    }
-
-    public void CloseSubstitutionWindow()
-    {
-        substitutionWindowOpen = false;
-    }
-
 }

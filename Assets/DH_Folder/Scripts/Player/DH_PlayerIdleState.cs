@@ -25,6 +25,13 @@ public class DH_PlayerIdleState : DH_PlayerGroundedState
     {
         base.Update();
 
+        // 공격 입력 처리 확인
+        if (HandleAttackInput())
+        {
+            Debug.Log("HandleAttackInput triggered an attack state transition.");
+            return;
+        }
+
         //if (xInput == player.facingDir) // && player.IsWallDetected())
         //{ Debug.Log("대시 막힘"); return; }
 

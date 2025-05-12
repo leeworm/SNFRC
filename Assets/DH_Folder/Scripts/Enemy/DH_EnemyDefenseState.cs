@@ -1,33 +1,39 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class DH_EnemyDefenseState : DH_EnemyGroundedState
+public class DH_EnemyDefenseState : DH_EnemyState
 {
-    public DH_EnemyDefenseState(DH_Enemy _enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
-        : base(_enemy, stateMachine, animBoolName) { }
+    public DH_EnemyDefenseState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.isBusy = true;
-        enemy.isBlocking = true;
-        enemy.SetVelocity(0, rb.linearVelocity.y);
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-        enemy.isBusy = false;
-        enemy.isBlocking = false;
     }
 
     public override void Update()
     {
         base.Update();
-        
-        if (Input.GetKeyUp(KeyCode.S))
+
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
         {
-            stateMachine.ChangeState(enemy.idleState);
-            return;
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
         }
+        if (enemy.isJumpInput)
+        {
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
+        }
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
     }
 }

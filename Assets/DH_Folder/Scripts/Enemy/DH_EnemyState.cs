@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
 public class DH_EnemyState
 {
@@ -16,55 +17,36 @@ public class DH_EnemyState
 
     public DH_EnemyState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
     {
-        this.enemy = _enemy;            // 플레이어 객체 저장
-        this.stateMachine = _stateMachine; // 상태 머신 저장
-        this.animBoolName = _animBoolName; // 애니메이션 트리거 변수 이름 저장
+        this.enemy = _enemy;
+        this.stateMachine = _stateMachine;
+        this.animBoolName = _animBoolName;
     }
 
     public virtual void Enter()
     {
-        enemy.anim.SetBool(animBoolName, true); // 애니메이션 트리거 활성화
+        enemy.anim.SetBool(animBoolName, true);
         rb = enemy.rb;
         triggerCalled = false;
-        //Debug.Log($"{animBoolName} 상태 진입"); // 상태 진입 로그 출력
     }
 
     public virtual void Update()
     {
-        stateTimer -= Time.deltaTime; // 상태 타이머 업데이트
+        stateTimer -= Time.deltaTime;
 
-        xInput = GetArrowKeyHorizontalInput(); // 수평 입력 값 가져오기
-        yInput = GetArrowKeyVerticalInput(); // 수직 입력 값 가져오기
-        enemy.anim.SetFloat("yVelocity", rb.linearVelocity.y); // y축 속도 애니메이션 변수 설정
-        //Debug.Log($"{animBoolName} 상태 업데이트"); // 상태 업데이트 로그 출력
+        xInput = enemy.inputX;
+        yInput = enemy.isUpInput ? 1f : (enemy.isCrouching ? -1f : 0f);
+
+        enemy.anim.SetFloat("yVelocity", rb.linearVelocity.y);
     }
 
     public virtual void Exit()
     {
-        enemy.anim.SetBool(animBoolName, false); // 애니메이션 트리거 비활성화
-        Debug.Log($"{animBoolName} 상태 종료"); // 상태 종료 로그 출력
+        enemy.anim.SetBool(animBoolName, false);
+        Debug.Log($"{animBoolName} 상태 종료");
     }
 
     public virtual void AnimationFinishTrigger()
     {
         triggerCalled = true;
-    }
-
-    public static float GetArrowKeyHorizontalInput()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow))
-            return -1f;
-        if (Input.GetKey(KeyCode.RightArrow))
-            return 1f;
-        return 0f;
-    }
-
-    public static float GetArrowKeyVerticalInput()
-    {
-        if (Input.GetKey(KeyCode.UpArrow))
-            return 1f;
-        if (Input.GetKey(KeyCode.DownArrow))
-            return -1f;
-        return 0f;
     }
 }

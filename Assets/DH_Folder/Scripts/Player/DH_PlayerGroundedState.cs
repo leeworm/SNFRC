@@ -36,7 +36,7 @@ public abstract class DH_PlayerGroundedState : DH_PlayerState
             return;
 
         if (Input.GetKeyDown(KeyCode.X)
-            && (player.currentJumpCount > 0 && (!player.isBusy && !player.isAttacking)))
+            && (player.currentJumpCount > 0 && (!player.isBusy && !player.isAttacking && !player.isHurting && !player.isKnockdown)))
         {
             if (yInput > 0.1f && player.isIdle)
                 stateMachine.ChangeState(player.teleportJumpState);
@@ -55,11 +55,13 @@ public abstract class DH_PlayerGroundedState : DH_PlayerState
 
         if (Input.GetKeyDown(KeyCode.F) && !player.isBusy)
         {
+            if (player.isAttacking || player.isSubstituting || player.isBlocking || player.isHurting || player.isKnockdown)
+                return;
             stateMachine.ChangeState(player.SexyJutsuState);
             return;
         }
 
-        if (player.isLanding && player.isGrounded && !(stateMachine.currentState is DH_PlayerLandState) && !player.isSubstituting)
+        if (player.isLanding && player.isGrounded && !(stateMachine.currentState is DH_PlayerLandState) && !player.isSubstituting && !player.isKnockdown && !player.isHurting)
         {
             stateMachine.ChangeState(player.landState);
             return;
@@ -79,7 +81,7 @@ public abstract class DH_PlayerGroundedState : DH_PlayerState
     /// 공격 관련 입력을 한 번에 처리 (우선순위: 어퍼컷 > 대시어택 > 일반공격)
     /// </summary>
     /// <returns>공격 입력이 처리되면 true, 아니면 false</returns>
-    private bool HandleAttackInput()
+    public bool HandleAttackInput()
     {
         if (!Input.GetKeyDown(KeyCode.Z))
             return false;

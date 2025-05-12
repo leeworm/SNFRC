@@ -1,22 +1,39 @@
-﻿using System.Collections;
 using UnityEngine;
 
-public class DH_EnemyKnockdownState : DH_EnemyState
+public class DH_EnemyKnockDownState : DH_EnemyState
 {
-    public DH_EnemyKnockdownState(DH_Enemy _enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
-        : base(_enemy, stateMachine, animBoolName) { }
+    public DH_EnemyKnockDownState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.anim.Play("Knockdown");
-        enemy.SetVelocity(0, 0);
-        enemy.StartCoroutine(KnockdownRecovery());
     }
 
-    private IEnumerator KnockdownRecovery()
+    public override void Update()
     {
-        yield return new WaitForSeconds(0.5f); // 넉다운 지속 시간
-        stateMachine.ChangeState(enemy.idleState);
+        base.Update();
+
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
+        {
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
+        }
+        if (enemy.isJumpInput)
+        {
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
+        }
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
     }
 }

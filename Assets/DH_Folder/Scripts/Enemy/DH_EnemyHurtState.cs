@@ -1,52 +1,39 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class DH_EnemyHurtState : DH_EnemyState
 {
-    private bool playedKnockbackAnim = false;
-
-    public DH_EnemyHurtState(DH_Enemy _enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
-        : base(_enemy, stateMachine, animBoolName) { }
+    public DH_EnemyHurtState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.isBusy = true;
-        enemy.SetVelocity(enemy.lastKnockback.x, enemy.lastKnockback.y);
-
-        // 넉백 방향에 따라 애니메이션 선택
-        if (Mathf.Abs(enemy.lastKnockback.x) > 0.1f)
-        {
-            enemy.anim.Play("Knockback");
-            playedKnockbackAnim = true;
-        }
-        else
-        {
-            enemy.anim.Play("Hurt");
-        }
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (rb.linearVelocity.y < 0 && !enemy.IsGrounded())
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
         {
-            enemy.anim.Play("Knockback");
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
         }
-
-        if (enemy.isGrounded && playedKnockbackAnim)
+        if (enemy.isJumpInput)
         {
-            stateMachine.ChangeState(enemy.knockdownState);
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
         }
-        else if (enemy.isGrounded)
+        if (enemy.isDashInput)
         {
-            stateMachine.ChangeState(enemy.idleState);
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        enemy.isBusy = false;
     }
 }

@@ -95,9 +95,23 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.083333336
+    functionName: EnableHitbox
+    data: UpperCut
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.25
     functionName: DeactivateHitbox
     data: Uppercut
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: DisableHitbox
+    data: UpperCut
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

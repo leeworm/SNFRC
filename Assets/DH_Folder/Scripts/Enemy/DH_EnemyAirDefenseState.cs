@@ -1,40 +1,39 @@
-﻿using System.Collections;
 using UnityEngine;
 
-public class DH_EnemyAirDefenseState : DH_EnemyAirState
+public class DH_EnemyAirDefenseState : DH_EnemyState
 {
-
-    public DH_EnemyAirDefenseState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
-        : base(_enemy, _stateMachine, _animBoolName) { }
+    public DH_EnemyAirDefenseState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.isBlocking = true;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (enemy.isGrounded)
+        // 예시 자동 전이 조건들 (필요한 상태만 활성화)
+        if (enemy.isAttackInput)
         {
-            stateMachine.ChangeState(enemy.landState);
-            return;
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
         }
-
-        if (Input.GetKeyUp(KeyCode.S))
+        if (enemy.isJumpInput)
         {
-            stateMachine.ChangeState(enemy.airState);
-            return;
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
         }
-
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
+        }
     }
 
     public override void Exit()
     {
         base.Exit();
-        enemy.isBusy = false;
-        enemy.isBlocking = false;
     }
 }
