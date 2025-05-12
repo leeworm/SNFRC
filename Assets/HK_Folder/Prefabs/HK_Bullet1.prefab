@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6772387470114887268}
   m_Layer: 0
   m_Name: HK_Bullet1
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

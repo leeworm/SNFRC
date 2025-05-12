@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 5e5d08470bf69ae4cbfdcd23eb5ba223
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1809319168856598164
+    second: Game Boy Advance - Wario Land 4 - Portal_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 36
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496a009a23efb1910800000000000000
+      internalID: 1809319168856598164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4c9c6cee9b5694780e0fb9c3a09cf5
+      internalID: -1848038177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d89dc00cf6ff84abf2969f8c988643
+      internalID: -1177382403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d036623d5ae6644aa3099a255bf98e
+      internalID: -706852828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43b85ac62f82264aaf1b2425b1dd82a
+      internalID: -214629997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7d9fe09f34ccd439491d2d43c0f64e
+      internalID: -2051239749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e834cea624b3a4fbce5c87a2e17a28
+      internalID: -1147273283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 267
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5e8bf02ba6095468652a5e649a89ce
+      internalID: 296135916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8118ab13eeed7614881717583764fb34
+      internalID: -26868435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29c30b69c1ae0b4c89778991e4405f0
+      internalID: -1658764291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1967921894035e149a196fcc8ac6c1dd
+      internalID: 206097249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3965c242490eaee41859044faa943cac
+      internalID: -161347100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_12
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f360d76bbe267944a9f66beb4ba75764
+      internalID: 1937874638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ababe67c5fdf4eb45ab55169a920d964
+      internalID: -2104234372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_14
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04465908464ee42449905b9316fb21d6
+      internalID: -54959839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_15
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 201
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab507b0eab7ae3409d9b39a60e91f00
+      internalID: 1458314344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f805bcd1a9f4fc8449841d5bec9920dc
+      internalID: 1295869203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1027ac18568f741bbeec6301587599
+      internalID: -406441874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_18
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0250e49f1690c614f9a5721934ae9f06
+      internalID: -1673109527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba08eeba3f0ec2e4bb43a8bb66174b8e
+      internalID: 1596588365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_20
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9bb57ebef1f3d4cb7f5f6de637ead6
+      internalID: -631298557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_21
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532cc77e398c8d54b92cf2bb8cbb23bb
+      internalID: -366290587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df322667a743124b9489d0bca56030a
+      internalID: 1857717308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_23
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 135
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9955b0c0994e93941b79730d8aabd142
+      internalID: 661526993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab7801511baf9b4d821320c5eba51b4
+      internalID: 1210056448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_25
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64f4f3558a316f4ead8a871451b279f
+      internalID: 2037880926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_26
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552bd6fe2f1ffe945ad73458b4bd4e06
+      internalID: 1730480689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_27
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c6665a1c82da844ac1c2c57f298e21
+      internalID: -1005676752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_28
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a2ea0b22594d9448f498d3b4c7b364
+      internalID: 882191115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_29
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0914828007b32624491588db98013dbb
+      internalID: -416913107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_30
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10550e0fae3c60441b8c9b0f649484db
+      internalID: -626853180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_31
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 69
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7251c351f69c1147a0ff05bfe2f8e46
+      internalID: -232641293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5672394f8c28b4aa822d39074b833b
+      internalID: -1823404320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_33
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbb819020cdcb543b24374d1969ce90
+      internalID: -1697947389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_34
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d94d6a4fe6440f4388713b8d7c693ca
+      internalID: 753376283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_35
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a44601161e4c44d9d0a6be8fbe64af
+      internalID: -1115850386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_36
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706268a9a0452214084eb0d4c5f25ae7
+      internalID: 275163173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_37
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15440679d2cb11a46b6b57ebd2242ee2
+      internalID: 1566584227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_38
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada23c8aa9d48fd4eb7164971662c04d
+      internalID: 1177420607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Wario Land 4 - Portal_39
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d40b6fdf4b7ff45b651d957cf3b53c
+      internalID: 1609486575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c91d440edc43d024fa0e00e1b1b8bf69
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Game Boy Advance - Wario Land 4 - Portal_0: 1809319168856598164
+      Game Boy Advance - Wario Land 4 - Portal_1: -1848038177
+      Game Boy Advance - Wario Land 4 - Portal_10: 206097249
+      Game Boy Advance - Wario Land 4 - Portal_11: -161347100
+      Game Boy Advance - Wario Land 4 - Portal_12: 1937874638
+      Game Boy Advance - Wario Land 4 - Portal_13: -2104234372
+      Game Boy Advance - Wario Land 4 - Portal_14: -54959839
+      Game Boy Advance - Wario Land 4 - Portal_15: 1458314344
+      Game Boy Advance - Wario Land 4 - Portal_16: 1295869203
+      Game Boy Advance - Wario Land 4 - Portal_17: -406441874
+      Game Boy Advance - Wario Land 4 - Portal_18: -1673109527
+      Game Boy Advance - Wario Land 4 - Portal_19: 1596588365
+      Game Boy Advance - Wario Land 4 - Portal_2: -1177382403
+      Game Boy Advance - Wario Land 4 - Portal_20: -631298557
+      Game Boy Advance - Wario Land 4 - Portal_21: -366290587
+      Game Boy Advance - Wario Land 4 - Portal_22: 1857717308
+      Game Boy Advance - Wario Land 4 - Portal_23: 661526993
+      Game Boy Advance - Wario Land 4 - Portal_24: 1210056448
+      Game Boy Advance - Wario Land 4 - Portal_25: 2037880926
+      Game Boy Advance - Wario Land 4 - Portal_26: 1730480689
+      Game Boy Advance - Wario Land 4 - Portal_27: -1005676752
+      Game Boy Advance - Wario Land 4 - Portal_28: 882191115
+      Game Boy Advance - Wario Land 4 - Portal_29: -416913107
+      Game Boy Advance - Wario Land 4 - Portal_3: -706852828
+      Game Boy Advance - Wario Land 4 - Portal_30: -626853180
+      Game Boy Advance - Wario Land 4 - Portal_31: -232641293
+      Game Boy Advance - Wario Land 4 - Portal_32: -1823404320
+      Game Boy Advance - Wario Land 4 - Portal_33: -1697947389
+      Game Boy Advance - Wario Land 4 - Portal_34: 753376283
+      Game Boy Advance - Wario Land 4 - Portal_35: -1115850386
+      Game Boy Advance - Wario Land 4 - Portal_36: 275163173
+      Game Boy Advance - Wario Land 4 - Portal_37: 1566584227
+      Game Boy Advance - Wario Land 4 - Portal_38: 1177420607
+      Game Boy Advance - Wario Land 4 - Portal_39: 1609486575
+      Game Boy Advance - Wario Land 4 - Portal_4: -214629997
+      Game Boy Advance - Wario Land 4 - Portal_5: -2051239749
+      Game Boy Advance - Wario Land 4 - Portal_6: -1147273283
+      Game Boy Advance - Wario Land 4 - Portal_7: 296135916
+      Game Boy Advance - Wario Land 4 - Portal_8: -26868435
+      Game Boy Advance - Wario Land 4 - Portal_9: -1658764291
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
