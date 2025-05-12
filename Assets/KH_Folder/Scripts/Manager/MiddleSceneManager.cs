@@ -13,6 +13,12 @@ public class MiddleSceneManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            if(MainGameManager.Instance.ErrorNum >= 6)
+            {
+                SceneManager.LoadScene("EndingScene");
+                return;
+            }
+
             if(MainGameManager.Instance.ErrorNum == 0)
             {
                 SceneManager.LoadScene(1);

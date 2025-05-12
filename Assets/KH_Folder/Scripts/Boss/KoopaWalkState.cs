@@ -63,7 +63,7 @@ public class KoopaWalkState : KoopaState
         if(koopa.phaseState == PhaseState.Phase1)
             patternRandomNum = Random.Range(0, 4);
         else if(koopa.phaseState == PhaseState.Phase2)
-            patternRandomNum = Random.Range(4, 8);
+            patternRandomNum = Random.Range(0, 8);
 
         Debug.Log("패턴 번호 : " + patternRandomNum);
 

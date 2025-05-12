@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KH_Portal : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class KH_Portal : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             // 씬 이동
+            SceneManager.LoadScene("MiddleScene");
         }
     }
 }

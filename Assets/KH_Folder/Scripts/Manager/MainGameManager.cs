@@ -40,11 +40,16 @@ public class MainGameManager : MonoBehaviour
             // 씬 재시작
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            GetErrorPiece();
+            SceneManager.LoadScene("MiddleScene");
+        }
         // if(Input.GetKeyDown(KeyCode.P))
         // {
         //     int currentIndex = SceneManager.GetActiveScene().buildIndex;
         //     int maxIndex = SceneManager.sceneCountInBuildSettings - 1;
-            
+         
         //     if (currentIndex < maxIndex)
         //     {
         //         SceneManager.LoadScene(currentIndex + 1);
