@@ -14,6 +14,12 @@ public class WorldChanger_W : MonoBehaviour
     public TileBase DTile;
     public TileBase CCTile; 
     public TileBase DDTile;
+    public TileBase ETile;
+    public TileBase EETile;
+    public TileBase FTile;
+    public TileBase FFTile;
+    public TileBase GTile;
+    public TileBase GGTile;
 
 
     public float delayBetweenTiles = 0.01f;
@@ -48,6 +54,14 @@ public class WorldChanger_W : MonoBehaviour
                     tilemap.SetTile(pos, CCTile);
                 else if (current == DTile)
                     tilemap.SetTile(pos, DDTile);
+                else if (current == ETile)
+                    tilemap.SetTile(pos, EETile);
+                else if (current == FTile)
+                    tilemap.SetTile(pos, FFTile);
+                else if (current == GTile)
+                    tilemap.SetTile(pos, GGTile);
+                
+                    
 
 
                 yield return new WaitForSeconds(delayBetweenTiles);
@@ -57,4 +71,7 @@ public class WorldChanger_W : MonoBehaviour
             }
         }
     }
+
+    
+
 }
