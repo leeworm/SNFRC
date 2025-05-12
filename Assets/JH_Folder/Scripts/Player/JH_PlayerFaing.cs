@@ -10,7 +10,7 @@ public class JH_PlayerFaing : MonoBehaviour
 
     void Start()
     {
-        entityScript = GetComponent<JH_Entity>();
+        entityScript = GetComponentInParent<JH_Entity>();
         if (entityScript == null)
         {
             Debug.LogError("JH_Entity 스크립트를 찾을 수 없습니다!", gameObject);
@@ -39,31 +39,16 @@ public class JH_PlayerFaing : MonoBehaviour
 
     void AutoFaceOpponent()
     {
-        // 상대방이 없거나, entityScript가 없거나, 플레이어가 KO 상태이면 실행하지 않음
-        if (opponentTransform == null || entityScript == null || entityScript.isKnocked)
-        {
+        if (opponentTransform == null || entityScript == null)
             return;
-        }
 
-        // 1. 상대방과의 수평 거리 계산
-        float distanceToOpponentX = opponentTransform.position.x - transform.position.x;
+        float direction = opponentTransform.position.x - transform.position.x;
 
-        // 2. 새로운 바라볼 방향 결정 (기본값은 현재 방향)
-        int newFacingDirection = entityScript.facingDir;
-
-        if (distanceToOpponentX > facingThreshold) // 상대방이 오른쪽에 있다면
+        // 일정 거리 이상 차이가 나야 방향 전환 (노이즈 방지)
+        if (Mathf.Abs(direction) > facingThreshold)
         {
-            newFacingDirection = 1; // 오른쪽 (facingDir = 1)
-        }
-        else if (distanceToOpponentX < -facingThreshold) // 상대방이 왼쪽에 있다면
-        {
-            newFacingDirection = -1; // 왼쪽 (facingDir = -1)
-        }
-
-        // 3. 실제로 방향을 바꿔야 할 때만 SetFacingDirection 호출
-        if (newFacingDirection != entityScript.facingDir)
-        {
-            entityScript.SetFacingDirection(newFacingDirection);
+            int facing = direction > 0 ? 1 : -1;
+            entityScript.SetFacingDirection(facing);
         }
     }
 }

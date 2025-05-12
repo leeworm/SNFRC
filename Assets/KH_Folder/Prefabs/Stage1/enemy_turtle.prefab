@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -53139637
+  m_SortingLayerID: -506665027
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1080235306, guid: 5108604fc44eab04983796632079bdf5, type: 3}
@@ -250,8 +250,6 @@ MonoBehaviour:
     m_Bits: 384
   wallCheckDir: 0
   moveSpeed: 2
-  isDeath: 0
-  deathVelocity: {x: 3, y: 5}
   spinSpeed: 6
   spinCol: {fileID: 3842580792004121228}
 --- !u!50 &3973774174745772527

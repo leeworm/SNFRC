@@ -1,14 +1,18 @@
-ï»¿using UnityEngine;
+using UnityEngine;
 
-public class Hurtbox : MonoBehaviour
+[RequireComponent(typeof(AudioSource))]
+public class JH_Hurtbox : MonoBehaviour
 {
-    // JH_Entity í´ë˜ìŠ¤ ë‚´ë¶€ì— ì •ì˜ëœ BodyPart ì—´ê±°í˜•ì„ ì‚¬ìš©í•˜ë¯€ë¡œ íƒ€ì…ì„ JH_Entity.BodyPartë¡œ ëª…ì‹œí•©ë‹ˆë‹¤.
-    public JH_Entity.BodyPart bodyPartType = JH_Entity.BodyPart.Body; // ê¸°ë³¸ê°’ì„ Bodyë¡œ ì„¤ì • (Noneì´ enumì— ì—†ìœ¼ë¯€ë¡œ)
-    public JH_Entity ownerEntity; // ì´ í—ˆíŠ¸ë°•ìŠ¤ê°€ ì†í•œ ë©”ì¸ Entity ìŠ¤í¬ë¦½íŠ¸ (Player ë˜ëŠ” Enemy)
+    // JH_Entity Å¬·¡½º ³»ºÎ¿¡ Á¤ÀÇµÈ BodyPart ¿­°ÅÇüÀ» »ç¿ëÇÏ¹Ç·Î Å¸ÀÔÀ» JH_Entity.BodyPart·Î ¸í½ÃÇÕ´Ï´Ù.
+    public JH_Entity.BodyPart bodyPartType = JH_Entity.BodyPart.Body; // ±âº»°ªÀ» Body·Î ¼³Á¤ (NoneÀÌ enum¿¡ ¾øÀ¸¹Ç·Î)
+    public JH_Entity ownerEntity; // ÀÌ ÇãÆ®¹Ú½º°¡ ¼ÓÇÑ ¸ŞÀÎ Entity ½ºÅ©¸³Æ® (Player ¶Ç´Â Enemy)
+
+    public AudioClip impactSoundClip; // Inspector¿¡¼­ ÀÌ ÇãÆ®¹Ú½º¿¡ ¸Â¾ÒÀ» ¶§ Àç»ıÇÒ »ç¿îµå Å¬¸³
+    private AudioSource audioSource;    // »ç¿îµå¸¦ Àç»ıÇÒ AudioSource ÄÄÆ÷³ÍÆ®
 
     void Awake()
     {
-        // ownerEntityê°€ ì¸ìŠ¤í™í„°ì—ì„œ í• ë‹¹ë˜ì§€ ì•Šì•˜ë‹¤ë©´, ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸ì—ì„œ JH_Entityë¥¼ ì°¾ìŠµë‹ˆë‹¤.
+        // ownerEntity°¡ ÀÎ½ºÆåÅÍ¿¡¼­ ÇÒ´çµÇÁö ¾Ê¾Ò´Ù¸é, ºÎ¸ğ ¿ÀºêÁ§Æ®¿¡¼­ JH_Entity¸¦ Ã£½À´Ï´Ù.
         if (ownerEntity == null)
         {
             ownerEntity = GetComponentInParent<JH_Entity>();
@@ -16,24 +20,34 @@ public class Hurtbox : MonoBehaviour
 
         if (ownerEntity == null)
         {
-            Debug.LogError(gameObject.name + " ì—ì„œ ë¶€ëª¨ JH_Entityë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤! Hurtboxê°€ ì˜¬ë°”ë¥´ê²Œ ì‘ë™í•˜ì§€ ì•Šì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
-            enabled = false; // ownerEntityê°€ ì—†ìœ¼ë©´ ì´ ìŠ¤í¬ë¦½íŠ¸ëŠ” ì‘ë™í•˜ì§€ ì•Šë„ë¡ ë¹„í™œì„±í™”
+            enabled = false; // ownerEntity°¡ ¾øÀ¸¸é ÀÌ ½ºÅ©¸³Æ®´Â ÀÛµ¿ÇÏÁö ¾Êµµ·Ï ºñÈ°¼ºÈ­
+            return;
         }
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
     }
 
-    // ê³µê²©ìì˜ JH_Hitbox ìŠ¤í¬ë¦½íŠ¸ê°€ ì´ í—ˆíŠ¸ë°•ìŠ¤ì™€ ì¶©ëŒí–ˆì„ ë•Œ í˜¸ì¶œí•˜ëŠ” ë©”ì†Œë“œì…ë‹ˆë‹¤.
-    // ì´ ë©”ì†Œë“œëŠ” ê³µê²©ìœ¼ë¡œë¶€í„° ë°›ì€ ë°ë¯¸ì§€ ê°’ê³¼, ì´ í—ˆíŠ¸ë°•ìŠ¤ê°€ ì–´ë–¤ ë¶€ìœ„ì¸ì§€ë¥¼ ownerEntityì—ê²Œ ì „ë‹¬í•©ë‹ˆë‹¤.
+    // °ø°İÀÚÀÇ JH_Hitbox ½ºÅ©¸³Æ®°¡ ÀÌ ÇãÆ®¹Ú½º¿Í Ãæµ¹ÇßÀ» ¶§ È£ÃâÇÏ´Â ¸Ş¼ÒµåÀÔ´Ï´Ù.
+    // ÀÌ ¸Ş¼Òµå´Â °ø°İÀ¸·ÎºÎÅÍ ¹ŞÀº µ¥¹ÌÁö °ª°ú, ÀÌ ÇãÆ®¹Ú½º°¡ ¾î¶² ºÎÀ§ÀÎÁö¸¦ ownerEntity¿¡°Ô Àü´ŞÇÕ´Ï´Ù.
     public void ProcessHit(float damageAmount)
     {
-        if (ownerEntity != null && !ownerEntity.isKnocked) // ownerEntityê°€ ì¡´ì¬í•˜ê³ , KO ìƒíƒœê°€ ì•„ë‹ ë•Œë§Œ ë°ë¯¸ì§€ ì²˜ë¦¬
+       
+
+        // ÇÇ°İ »ç¿îµå Àç»ı
+        if (audioSource != null && impactSoundClip != null)
         {
-            // ownerEntityì˜ TakeDamage ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ì—¬
-            // ê³µê²©ìë¡œë¶€í„° ë°›ì€ ë°ë¯¸ì§€(damageAmount)ì™€ ì´ í—ˆíŠ¸ë°•ìŠ¤ì˜ ë¶€ìœ„ ì •ë³´(this.bodyPartType)ë¥¼ ì „ë‹¬í•©ë‹ˆë‹¤.
+            audioSource.PlayOneShot(impactSoundClip);
+        }
+
+        if (ownerEntity != null && !ownerEntity.isKnocked)
+        {
             ownerEntity.TakeDamage(damageAmount, this.bodyPartType);
         }
         else if (ownerEntity == null)
         {
-            Debug.LogError(gameObject.name + "ì˜ Hurtboxì— ownerEntityê°€ ì—°ê²°ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+            Debug.LogError(gameObject.name + "ÀÇ Hurtbox¿¡ ownerEntity°¡ ¿¬°áµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
         }
     }
 }

@@ -10,8 +10,8 @@ public class HK_ErrorCodeItem : MonoBehaviour
     [Range(0f, 1f)] public float pickupVolume = 0.8f;
 
     [Header("Portal Settings")]
-    public GameObject portalPrefab; // Æ÷Å» ÇÁ¸®ÆÕÀ» ÀÎ½ºÆåÅÍ¿¡¼­ ÇÒ´çÇÒ º¯¼ö
-    public Transform portalSpawnPosition; // Æ÷Å»ÀÌ ¼ÒÈ¯µÉ À§Ä¡
+    public GameObject portalPrefab; // ï¿½ï¿½Å» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public Transform portalSpawnPosition; // ï¿½ï¿½Å»ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½Ä¡
 
     private Rigidbody2D rb;
     private bool hasBounced = false;
@@ -32,20 +32,21 @@ public class HK_ErrorCodeItem : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        // 1. ÀÎº¥Åä¸® Ã³¸®
+        // 1. ï¿½Îºï¿½ï¿½ä¸® Ã³ï¿½ï¿½
         var inventory = other.GetComponent<HK_PlayerInventory>();
         inventory?.AcquireErrorCode();
 
-        // 2. Æ÷Å» ¼ÒÈ¯ (ÇÁ¸®ÆÕÀ» ÀÎ½ºÅÏ½ºÈ­ÇÏ¿© ¼ÒÈ¯)
+        // 2. ï¿½ï¿½Å» ï¿½ï¿½È¯ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½È­ï¿½Ï¿ï¿½ ï¿½ï¿½È¯)
         if (portalPrefab != null && portalSpawnPosition != null)
         {
             Instantiate(portalPrefab, portalSpawnPosition.position, Quaternion.identity);
         }
+        HK_GameManager.Instance.CreatePotal();
 
-        // 3. »ç¿îµå Àç»ý (º¼·ý Á¶Àý Æ÷ÇÔ)
+        // 3. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
         PlayPickupSound();
 
-        // 4. ¾ÆÀÌÅÛ Á¦°Å
+        // 4. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Destroy(gameObject);
     }
 
@@ -59,6 +60,6 @@ public class HK_ErrorCodeItem : MonoBehaviour
         source.volume = pickupVolume;
         source.Play();
 
-        Destroy(tempAudio, pickupSound.length); // »ç¿îµå ³¡³ª¸é Á¦°Å
+        Destroy(tempAudio, pickupSound.length); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 }
