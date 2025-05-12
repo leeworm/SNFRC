@@ -6,6 +6,8 @@ public class HK_BulletController : MonoBehaviour
     public float speed = 10f;
     public float lifeTime = 2f;
 
+    private Vector2 moveDirection = Vector2.right; // 기본값은 오른쪽
+
     void Start()
     {
         Destroy(gameObject, lifeTime);
@@ -13,36 +15,32 @@ public class HK_BulletController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(transform.right * speed * Time.deltaTime);
+        transform.Translate(moveDirection * speed * Time.deltaTime);
+    }
+
+    public void SetDirection(Vector2 direction)
+    {
+        moveDirection = direction.normalized;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // �� �Ǵ� �������� ����
         if (other.CompareTag("Enemy"))
         {
-            // �Ϲ� ���� ü�� ó��
             HK_Health health = other.GetComponent<HK_Health>();
             if (health != null)
-            {
-                health.TakeDamage(damage);
-            }
+                health.TakeDamage(damage, transform.position);
 
-            // ���� ü�� ó��
-            HK_BossHealth bossHealth = other.GetComponent<HK_BossHealth>();
+            HK_EnemyHealth bossHealth = other.GetComponent<HK_EnemyHealth>();
             if (bossHealth != null)
-            {
-                bossHealth.TakeDamage(damage);
-            }
+                bossHealth.TakeDamage(damage, transform.position);
 
             Destroy(gameObject);
         }
 
-        // �� �Ǵ� �ٸ� ��ֹ��� �浹���� ��
         if (other.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
     }
 }
-

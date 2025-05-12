@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2785188320911774163, guid: 70989fcb73b2b5c408ec2c4ce002981a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7728471140036833177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbb6fc4b2e0743469cc8ce14bf7419e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletType: 0
   damage: 10
-  speed: 5
+  speed: 3
   lifeTime: 3
   canPierce: 0
-  direction: {x: 1, y: 0}
