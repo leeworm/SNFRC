@@ -27,7 +27,10 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
     [SerializeField] protected float GroundCheckDistance;
     [SerializeField] protected Transform EnemyCheck;
     [SerializeField] protected float EnemyCheckDistance;
+    [SerializeField] protected LayerMask enemyLayer;
     [SerializeField] protected LayerMask whatIsGround; // EnemyCheck에도 whatIsGround가 사용되고 있습니다. 적으로 감지할 다른 LayerMask가 필요할 수 있습니다.
+
+
 
     protected float jumpGracePeriodTimer = 0f;
     public float jumpGraceDuration = 0.15f;
@@ -61,9 +64,17 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
 
     protected virtual void Start()
     {
+        // 자신의 컴포넌트 찾기
         if (sr == null) sr = GetComponent<SpriteRenderer>();
         if (animator == null) animator = GetComponentInChildren<Animator>();
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+
+        // 스프라이트 렌더러가 없다면 자식에서 찾기
+        if (sr == null)
+        {
+            sr = GetComponentInChildren<SpriteRenderer>();
+            Debug.Log($"{gameObject.name}: 자식에서 SpriteRenderer 찾음 - {(sr != null ? "성공" : "실패")}");
+        }
 
         CurrentHP = MaxHP;
         isKnocked = false;
@@ -72,25 +83,49 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
 
     protected virtual void Update()
     {
-        if (isKnocked) return; // KO 상태에서는 업데이트 로직 중단
-
-        if (jumpGracePeriodTimer > 0)
+        // 게임 매니저가 없거나 일시정지 상태면 움직임 정지
+        if (JH_GameManager.Instance == null || JH_GameManager.IsPaused())
         {
-            jumpGracePeriodTimer -= Time.deltaTime;
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.gravityScale = 0;
+            }
+            return;
+        }
+
+        // 승리 애니메이션 중이 아닐 때만 일반 업데이트 실행
+        if (!JH_GameManager.Instance.IsVictoryAnimationPlaying())
+        {
+            if (rb != null)
+            {
+                rb.gravityScale = 1;
+            }
+
+            if (isKnocked) return;
+
+            if (jumpGracePeriodTimer > 0)
+            {
+                jumpGracePeriodTimer -= Time.deltaTime;
+            }
+
+            UpdateEnemyDetection();
         }
     }
 
-    protected virtual void Exit() // 현재 사용되지 않는 것으로 보입니다.
+    protected virtual void Exit() 
     {
-        // 이 메소드의 목적이 있다면 관련 로직 추가
     }
 
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
+        if (JH_GameManager.IsPaused()) return;
+
         if (isKnocked) return; // KO 상태에서는 속도 변경 불가
         if (rb != null) // Null 체크 추가
         {
-            rb.linearVelocity = new Vector2(_xVelocity, _yVelocity); // 2D에서는 rb.velocity가 더 일반적
+            rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
+            UpdateEnemyDetection();
         }
     }
 
@@ -108,15 +143,63 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
         return Physics2D.Raycast(GroundCheck.position, Vector2.down, GroundCheckDistance, whatIsGround);
     }
 
-    // EnemyCheck의 LayerMask를 whatIsGround 대신 적절한 '적' 레이어로 변경하는 것을 고려해야 합니다.
-    public virtual bool IsEnemyDetected() => EnemyCheck != null && Physics2D.Raycast(EnemyCheck.position, Vector2.right * facingDir, EnemyCheckDistance, whatIsGround /* <- 적 레이어로 변경 권장 */);
+    public virtual void UpdateEnemyDetection()
+    {
+        if (EnemyCheck == null) return;
+
+        // 왼쪽 방향 체크
+        RaycastHit2D leftHit = Physics2D.Raycast(EnemyCheck.position, Vector2.left, EnemyCheckDistance, enemyLayer);
+
+        // 오른쪽 방향 체크
+        RaycastHit2D rightHit = Physics2D.Raycast(EnemyCheck.position, Vector2.right, EnemyCheckDistance, enemyLayer);
+
+        // 디버그 로그
+        if (leftHit.collider != null)
+            Debug.Log($"{gameObject.name}: 왼쪽에서 적 감지 - {leftHit.collider.name}");
+        if (rightHit.collider != null)
+            Debug.Log($"{gameObject.name}: 오른쪽에서 적 감지 - {rightHit.collider.name}");
+
+        // 양쪽 중 더 가까운 적을 향해 방향 설정
+        if (leftHit.collider != null && rightHit.collider != null)
+        {
+            // 더 가까운 쪽으로 방향 설정
+            float leftDistance = leftHit.distance;
+            float rightDistance = rightHit.distance;
+            SetFacingDirection(leftDistance < rightDistance ? -1 : 1);
+        }
+        else if (leftHit.collider != null)
+        {
+            SetFacingDirection(-1);
+        }
+        else if (rightHit.collider != null)
+        {
+            SetFacingDirection(1);
+        }
+    }
+
+    public virtual bool IsEnemyDetected()
+    {
+        if (EnemyCheck == null) return false;
+
+        // 현재 바라보는 방향으로만 체크
+        return Physics2D.Raycast(EnemyCheck.position, Vector2.right * facingDir, EnemyCheckDistance, enemyLayer);
+    }
 
     protected virtual void OnDrawGizmos()
     {
         if (GroundCheck != null)
             Gizmos.DrawLine(GroundCheck.position, new Vector3(GroundCheck.position.x, GroundCheck.position.y - GroundCheckDistance));
+
         if (EnemyCheck != null)
-            Gizmos.DrawLine(EnemyCheck.position, new Vector3(EnemyCheck.position.x + EnemyCheckDistance * facingDir, EnemyCheck.position.y));
+        {
+            // 왼쪽 방향 레이
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(EnemyCheck.position, EnemyCheck.position + Vector3.left * EnemyCheckDistance);
+
+            // 오른쪽 방향 레이
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(EnemyCheck.position, EnemyCheck.position + Vector3.right * EnemyCheckDistance);
+        }
     }
     #endregion
 
@@ -147,7 +230,11 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
 
     protected virtual void PlayHitReaction(BodyPart hitPart)
     {
-        if (animator == null) return;
+        if (animator == null)
+        {
+            Debug.LogError($"{gameObject.name}에 Animator가 없습니다!");
+            return;
+        }
 
         Debug.Log(gameObject.name + " playing hit reaction for " + hitPart);
         string triggerName = ""; // Animator Trigger 이름 초기화
@@ -199,10 +286,9 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
         if (direction == 1 || direction == -1)
         {
             facingDir = direction;
-            if (sr != null)
-            {
-                sr.flipX = (facingDir == -1);
-            }
+
+            // 회전 적용 (0도 또는 180도)
+            transform.rotation = Quaternion.Euler(0, facingDir == -1 ? 180f : 0f, 0);
         }
     }
 }
