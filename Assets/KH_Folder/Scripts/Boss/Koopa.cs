@@ -252,6 +252,8 @@ public class Koopa : KH_Enemy
 
     public void GoMidPos()
     {
+        BackgroundMusic.Instance.BGM_Change();
+
         // 2페이즈 직전
         transform.position = new Vector2(0, transform.position.y);
 

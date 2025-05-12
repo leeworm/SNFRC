@@ -1159,7 +1159,7 @@ TextureImporter:
         width: 10
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1168,6 +1168,28 @@ TextureImporter:
       bones: []
       spriteID: 6e9517d60d9356844956da87dd1429e0
       internalID: 418509975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: error_block
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e873810b9db7e947a8273b44632b2cd
+      internalID: 1590672181
       vertices: []
       indices: 
       edges: []
@@ -1202,6 +1224,7 @@ TextureImporter:
       cloud5: 1279654261
       cloud6: -929078884
       coin1: -1668514866
+      error_block: 1590672181
       flag_stick: 605393653
       grass1: -498442290
       grass2: -1134986576

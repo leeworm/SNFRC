@@ -65,6 +65,8 @@ public class KH_Enemy : KH_Entity
         {
             if(transform.position.y < collision.transform.position.y) // 위에 있는 플레이어 발의 의한 충돌
             {
+                KH_SoundManager.Instance.PlaySFXSound("marioBump");
+
                 Death();
                 collision.transform.parent.GetComponent<KH_Player>().Bounce();
             }
