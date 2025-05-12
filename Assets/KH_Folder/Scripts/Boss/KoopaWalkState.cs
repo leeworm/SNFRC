@@ -60,23 +60,37 @@ public class KoopaWalkState : KoopaState
 
     private void Phase1_Pattern()
     {
-        patternRandomNum = Random.Range(0, 4); 
+        if(koopa.phaseState == PhaseState.Phase1)
+            patternRandomNum = Random.Range(0, 4);
+        else if(koopa.phaseState == PhaseState.Phase2)
+            patternRandomNum = Random.Range(0, 8);
 
-            if(patternRandomNum == 0) // 불꽃 발사 패턴
-            {
-                koopa.stateMachine.ChangeState(koopa.fireShotState);
-            }
-            else if(patternRandomNum == 1) // 점프 공격 패턴
-            {
-                koopa.stateMachine.ChangeState(koopa.jumpAttackState);
-            }
-            else if(patternRandomNum == 2) // 모든 방향으로 불꽃 발사 패턴
-            {
-                koopa.stateMachine.ChangeState(koopa.allDirFireState);
-            }
-            else if(patternRandomNum == 3) // 롤링 불꽃 발사 패턴
-            {
-                koopa.stateMachine.ChangeState(koopa.roundFireState);
-            }
+        Debug.Log("패턴 번호 : " + patternRandomNum);
+
+        if(patternRandomNum == 0) // 불꽃 발사 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.fireShotState);
+        }
+        else if(patternRandomNum == 1) // 점프 공격 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.jumpAttackState);
+        }
+        else if(patternRandomNum == 2) // 모든 방향으로 불꽃 발사 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.allDirFireState);
+        }
+        else if(patternRandomNum == 3) // 롤링 불꽃 발사 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.roundFireState);
+        }
+        else if(patternRandomNum == 4 || patternRandomNum == 5) // 스핀 공격 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.spinAttackState);
+        }
+        else if(patternRandomNum == 6 || patternRandomNum == 7) // 레이저 공격 패턴
+        {
+            koopa.stateMachine.ChangeState(koopa.laserShotState);
+        }
     }
+
 }

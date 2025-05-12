@@ -169,7 +169,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,6 +178,28 @@ TextureImporter:
       bones: []
       spriteID: f50323bc987670e4d8abf103c35e0105
       internalID: -1689532497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: error_piece
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 482
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebacea33d98f3124888cf08a19b9f933
+      internalID: 1636801946
       vertices: []
       indices: 
       edges: []
@@ -196,6 +218,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      error_piece: 1636801946
       flag: -8869406681220009429
       item_mushroom: -1689532497
   mipmapLimitGroupName: 

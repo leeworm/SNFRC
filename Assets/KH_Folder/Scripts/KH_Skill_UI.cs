@@ -8,6 +8,7 @@ public class KH_Skill_UI : MonoBehaviour
     [Header("UI")]
     public Image CoolTimeImage_Pipe;
     public Image CoolTimeImage_MushRoom;
+    public Image CoolTimeImage_ErrorPiece;
 
     
 
@@ -21,6 +22,7 @@ public class KH_Skill_UI : MonoBehaviour
         {
             CoolTimeImage_Pipe.fillAmount = 0;
         }
+
         if(player.mushRoomTimer > 0)
         {
             CoolTimeImage_MushRoom.fillAmount = player.mushRoomTimer / player.mushRoomCoolTime;
@@ -28,6 +30,16 @@ public class KH_Skill_UI : MonoBehaviour
         else
         {
             CoolTimeImage_MushRoom.fillAmount = 0;
+        }
+
+        
+        if(player.errorPieceTimer > 0)
+        {
+            CoolTimeImage_ErrorPiece.fillAmount = player.errorPieceTimer / player.errorPieceCoolTime;
+        }
+        else
+        {
+            CoolTimeImage_ErrorPiece.fillAmount = 0;
         }
     }
 }

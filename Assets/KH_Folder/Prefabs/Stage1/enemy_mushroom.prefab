@@ -61,8 +61,6 @@ MonoBehaviour:
     m_Bits: 384
   wallCheckDir: 0
   moveSpeed: 2
-  isDeath: 0
-  deathVelocity: {x: 3, y: 5}
 --- !u!50 &7572295667587766853
 Rigidbody2D:
   serializedVersion: 5
@@ -241,7 +239,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -53139637
+  m_SortingLayerID: -506665027
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -6469838034995708988, guid: 5108604fc44eab04983796632079bdf5, type: 3}

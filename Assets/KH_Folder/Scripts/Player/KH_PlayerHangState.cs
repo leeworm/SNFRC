@@ -20,7 +20,7 @@ public class KH_PlayerHangState : KH_PlayerState
 
         if(player.IsGroundDetected())
         {
-            stateMachine.ChangeState(player.cutMoveState);
+            stateMachine.ChangeState(player.cutMovingState);
         }
     }
 

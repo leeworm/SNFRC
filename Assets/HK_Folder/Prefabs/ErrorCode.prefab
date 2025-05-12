@@ -191,3 +191,5 @@ MonoBehaviour:
   bounceForce: 10
   pickupSound: {fileID: 8300000, guid: e60efd73ea762904793daf1e0be67ffe, type: 3}
   pickupVolume: 0.19
+  portalPrefab: {fileID: 5848138599690258402, guid: f14074be3a9bdbd45aab525472307c5a, type: 3}
+  portalSpawnPosition: {fileID: 2120516612620332744, guid: f14074be3a9bdbd45aab525472307c5a, type: 3}
