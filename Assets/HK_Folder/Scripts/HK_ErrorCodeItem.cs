@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class HK_ErrorCodeItem : MonoBehaviour
 {
-    public float bounceForce = 5f;            // Ã³À½ Æ¢¾î¿À¸¦ Èû
+    [Header("Physics Settings")]
+    public float bounceForce = 5f;
+
+    [Header("Sound Settings")]
     public AudioClip pickupSound;
+    [Range(0f, 1f)] public float pickupVolume = 0.8f;
+
+    [Header("Portal Settings")]
+    public GameObject portalPrefab; // ï¿½ï¿½Å» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public Transform portalSpawnPosition; // ï¿½ï¿½Å»ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½Ä¡
 
     private Rigidbody2D rb;
     private bool hasBounced = false;
@@ -14,7 +22,7 @@ public class HK_ErrorCodeItem : MonoBehaviour
         if (rb != null && !hasBounced)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.gravityScale = 1.5f; // ³«ÇÏ ¼Óµµ Á¶Àý °¡´É
+            rb.gravityScale = 1.5f;
             rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
             hasBounced = true;
         }
@@ -22,26 +30,36 @@ public class HK_ErrorCodeItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+
+        // 1. ï¿½Îºï¿½ï¿½ä¸® Ã³ï¿½ï¿½
+        var inventory = other.GetComponent<HK_PlayerInventory>();
+        inventory?.AcquireErrorCode();
+
+        // 2. ï¿½ï¿½Å» ï¿½ï¿½È¯ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½È­ï¿½Ï¿ï¿½ ï¿½ï¿½È¯)
+        if (portalPrefab != null && portalSpawnPosition != null)
         {
-            HK_PlayerInventory inventory = other.GetComponent<HK_PlayerInventory>();
-            if (inventory != null)
-            {
-                inventory.AcquireErrorCode();
-            }
-
-            // Æ÷Å» È°¼ºÈ­
-            HK_Portal portal = Object.FindFirstObjectByType<HK_Portal>();
-            if (portal != null)
-            {
-                portal.ActivatePortal();
-            }
-
-            if (pickupSound != null)
-                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
-
-            Destroy(gameObject);
+            Instantiate(portalPrefab, portalSpawnPosition.position, Quaternion.identity);
         }
+        HK_GameManager.Instance.CreatePotal();
+
+        // 3. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        PlayPickupSound();
+
+        // 4. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Destroy(gameObject);
+    }
+
+    private void PlayPickupSound()
+    {
+        if (pickupSound == null) return;
+
+        GameObject tempAudio = new GameObject("TempAudio");
+        AudioSource source = tempAudio.AddComponent<AudioSource>();
+        source.clip = pickupSound;
+        source.volume = pickupVolume;
+        source.Play();
+
+        Destroy(tempAudio, pickupSound.length); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 }
-

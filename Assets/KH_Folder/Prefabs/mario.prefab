@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &206376537154295512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3126710722178708676}
+  m_Layer: 10
+  m_Name: pipeCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3126710722178708676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206376537154295512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7790851948886759061}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619535390607818486
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +146,7 @@ Transform:
   - {fileID: 8170814867249944176}
   - {fileID: 4570556970407230098}
   - {fileID: 727605241923174049}
+  - {fileID: 3126710722178708676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4708537833077653565
@@ -135,11 +167,16 @@ MonoBehaviour:
   wallCheckDistance: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 32832
   whatIsWall:
     serializedVersion: 2
     m_Bits: 128
   wallCheckDir: 1
+  pipeChek: {fileID: 3126710722178708676}
+  pipeCheckDistance: 0.25
+  whatIsPipe:
+    serializedVersion: 2
+    m_Bits: 32768
   moveSpeed: 8
   jumpForce: 20
   bouncePower: 15
@@ -147,6 +184,20 @@ MonoBehaviour:
   canHit: 1
   FireballPrefab: {fileID: 4433279565195748080, guid: 58b44a67d06032545a8af9786c639e1f, type: 3}
   FireballSpawnPoint: {fileID: 727605241923174049}
+  MushRoomPrefab: {fileID: 0}
+  mushRoomCoolTime: 10
+  mushRoomTimer: 0
+  SetPipePrefab: {fileID: 0}
+  UsePipePrefab: {fileID: 0}
+  setPipeCoolTime: 15
+  setPipeTimer: 0
+  errorPieceCoolTime: 20
+  errorPieceTimer: 0
+  isErrorState: 0
+  isPlayerRaindow: 0
+  errorStateDuration: 10
+  pipeCount: 1
+  isStage1: 1
 --- !u!50 &4739936956380790687
 Rigidbody2D:
   serializedVersion: 5
@@ -347,8 +398,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -787977233
-  m_SortingLayer: 3
+  m_SortingLayerID: -1059990345
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1830896859, guid: b0ef29aea0187794b89dbe7c19bc056c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
+
 public class B_PlayerHealth : MonoBehaviour
 {
     public int maxHearts = 10;
@@ -16,12 +17,18 @@ public class B_PlayerHealth : MonoBehaviour
 
     private HashSet<B_Enemy> recentlyHitEnemies = new HashSet<B_Enemy>();
     private float contactCooldown = 1f; // 중복 데미지 방지 시간
+    public B_HeartUI heartUI;
+    private Coroutine regenCoroutine;
+    public AudioClip hitSound;
+    
 
     private void Start()
     {
         currentHearts = maxHearts;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        heartUI.UpdateHearts(currentHearts);
+        regenCoroutine = StartCoroutine(AutoRegen());
     }
 
     public void TakeDamage(int damage, Vector2 attackerPos)
@@ -32,6 +39,7 @@ public class B_PlayerHealth : MonoBehaviour
         currentHearts = Mathf.Clamp(currentHearts, 0, maxHearts);
 
         Debug.Log($"❤️ 남은 하트: {currentHearts}");
+         heartUI.UpdateHearts(currentHearts);
 
         KnockbackFrom(attackerPos);
         StartCoroutine(HitFlash());
@@ -49,6 +57,21 @@ public class B_PlayerHealth : MonoBehaviour
         isInvincible = false;
     }
 
+    private IEnumerator AutoRegen()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10f); // 10초마다
+
+            if (currentHearts < maxHearts)
+            {
+                currentHearts++;
+                heartUI.UpdateHearts(currentHearts);
+                Debug.Log($"❤️ 회복됨: {currentHearts} / {maxHearts}");
+            }
+        }
+    }
+
     private void Die()
     {
         Debug.Log("💀 플레이어 사망");
@@ -61,6 +84,7 @@ public class B_PlayerHealth : MonoBehaviour
         float dir = Mathf.Sign(transform.position.x - attackerPos.x);
         Vector2 force = new Vector2(dir * -6f, 2f);
         rb.AddForce(force, ForceMode2D.Impulse);
+          B_AudioManager.Instance.PlaySFX(hitSound);
     }
 
     private IEnumerator HitFlash()
@@ -100,11 +124,12 @@ public class B_PlayerHealth : MonoBehaviour
          B_Enemy enemy = other.GetComponent<B_Enemy>();
 
         // 히트박스 무시
-        if (enemy != null && !other.CompareTag("Hitbox"))
+        if (enemy != null && !other.CompareTag("HitHitbox"))
         {
             if (contactDamageCoroutine == null)
                 contactDamageCoroutine = StartCoroutine(DealContactDamage(enemy));
         }
+        
     }
 
 

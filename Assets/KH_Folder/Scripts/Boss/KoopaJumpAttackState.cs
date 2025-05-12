@@ -40,14 +40,14 @@ public class KoopaJumpAttackState : KoopaState
         {
             if(koopa.transform.position.y > 15f)
             {
-                koopa.GoPlayerPos();
+                koopa.GoPlayerPosX();
             }
         }
         else if(koopa.phaseState == PhaseState.Phase2)
         {
             if(koopa.transform.position.y > -185f)
             {
-                koopa.GoPlayerPos();
+                koopa.GoPlayerPosX();
             }
         }
     }
@@ -62,7 +62,7 @@ public class KoopaJumpAttackState : KoopaState
     {
         if(koopa.IsGroundDetected())
         {
-            KH_GameManager.Instance.SetActive_DamageRange(false);
+            KH_GameManager.Instance.SetActive_DamageRangeX(false);
 
             Debug.Log("점프 공격 종료");
             KH_CameraShake.Instance.Shake(); // 카메라 흔들림 효과

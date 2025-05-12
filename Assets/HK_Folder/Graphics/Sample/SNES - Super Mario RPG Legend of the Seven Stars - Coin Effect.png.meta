@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SNES - Super Mario RPG Legend of the Seven Stars - Coin Effect_0: -1380771178616330040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

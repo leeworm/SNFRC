@@ -24,6 +24,8 @@ public class WorldChanger : MonoBehaviour
     public TileBase N_dirtTile;
     public TileBase N_sandTile;
     public TileBase N_JuaLTile;
+    public TileBase NGressTile;
+    public TileBase EnderTile;
 
     public float delayBetweenTiles = 0.01f; // 순차적으로 바뀌게 할 딜레이
 
@@ -81,6 +83,12 @@ public class WorldChanger : MonoBehaviour
                 {
                     tilemap.SetTile(tilePos, N_JuaLTile);
                 }
+                else if (currentTile == NGressTile)
+                {
+                    tilemap.SetTile(tilePos, EnderTile);
+                }
+                
+                
                 
                 yield return new WaitForSeconds(delayBetweenTiles); // 순차적 변경
             }

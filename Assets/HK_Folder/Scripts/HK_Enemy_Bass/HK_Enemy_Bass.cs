@@ -26,6 +26,7 @@ public class HK_Enemy_Bass : MonoBehaviour
     public Vector2 moveDirection;
 
     public GameObject errorCodeItemPrefab; // 에러코드 아이템 프리팹
+
     void Awake()
     {
         // 초기화
@@ -47,26 +48,7 @@ public class HK_Enemy_Bass : MonoBehaviour
         stateMachine?.currentState?.Update();
     }
 
-    // 사망 처리
-    void OnDeath()
-    {
-        stateMachine.ChangeState(new HK_BassDeathState(this));
-    }
-
-    public void AnimationFinishTrigger()
-    {
-        stateMachine?.currentState?.AnimationFinishTrigger();
-    }
-
-    public void SetVelocity(Vector2 velocity)
-    {
-        if (rb != null)
-        {
-            rb.linearVelocity = velocity; // 수정: Rigidbody2D 속도 업데이트
-        }
-    }
-
-    // 🎯 발사 관련 애니메이션 이벤트 함수
+    // 발사 관련 애니메이션 이벤트 함수
     public void FireRapidShot(GameObject shotPrefab)
     {
         if (shotPrefab != null && firePoint != null)
@@ -101,20 +83,22 @@ public class HK_Enemy_Bass : MonoBehaviour
         FireRapidShot(rapidShotPrefab2);
     }
 
-    // 플레이어의 공격을 맞았을 때 넉백 처리 및 히트 애니메이션 트리거
-    public void OnHitByBullet(Vector2 bulletPosition)
+    // 사망 처리
+    void OnDeath()
+    {
+        stateMachine.ChangeState(new HK_BassDeathState(this));
+    }
+
+    public void AnimationFinishTrigger()
+    {
+        stateMachine?.currentState?.AnimationFinishTrigger();
+    }
+
+    public void SetVelocity(Vector2 velocity)
     {
         if (rb != null)
         {
-            // 넉백 방향 계산 (배스 위치와 불렛 위치의 반대 방향)
-            Vector2 knockbackDirection = (transform.position - (Vector3)bulletPosition).normalized;
-
-            // Rigidbody2D에 힘을 추가하여 넉백 효과
-            float knockbackStrength = 5f; // 넉백 강도 조정
-            rb.AddForce(knockbackDirection * knockbackStrength, ForceMode2D.Impulse);
+            rb.linearVelocity = velocity; // 수정: Rigidbody2D 속도 업데이트
         }
-
-        // 'Hit' 애니메이션 트리거
-        animator.SetTrigger("Hit");
     }
 }
