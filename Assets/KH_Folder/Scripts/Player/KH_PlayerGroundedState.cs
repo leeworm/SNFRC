@@ -21,7 +21,7 @@ public class KH_PlayerGroundedState : KH_PlayerState
 
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
         {
-            KH_SoundManager.Instance.PlaySFXSound("marioJump");
+            KH_SoundManager.Instance.PlaySFXSound("marioJump", 0.5f);
             stateMachine.ChangeState(player.jumpState);
         }
 

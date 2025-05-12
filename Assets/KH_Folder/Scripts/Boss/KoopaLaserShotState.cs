@@ -53,6 +53,7 @@ public class KoopaLaserShotState : KoopaState
             {
                 if(!isCreate)
                 {
+                    KH_SoundManager.Instance.PlaySFXSound("koopaFireLaser", 0.5f);
                     koopa.CreateLaser();
                     isCreate = true;
                 }
@@ -63,6 +64,7 @@ public class KoopaLaserShotState : KoopaState
             {
                 if(!isCharge)
                 {
+                    KH_SoundManager.Instance.PlaySFXSound("koopaLaserReady", 0.5f);
                     KH_EffectManager.Instance.PlayEffect("ChargeEffect", koopa.transform.position);
                     isCharge = true;
                 }

@@ -36,7 +36,12 @@ public class KoopaState
 
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
-
+        
+        if(koopa.healthPoint <= 0 && !koopa.IsDeath)
+        {
+            stateMachine.ChangeState(koopa.deathState);
+            koopa.IsDeath = true;
+        }
     }
 
     public virtual void Exit()

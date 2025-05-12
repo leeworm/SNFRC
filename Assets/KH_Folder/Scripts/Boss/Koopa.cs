@@ -33,6 +33,8 @@ public class Koopa : KH_Enemy
     public KoopaSpinAttackState spinAttackState { get; private set; }
     public KoopaLaserShotState laserShotState { get; private set; }
 
+    public KoopaDeathState deathState { get; private set; }
+
     #endregion
 
     #region Phase 1
@@ -79,6 +81,11 @@ public class Koopa : KH_Enemy
     public float fireLaserSpeed = 1.0f;         // 회전 속도
     public float fireLaser_maxAngle = 110.0f;    // 최대 각도
     public float fireLaserTime = 15;
+    
+    [Header("죽음 정보")]
+    public float deathJumpPower = 5f;
+    public GameObject ErrorPrefab;
+    public bool IsDeath = false;
 
     #endregion
 
@@ -103,6 +110,8 @@ public class Koopa : KH_Enemy
 
         spinAttackState = new KoopaSpinAttackState(this, stateMachine, "Spin");
         laserShotState = new KoopaLaserShotState(this, stateMachine, "Fire");
+        
+        deathState = new KoopaDeathState(this, stateMachine, "Death");
     }
 
     protected override void Start()
@@ -145,6 +154,7 @@ public class Koopa : KH_Enemy
             }
             if(collision.gameObject.GetComponent<Sonic>() != null)
             {
+                KH_SoundManager.Instance.PlaySFXSound("sonicCollision", 0.5f);
                 // 체력 감소
                 int damageS = collision.gameObject.GetComponent<Sonic>().Damage;
                 healthPoint -= damageS;
@@ -156,6 +166,8 @@ public class Koopa : KH_Enemy
     #region Phase 1 Fuctions
     public void ShotFire()
     {
+        KH_SoundManager.Instance.PlaySFXSound("koopaFire", 0.5f);
+
         GameObject fire = Instantiate(fireShotPrefab, wallCheck.position, Quaternion.identity);
         
         if(transform.position.x > playerTransform.position.x) // -
@@ -203,12 +215,14 @@ public class Koopa : KH_Enemy
 
     public void JumpDown()
     {
+        KH_SoundManager.Instance.PlaySFXSound("koopaJump");
         Debug.Log("JumpDown");
         rb.linearVelocityY = -jumpAttackSpeed;
     }
 
     public void AllDirFire()
     {
+        KH_SoundManager.Instance.PlaySFXSound("koopaFire", 0.5f);
         for (float angle = 0; angle < 360; angle += angleIncrement)
         {
             GameObject fire = Instantiate(smallFireShotPrefab, transform.position, Quaternion.identity);
@@ -228,8 +242,8 @@ public class Koopa : KH_Enemy
 
     public void RoundFire()
     {
+        KH_SoundManager.Instance.PlaySFXSound("koopaRoundFIre", 0.5f);
         Debug.Log("RoundFire");
-
         GameObject fire = Instantiate(roundFireShotPrefab, wallCheck.position, Quaternion.identity);
         
         if(transform.position.x > playerTransform.position.x) // -
@@ -298,12 +312,16 @@ public class Koopa : KH_Enemy
 
     public void GoPlayerPosY()
     {
+        KH_SoundManager.Instance.PlaySFXSound("koopaSpinAttack2", 0.5f);
+
         transform.position = new Vector2(transform.position.x, playerTransform.position.y);
         KH_GameManager.Instance.SetActive_DamageRangeY(true);
     }
 
     public void StartSpin(ref int count)
     {
+        KH_SoundManager.Instance.PlaySFXSound("koopaSpinWind2", 0.5f);
+
         KH_GameManager.Instance.SetActive_DamageRangeY(false);
 
         if(transform.position == new Vector3(-30, transform.position.y, 0))
@@ -350,6 +368,17 @@ public class Koopa : KH_Enemy
         rainbowScreenPrefab.SetActive(false);
         //transform.DOKill();
         Destroy(fireLaser);
+    }
+
+    public void TriggerOn()
+    {
+        boxCollider.isTrigger = true;
+    }
+
+    public void CreateErrorPiece()
+    {
+        Debug.Log("CreateErrorPiece");
+        Instantiate(ErrorPrefab, new Vector3(0,-202, 0), Quaternion.identity);
     }
 
     #endregion

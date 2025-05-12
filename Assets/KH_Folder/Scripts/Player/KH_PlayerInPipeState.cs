@@ -13,6 +13,7 @@ public class KH_PlayerInPipeState : KH_PlayerState
     public override void Enter()
     {
         base.Enter();
+        KH_SoundManager.Instance.PlaySFXSound("marioPipe");
         
         rb.linearVelocity = new Vector2(0, 0); // 힘 없애기
         player.PlayerIsTrigger(true); // 트리거로 만들기기

@@ -14,7 +14,7 @@ public class Brick : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            KH_SoundManager.Instance.PlaySFXSound("marioBrick");
+            KH_SoundManager.Instance.PlaySFXSound_B("marioBrick", 0.5f);
             
             GameObject damgeObj = Instantiate(damagePrefab, transform.position, Quaternion.identity); // 데미지 이펙트 생성
             Destroy(damgeObj, 0.5f); // 0.5초 후에 데미지 이펙트 제거

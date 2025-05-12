@@ -26,7 +26,11 @@ public class Sonic : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         
         // 스핀 준비하고 발사
+        seq.AppendInterval(0.3f);
         seq.AppendCallback(() => anim.SetBool("Spin", true));
+        seq.AppendCallback(() => {
+            KH_SoundManager.Instance.PlaySFXSound("sonicSpin", 0.5f);
+        });
         seq.AppendInterval(1f);
         seq.AppendCallback(() => anim.SetBool("Spin", false));
 
