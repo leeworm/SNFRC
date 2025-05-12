@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public enum PhaseState
 {
@@ -10,6 +11,7 @@ public enum PhaseState
 public class Koopa : KH_Enemy
 {
     private SpriteRenderer sr;
+    
 
     [Header("Koopa 정보")]
     public Koopa_HpBar koopaHpBar; // 체력바 스크립트
@@ -27,6 +29,9 @@ public class Koopa : KH_Enemy
     public KoopaAllDirFireState allDirFireState { get; private set; }
 
     public KoopaPhaseChangeState phaseChangeState { get; private set; }
+
+    public KoopaSpinAttackState spinAttackState { get; private set; }
+    public KoopaLaserShotState laserShotState { get; private set; }
 
     #endregion
 
@@ -54,6 +59,29 @@ public class Koopa : KH_Enemy
     public float roundFireDelay = 1.5f;
     #endregion
 
+    
+    #region Phase 2
+    
+    [Header("스핀 공격 정보")]
+    public float spinReadySpeed = 10f;
+    public float spinSpeed = 30f;
+    public int spinCount = 3; // 상수
+    public bool isReadySpin = false;
+    public bool isScreenOutSpin = false;
+    public bool isEndSpin = false;
+    public float spinReadyTimer;
+    public float spinReadyTime = 0.5f; // 상수
+    
+    [Header("레이저 공격 정보")]
+    public GameObject fireLaserPrefab;
+    public GameObject rainbowScreenPrefab;
+    public Transform fireLaserPos;
+    public float fireLaserSpeed = 1.0f;         // 회전 속도
+    public float fireLaser_maxAngle = 110.0f;    // 최대 각도
+    public float fireLaserTime = 15;
+
+    #endregion
+
     public PhaseState phaseState = PhaseState.Phase1; // 현재 상태
 
     protected override void Awake()
@@ -72,6 +100,9 @@ public class Koopa : KH_Enemy
         allDirFireState = new KoopaAllDirFireState(this, stateMachine, "Idle");
 
         phaseChangeState = new KoopaPhaseChangeState(this, stateMachine, "Idle");
+
+        spinAttackState = new KoopaSpinAttackState(this, stateMachine, "Spin");
+        laserShotState = new KoopaLaserShotState(this, stateMachine, "Fire");
     }
 
     protected override void Start()
@@ -106,17 +137,23 @@ public class Koopa : KH_Enemy
             {
                 // 파이어볼 비활성화
                 KH_BulletPool.Instance.ReturnBullet(collision.gameObject);
-                
 
                 // 체력 감소
                 int damage = collision.gameObject.GetComponent<KH_Fireball>().Damage;
                 healthPoint -= damage;
                 koopaHpBar.GetDamage(damage);
-    
+            }
+            if(collision.gameObject.GetComponent<Sonic>() != null)
+            {
+                // 체력 감소
+                int damageS = collision.gameObject.GetComponent<Sonic>().Damage;
+                healthPoint -= damageS;
+                koopaHpBar.GetDamage(damageS);
             }
         }
     }
 
+    #region Phase 1 Fuctions
     public void ShotFire()
     {
         GameObject fire = Instantiate(fireShotPrefab, wallCheck.position, Quaternion.identity);
@@ -140,7 +177,7 @@ public class Koopa : KH_Enemy
             fire.GetComponent<Rigidbody2D>().linearVelocity = Vector2.right * fireShotSpeed;
         }
     }
-    #region Phase 1 Fuctions
+    
     public void JumpUp()
     {
         Debug.Log("JumpUp");
@@ -158,10 +195,10 @@ public class Koopa : KH_Enemy
         rb.linearVelocityY = jumpSpeed;
     }
 
-    public void GoPlayerPos()
+    public void GoPlayerPosX()
     {
         transform.position = new Vector2(playerTransform.position.x, transform.position.y);
-        KH_GameManager.Instance.SetActive_DamageRange(true);
+        KH_GameManager.Instance.SetActive_DamageRangeX(true);
     }
 
     public void JumpDown()
@@ -215,6 +252,8 @@ public class Koopa : KH_Enemy
 
     public void GoMidPos()
     {
+        BackgroundMusic.Instance.BGM_Change();
+
         // 2페이즈 직전
         transform.position = new Vector2(0, transform.position.y);
 
@@ -233,4 +272,85 @@ public class Koopa : KH_Enemy
         roundFireSpeed = 13f;
 
     }
+    
+    #region Phase 2 Fuctions
+
+    public void ReadySpin()
+    {
+        boxCollider.isTrigger = true;
+
+        if(transform.position == new Vector3(transform.position.x, -200, 0))
+        {
+            isReadySpin = true;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, -200, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    public void ScreenOutSpin()
+    {
+        if(transform.position == new Vector3(30, transform.position.y, 0))
+        {
+            spinReadyTimer = spinReadyTime; // 1초 동안
+            isScreenOutSpin = true;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(30, transform.position.y, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    public void GoPlayerPosY()
+    {
+        transform.position = new Vector2(transform.position.x, playerTransform.position.y);
+        KH_GameManager.Instance.SetActive_DamageRangeY(true);
+    }
+
+    public void StartSpin(ref int count)
+    {
+        KH_GameManager.Instance.SetActive_DamageRangeY(false);
+
+        if(transform.position == new Vector3(-30, transform.position.y, 0))
+        {
+            --count;
+            Debug.Log("스핀 카운트 : " + count);
+            transform.position = new Vector3(30, transform.position.y, 0); // 다시 오른쪽 좌표에서 다시 스핀
+            spinReadyTimer = spinReadyTime; // 1초 동안
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, transform.position.y, 0), Time.deltaTime * spinSpeed);        
+    }
+
+    public void EndSpin()
+    {
+        if(transform.position == new Vector3(0, -200, 0))
+        {
+            Debug.Log("isEndSpin !!");
+            boxCollider.isTrigger = false;
+            isEndSpin = true;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -200, 0), Time.deltaTime * spinReadySpeed);
+    }
+
+    private GameObject fireLaser;
+    public void CreateLaser()
+    {
+        fireLaser = Instantiate(fireLaserPrefab, fireLaserPos.position, Quaternion.identity);
+
+        if(fireLaser == null)
+            return;
+
+        fireLaser.transform.DORotate(new Vector3(0, 0, fireLaser_maxAngle), fireLaserSpeed)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo) // 무한 반복, 왔다 갔다
+            .SetLink(gameObject);
+    }
+    public void StartLaser()
+    {
+        rainbowScreenPrefab.SetActive(true);
+
+    }
+    public void DestoryLaser()
+    {
+        rainbowScreenPrefab.SetActive(false);
+        //transform.DOKill();
+        Destroy(fireLaser);
+    }
+
+    #endregion
 }
