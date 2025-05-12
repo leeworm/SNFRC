@@ -26,8 +26,15 @@ public abstract class B_Enemy : MonoBehaviour
     protected bool isDead = false;
     public bool IsDead => isDead;
 
+    private float lastTurnTime = 0f;
+    private float turnCooldown = 0.5f;
+
     [Header("공격 설정")]
     public int contactDamage = 1;
+
+    [Header("사운드 설정")]
+    public AudioClip hitSound;
+    public AudioClip deathSound;
 
     protected virtual void Start()
     {
@@ -48,6 +55,9 @@ public abstract class B_Enemy : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         if (isDead) return;
+
+        if (hitSound != null)
+        B_AudioManager.Instance.PlaySFX(hitSound);
 
         currentHP -= damage;
 
@@ -87,7 +97,12 @@ public abstract class B_Enemy : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+
+        if (deathSound != null)
+        B_AudioManager.Instance.PlaySFX(deathSound);
+
         StartCoroutine(DeathSequence());
+        
     }
 
     protected void FacePlayer()
@@ -118,6 +133,13 @@ public abstract class B_Enemy : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x) * -moveDirection;
         transform.localScale = scale;
+
+        if ((noGround || wallHit) && Time.time - lastTurnTime > turnCooldown)
+        {
+            moveDirection *= -1;
+            FacePlayer();
+            lastTurnTime = Time.time;
+        }
     }
 
     protected virtual void Update()
@@ -200,7 +222,7 @@ public abstract class B_Enemy : MonoBehaviour
 
         transform.rotation = endRot;
 
-        gameObject.layer = LayerMask.NameToLayer("Skill");
+        gameObject.layer = LayerMask.NameToLayer("Item");
 
         yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);
