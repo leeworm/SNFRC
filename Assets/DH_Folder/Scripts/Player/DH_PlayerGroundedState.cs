@@ -67,7 +67,7 @@ public abstract class DH_PlayerGroundedState : DH_PlayerState
             return;
         }
 
-        if (player.isIdle)
+        if (player.isIdle && !player.isHurting)
         {
             if (player.isIdle)
                 return;

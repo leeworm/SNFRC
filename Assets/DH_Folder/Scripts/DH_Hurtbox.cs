@@ -11,11 +11,14 @@ public class DH_Hurtbox : MonoBehaviour
             return;
 
         if (entity.IsBlocking())
-        {
             return;
-        }
 
-        // 블록 상태가 아닐 때만 데미지 처리 및 히트 이펙트 표시
+        // lastKnockback 저장 (플레이어/에너미만)
+        if (entity is DH_Player player)
+            player.lastKnockback = knockback;
+        else if (entity is DH_Enemy enemy)
+            enemy.lastKnockback = knockback;
+
         entity.TakeDamage(damage, knockback);
         entity.ApplyKnockback(knockback);
     }

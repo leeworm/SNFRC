@@ -177,7 +177,7 @@ public class DH_Entity : MonoBehaviour
 
     public virtual void TakeDamage(int damage, Vector2 hitDirection)
     {
-        if (isHurting || isKnockdown)
+        if (isDead || isHurting || isKnockdown)
             return;
 
         if (IsBlocking())
@@ -196,6 +196,7 @@ public class DH_Entity : MonoBehaviour
         }
 
         knockbackDirection = hitDirection; // 방향 저장      
+        rb.linearVelocity = hitDirection;
     }
 
        
