@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1744969648952312628}
   - component: {fileID: 5119368609147067511}
   m_Layer: 0
-  m_Name: ErorrCode
+  m_Name: ErrorCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,4 +189,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 10
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: e60efd73ea762904793daf1e0be67ffe, type: 3}
+  pickupVolume: 0.19
