@@ -6,14 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/OpeningScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Minecraft.unity
+    guid: de1115349efe8a14e963616e9cf81fd5
+  - enabled: 1
+    path: Assets/Scenes/Mega Man.unity
+    guid: 67a39cc58aa686f4aa4e03e299c96e8d
+  - enabled: 1
+    path: Assets/Scenes/StreetFighter.unity
+    guid: 261d0b31dd1c09443a2a46987272a918
+  - enabled: 1
+    path: Assets/Scenes/Naruto.unity
+    guid: c1fdff2cd3f182d4bb1694cd807fdb45
   - enabled: 1
     path: Assets/Scenes/SuperMario.unity
     guid: 23feaab88bff513409fa94ed7e6402c8
   - enabled: 1
     path: Assets/Scenes/BossScene_Koopa.unity
     guid: bdebb0f1c77a14a48bf66c8b9f20580e
+  - enabled: 1
+    path: Assets/Scenes/MiddleScene.unity
+    guid: 739fe909b12eb9f4e948d0f02f7f5b6f
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 0c893c54d77f42a448b1977cfb81d73e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

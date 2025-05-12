@@ -8,6 +8,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            MainGameManager.Instance.GetErrorPiece();
             hasEnderItem = true;
             Destroy(gameObject);
         }

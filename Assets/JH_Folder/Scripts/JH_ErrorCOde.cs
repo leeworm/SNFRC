@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class JH_ErrorCOde : MonoBehaviour
 {
-    public GameObject portalPrefab;  // »ý¼ºÇÒ Æ÷ÅÐ ÇÁ¸®ÆÕ
-    private static GameObject portal; // »ý¼ºµÈ Æ÷ÅÐ ÂüÁ¶ ÀúÀå (Áßº¹ »ý¼º ¹æÁö)
+    public GameObject portalPrefab;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private static GameObject portal; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 
-    [Header("Æ÷ÅÐ »ý¼º À§Ä¡")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡")]
     public Vector2 mapCenter = new Vector2(0f, 0f);  
     public float portalHeight = 1f;  
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
-        {
+        {   
+            MainGameManager.Instance.GetErrorPiece();
+
             if (portal == null)
             {
                 Camera mainCamera = Camera.main;

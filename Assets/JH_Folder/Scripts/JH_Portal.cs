@@ -10,17 +10,23 @@ public class JH_Portal : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            // ÇÃ·¹ÀÌ¾î°¡ Æ÷ÅÐ¿¡ ´êÀ¸¸é ´ÙÀ½ ¾ÀÀ¸·Î ÀüÈ¯
+            // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½Ð¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+            StartCoroutine(LoadNextScene());
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½Ð¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
             StartCoroutine(LoadNextScene());
         }
     }
 
     private System.Collections.IEnumerator LoadNextScene()
     {
-        // ÇÊ¿äÇÑ °æ¿ì ÆäÀÌµå È¿°ú³ª ÀüÈ¯ È¿°ú Ãß°¡
+        // ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ È¿ï¿½ï¿½ ï¿½ß°ï¿½
         yield return new WaitForSeconds(transitionDelay);
 
-        // ´ÙÀ½ ¾À ·Îµå
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½
         SceneManager.LoadScene(nextSceneName);
     }
     

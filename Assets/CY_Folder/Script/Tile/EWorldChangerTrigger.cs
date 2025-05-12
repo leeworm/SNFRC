@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EWorldChangerTrigger : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class EWorldChangerTrigger : MonoBehaviour
         yield return new WaitForSeconds(4f); // 영상 길이
 
         
+        
         Debug.Log("엔딩입니다. 여기서 바꾸셔야 합니다");
+        SceneManager.LoadScene("MiddleScene");
         // 여기서 씬이 바뀌어야 합니다.
     }
 }

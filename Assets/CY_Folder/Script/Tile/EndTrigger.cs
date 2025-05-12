@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EndTrigger : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class EndTrigger : MonoBehaviour
         Debug.Log("🎉 게임 종료!");
 
         // 예시: 씬 전환
-        // SceneManager.LoadScene("GameOverScene");
+        //SceneManager.LoadScene("MiddleScene");
 
         // 또는 멈추기
         // Time.timeScale = 0;

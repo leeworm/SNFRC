@@ -32,6 +32,8 @@ public class HK_ErrorCodeItem : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
+        MainGameManager.Instance.GetErrorPiece();
+
         // 1. �κ��丮 ó��
         var inventory = other.GetComponent<HK_PlayerInventory>();
         inventory?.AcquireErrorCode();

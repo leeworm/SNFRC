@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f3d6e6ce09acd4bb6784004ad5b501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: 
+  nextSceneName: MiddleScene
   transitionDelay: 1
 --- !u!58 &5179760545722365991
 CircleCollider2D:
