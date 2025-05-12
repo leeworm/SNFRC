@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8698472654938251792}
   - component: {fileID: 7198597336082697468}
   m_Layer: 14
-  m_Name: image_0
+  m_Name: ErrorCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
