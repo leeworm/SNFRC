@@ -21,10 +21,14 @@ public class JH_GameManager : MonoBehaviour
     [Header("게임 상태")]
     public bool isGameStarted = false;
     public static bool IsGamePaused { get; private set; } = true;
+    private bool isVictoryAnimationPlaying = false;
 
     [Header("플레이어 참조")]
     public JH_Player player;    // Inspector에서 플레이어 할당
     public JH_Entity enemy;     // Inspector에서 적 할당
+
+    [Header("아이템 설정")]
+    public GameObject errorCodePrefab;
 
     private void Awake()
     {
@@ -66,7 +70,15 @@ public class JH_GameManager : MonoBehaviour
 
     private void HandleEnemyKO()
     {
-        IsGamePaused = true;  // 게임 일시 정지
+        IsGamePaused = true;
+        isVictoryAnimationPlaying = true;
+
+        // 적의 위치에 아이템 생성
+        if (enemy != null && errorCodePrefab != null)
+        {
+            Vector3 spawnPosition = enemy.transform.position + Vector3.up * 0.5f;
+            Instantiate(errorCodePrefab, spawnPosition, Quaternion.identity);
+        }
 
         // Win 이미지 표시
         if (countdownImage != null && winsprite != null)
@@ -82,15 +94,24 @@ public class JH_GameManager : MonoBehaviour
             player.animator.SetTrigger("Victory");
         }
 
-        // 3초 후 게임 종료 또는 재시작
-        Invoke("HandleGameEnd", 3f);
+        Invoke("OnVictoryAnimationComplete", 2f);
     }
 
-    private void HandleGameEnd()
+    private void OnVictoryAnimationComplete()
     {
-        // 게임 종료 또는 재시작 로직
-        // 예: 씬 재시작 또는 메뉴로 이동
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        isVictoryAnimationPlaying = false;
+        IsGamePaused = false;  // 움직임 다시 활성화
+
+        // Win 이미지 숨기기
+        if (countdownImage != null)
+        {
+            countdownImage.gameObject.SetActive(false);
+        }
+    }
+
+    public bool IsVictoryAnimationPlaying()
+    {
+        return isVictoryAnimationPlaying;
     }
 
     private void OnDestroy()

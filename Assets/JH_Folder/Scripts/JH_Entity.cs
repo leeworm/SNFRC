@@ -83,35 +83,33 @@ public class JH_Entity : MonoBehaviour, JH_Entity.IDamageable // <--- 변경점:
 
     protected virtual void Update()
     {
-        if (JH_GameManager.IsPaused())
+        // 게임 매니저가 없거나 일시정지 상태면 움직임 정지
+        if (JH_GameManager.Instance == null || JH_GameManager.IsPaused())
         {
             if (rb != null)
             {
-                rb.linearVelocity = Vector2.zero; // 모든 움직임 정지
-                rb.gravityScale = 0; // 중력 효과 제거
+                rb.linearVelocity = Vector2.zero;
+                rb.gravityScale = 0;
             }
             return;
         }
 
-        // 게임 시작 후에는 중력 복원
-        if (rb != null)
+        // 승리 애니메이션 중이 아닐 때만 일반 업데이트 실행
+        if (!JH_GameManager.Instance.IsVictoryAnimationPlaying())
         {
-            rb.gravityScale = 1; // 원래 중력값으로 설정
-        }
+            if (rb != null)
+            {
+                rb.gravityScale = 1;
+            }
 
-        if (isKnocked) return; // KO 상태에서는 업데이트 로직 중단
+            if (isKnocked) return;
 
-        if (jumpGracePeriodTimer > 0)
-        {
-            jumpGracePeriodTimer -= Time.deltaTime;
-        }
+            if (jumpGracePeriodTimer > 0)
+            {
+                jumpGracePeriodTimer -= Time.deltaTime;
+            }
 
-        // 적 감지 및 방향 설정
-        UpdateEnemyDetection();
-
-        if (jumpGracePeriodTimer > 0)
-        {
-            jumpGracePeriodTimer -= Time.deltaTime;
+            UpdateEnemyDetection();
         }
     }
 

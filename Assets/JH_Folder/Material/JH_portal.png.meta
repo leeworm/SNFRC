@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1856d8665ef5ecf49816e25aa4b5364b
+guid: faf95fcc00abb5142bea478baecb52e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6210668508718394119
-    second: Noise_0
+      213: -6634637188469520107
+    second: JH_portal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Noise_0
+      name: JH_portal_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1300
-        height: 1300
+        x: 199
+        y: 74
+        width: 614
+        height: 876
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f4922895e54fc9a0800000000000000
-      internalID: -6210668508718394119
+      spriteID: 5198daff0a80de3a0800000000000000
+      internalID: -6634637188469520107
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8872eb5f04bee08449d7deb4dec9e334
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Noise_0: -6210668508718394119
+      JH_portal_0: -6634637188469520107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
