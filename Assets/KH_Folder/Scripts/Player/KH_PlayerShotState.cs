@@ -51,6 +51,8 @@ public class KH_PlayerShotState : KH_PlayerState
     private void ShootBullet()
     {
         //bulletPool.GetBullet(player.FireballSpawnPoint);
+        KH_SoundManager.Instance.PlaySFXSound("marioFireball", 0.5f);
+
         KH_BulletPool.Instance.GetBullet(player.FireballSpawnPoint, player.facingDir);
     }
 

@@ -38,14 +38,7 @@ public class KH_HealthManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            TakeDamage(1);
-        }
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            Heal(1);
-        }
+        
     }
 
     public void TakeDamage(int damage)

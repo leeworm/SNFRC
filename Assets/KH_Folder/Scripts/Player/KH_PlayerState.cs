@@ -38,7 +38,9 @@ public class KH_PlayerState
         yInput = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Z) && xInput == 0 && !player.isStage1)
+        {
             stateMachine.ChangeState(player.shotState);
+        }
         else if (Input.GetKeyDown(KeyCode.X) && xInput == 0 && !player.isStage1 && player.setPipeTimer <= 0)
         {
             stateMachine.ChangeState(player.setPipeState);

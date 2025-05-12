@@ -14,6 +14,8 @@ public class SetPipe : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.X))
         {
+            KH_SoundManager.Instance.PlaySFXSound("marioPipe");
+
             Instantiate(pipePrefab, transform.position, Quaternion.identity);
             Debug.Log("파이프 생성");
             Destroy(gameObject); // 파이프 생성 후 오브젝트 삭제

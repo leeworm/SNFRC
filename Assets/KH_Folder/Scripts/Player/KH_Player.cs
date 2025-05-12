@@ -155,6 +155,7 @@ public class KH_Player : KH_Entity
         if (collision.gameObject.name == "item_mushroom(Clone)")
         {
             Debug.Log("버섯 먹음");
+            KH_SoundManager.Instance.PlaySFXSound("marioMushroom");
             KH_HealthManager.Instance.Heal(2);
 
             Destroy(collision.gameObject); // 버섯 먹으면 삭제
@@ -162,6 +163,7 @@ public class KH_Player : KH_Entity
         if (collision.gameObject.name == "item_sonic(Clone)")
         {
             Debug.Log("소닉 먹음");
+            KH_SoundManager.Instance.PlaySFXSound("marioSonic");
 
             Instantiate(Sonic, transform.position, Quaternion.identity);
 
@@ -232,6 +234,8 @@ public class KH_Player : KH_Entity
 
     public void CallMushRoom()
     {   
+        KH_SoundManager.Instance.PlaySFXSound("marioItemDown");
+
         GameObject Prefab;
         if(isErrorState)
             Prefab = SonicPrefab;
@@ -313,6 +317,7 @@ public class KH_Player : KH_Entity
     {
         if(transform.position == _targetVec)
         {
+            KH_SoundManager.Instance.PlaySFXSound("marioPipe");
             Debug.Log("Telepot Success !");
             isTelepotSuccess = true;
             return;

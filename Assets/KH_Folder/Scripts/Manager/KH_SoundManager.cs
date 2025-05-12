@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class KH_SoundManager : MonoBehaviour
 {
     private AudioSource sfxPlayer;
     public float masterVolumeSFX = 1f;
+
+    bool isPlayingEffect = false;
     
     [SerializeField] private AudioClip[] sfxAudioClips; 
     Dictionary<string, AudioClip> audioClipsDic = new Dictionary<string, AudioClip>();
@@ -43,13 +46,33 @@ public class KH_SoundManager : MonoBehaviour
         }
     }
 
+    public void PlaySFXSound_B(string name, float volume = 1f)
+    {
+        if (audioClipsDic.ContainsKey(name) == false)
+            return;
+
+        sfxPlayer.PlayOneShot(audioClipsDic[name], volume * masterVolumeSFX);
+    }
+
+
     public void PlaySFXSound(string name, float volume = 1f)
     {
         if (audioClipsDic.ContainsKey(name) == false)
-        {
-            Debug.Log(name + " is not Contained audioClipsDic");
             return;
-        }
-        sfxPlayer.PlayOneShot(audioClipsDic[name], volume * masterVolumeSFX);
+
+        if (isPlayingEffect) return; // 중복 방지
+
+        StartCoroutine(PlayWithCooldown(name, volume));
     }
+
+    IEnumerator PlayWithCooldown(string name, float volume)
+    {
+        isPlayingEffect = true;
+    
+        sfxPlayer.PlayOneShot(audioClipsDic[name], volume * masterVolumeSFX);
+    
+        yield return new WaitForSeconds(0.1f); // 쿨타임
+        isPlayingEffect = false;
+    }
+
 }
