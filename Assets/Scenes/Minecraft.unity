@@ -35060,11 +35060,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b8eb46cf7e0a5ab47b722783e2be3c92, type: 3}
     - target: {fileID: 8702540894985683761, guid: 4262b475719c8a743998bdc7d268036e, type: 3}
       propertyPath: jumpForce
-      value: 16
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8702540894985683761, guid: 4262b475719c8a743998bdc7d268036e, type: 3}
       propertyPath: moveSpeed
-      value: 16
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8702540894985683761, guid: 4262b475719c8a743998bdc7d268036e, type: 3}
       propertyPath: audioSource
