@@ -76536,7 +76536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623816780}
   m_Layer: 0
-  m_Name: --------------------Zone--------------------
+  m_Name: ----------------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77491,7 +77491,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 5f002c05ab5e7554e97fc7210811e423, type: 3}
   m_Resource: {fileID: 8300000, guid: 5f002c05ab5e7554e97fc7210811e423, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -77876,7 +77876,7 @@ MonoBehaviour:
   wallCheckDir: 1
   moveSpeed: 8
   koopaHpBar: {fileID: 1466607720}
-  healthPoint: 200
+  healthPoint: 1000
   playerTransform: {fileID: 1386109347}
   fireShotPrefab: {fileID: 7649340161976860234, guid: f5feeaa9f6752de479af6434c35c1f29, type: 3}
   fireShotSpeed: 10
@@ -77905,6 +77905,9 @@ MonoBehaviour:
   fireLaserSpeed: 2
   fireLaser_maxAngle: 110
   fireLaserTime: 15
+  deathJumpPower: 3
+  ErrorPrefab: {fileID: 8765575724206526817, guid: a1ee7b9fbd49215409a3746d98a6f6d2, type: 3}
+  IsDeath: 0
   phaseState: 0
 --- !u!1 &1322293303
 GameObject:
@@ -80423,6 +80426,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1932877667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932877668}
+  m_Layer: 0
+  m_Name: ----------------------------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932877668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932877667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.283401, y: -6.2224436, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978241326
 GameObject:
   m_ObjectHideFlags: 0
@@ -80766,6 +80800,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ceccbcb5b3e39ed4a88374abc561c304, type: 3}
   - {fileID: 8300000, guid: 62037e4ecaf250d4ba2e04d54dceb90c, type: 3}
   - {fileID: 8300000, guid: e1b1393393640b14a97dc251214f79fd, type: 3}
+  - {fileID: 8300000, guid: 881fe8f6764e731439d6c9c44debf6c1, type: 3}
+  - {fileID: 8300000, guid: 028d844f938bfe346a9356afcb02e997, type: 3}
+  - {fileID: 8300000, guid: ef1d07ec26b4904439fe67e810c8c220, type: 3}
+  - {fileID: 8300000, guid: c2b79456e24382a49ba41cffc2c31f62, type: 3}
+  - {fileID: 8300000, guid: 9f8f45366a933ee4888310f5129bf0f2, type: 3}
+  - {fileID: 8300000, guid: 76b48dab0300e70478a5e3ddb79ebae5, type: 3}
+  - {fileID: 8300000, guid: 200dfd1431d07264fbcd65e85aed9c98, type: 3}
 --- !u!4 &2101794640
 Transform:
   m_ObjectHideFlags: 0
@@ -81169,14 +81210,15 @@ SceneRoots:
   - {fileID: 1347089863}
   - {fileID: 76601367}
   - {fileID: 1777032394}
+  - {fileID: 1932877668}
   - {fileID: 111370418}
   - {fileID: 1997741484}
   - {fileID: 1883464822}
+  - {fileID: 2101794640}
+  - {fileID: 1193929724}
   - {fileID: 623816780}
   - {fileID: 886277910}
   - {fileID: 7291966802802253942}
   - {fileID: 1759436608}
-  - {fileID: 1193929724}
-  - {fileID: 2101794640}
   - {fileID: 1302824483}
   - {fileID: 5359062915753687701}

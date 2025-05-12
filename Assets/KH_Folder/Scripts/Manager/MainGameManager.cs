@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainGameManager : MonoBehaviour
 {
@@ -34,6 +35,26 @@ public class MainGameManager : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            // 씬 재시작
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            int currentIndex = SceneManager.GetActiveScene().buildIndex;
+            int maxIndex = SceneManager.sceneCountInBuildSettings - 1;
+            
+            if (currentIndex < maxIndex)
+            {
+                SceneManager.LoadScene(currentIndex + 1);
+            }
+            else
+            {
+                Debug.Log("마지막 씬입니다.");
+            }
+        }
+
         for(int i = 0; i <= ErrorNum; i++)
         {
             ErrorEffectPrefabs[i].SetActive(true);

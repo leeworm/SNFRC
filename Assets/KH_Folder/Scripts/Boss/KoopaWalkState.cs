@@ -33,7 +33,7 @@ public class KoopaWalkState : KoopaState
     {
         base.Update();
 
-        if(koopa.healthPoint <= 100 && koopa.phaseState == PhaseState.Phase1) // 체력이 100 이하일 때
+        if(koopa.healthPoint <= 200 && koopa.phaseState == PhaseState.Phase1) // 체력이 200 이하일 때
         {
             koopa.phaseState = PhaseState.PhaseChange;
             koopa.healthPoint = 1000; // 체력 초기화
@@ -63,7 +63,7 @@ public class KoopaWalkState : KoopaState
         if(koopa.phaseState == PhaseState.Phase1)
             patternRandomNum = Random.Range(0, 4);
         else if(koopa.phaseState == PhaseState.Phase2)
-            patternRandomNum = Random.Range(0, 8);
+            patternRandomNum = Random.Range(4, 8);
 
         Debug.Log("패턴 번호 : " + patternRandomNum);
 
