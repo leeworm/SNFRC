@@ -2,29 +2,47 @@
 
 public class DH_EnemyMoveState : DH_EnemyState
 {
-    public DH_EnemyMoveState(DH_Enemy _enemy, DH_EnemyStateMachine _stateMachine, string _animBoolName)
-        : base(_enemy, _stateMachine, _animBoolName) { }
+    public DH_EnemyMoveState(DH_Enemy enemy, DH_EnemyStateMachine stateMachine, string animBoolName)
+        : base(enemy, stateMachine, animBoolName) { }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-        // 애니메이션이 끝났을 때 호출되는 메서드입니다.
-        // 필요한 경우 추가 로직을 여기에 작성할 수 있습니다.
-    }
     public override void Enter()
     {
         base.Enter();
-        // enemy.SetVelocity(1f, 0f); // 적의 속도를 설정합니다.
+        enemy.isMoving = true;
+        enemy.currentJumpCount = enemy.maxJumpCount;
+        enemy.commandDetectorEnabled = true;
     }
+
     public override void Update()
     {
         base.Update();
-        // 적의 이동 로직을 여기에 추가합니다.
-        // 예를 들어, 적이 플레이어를 추적하도록 할 수 있습니다.
+
+        if (enemy.isAttackInput)
+        {
+            enemy.isAttackInput = false;
+            stateMachine.ChangeState(enemy.primaryAttack);
+            return;
+        }
+        if (enemy.isJumpInput)
+        {
+            enemy.isJumpInput = false;
+            stateMachine.ChangeState(enemy.jumpState);
+        }
+        if (enemy.isDashInput)
+        {
+            enemy.isDashInput = false;
+            stateMachine.ChangeState(enemy.dashState);
+        }
+        if (enemy.inputX == 0)
+        {
+            stateMachine.ChangeState(enemy.idleState); // ← 반대 전이도 명시
+            return;
+        }
     }
+
     public override void Exit()
     {
         base.Exit();
-        // enemy.SetVelocity(0f, 0f); // 적의 속도를 0으로 설정합니다.
+        enemy.isMoving = false;
     }
 }

@@ -10,7 +10,6 @@ public class DH_PlayerAirDefenseState : DH_PlayerAirState
     public override void Enter()
     {
         base.Enter();
-        player.isBusy = true;
         player.isBlocking = true;
     }
 
@@ -18,7 +17,7 @@ public class DH_PlayerAirDefenseState : DH_PlayerAirState
     {
         base.Update();
 
-        if (Input.GetKey(KeyCode.S) && IsGrounded())
+        if (player.isGrounded)
         {
             stateMachine.ChangeState(player.landState);
             return;

@@ -12,21 +12,28 @@ public class DH_PlayerSubstituteState : DH_PlayerState
     public override void Enter()
     {
         base.Enter();
+        player.isBusy = true; // 바꿔치기 상태에서 플레이어가 바쁘게 설정
+        player.isSubstituting = true;
+    }
+    
+    public override void Update()
+    {
+        base.Update();
+    }
+
+    // 애니메이션 트리거에서 호출될 함수
+    public void OnVanishAnimationEndtoAppear()
+    {
+        player.anim.SetBool("Vanish", false); // 바꿔치기 애니메이션 종료
 
         // 적 탐색
         targetEnemy = player.GetNearestEnemy();
         if (targetEnemy == null)
         {
             Debug.Log("❌ 바꿔치기 실패: 적 없음");
-            stateMachine.ChangeState(player.idleState);
+            player.anim.SetBool("Appear", true);
             return;
         }
-    }
-
-    // 애니메이션 트리거에서 호출될 함수
-    public void OnVanishAnimationEnd()
-    {
-        player.anim.SetBool("Substitute_Venish", false); // 바꿔치기 애니메이션 종료
         // 위치 이동
         Vector2 destination = CalculateBehindPosition(targetEnemy);
         player.transform.position = destination;
@@ -35,12 +42,14 @@ public class DH_PlayerSubstituteState : DH_PlayerState
         float toEnemyDir = Mathf.Sign(targetEnemy.position.x - player.transform.position.x);
         player.FlipController(toEnemyDir);
 
-        player.anim.SetBool("Substitute_Appear", true);
+        player.anim.SetBool("Appear", true);
     }
 
     public void OnAppearAnimationEnd()
-    {        
-        player.anim.SetBool("Substitute_Appear", false); // 바꿔치기 애니메이션 종료
+    {
+        Debug.Log("🟢 바꿔치기 애니메이션 종료");
+        player.isBusy = false; // 상태 전이 전에 busy 해제
+        player.anim.SetBool("Appear", false);
         stateMachine.ChangeState(player.idleState);
         return;
     }
@@ -55,5 +64,8 @@ public class DH_PlayerSubstituteState : DH_PlayerState
     public override void Exit()
     {
         base.Exit();
+        player.isBusy = false; // 바꿔치기 상태 나가면 플레이어가 바쁘지 않게 설정
+        player.isSubstituting = false;
     }
+
 }

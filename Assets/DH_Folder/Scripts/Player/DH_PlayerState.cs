@@ -33,8 +33,8 @@ public class DH_PlayerState
     {
         stateTimer -= Time.deltaTime; // 상태 타이머 업데이트
 
-        xInput = Input.GetAxisRaw("Horizontal"); // 수평 입력 값 가져오기
-        yInput = Input.GetAxisRaw("Vertical"); // 수직 입력 값 가져오기
+        xInput = GetArrowKeyHorizontalInput(); // 수평 입력 값 가져오기
+        yInput = GetArrowKeyVerticalInput(); // 수직 입력 값 가져오기
         player.anim.SetFloat("yVelocity", rb.linearVelocity.y); // y축 속도 애니메이션 변수 설정
         //Debug.Log($"{animBoolName} 상태 업데이트"); // 상태 업데이트 로그 출력
     }
@@ -48,5 +48,23 @@ public class DH_PlayerState
     public virtual void AnimationFinishTrigger()
     {
         triggerCalled = true;
+    }
+
+    public static float GetArrowKeyHorizontalInput()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+            return -1f;
+        if (Input.GetKey(KeyCode.RightArrow))
+            return 1f;
+        return 0f;
+    }
+
+    public static float GetArrowKeyVerticalInput()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+            return 1f;
+        if (Input.GetKey(KeyCode.DownArrow))
+            return -1f;
+        return 0f;
     }
 }
